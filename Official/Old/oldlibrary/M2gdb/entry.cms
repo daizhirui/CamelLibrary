@@ -1,0 +1,14 @@
+TECH = M2
+COMPILER_PATH = /Applications/mips-netbsd-elf/bin
+TARGET = entry_mac
+TARGET_ADDRESS = 10000000
+DATA_ADDRESS = 
+RODATA_ADDRESS = 
+ARCHITECT = standalone
+AUTOLOAD = false
+//C_SOURCES = 
+A_SOURCES = entry.s 
+HEADERS = mcu.h str.h 
+//DEBUG = 
+//CUSTOM_LIBRARY = 
+//LIBRARY = 

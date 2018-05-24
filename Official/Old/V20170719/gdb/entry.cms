@@ -1,0 +1,14 @@
+TECH = M2
+COMPILER_PATH = C:/Program Files/Imagination Technologies/Toolchains/mips-mti-elf/2015.01-7/bin
+TARGET = entry
+TARGET_ADDRESS = 10000000
+DATA_ADDRESS = 
+RODATA_ADDRESS = 
+ARCHITECT = standalone
+AUTOLOAD = false
+//C_SOURCES = 
+A_SOURCES = entry.s
+HEADERS = mcu.h str.h 
+//DEBUG = 
+//CUSTOM_LIBRARY = 
+//LIBRARY = 
