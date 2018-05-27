@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "type_traits": "c",
+        "bool.h": "c",
+        "stdarg.h": "c"
+    }
+}

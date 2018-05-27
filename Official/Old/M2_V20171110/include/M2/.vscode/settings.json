@@ -1,5 +1,0 @@
-{
-    "terminal.integrated.env.osx": {
-        "PATH": "/Users/daizhirui/.platformio/penv/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
-    }
-}

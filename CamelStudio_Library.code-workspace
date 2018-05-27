@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "Official"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"type_traits": "cpp"
+		},
+		"editor.quickSuggestions": false
+	}
+}

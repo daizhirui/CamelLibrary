@@ -1,0 +1,102 @@
+\hypertarget{stdarg_8h}{}\section{std/stdarg.h File Reference}
+\label{stdarg_8h}\index{std/stdarg.\+h@{std/stdarg.\+h}}
+
+
+Standard Argument Definition.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{stdarg_8h_a0794d955f9ed9aa1a4c523c8dc020e85}{\+\_\+\+I\+N\+T\+S\+I\+Z\+E\+OF}}(type)~((sizeof(type) + sizeof(int) -\/ 1) \& $\sim$(sizeof(int) -\/ 1))
+\begin{DoxyCompactList}\small\item\em Calculate the size of type as a multiple of int. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{stdarg_8h_ab23fb3ac0aff18d3c1a09f3df4ebc8b5}{va\+\_\+start}}(ap,  value)~(ap = (va\+\_\+list)\&value + \mbox{\hyperlink{stdarg_8h_a0794d955f9ed9aa1a4c523c8dc020e85}{\+\_\+\+I\+N\+T\+S\+I\+Z\+E\+OF}}(value))
+\begin{DoxyCompactList}\small\item\em Calculate the beginning of changable parameter list. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{stdarg_8h_a81ebe6ea6253b0c6618e29de70fe10eb}{va\+\_\+arg}}(ap,  type)~($\ast$(type$\ast$)(ap))
+\begin{DoxyCompactList}\small\item\em Get the value which the pointer points to. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{stdarg_8h_acd9b3b9085ec072324c5fdac2b40304e}{va\+\_\+end}}(ap)~(ap = (char$\ast$)0)
+\begin{DoxyCompactList}\small\item\em Release the parameter pointer by setting it N\+U\+LL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stdarg_8h_abaefbc6cabb217bf0138d4f9c94d4775}\label{stdarg_8h_abaefbc6cabb217bf0138d4f9c94d4775}} 
+typedef char $\ast$ {\bfseries va\+\_\+list}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Standard Argument Definition. 
+
+\begin{DoxyAuthor}{Author}
+Zhirui Dai 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2018-\/05-\/27 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{stdarg_8h_a0794d955f9ed9aa1a4c523c8dc020e85}\label{stdarg_8h_a0794d955f9ed9aa1a4c523c8dc020e85}} 
+\index{stdarg.\+h@{stdarg.\+h}!\+\_\+\+I\+N\+T\+S\+I\+Z\+E\+OF@{\+\_\+\+I\+N\+T\+S\+I\+Z\+E\+OF}}
+\index{\+\_\+\+I\+N\+T\+S\+I\+Z\+E\+OF@{\+\_\+\+I\+N\+T\+S\+I\+Z\+E\+OF}!stdarg.\+h@{stdarg.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+I\+N\+T\+S\+I\+Z\+E\+OF}{\_INTSIZEOF}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+N\+T\+S\+I\+Z\+E\+OF(\begin{DoxyParamCaption}\item[{}]{type }\end{DoxyParamCaption})~((sizeof(type) + sizeof(int) -\/ 1) \& $\sim$(sizeof(int) -\/ 1))}
+
+
+
+Calculate the size of type as a multiple of int. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type to calculate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{stdarg_8h_a81ebe6ea6253b0c6618e29de70fe10eb}\label{stdarg_8h_a81ebe6ea6253b0c6618e29de70fe10eb}} 
+\index{stdarg.\+h@{stdarg.\+h}!va\+\_\+arg@{va\+\_\+arg}}
+\index{va\+\_\+arg@{va\+\_\+arg}!stdarg.\+h@{stdarg.\+h}}
+\subsubsection{\texorpdfstring{va\+\_\+arg}{va\_arg}}
+{\footnotesize\ttfamily \#define va\+\_\+arg(\begin{DoxyParamCaption}\item[{}]{ap,  }\item[{}]{type }\end{DoxyParamCaption})~($\ast$(type$\ast$)(ap))}
+
+
+
+Get the value which the pointer points to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ap} & The pointer to the current parameter to get. \\
+\hline
+{\em type} & The type of the current parameter. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{stdarg_8h_acd9b3b9085ec072324c5fdac2b40304e}\label{stdarg_8h_acd9b3b9085ec072324c5fdac2b40304e}} 
+\index{stdarg.\+h@{stdarg.\+h}!va\+\_\+end@{va\+\_\+end}}
+\index{va\+\_\+end@{va\+\_\+end}!stdarg.\+h@{stdarg.\+h}}
+\subsubsection{\texorpdfstring{va\+\_\+end}{va\_end}}
+{\footnotesize\ttfamily \#define va\+\_\+end(\begin{DoxyParamCaption}\item[{}]{ap }\end{DoxyParamCaption})~(ap = (char$\ast$)0)}
+
+
+
+Release the parameter pointer by setting it N\+U\+LL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ap} & The pointer to the function parameter list. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{stdarg_8h_ab23fb3ac0aff18d3c1a09f3df4ebc8b5}\label{stdarg_8h_ab23fb3ac0aff18d3c1a09f3df4ebc8b5}} 
+\index{stdarg.\+h@{stdarg.\+h}!va\+\_\+start@{va\+\_\+start}}
+\index{va\+\_\+start@{va\+\_\+start}!stdarg.\+h@{stdarg.\+h}}
+\subsubsection{\texorpdfstring{va\+\_\+start}{va\_start}}
+{\footnotesize\ttfamily \#define va\+\_\+start(\begin{DoxyParamCaption}\item[{}]{ap,  }\item[{}]{value }\end{DoxyParamCaption})~(ap = (va\+\_\+list)\&value + \mbox{\hyperlink{stdarg_8h_a0794d955f9ed9aa1a4c523c8dc020e85}{\+\_\+\+I\+N\+T\+S\+I\+Z\+E\+OF}}(value))}
+
+
+
+Calculate the beginning of changable parameter list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ap} & The pointer to the parameter list (including fix ) for a function. \\
+\hline
+{\em value} & The type of the value before the changable parameter list. \\
+\hline
+\end{DoxyParams}

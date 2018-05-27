@@ -1,0 +1,22 @@
+# Project path
+PROJECT_PATH = /Users/daizhirui/Development/CamelStudio_Library/Official
+PROJECT_SRC_PATH = $(PROJECT_PATH)/src
+RELEASE_PATH = $(PROJECT_PATH)/release
+
+# Compiler definition
+TARTGET_ADDRESS = 10000000
+DATA_ADDRESS = 01000010
+TOOLCHAINS_DIR = /Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin
+GCC_MIPS = $(TOOLCHAINS_DIR)/mips-netbsd-elf-gcc
+GCC_FLAGS = -EL -DPRT_UART -march=mips1 -std=c99 -fno-builtin -c
+AS_MIPS =  $(TOOLCHAINS_DIR)/mips-netbsd-elf-as
+AS_FLAGS = -EL
+LD_MIPS =  $(TOOLCHAINS_DIR)/mips-netbsd-elf-ld
+LD_FLAGS = -EL -eentry -s -N -Ttext $(TARTGET_ADDRESS) -Tdata $(DATA_ADDRESS) $(if $(RODATA_ADDRESS),--section-start .rodata=$(RODATA_ADDRESS),)
+OBJDUMP_MIPS =  $(TOOLCHAINS_DIR)/mips-netbsd-elf-objdump
+AR_MIPS =  $(TOOLCHAINS_DIR)/mips-netbsd-elf-ar
+AR_FLAGS = rcs
+C_INCLUDE_PATH = $(TOOLCHAINS_DIR)/../include
+LIBRARY_PATH = $(TOOLCHAINS_DIR)/../lib
+CONVERT_MY = /Applications/CamelStudioX.app/Contents/Resources/Developer/Toolchains/convert
+CONVERTER_OPTION = -m
