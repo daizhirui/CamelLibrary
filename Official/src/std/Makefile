@@ -6,20 +6,28 @@ LIBFILE_NAME=$(LIB_NAME:%=lib%.a)
 
 all: $(LIBFILE_NAME)
 
-libstdio.a: stdio_shared.o stdio.o
+libstdio.a: stdio.o
 	$(AR_MIPS) $(AR_FLAGS) $@ $^
 	rm $^
 
-libstdio_fp.a: stdio_shared.c stdio_fp.c
-	$(GCC_MIPS) $(GCC_FLAGS) -G0 -msoft-float -I ../mcu -I ./ -o stdio_shared.o stdio_shared.c;\
+libstdlib.a: stdlib.o
+	$(AR_MIPS) $(AR_FLAGS) $@ $^
+	rm $^
+
+libstdio_fp.a: stdio_fp.c
 	$(GCC_MIPS) $(GCC_FLAGS) -G0 -msoft-float -I ../mcu -I ./ -o stdio_fp.o stdio_fp.c;\
-	$(AR_MIPS) $(AR_FLAGS) $@ stdio_shared.o stdio_fp.o;\
+	$(AR_MIPS) $(AR_FLAGS) $@ stdio_fp.o;\
 	rm *.o
 
 libstdlib_fp.a: stdlib.c stdlib_fp.c
 	$(GCC_MIPS) $(GCC_FLAGS) -G0 -msoft-float -I ../mcu -I ./ -o stdlib.o stdlib.c;\
 	$(GCC_MIPS) $(GCC_FLAGS) -G0 -msoft-float -I ../mcu -I ./ -o stdlib_fp.o stdlib_fp.c;\
 	$(AR_MIPS) $(AR_FLAGS) $@ stdlib.o stdlib_fp.o;\
+	rm *.o
+
+libmath.a: math.c
+	$(GCC_MIPS) $(GCC_FLAGS) -G0 -msoft-float -I ../mcu -I ./ -o math.o math.c;\
+	$(AR_MIPS) $(AR_FLAGS) $@ math.o;\
 	rm *.o
 
 .PHYONE: install
@@ -34,7 +42,3 @@ clean:
 ##############################
 %.o : %.c
 	$(GCC_MIPS) $(GCC_FLAGS) -I ../mcu -I ./ $< -o $@
-
-lib%.a : %.o
-	$(AR_MIPS) $(AR_FLAGS) $@ $<;\
-	rm $^

@@ -42,6 +42,7 @@
 #define RT_UART0_SetCompare(val)   MemoryOr32(UART0_CTL_REG,val<<8)                // set irq compare bits
 #define RT_UART0_ClearIrq()        MemoryWrite32(UART0_IRQ_ACK_REG,0x0)            // clear irq
 #define RT_UART0_RaiseIrq()        MemoryOr32(UART0_CTL_REG,0x1)                   // raise irq manually
+#define RT_UART0_CheckIrq()        MemoryBitAt(UART0_CTL_REG,0)
 /**
  * @brief This function sends 1-byte data by UART0
  * 

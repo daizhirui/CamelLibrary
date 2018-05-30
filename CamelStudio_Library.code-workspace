@@ -6,8 +6,9 @@
 	],
 	"settings": {
 		"files.associations": {
-			"type_traits": "cpp"
+			"type_traits": "cpp",
+			"autouart.h": "c"
 		},
-		"editor.quickSuggestions": false
+		"editor.quickSuggestions": true
 	}
 }

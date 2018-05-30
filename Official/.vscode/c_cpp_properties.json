@@ -9,7 +9,8 @@
                 "limitSymbolsToIncludedHeaders": true
             },
             "includePath": [
-                "${workspaceFolder}/**"
+                "/Users/daizhirui/Development/CamelStudio_Library/Official/release/include",
+                "${workspaceFolder}"
             ],
             "defines": [],
             "macFrameworkPath": [
