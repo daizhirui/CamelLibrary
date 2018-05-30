@@ -1,6 +1,6 @@
 include ../Makefile.compiler
 
-LIB_NAME=m2core
+LIB_NAME=m2core m2core_autoUart
 LIBFILE_NAME=$(LIB_NAME:%=lib%.a)
 
 all: entry.o $(LIBFILE_NAME)
@@ -8,13 +8,16 @@ all: entry.o $(LIBFILE_NAME)
 # entry.o: entry.s
 # 	$(AS_MIPS) $(AS_FLAGS) -o $@ $<
 
-m2core: interrupt.o isr.o
+libm2core.a: interrupt.o isr.o
 	$(AR_MIPS) $(AR_FLAGS) $@ $^;\
-	rm $^
+
+libm2core_autoUart.a: autoUart.o isr.o
+	$(AR_MIPS) $(AR_FLAGS) $@ $^;\
 
 .PHYONE:install
 install:
-	mv lib$(LIB_NAME).a $(PROJECT_PATH)/release/lib
+	cp autoUart.h $(PROJECT_PATH)/release/include
+	mv $(LIBFILE_NAME) $(PROJECT_PATH)/release/lib
 	mv entry.o $(PROJECT_PATH)/release/lib
 
 .PHYONE:clean
@@ -24,11 +27,7 @@ clean:
 
 ##############################
 %.o : %.c
-	$(GCC_MIPS) $(GCC_FLAGS) -I ../mcu -I ./ $< -o $@
+	$(GCC_MIPS) $(GCC_FLAGS) -I ../mcu -I ../UART0 -I ../std -I ./ $< -o $@
 
 %.o : %.s
 	$(AS_MIPS) $(AS_FLAGS) -o $@ $<
-
-lib%.a : interrupt.o isr.o
-	$(AR_MIPS) $(AR_FLAGS) $@ $^;\
-	rm $^
