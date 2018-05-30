@@ -1,7 +1,7 @@
 
 /**
  * @brief M2 micro core unit
- * 
+ *
  * @file mcu.h
  * @author Zhirui Dai
  * @date 2018-05-25
@@ -34,8 +34,8 @@
 #define INT_COUNT            0x01001FF4 //RAM address to store current interrupt depth, number of interrupts
 // External Interrupt
 #define INT_CTL0_REG         0x1f800500 // EX Int enable control and base
-#define INT_CTL1_REG         0x1f800501 // EX Int IRQ bits content read, (m1=03) 
-#define INT_CTL2_REG         0x1f800502 // EX Int high enable 
+#define INT_CTL1_REG         0x1f800501 // EX Int IRQ bits content read, (m1=03)
+#define INT_CTL2_REG         0x1f800502 // EX Int high enable
 #define INT_CLR_REG          0x1f800503 // EX Int IRQ clear  (m1=01)
 // Uart0
 #define UART0_READ_REG       0x1f800000
@@ -115,8 +115,6 @@
 #define RTC_CTL_REG          0x1f800f00
 #define RTC_TIME_REG         0x1f800f01 // time
 #define RTC_CLR_REG          0x1f800f03
-
-
 
 #define DATA_SIZE 256
 
