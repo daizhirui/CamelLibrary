@@ -7,8 +7,8 @@
 // DESCRIPTION:
 // Rev No.: V1.0
 //
-//   
-//   
+//
+//
 //################################################################
 
 #include "mcu.h"
@@ -20,5 +20,3 @@ void interrupt(void)
 	MemoryWrite(USER_INT, 0x1);
 	user_interrupt();
 }
-
-

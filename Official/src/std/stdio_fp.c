@@ -7,8 +7,7 @@
  */
 
 #include <stdarg.h>
-#include <stddef.h>
-#include <math.h>
+#include <soft_fp.h>
 #include <stdio_fp.h>
 #include "stdio_shared.c"
 
@@ -20,14 +19,17 @@
  */
 char* ftoa(float a_fp)
 {
-    itoa((int)a_fp, 10);
-    _strcat(__convertBuffer, ".");               //append decimal point
-    a_fp = FP_Abs(a_fp);
-    int i = (a_fp - (int)a_fp) * 1000000;  //subtract to get the decimals, and multiply by 1000
-    char frac_part[4];
-    itoa(i, 10);                     //convert to a second string
-    _strcat(__convertBuffer, frac_part);          //and append to the first
-    return __convertBuffer;
+    static char buf[33];
+    _memset(buf,33,0);
+    long integer_part = fp_float32_to_int32(a_fp);
+    itoa(integer_part, 10);
+    _strcat(buf,__convertBuffer);
+    _strcat(buf, ".");               //append decimal point
+    a_fp = abs(a_fp);
+    int frac_part = (a_fp - fp_int32_to_float32(integer_part)) * 1000;  //subtract to get the decimals, and multiply by 1000
+    itoa(frac_part, 10);                     //convert to a second string
+    _strcat(buf, __convertBuffer);          //and append to the first
+    return buf;
 }
 
 void _printf(char* buf, const char *format, va_list ap)
@@ -43,30 +45,31 @@ void _printf(char* buf, const char *format, va_list ap)
                     itoa(va_arg(ap, int), 10);
                     _strcat(buf, __convertBuffer);
                     buf += _strlen(buf);
-                    ap = va_next(ap, int); // move to next param
+                    // ap = va_next(ap, int); // move to next param
                     break;
                 }
                 case 'X':
                 case 'x': {
                     itoa(va_arg(ap, int), 16);
                     buf += _strlen(buf);
-                    ap = va_next(ap, int); // move to next param
+                    // ap = va_next(ap, int); // move to next param
                     break;
                 }
                 case 'c': {
-                    *(buf++) = va_arg(ap, char);
-                    ap = va_next(ap, int); // move to next param
+                    *(buf++) = (char)va_arg(ap, int);
+                    // ap = va_next(ap, int); // move to next param
                     break;
                 }
                 case 'f': {
-                    ftoa(va_arg(ap, float));
+                    char* float_str = ftoa(va_arg(ap, double));
+                    _strcat(buf, float_str);
                     buf += _strlen(buf);
                     break;
                 }
                 case 's': {
                     _strcat(buf, va_arg(ap, char*));
                     buf += _strlen(buf);
-                    ap = va_next(ap, char*); // move to next param
+                    // ap = va_next(ap, char*); // move to next param
                     break;
                 }
                 default: {

@@ -8,7 +8,9 @@ TARTGET_ADDRESS = 10000000
 DATA_ADDRESS = 01000010
 TOOLCHAINS_DIR = /Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin
 GCC_MIPS = $(TOOLCHAINS_DIR)/mips-netbsd-elf-gcc
-GCC_FLAGS = -EL -DPRT_UART -march=mips1 -std=c99 -fno-builtin -c
+GXX_MIPS = $(TOOLCHAINS_DIR)/mips-netbsd-elf-g++
+GCC_FLAGS = -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall
+GXX_FLAGS = -EL -DPRT_UART -march=mips1 -c -G0
 AS_MIPS =  $(TOOLCHAINS_DIR)/mips-netbsd-elf-as
 AS_FLAGS = -EL
 LD_MIPS =  $(TOOLCHAINS_DIR)/mips-netbsd-elf-ld
