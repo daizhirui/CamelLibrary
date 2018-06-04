@@ -347,6 +347,26 @@ float fp_float64_to_float32(double a_dfp)
     }
 }
 
+double fp_float64_add(double a_dfp, double b_dfp)
+{
+    return fp_float32_add(fp_float64_to_float32(a_dfp), fp_float64_to_float32(b_dfp));
+}
+
+double fp_float64_sub(double a_dfp, double b_dfp)
+{
+    return fp_float32_sub(fp_float64_to_float32(a_dfp), fp_float64_to_float32(b_dfp));
+}
+
+double fp_float64_mult(double a_dfp, double b_dfp)
+{
+    return fp_float32_mult(fp_float64_to_float32(a_dfp), fp_float64_to_float32(b_dfp));
+}
+
+double fp_float64_div(double a_dfp, double b_dfp)
+{
+    return fp_float32_div(fp_float64_to_float32(a_dfp), fp_float64_to_float32(b_dfp));
+}
+
 //0 iff a==b; 1 iff a>b; -1 iff a<b
 /**
  * @brief Compare two float value.
