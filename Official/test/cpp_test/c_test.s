@@ -7,6 +7,8 @@
 	.text
 	.align	2
 	.globl	user_interrupt
+	.set	nomips16
+	.set	nomicromips
 	.ent	user_interrupt
 	.type	user_interrupt, @function
 user_interrupt:
@@ -25,14 +27,17 @@ user_interrupt:
 	jr	$31
 	nop
 
+	.set	macro
 	.set	reorder
 	.end	user_interrupt
 	.size	user_interrupt, .-user_interrupt
 	.align	2
-	.globl	putchar
-	.ent	putchar
-	.type	putchar, @function
-putchar:
+	.globl	__putchar
+	.set	nomips16
+	.set	nomicromips
+	.ent	__putchar
+	.type	__putchar, @function
+__putchar:
 	.frame	$fp,8,$31		# vars= 0, regs= 1/0, args= 0, gp= 0
 	.mask	0x40000000,-4
 	.fmask	0x00000000,0
@@ -66,13 +71,15 @@ $L3:
 
 	.set	macro
 	.set	reorder
-	.end	putchar
-	.size	putchar, .-putchar
+	.end	__putchar
+	.size	__putchar, .-__putchar
 	.align	2
-	.globl	puts
-	.ent	puts
-	.type	puts, @function
-puts:
+	.globl	__puts
+	.set	nomips16
+	.set	nomicromips
+	.ent	__puts
+	.type	__puts, @function
+__puts:
 	.frame	$fp,24,$31		# vars= 0, regs= 2/0, args= 16, gp= 0
 	.mask	0xc0000000,-4
 	.fmask	0x00000000,0
@@ -95,7 +102,7 @@ $L7:
 	nop
 
 	li	$4,13			# 0xd
-	jal	putchar
+	jal	__putchar
 	nop
 
 $L6:
@@ -107,7 +114,7 @@ $L6:
 	nop
 	andi	$2,$2,0x00ff
 	move	$4,$2
-	jal	putchar
+	jal	__putchar
 	nop
 
 $L5:
@@ -128,8 +135,10 @@ $L5:
 
 	.set	macro
 	.set	reorder
-	.end	puts
-	.size	puts, .-puts
+	.end	__puts
+	.size	__puts, .-__puts
+
+	.comm	i,40,4
 	.rdata
 	.align	2
 $LC0:
@@ -137,8 +146,8 @@ $LC0:
 	.text
 	.align	2
 	.globl	main
-
-
+	.set	nomips16
+	.set	nomicromips
 	.ent	main
 	.type	main, @function
 main:
@@ -151,15 +160,37 @@ main:
 	sw	$31,20($sp)
 	sw	$fp,16($sp)
 	move	$fp,$sp
-$L9:
-	lui	$2,%hi($LC0)
-	addiu	$4,$2,%lo($LC0)
-	jal	puts
-	nop
-
 	b	$L9
 	nop
 
+$L10:
+	lui	$2,%hi($LC0)
+	addiu	$4,$2,%lo($LC0)
+	jal	__puts
+	nop
+
+	lui	$2,%hi(i)
+	lw	$2,%lo(i)($2)
+	nop
+	addiu	$3,$2,1
+	lui	$2,%hi(i)
+	sw	$3,%lo(i)($2)
+$L9:
+	lui	$2,%hi(i)
+	lw	$3,%lo(i)($2)
+	li	$2,1			# 0x1
+	bne	$3,$2,$L10
+	nop
+
+	move	$2,$0
+	move	$sp,$fp
+	lw	$31,20($sp)
+	lw	$fp,16($sp)
+	addiu	$sp,$sp,24
+	jr	$31
+	nop
+
+	.set	macro
 	.set	reorder
 	.end	main
 	.size	main, .-main

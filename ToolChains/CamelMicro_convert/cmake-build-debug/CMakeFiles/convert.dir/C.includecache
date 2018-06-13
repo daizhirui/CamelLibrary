@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/convert.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+

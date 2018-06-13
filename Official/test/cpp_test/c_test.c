@@ -22,7 +22,7 @@ int i[10];
 int main()
 {
     //memset(i,100,0);
-    while(1){
+    while(i[0] - 1 != 0){
         __puts("Hello!");
         //printf("%d\n", i[0]);
         i[0]++;

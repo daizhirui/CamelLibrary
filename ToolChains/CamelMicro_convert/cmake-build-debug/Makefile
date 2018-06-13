@@ -48,10 +48,10 @@ RM = "/Users/daizhirui/Library/Application Support/JetBrains/Toolbox/apps/CLion/
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/daizhirui/Development/CamelMicro_convert
+CMAKE_SOURCE_DIR = /Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/daizhirui/Development/CamelMicro_convert/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/daizhirui/Development/CamelMicro_convert/cmake-build-debug/CMakeFiles /Users/daizhirui/Development/CamelMicro_convert/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles /Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/daizhirui/Development/CamelMicro_convert/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
