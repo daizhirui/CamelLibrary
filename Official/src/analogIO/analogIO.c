@@ -15,34 +15,32 @@
 #include "time.h"
 
 /**
- * @brief
- * This function is used to get the value of ADC_SD.
- * @return int         ADC_SD result
+ * @brief  Get the value of ADC_SD.
+ * @return uint32_t  the result from SD.
  */
-int RT_ADC_SD_Read()
+uint32_t RT_ADC_SD_Read()
 {
-    register int i;
-    MemoryWrite32(AD_CLR_REG, 0);                       //clear ADC to prepare reading
+    register uint32_t i;
+    RT_ADC_SD_On();                             // make sure sd is on.
+    RT_ADC_Clear();                             // clear ADC to prepare reading
     for (i = 0; i < 200; i++)
-        __asm__("nop");                                 //add delay for acc_en up
-    if (!((MemoryRead32(AD_CTL0_REG) >> 6) & 1))        // use SD_WT2READ as trigger source
-        RT_ADC_SD_Start();                              //kick off the ADC read process
-    while (!(MemoryRead32(AD_CTL0_REG) & 0x80000000))
-        ;                                               //check if rdy bit is ok
-    return MemoryRead32(AD_READ_REG) & 0x3ffff;         //read the low 18bit data
+        __asm__("nop");                         // add delay for acc_en up
+    RT_ADC_SD_SetTrigger(SD_TRIG_BY_WT2READ);   // use SD_WT2READ as trigger source
+    RT_ADC_SD_Start();                          // start to accumulate
+    while (!RT_ADC_SD_DataReady());             // check if rdy bit is ok
+    return MemoryRead32(AD_READ_REG) & 0xfffff; // read the low 20bit data
 } // End of ADC_SD_Read
 
 /**
- * @brief
- * This function is used to get the value of ADC_V2P.
- * @return int         ADC_V2P result
+ * @brief  Get the value of ADC_V2P.
+ * @return uint32_t the result from V2P
  */
-int RT_ADC_V2P_Read()
+uint32_t RT_ADC_V2P_Read()
 {
-    int count = 0;
-    int number = 16; //16 times to average
-    int valid = 0;
-    int i = 0;
+    uint32_t count = 0;
+    uint32_t number = 16; //16 times to average
+    uint32_t valid = 0;
+    uint32_t i = 0;
     for (i = 0; i < number; i++)
     {
         int tmp;

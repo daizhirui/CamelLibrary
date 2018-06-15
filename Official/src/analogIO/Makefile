@@ -1,6 +1,6 @@
 include ../Makefile.compiler
 
-LIB_NAME=AFE
+LIB_NAME=analogIO
 LIB_HEADER=$(LIB_NAME:%=%.h)
 LIBFILE_NAME=$(LIB_NAME:%=lib%.a)
 
