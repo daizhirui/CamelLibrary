@@ -1,6 +1,6 @@
 /**
  * @brief Functions for UART0, UART1...
- * 
+ *
  * @file autoUART.h
  * @author Zhirui Dai
  * @date 2018-05-28
@@ -9,7 +9,8 @@
 #ifndef __M2_AUTOUART_H__
 #define __M2_AUTOUART_H__
 
-#include "stddef.h"
+#include <stdbool.h>
+#include <stddef.h>
 
 unsigned char __uartPort;           // Port number of auto-UART
 char* __uartBuffer;                 // Buffer pointer for UART.

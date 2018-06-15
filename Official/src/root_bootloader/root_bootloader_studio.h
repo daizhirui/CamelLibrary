@@ -53,6 +53,34 @@ void _Uart_sync()
             } else if (tmp == 0)
                     start = cnt;
             else {
+<<<<<<< HEAD
+                if (tmp == 0x81) {
+                    start = ((cnt*7)>>3);
+                    end = cnt;
+                } else if (tmp == 0xc1) {
+                    start = ((cnt*3)>>2);
+                    end = ((cnt*7)>>3);
+                } else if (tmp == 0xc0) {
+                    start = ((cnt*5)>>3);
+                    end = ((cnt*3)>>2);
+                } else if (tmp == 0xe0) {
+                    start = ((cnt*5)>>3);
+                    end = ((cnt*3)>>2);
+                } else if (tmp == 0xf0) {
+                    start = (cnt>>1);
+                    end = ((cnt*5)>>3);
+                } else if (tmp == 0xf8) {
+                    start = ((cnt*3)>>3);
+                    end = (cnt>>1);
+                } else if (tmp == 0xfc) {
+                    start = (cnt>>2);
+                    end = ((cnt*3)>>3);
+                } else if (tmp == 0xfe) {
+                    start = (cnt>>3);
+                    end = (cnt>>2);
+                } else
+                    end = (cnt>>2);
+=======
                     if (tmp == 0x81) {
                             start = ((cnt*7)>>3);
                             end = cnt;
@@ -79,6 +107,7 @@ void _Uart_sync()
                             end = (cnt>>2);
                     } else
                             end = (cnt>>2);
+>>>>>>> master
             }
     }
     MemoryWrite32(SYS_GDR_REG, cnt<<1);

@@ -1,0 +1,3 @@
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles/convert.dir

@@ -1,6 +1,6 @@
 /*--------------------------------------------------------------------
  * TITLE: M2 Hardware Definition
- * AUTHOR: John & Jack 
+ * AUTHOR: John & Jack
  * DATE CREATED: 2017/11/1
  * FILENAME: string.c
  * PROJECT: M2Library
@@ -62,8 +62,7 @@ char * strcat(char *dest, const char * src)
     char *ret = dest;
     while (*dest)
         dest++;
-    while (*dest++ = *src++)
-        ;
+    while (*src) *dest++ = *src++;
     return ret;
 }
 char * strncat(char *dest, const char * src, size_t n)
@@ -100,8 +99,7 @@ int strncmp(const char * s1, const char * s2, size_t n)
 char * strcpy(char * dest, const char * src)
 {
     char *ret = dest;
-    while (*dest++ = *src++)
-        ;
+    while (*src) *dest++ = *src++;
     return ret;
 }
 char * strncpy(char * dest, const char * src, size_t n)
@@ -110,7 +108,8 @@ char * strncpy(char * dest, const char * src, size_t n)
     do {
         if (!n--)
             return ret;
-    } while (*dest++ = *src++);
+        *dest = *src++;
+    } while (*dest++);
     while (n--)
         *dest++ = 0;
     return ret;

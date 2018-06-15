@@ -1,0 +1,162 @@
+The system is: Darwin - 17.6.0 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is AppleClang, found in "/Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a6dd7/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_a6dd7.dir/build.make CMakeFiles/cmTC_a6dd7.dir/build
+Building C object CMakeFiles/cmTC_a6dd7.dir/testCCompiler.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -o CMakeFiles/cmTC_a6dd7.dir/testCCompiler.c.o   -c /Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_a6dd7
+"/Users/daizhirui/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/CLion.app/Contents/bin/cmake/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_a6dd7.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_a6dd7.dir/testCCompiler.c.o  -o cmTC_a6dd7 
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a6baa/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_a6baa.dir/build.make CMakeFiles/cmTC_a6baa.dir/build
+Building C object CMakeFiles/cmTC_a6baa.dir/CMakeCCompilerABI.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -o CMakeFiles/cmTC_a6baa.dir/CMakeCCompilerABI.c.o   -c "/Users/daizhirui/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/CLion.app/Contents/bin/cmake/share/cmake-3.10/Modules/CMakeCCompilerABI.c"
+Linking C executable cmTC_a6baa
+"/Users/daizhirui/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/CLion.app/Contents/bin/cmake/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_a6baa.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_a6baa.dir/CMakeCCompilerABI.c.o  -o cmTC_a6baa 
+Apple LLVM version 9.1.0 (clang-902.0.39.2)
+Target: x86_64-apple-darwin17.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_a6baa -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_a6baa.dir/CMakeCCompilerABI.c.o -L/usr/include -L/usr/local/include -L. -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-351.8
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+Library search paths:
+	/usr/include
+	/usr/local/include
+	.
+	/usr/lib
+	/usr/local/lib
+Framework search paths:
+	/Library/Frameworks/
+	/System/Library/Frameworks/
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a6baa/fast"]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_a6baa.dir/build.make CMakeFiles/cmTC_a6baa.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_a6baa.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -o CMakeFiles/cmTC_a6baa.dir/CMakeCCompilerABI.c.o   -c "/Users/daizhirui/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/CLion.app/Contents/bin/cmake/share/cmake-3.10/Modules/CMakeCCompilerABI.c"]
+  ignore line: [Linking C executable cmTC_a6baa]
+  ignore line: ["/Users/daizhirui/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/CLion.app/Contents/bin/cmake/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_a6baa.dir/link.txt --verbose=1]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_a6baa.dir/CMakeCCompilerABI.c.o  -o cmTC_a6baa ]
+  ignore line: [Apple LLVM version 9.1.0 (clang-902.0.39.2)]
+  ignore line: [Target: x86_64-apple-darwin17.6.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_a6baa -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_a6baa.dir/CMakeCCompilerABI.c.o -L/usr/include -L/usr/local/include -L. -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/lib/darwin/libclang_rt.osx.a]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> ignore, skip following value
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.13.0] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_a6baa] ==> ignore
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_a6baa.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-L/usr/include] ==> dir [/usr/include]
+    arg [-L/usr/local/include] ==> dir [/usr/local/include]
+    arg [-L.] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/usr/include;/usr/local/include;.;/usr/lib;/usr/local/lib]
+  Framework search paths: [;/Library/Frameworks/;/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/usr/include] ==> [/usr/include]
+  collapse library dir [/usr/local/include] ==> [/usr/local/include]
+  collapse library dir [/usr/include] ==> [/usr/include]
+  collapse library dir [/usr/local/include] ==> [/usr/local/include]
+  collapse library dir [.] ==> [/Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse framework dir [/Library/Frameworks/] ==> [/Library/Frameworks]
+  collapse framework dir [/System/Library/Frameworks/] ==> [/System/Library/Frameworks]
+  implicit libs: []
+  implicit dirs: [/usr/include;/usr/local/include;/Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert;/usr/lib;/usr/local/lib]
+  implicit fwks: [/Library/Frameworks;/System/Library/Frameworks]
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1fcb5/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_1fcb5.dir/build.make CMakeFiles/cmTC_1fcb5.dir/build
+Building C object CMakeFiles/cmTC_1fcb5.dir/feature_tests.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_1fcb5.dir/feature_tests.c.o   -c /Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_1fcb5
+"/Users/daizhirui/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/CLion.app/Contents/bin/cmake/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_1fcb5.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_1fcb5.dir/feature_tests.c.o  -o cmTC_1fcb5 
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_98768/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_98768.dir/build.make CMakeFiles/cmTC_98768.dir/build
+Building C object CMakeFiles/cmTC_98768.dir/feature_tests.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_98768.dir/feature_tests.c.o   -c /Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_98768
+"/Users/daizhirui/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/CLion.app/Contents/bin/cmake/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_98768.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_98768.dir/feature_tests.c.o  -o cmTC_98768 
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_66da9/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_66da9.dir/build.make CMakeFiles/cmTC_66da9.dir/build
+Building C object CMakeFiles/cmTC_66da9.dir/feature_tests.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_66da9.dir/feature_tests.c.o   -c /Users/daizhirui/Development/CamelStudio_Library/ToolChains/CamelMicro_convert/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_66da9
+"/Users/daizhirui/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/CLion.app/Contents/bin/cmake/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_66da9.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_66da9.dir/feature_tests.c.o  -o cmTC_66da9 
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros

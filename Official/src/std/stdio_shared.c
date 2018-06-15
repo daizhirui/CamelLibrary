@@ -8,12 +8,46 @@
 
 #include <mcu.h>
 #include <stdarg.h>
-#include <stddef.h>
+#include <stdint.h>
+#include <stdbool.h>
 
 static char __convertBuffer[33];
 static char __printfBuffer[128];
 
 void _printf(char* buf, const char *format, va_list ap);
+
+
+// Initialize a memory segment.
+void _memset(char* ptr, unsigned int size, char value)
+{
+    while (size) {
+        *ptr++ = value;
+        size--;
+    }
+}
+
+// connect src to the end of dest.
+char * _strcat(char *dest, const char * src)
+{
+    char *ret = dest;
+    while (*dest)
+        dest++;
+    while (*src) *dest++ = *src++;
+    return ret;
+}
+
+// calculate the length of str.
+unsigned int _strlen(const char * str)
+{
+    register int n;
+    n = 0;
+    register char * tmp = (char *)str;
+    while (*tmp) {
+        n++;
+        tmp++;
+    }
+    return n;
+}
 
 /**
  * @brief Print a character to uart0.
@@ -133,6 +167,7 @@ char* itoa(int value, unsigned int base)
     char* start = __convertBuffer;
     char* end = __convertBuffer;
     char tmp;
+    _memset(__convertBuffer,33,0);
 
     if (value < 0 && base == 10) {  // Check '-' sign.
         *(end++) = '-';
@@ -151,39 +186,6 @@ char* itoa(int value, unsigned int base)
         *end = tmp;
     }
     return __convertBuffer;
-}
-
-// Initialize a memory segment.
-void _memset(char* ptr, unsigned int size, char value)
-{
-    while (size) {
-        *ptr++ = value;
-        size--;
-    }
-}
-
-// connect src to the end of dest.
-char * _strcat(char *dest, const char * src)
-{
-    char *ret = dest;
-    while (*dest)
-        dest++;
-    while (*dest++ = *src++)
-        ;
-    return ret;
-}
-
-// calculate the length of str.
-unsigned int _strlen(const char * str)
-{
-    register int n;
-    n = 0;
-    register char * tmp = (char *)str;
-    while (*tmp) {
-        n++;
-        tmp++;
-    }
-    return n;
 }
 
 /**

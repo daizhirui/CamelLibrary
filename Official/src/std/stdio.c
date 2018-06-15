@@ -24,7 +24,7 @@ void _printf(char* buf, const char *format, va_list ap)
                     itoa(va_arg(ap, int), 10);
                     _strcat(buf, __convertBuffer);
                     buf += _strlen(buf);
-                    ap = va_next(ap, int); // move to next param
+                    // ap = va_next(ap, int); // move to next param
                     break;
                 }
                 case 'X':
@@ -32,12 +32,12 @@ void _printf(char* buf, const char *format, va_list ap)
                     itoa(va_arg(ap, int), 16);
                     _strcat(buf, __convertBuffer);
                     buf += _strlen(buf);
-                    ap = va_next(ap, int); // move to next param
+                    // ap = va_next(ap, int); // move to next param
                     break;
                 }
                 case 'c': {
-                    *(buf++) = va_arg(ap, char);
-                    ap = va_next(ap, char); // move to next param
+                    *(buf++) = (char)va_arg(ap, int);
+                    // ap = va_next(ap, char); // move to next param
                     break;
                 }
                 case 'f': {
@@ -46,7 +46,7 @@ void _printf(char* buf, const char *format, va_list ap)
                 case 's': {
                     _strcat(buf, va_arg(ap, char*));
                     buf += _strlen(buf);
-                    ap = va_next(ap, char*); // move to next param
+                    // ap = va_next(ap, char*); // move to next param
                     break;
                 }
                 default: {

@@ -1,6 +1,6 @@
 /**
  * @brief Standard Library for M2
- * 
+ *
  * @file stdlib.c
  * @author Zhirui Dai
  * @date 2018-05-27
@@ -9,11 +9,11 @@
 #ifndef __M2_STDLIB_H__
 #define __M2_STDLIB_H__
 
-#include <stddef.h>
+#include <stdbool.h>
 
 /**
  * @brief Convert a string (hexadecimal) to an integer value.
- * 
+ *
  * @param str  String (hexadecimal) to be converted to an integer.
  * @return unsigned long  An unsigned long integer.
  */
@@ -37,7 +37,7 @@ unsigned long xtoi(const char* str)
 
 /**
  * @brief Convert a string (decimal) to an integer value.
- * 
+ *
  * @param str  String (decimal) to be converted to an integer.
  * @return long  A long integer.
  */

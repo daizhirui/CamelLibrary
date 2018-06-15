@@ -1,6 +1,6 @@
 include Makefile.compiler
 
-LIBRARY_NAME = AFE boot LCD mcu SPI std string time UART0 UART0_Lin UART1 UART1_Lin 
+LIBRARY_NAME = analogIO boot LCD mcu SPI std string time UART0 UART0_Lin UART1 UART1_Lin soft_fp DES
 TARGET_NAME = $(LIBRARY_NAME:%=lib%.a)
 #libAFE.a libCORE.a libLCD.a libtime.a libUART0.a libUART1.a libUARTx.a libUART0_Lin.a libUART1_Lin.a libSPI.a libstr.a libstring.a libextend_str.a libprobe.a
 
@@ -30,6 +30,22 @@ build_test: build_test.c
 .PHYONE: install
 install:
 	cp ./*.h $(RELEASE_PATH)/include
+
+CAMELSTUDIOX_LIB_PATH=/Users/daizhirui/Development/CamelStudioX_Mac/CamelStudioX/Developer/OfficialLibrary
+
+.PHYONE: install_to_studio
+install_to_studio:
+	rm $(CAMELSTUDIOX_LIB_PATH)/include/M2/*;\
+	rm $(CAMELSTUDIOX_LIB_PATH)/lib/M2/*;\
+	cp $(RELEASE_PATH)/include/* $(CAMELSTUDIOX_LIB_PATH)/include/M2/;\
+	cp $(RELEASE_PATH)/lib/* $(CAMELSTUDIOX_LIB_PATH)/lib/M2/;\
+
+.PHYONE: make_and_install
+make_and_install:
+	make clean;\
+	make 2>&1 >make_log.txt;\
+	make install;\
+	make install_to_studio;\
 
 .PHONY:clean
 clean:
