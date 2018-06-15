@@ -19,7 +19,7 @@ Simply setup SD with specific sample rate and ad width.
 - Definition
 
 ```C
-RT_ADC_SD_Setup(sampleRate, adWidth, triggerSource);
+void RT_ADC_SD_Setup(sampleRate, adWidth, triggerSource);
 ```
 
 - Parameter
@@ -34,7 +34,7 @@ Set the sample rate of SD.
 - Definition
 
 ```C
-RT_ADC_SD_SetSampleRate(mode);
+void RT_ADC_SD_SetSampleRate(mode);
 ```
 
 - Parameter
@@ -47,7 +47,7 @@ Set the length of the result. This length decides the result precision.
 - Definition
 
 ```C
-RT_ADC_SD_SetAdWidth(mode)
+void RT_ADC_SD_SetAdWidth(mode)
 ```
 
 - Parameter:
@@ -60,7 +60,7 @@ Set the source to trig sampling.
 - Definition
 
 ```C
-RT_ADC_SD_SetTrigger(source);
+void RT_ADC_SD_SetTrigger(source);
 ```
 
 - Parameter:
@@ -73,7 +73,7 @@ Turn on SD and trig df accumulation. When the accumulation is completed, SD irq 
 - Definition
 
 ```C
-RT_ADC_SD_Start();
+void RT_ADC_SD_Start();
 ```
 
 #### RT_ADC_SD_Read
@@ -91,7 +91,7 @@ Check is the accumulation is completed.
 - Definition
 
 ```C
-RT_ADC_SD_DataReady();
+void RT_ADC_SD_DataReady();
 ```
 
 #### RT_ADC_Clear
@@ -100,7 +100,7 @@ Clear SD.
 - Definition
 
 ```C
-RT_ADC_Clear();
+void RT_ADC_Clear();
 ```
 
 ### Amplifier (OPO)
