@@ -228,47 +228,58 @@ DES_Key* DES_generateSubKeys(const DES_Key originalKey)
  */
 uint32_t __calculate_R_part__(MessageData lastItem, DES_Key key)
 {
-    uint32_t r_part = 0x0;
+    register uint32_t r_part = 0x0;
     MessageData temp;
     temp.data = 0x0;
 
-    uint8_t index, bit, pos, i, j;
-    for (index = 0; index < 48; index++) {  // expand R part of lastItem from 32bit to 48bit
+    register uint32_t index, bit, pos, i, j;
+    // expand R part of lastItem from 32bit to 48bit
+    for (index = 0; index < 16; index++) {  // high 16 bits
         pos = __E_BIT_SELECTION_TABLE__[index];
-        bit = __getBitAt__(__R_part__(lastItem), pos);
-        if (index < 16) {
-            __high32__(temp) <<= 1;
-            __high32__(temp) |= bit;
-        } else {
-            __low32__(temp) <<= 1;
-            __low32__(temp) |= bit;
-        }
+        __high32__(temp) <<= 1;
+        __high32__(temp) |= __getBitAt__(__R_part__(lastItem), pos);
+    }
+    for (index = 16; index < 48; index++) { // low 32 bits
+        pos = __E_BIT_SELECTION_TABLE__[index];
+        __low32__(temp) <<= 1;
+        __low32__(temp) |= __getBitAt__(__R_part__(lastItem), pos);
     }
     __low32__(temp) ^= __low32__(key);      // XOR with the key, low32
     __high32__(temp) ^= __high32__(key);    // XOR with the key, high32
     __high32__(temp) &= 0xFFFF;             // make sure high 16bit of high32 part is 0x0.
-    for (index = 0; index < 8; index++) {   // compress R part from 48bit to 32bit by S_TABLE
-        if (index < 2) {
-            bit = (__high32__(temp) & (0x3F << ((1 - index) * 6 + 4))) >> ((1 - index) * 6 + 4);
-        }
-        else if (index == 2) {
-            bit = ((__high32__(temp) & 0xF) << 2) | (__low32__(temp) >> 30);
-        }
-        else {
-            bit = (__low32__(temp) & (0x3F << ((7 - index) * 6))) >> ((7 - index) * 6);
-        }
+    // index = 0
+    bit = (__high32__(temp) & (0x3F << 10)) >> 10;
+    i = (((bit & 0x20) >> 4) | (bit & 0x1));
+    j = (bit & 0x1e) >> 1;
+    r_part <<= 4;
+    r_part |= (__S_TABLE__[0][i][j] & 0xF);
+    // index = 1
+    bit = (__high32__(temp) & (0x3F << 4)) >> 4;
+    i = (((bit & 0x20) >> 4) | (bit & 0x1));
+    j = (bit & 0x1e) >> 1;
+    r_part <<= 4;
+    r_part |= (__S_TABLE__[1][i][j] & 0xF);
+    // index = 2
+    bit = ((__high32__(temp) & 0xF) << 2) | (__low32__(temp) >> 30);
+    i = (((bit & 0x20) >> 4) | (bit & 0x1));
+    j = (bit & 0x1e) >> 1;
+    r_part <<= 4;
+    r_part |= (__S_TABLE__[2][i][j] & 0xF);
+    // index >= 3
+    for (index = 3, pos = 24; index < 8; index++, pos -= 6) {   // compress R part from 48bit to 32bit by S_TABLE
+        bit = (__low32__(temp) & (0x3F << pos)) >> pos;
         i = (((bit & 0x20) >> 4) | (bit & 0x1));
         j = (bit & 0x1e) >> 1;
         r_part <<= 4;
         r_part |= (__S_TABLE__[index][i][j] & 0xF);
     }
+    // P
     __R_part__(temp) = r_part;
     r_part = 0x0;               // clear part
     for (index = 0; index < 32; index++) {
         pos = __PERMUTATION_P_TABLE__[index];
-        bit = __getBitAt__(__R_part__(temp), pos);
         r_part <<= 1;
-        r_part |= bit;
+        r_part |= __getBitAt__(__R_part__(temp), pos);
     }
     r_part ^= __L_part__(lastItem);   // XOR L(n-1)
     return r_part;
@@ -282,26 +293,29 @@ uint32_t __calculate_R_part__(MessageData lastItem, DES_Key key)
 */
 MessageData DES_process(MessageData originalData, DES_Key* subKeys, uint8_t mode)
 {
-    uint8_t index, bit, pos, keyIndex;
+    register uint32_t index, pos;
     MessageData output, temp;
     // Initialize output and temp.
     output.data = 0x0;
     temp.data = 0x0;
 
     // Generate initial permuted data
-    for (index = 0; index < 64; index++) {
+    for (index = 0; index < 32; index++) {  // high 32 bits
         pos = __permuted_message_table_IP__[index];
+        __L_part__(temp) <<= 1;
         if (pos < 32) { // get bit from low32
-            bit = __getBitAt__(__low32__(originalData), pos);
+            __L_part__(temp) |= __getBitAt__(__low32__(originalData), pos);
         } else {    // get bit from high32
-            bit = __getBitAt__(__high32__(originalData), pos - 32);
+            __L_part__(temp) |= __getBitAt__(__high32__(originalData), pos - 32);
         }
-        if (index < 32) {
-            __L_part__(temp) <<= 1;
-            __L_part__(temp) |= bit;
-        } else {
-            __R_part__(temp) <<= 1;
-            __R_part__(temp) |= bit;
+    }
+    for (index = 32; index < 64; index++) { // low 32 bits
+        pos = __permuted_message_table_IP__[index];
+        __R_part__(temp) <<= 1;
+        if (pos < 32) { // get bit from low32
+            __R_part__(temp) |= __getBitAt__(__low32__(originalData), pos);
+        } else {    // get bit from high32
+            __R_part__(temp) |= __getBitAt__(__high32__(originalData), pos - 32);
         }
     }
 
@@ -310,35 +324,41 @@ MessageData DES_process(MessageData originalData, DES_Key* subKeys, uint8_t mode
     // mode = ENCRYPT_MODE = 0x0: L(n) = R(n-1), R(n) = L(n-1) + f(R(n-1), subKey(n))
     // mode = DECRYPT_MODE = 0x1: L(n) = R(n-1), R(n) = L(n-1) + f(R(n-1), subKey(17-n))
     // MessageData.apart[0] = R part, MessageData.apart[1] = L part
-    for (index = 1; index < 17; index++) {  // Iteration of L part and R part
-        if (mode == DES_DECRYPT_MODE) { // Decrypt mode
-            keyIndex = 17 - index;
-        } else {    // Encrypt mode
-            keyIndex = index;
+    if (mode == DES_DECRYPT_MODE) { // Decrypt mode
+        for (index = 1; index < 17; index++) {  // Iteration of L part and R part
+            __L_part__(output) = __R_part__(temp);
+            __R_part__(output) = __calculate_R_part__(temp, subKeys[17 - index]);
+            temp = output;
         }
-        __L_part__(output) = __R_part__(temp);
-        __R_part__(output) = __calculate_R_part__(temp, subKeys[keyIndex]);
-        temp = output;
+    } else {    // Encrypt mode
+        for (index = 1; index < 17; index++) {  // Iteration of L part and R part
+            __L_part__(output) = __R_part__(temp);
+            __R_part__(output) = __calculate_R_part__(temp, subKeys[index]);
+            temp = output;
+        }
     }
 
     // exchange L part and R part.
     __L_part__(temp) = __R_part__(output);
     __R_part__(temp) = __L_part__(output);
-    output.data = 0x0;                      // clear output
+    output.data = 0x0;   // clear output
     // final permutation by P-1 table
-    for (index = 0; index < 64; index ++) {
+    for (index = 0; index < 32; index ++) {     // high 32 bits
         pos = __PERMUTATION_P_1_TABLE__[index];
+        __high32__(output) <<= 1;
         if (pos < 32) { // get bit from low32
-            bit = __getBitAt__(__low32__(temp), pos);
+            __high32__(output) |= __getBitAt__(__low32__(temp), pos);
         } else {    // get bit from high32
-            bit = __getBitAt__(__high32__(temp), pos - 32);
+            __high32__(output) |= __getBitAt__(__high32__(temp), pos - 32);
         }
-        if (index < 32) {
-            __high32__(output) <<= 1;
-            __high32__(output) |= bit;
-        } else {
-            __low32__(output) <<= 1;
-            __low32__(output) |= bit;
+    }
+    for (index = 32; index < 64; index ++) {    // low 32 bits
+        pos = __PERMUTATION_P_1_TABLE__[index];
+        __low32__(output) <<= 1;
+        if (pos < 32) { // get bit from low32
+            __low32__(output) |= __getBitAt__(__low32__(temp), pos);
+        } else {    // get bit from high32
+            __low32__(output) |= __getBitAt__(__high32__(temp), pos - 32);
         }
     }
     return output;

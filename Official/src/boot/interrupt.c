@@ -14,6 +14,7 @@
 #include "mcu.h"
 
 void user_interrupt(void);
+void before_user_interrupt(void);
 void interrupt(void)
 {
 	//go to handler @0x10000008

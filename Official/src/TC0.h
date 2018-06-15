@@ -30,10 +30,10 @@
 /****************** end*******************/
 
 /****************** Timer ******************/
-#define TC0_TimerOn() MemoryOr32(T0_CTL0_REG, 1 << 1)
-#define TC0_TimerOff() MemoryAnd32(T0_CTL0_REG, ~(1 << 1))
+#define RT_TC0_TimerOn() MemoryOr32(T0_CTL0_REG, 1 << 1)
+#define RT_TC0_TimerOff() MemoryAnd32(T0_CTL0_REG, ~(1 << 1))
 /**
- * @brief 
+ * @brief
  * This function sets the timer function of TC0
  * @param T         the target time to reach
  * @param irq       when ON, the interrupt is enabled; when OFF, disabled
@@ -42,7 +42,7 @@
 #define RT_TC0_TimerSet1us(T, irq)                        \
     {                                                  \
         MemoryAnd32(T0_CTL0_REG, ~(1 << 7));           \
-        MemoryWrite32(T0_CLK_REG, T / 81);             \
+        MemoryWrite32(T0_CLK_REG, T / 81 + 1);         \
         MemoryWrite32(T0_REF_REG, 243 * T / (T + 81)); \
         MemoryOr32(T0_CTL0_REG, (0x02 | (irq << 7)));  \
         MemoryOr32(SYS_CTL0_REG, irq);                 \
@@ -52,7 +52,7 @@
 // What is counter? frequency counter? --Astro, 2017/11/3
 //??????????????????????????????????????????????
 /**
- * @brief 
+ * @brief
  * This function sets the frequency counter of TC0
  * The base frequency of the counter is 45Hz
  * @param n     times of 45Hz
@@ -70,7 +70,7 @@
 #define RT_TC0_EcntOn() MemoryOr32(T0_CTL0_REG, 1)
 #define RT_TC0_EcntOff() MemoryAnd32(T0_CTL0_REG, ~1)
 /**
- * @brief 
+ * @brief
  * This function sets the ECNT function of TC0
  * @param n         the target value to reach
  * @param trigger   the trigger mode, RISING or FALLING
@@ -88,12 +88,12 @@
 #define RT_TC0_PWMOn() MemoryOr32(T0_CTL0_REG, 1 << 4)
 #define RT_TC0_PWMOff() MemoryAnd32(T0_CTL0_REG, ~(1 << 4))
 /**
- * @brief 
+ * @brief
  * This function sets the PWM function of TC0
  * @param div       the clock freq divider
  * @param ref       0-255, the clock high length
  * @param irq       when ON, the interrupt is enabled; when OFF, disabled
- * @return          void 
+ * @return          void
  */
 #define RT_TC0_SetPWM(div, ref, irq)                                  \
     {                                                              \
@@ -112,11 +112,11 @@
         MemoryOr32(T0_CTL0_REG, mode << 2);  \
     }
 /**
- * @brief 
+ * @brief
  * This function sets the Pulse width measure for TC0
  * @param trigger   the trigger mode, RISING or FALLING
  * @param irq       when ON, the interrupt is enabled; when OFF, disabled
- * @return          void 
+ * @return          void
  */
 #define RT_TC0_SetPWMM(trigger, irq)                                   \
     {                                                               \
