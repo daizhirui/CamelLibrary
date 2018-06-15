@@ -40,6 +40,7 @@ var mcu_8h =
     [ "RISING", "mcu_8h.html#aeea2b49478f3b13faedba764985c6e96", null ],
     [ "RT_SYSINT_En", "mcu_8h.html#a3a5a4fd26771545cf945f34fa520e83f", null ],
     [ "RT_SYSINT_Flag", "mcu_8h.html#a5b5c7263f32d6555951bedb9222f9c25", null ],
+    [ "RT_SYSINT_Off", "mcu_8h.html#a9c68b82296205323f01358d9a27813a9", null ],
     [ "RT_SYSINT_On", "mcu_8h.html#a19ec160c158f3f3531745d431e19bc24", null ],
     [ "RTC_12HOUR", "mcu_8h.html#a6023ebffc90fff4ba8131242c8f4e1ed", null ],
     [ "RTC_24HOUR", "mcu_8h.html#a4bb66ada65a9c9df51dd50402f75e35e", null ],

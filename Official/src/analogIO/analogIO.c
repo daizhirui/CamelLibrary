@@ -1,22 +1,17 @@
-/*--------------------------------------------------------------------
- * TITLE: M2 Hardware Definition
- * AUTHOR: Astro
- * DATE CREATED: 2017/11/2
- * FILENAME: AFE.c
- * PROJECT: M2Library
- * COPYRIGHT: Camel Microelectronics, Ltd.
- * DESCRIPTION:
- *         Analog Module Library
- *         2017/11/3    updated from V2017.07.15
- *--------------------------------------------------------------------*/
-
+/**
+* @file analogIO.c
+* @author Zhirui Dai
+* @date 15 Jun 2018
+* @copyright 2018 Zhirui
+* @brief Analog Input Output Library for M2
+*/
 #include "analogIO.h"
 #include "TC0.h"
 #include "time.h"
 
 /**
- * @brief  Get the value of ADC_SD.
- * @return uint32_t  the result from SD.
+ * @brief           Get the result of SD.
+ * @return uint32_t SD result.
  */
 uint32_t RT_ADC_SD_Read()
 {
@@ -32,8 +27,8 @@ uint32_t RT_ADC_SD_Read()
 } // End of ADC_SD_Read
 
 /**
- * @brief  Get the value of ADC_V2P.
- * @return uint32_t the result from V2P
+ * @brief           Get the result of V2P.
+ * @return int      V2P result.
  */
 uint32_t RT_ADC_V2P_Read()
 {

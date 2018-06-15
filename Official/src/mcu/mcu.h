@@ -1,7 +1,5 @@
-
 /**
  * @brief M2 micro core unit
- *
  * @file mcu.h
  * @author Zhirui Dai
  * @date 2018-05-25
@@ -11,11 +9,20 @@
 #define __M2_MCU__
 
 /**
- * @brief Value definition
+ * @brief Keyword ON.
  */
 #define ON      0x1
+/**
+ * @breif Keyword OFF.
+ */
 #define OFF     0x0
+/**
+ * @breif Keyword RISING.
+ */
 #define RISING  0x1
+/**
+ * @breif Keyword FALLING.
+ */
 #define FALLING 0x0
 #define RTC_12HOUR 0x1
 #define RTC_24HOUR 0x3

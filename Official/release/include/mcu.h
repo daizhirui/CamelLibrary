@@ -1,7 +1,5 @@
-
 /**
  * @brief M2 micro core unit
- *
  * @file mcu.h
  * @author Zhirui Dai
  * @date 2018-05-25

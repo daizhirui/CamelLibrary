@@ -1,143 +1,144 @@
 # Analog Input Output Library for M2
 
-## Interface
-
-### Sigma Delta Converter (SD) of Analog Digit Converter (ADC)
-
-#### RT_ADC_SD_On
-
-Turn on SD.
-
-- Definition
-
-```C
-void RT_ADC_SD_On();
-```
-
-#### RT_ADC_SD_Off
-
-Turn off SD.
-
-- Definition
-
-```C
-void RT_ADC_SD_Off();
-```
-
-#### RT_ADC_SD_Setup
-
-Simply setup SD with specific sample rate and ad width.
-
-- Definition
-
-```C
-void RT_ADC_SD_Setup(sampleRate, adWidth, triggerSource);
-```
-
-- Parameter
-    - sampleRate: The sample rate, decided by the clock frequency, `SD_CLK_3M`, `SD_CLK_1_5M`, `SD_CLK_781K` or `SD_CLK_390K`.
-    - adWidth: The length of a result, `SD_14BIT`, `SD_16BIT`, `SD_18BIT` or `SD_20BIT`. This decides the precision of the result.
-    - triggerSource: The source to trig sampling, `SD_TRIG_BY_TC0PWM` or `SD_TRIG_BY_WT2READ`.
-
-#### RT_ADC_SD_SetSampleRate
-
-Set the sample rate of SD.
-
-- Definition
-
-```C
-void RT_ADC_SD_SetSampleRate(mode);
-```
-
-- Parameter
-    - mode: The sample rate, decided by the clock frequency, `SD_CLK_3M`, `SD_CLK_1_5M`, `SD_CLK_781K` or `SD_CLK_390K`.
-
-#### RT_ADC_SD_SetAdWidth
-
-Set the length of the result. This length decides the result precision.
-
-- Definition
-
-```C
-void RT_ADC_SD_SetAdWidth(mode);
-```
-
-- Parameter:
-    - mode: The length of a result, `SD_14BIT`, `SD_16BIT`, `SD_18BIT` or `SD_20BIT`.
-
-#### RT_ADC_SD_SetTrigger
-
-Set the source to trig sampling.
-
-- Definition
-
-```C
-void RT_ADC_SD_SetTrigger(source);
-```
-
-- Parameter:
-    - source: The source to trig sampling, `SD_TRIG_BY_TC0PWM` or `SD_TRIG_BY_WT2READ`.
-
-#### RT_ADC_SD_Start
-
-Turn on SD and trig df accumulation. When the accumulation is completed, SD irq flag will be raised.
-
-- Definition
-
-```C
-void RT_ADC_SD_Start();
-```
-
-#### RT_ADC_SD_Read
-Read the result of SD when it is ready.
-
-- Definition
-
-```C
-uint32_t RT_ADC_SD_Read();
-```
-
-#### RT_ADC_SD_DataReady
-Check is the accumulation is completed.
-
-- Definition
-
-```C
-void RT_ADC_SD_DataReady();
-```
-
-#### RT_ADC_Clear
-Clear SD.
-
-- Definition
+## Analog Digit Converter
 
 ```C
 void RT_ADC_Clear();
 ```
 
-### Amplifier (OPO)
+## Amplifier (OPO)
 
-#### RT_OPO_On
-#### RT_OPO_Off
-#### RT_OPO_SetChannel
-#### RT_OPO_SetSingleSideMode
-#### RT_OPO_SetDifferentialMode
-#### RT_OPO_SetAmplification
-#### RT_OPO_SetPsideFeedback
-#### RT_OPO_SetPNExchange
-#### RT_OPO_SetShort
-#### RT_OPO_SetBypass
-#### RT_OPO_SetPsideGND
+```C
+void RT_OPO_On();
 
+void RT_OPO_Off();
 
-### Voltage To Pulse Width (V2P)
+void RT_OPO_SetChannel(ch0, ch1, ch2, ch3);
 
-#### RT_ADC_V2P_On
-#### RT_ADC_V2P_Off
-#### RT_ADC_V2P_SetRes
-#### RT_ADC_V2P_Read
+void RT_OPO_SetAmplification(Pin, Pgain, Nin, Ngain);
 
-### Internal Temperature Sensor
+void RT_OPO_SetPsideFeedback(mode);
 
-#### RT_ADC_TemperatureSensorOn
-#### RT_ADC_TemperatureSensorOff
+void RT_OPO_ExchangeChannelPin(switch);
+
+void RT_OPO_SelectChannelPin(pin);
+
+void RT_OPO_SetSingleSideMode(ch0, ch1, ch2, ch3, pin);
+
+void RT_OPO_SetDifferentialMode(ch0, ch1, ch2, ch3, exchange);
+
+void RT_OPO_SetShort(mode);
+
+void RT_OPO_SetBypass(mode);
+
+void RT_OPO_SetVPGND(op);
+```
+
+### Example
+
+```C
+#include "analogIO.h"
+
+void Example_OPO_SingleSide()
+{
+    RT_OPO_SetSingleSideMode(ON, OFF, OFF, OFF, OPO_PSIDE);
+    // 20-time amplification
+    RT_OPO_SetAmplification(OPO_PIN_RESISTOR_1K, OPO_GAIN_20K, \
+                            OPO_PIN_RESISTOR_1K, OPO_GAIN_20K);
+    RT_ADC_Clear();
+    RT_OPO_On();
+}
+
+void Example_OPO_DifferentialMode()
+{
+    RT_OPO_SetDifferentialMode(ON, OFF, OFF, OFF, OPO_NOT_EXCHANGE_PIN);
+    // 20-time amplification
+    RT_OPO_SetAmplification(OPO_PIN_RESISTOR_1K, OPO_GAIN_20K, \
+                            OPO_PIN_RESISTOR_1K, OPO_GAIN_20K);
+    RT_ADC_Clear();
+    RT_OPO_On();
+}
+
+void Example_OPO_Calibration()
+{
+    RT_OPO_SetShort(ON);
+}
+
+void Example_OPO_Bypass()
+{
+    RT_OPO_SetBypass(ON);
+}
+
+```
+
+## Sigma Delta
+
+```C
+void RT_ADC_SD_On();
+
+void RT_ADC_SD_Off();
+
+void RT_ADC_SD_SetSampleRate(mode);
+
+void RT_ADC_SD_SetAdWidth(mode);
+
+void RT_ADC_SD_SetTrigger(source);
+
+void RT_ADC_SD_Setup(sampleRate, adWidth, triggerSource);
+
+void RT_ADC_SD_Start();
+
+uint32_t RT_ADC_SD_DataReady();
+
+uint32_t RT_ADC_SD_Read();
+```
+
+### Example
+
+```C
+
+#include "analogIO.h"
+
+void Example_SD_Simplest()
+{
+    RT_ADC_SD_Setup(SD_CLK_3M, SD_20BIT, SD_TRIG_BY_WT2READ);
+    // Turn on SD, clear SD, start accumulation are all done in RT_ADC_SD_Read
+    uint32_t result = RT_ADC_SD_Read();
+    // ...
+}
+
+void Example_SD_Basic()
+{
+    RT_ADC_SD_SetSampleRate(SD_CLK_3M);
+    RT_ADC_SD_SetAdWidth(SD_20BIT);
+    RT_ADC_SD_SetTrigger(SD_TRIG_BY_TC0PWM);
+    RT_ADC_Clear();
+    RT_ADC_SD_On();
+    for (register uint32_t i=0; i<200;i++)
+        __asm__("nop");
+    RT_ADC_SD_Start();
+    while(!RT_ADC_SD_DataReady());
+    uint32_t result = MemoryRead32(AD_READ_REG) & 0xfffff;
+    // ...
+}
+```
+
+## Voltage to Pulse Width
+
+```C
+void RT_ADC_V2P_On();
+
+void RT_ADC_V2P_Off();
+
+void RT_ADC_V2P_SetResistor();
+
+uint32_t RT_ADC_V2P_Read();
+```
+
+## Internal Temperature Sensor
+
+```C
+void RT_ADC_TemperatureSensorOn();
+
+void RT_ADC_TemperatureSensorOff();
+```

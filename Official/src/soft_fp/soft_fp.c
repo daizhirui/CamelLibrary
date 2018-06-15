@@ -50,14 +50,6 @@ unsigned long __float64_buffer[2];
 #define __float64_buffer_hi     __float64_buffer[1]
 #define __float64_buffer_lo     __float64_buffer[0]
 #define __float64_buffer_to_float64__()      (*((double*)__float64_buffer))
-// For float32
-unsigned long a, b, c;          // unsigned long expression of a_fp and b_fp.
-unsigned long as, bs, cs;       // sign
-long ae, af, be, bf, ce, cf;    // exponent and fraction
-// For float32 multiply / division
-unsigned long a1, a2, b1, b2, med1, med2;
-unsigned long lo, hi;
-long d; // division
 
 /**
  * @brief Calculate the negative value of a_fp.
@@ -66,6 +58,7 @@ long d; // division
  */
 float fp_float32_neg(float a_fp)
 {
+    uint32_t a;
     a = __float32_to_uint32__(a_fp);
     a ^= 0x80000000;
     return __uint32_to_float32__(a);
@@ -88,6 +81,9 @@ float fp_float32_abs(float a_fp)
  */
 float fp_float32_add(float a_fp, float b_fp)
 {
+    uint32_t a,b,c;             // unit32 expression
+    uint32_t as,bs,cs;          // sign
+    int32_t ae,be,ce,af,bf,cf;  // exponent and fraction
     a = __float32_to_uint32__(a_fp);
     b = __float32_to_uint32__(b_fp);
     as = __float32_sign__(a);            //sign
@@ -146,6 +142,10 @@ float fp_float32_sub(float a_fp, float b_fp)
  */
 float fp_float32_mult(float a_fp, float b_fp)
 {
+    uint32_t a,b,c;             // unit32 expression
+    uint32_t as,bs,cs;          // sign
+    int32_t ae,be,ce,af,bf,cf;  // exponent and fraction
+    uint32_t a1,a2,b1,b2,med1,med2,lo,hi;   // for multiply
     // conversion
     a = __float32_to_uint32__(a_fp);
     b = __float32_to_uint32__(b_fp);
@@ -192,6 +192,11 @@ float fp_float32_mult(float a_fp, float b_fp)
  */
 float fp_float32_div(float a_fp, float b_fp)
 {
+    uint32_t a,b,c;             // unit32 expression
+    uint32_t as,bs,cs;          // sign
+    int32_t ae,be,ce,af,bf,cf;  // exponent and fraction
+    uint32_t a1,a2,b1,b2,med1,med2,lo,hi;   // for division
+    int32_t d;
     a = __float32_to_uint32__(a_fp);
     b = __float32_to_uint32__(b_fp);
     as = __float32_sign__(a);            //sign
@@ -248,6 +253,9 @@ float fp_float32_div(float a_fp, float b_fp)
  */
 long fp_float32_to_int32(float a_fp)
 {
+    uint32_t a;     // uint32_t expression
+    uint32_t as;    // sign
+    int32_t ae, af; // exponent and fraction
     long shift;
     a = __float32_to_uint32__(a_fp);
     as = __float32_sign__(a);            //sign
@@ -274,6 +282,9 @@ long fp_float32_to_int32(float a_fp)
  */
 float fp_int32_to_float32(long af)
 {
+    uint32_t a;  // unit32 expression
+    uint32_t as; // sign
+    int32_t ae;  // exponent
     as = af>=0 ? 0 : 1;
     af = af>=0 ? af : -af;
     ae = FLOAT32_EXPO_BASE + 22;
@@ -299,6 +310,9 @@ float fp_int32_to_float32(long af)
  */
 float fp_uint32_to_float32(unsigned long af)
 {
+    uint32_t a;  // unit32 expression
+    uint32_t as; // sign
+    int32_t ae;  // exponent
     as = 0;
     ae = FLOAT32_EXPO_BASE + 22;    // FLOAT32_EXPO_BASE - 1 + 23
     if(af == 0)
@@ -317,6 +331,9 @@ float fp_uint32_to_float32(unsigned long af)
 
 double fp_float32_to_float64(float a_fp)
 {
+    uint32_t a;             // unit32 expression
+    uint32_t as,bs;          // sign
+    int32_t ae,be,af;  // exponent and fraction
     a = __float32_to_uint32__(a_fp);
     as = __float32_sign__(a);
     ae = __float32_expo__(a);
@@ -331,6 +348,9 @@ double fp_float32_to_float64(float a_fp)
 
 float fp_float64_to_float32(double a_dfp)
 {
+    uint32_t a;             // unit32 expression
+    uint32_t as;          // sign
+    int32_t ae,af;  // exponent and fraction
     __float64_buffer_hi = __float64_hi(a_dfp);
     __float64_buffer_lo = __float64_lo(a_dfp);
     as = __float32_sign__(__float64_buffer_hi);

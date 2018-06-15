@@ -23,10 +23,47 @@ for the JavaScript code in this file
 */
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
+{text:"Related Pages",url:"pages.html"},
+{text:"Classes",url:"annotated.html",children:[
+{text:"Class List",url:"annotated.html"},
+{text:"Class Index",url:"classes.html"},
+{text:"Class Hierarchy",url:"hierarchy.html"}]},
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"},
 {text:"File Members",url:"globals.html",children:[
-{text:"All",url:"globals.html"},
-{text:"Functions",url:"globals_func.html"},
+{text:"All",url:"globals.html",children:[
+{text:"_",url:"globals.html#index__"},
+{text:"a",url:"globals.html#index_a"},
+{text:"d",url:"globals.html#index_d"},
+{text:"f",url:"globals.html#index_f"},
+{text:"g",url:"globals.html#index_g"},
+{text:"i",url:"globals.html#index_i"},
+{text:"j",url:"globals.html#index_j"},
+{text:"m",url:"globals.html#index_m"},
+{text:"o",url:"globals.html#index_o"},
+{text:"p",url:"globals.html#index_p"},
+{text:"r",url:"globals.html#index_r"},
+{text:"s",url:"globals.html#index_s"},
+{text:"v",url:"globals.html#index_v"},
+{text:"x",url:"globals.html#index_x"}]},
+{text:"Functions",url:"globals_func.html",children:[
+{text:"_",url:"globals_func.html#index__"},
+{text:"a",url:"globals_func.html#index_a"},
+{text:"d",url:"globals_func.html#index_d"},
+{text:"f",url:"globals_func.html#index_f"},
+{text:"g",url:"globals_func.html#index_g"},
+{text:"i",url:"globals_func.html#index_i"},
+{text:"p",url:"globals_func.html#index_p"},
+{text:"r",url:"globals_func.html#index_r"},
+{text:"s",url:"globals_func.html#index_s"},
+{text:"x",url:"globals_func.html#index_x"}]},
 {text:"Typedefs",url:"globals_type.html"},
-{text:"Macros",url:"globals_defs.html"}]}]}]}
+{text:"Macros",url:"globals_defs.html",children:[
+{text:"f",url:"globals_defs.html#index_f"},
+{text:"g",url:"globals_defs.html#index_g"},
+{text:"j",url:"globals_defs.html#index_j"},
+{text:"m",url:"globals_defs.html#index_m"},
+{text:"o",url:"globals_defs.html#index_o"},
+{text:"r",url:"globals_defs.html#index_r"},
+{text:"s",url:"globals_defs.html#index_s"},
+{text:"v",url:"globals_defs.html#index_v"}]}]}]}]}
