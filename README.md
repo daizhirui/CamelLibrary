@@ -37,6 +37,10 @@ Official Library for Camel Micro products. This library is embedded in [CamelStu
 
 ## History
 
+### 15.06.2018
+
+- Add Data Encryption Standard (DES) Library.
+
 ### 13.06.2018
 
 - Add .data loader to boot loader and update convert to make it compatible.
