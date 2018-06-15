@@ -31,6 +31,10 @@ Official Library for Camel Micro products.
 - libm2core.a
 - libsoft_fp.a
 
+## Documentation
+
+[DES Library](Official/src/DES/README.md)
+
 ## History
 
 ### 13.06.2018

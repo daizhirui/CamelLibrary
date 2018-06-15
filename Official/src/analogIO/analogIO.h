@@ -9,70 +9,204 @@
  * 		Analog Module Library
  * 		2017/11/3	updated from V2017.07.15
  *--------------------------------------------------------------------*/
-#ifndef __AFE_h__
-#define __AFE_h__
+#ifndef __M2_ANALOG_h__
+#define __M2_ANALOG_h__
 
 #include "mcu.h"
 
 /*********** Value Definition ************/
 // This part aims to make coding easier.
-// A starting level learner just needs to use following key words.
-//>> OPO P-Side and N-Side Key Words
+
+/**
+ * @brief P-Side Keyword for OPO Module
+ */
 #define OPO_PSIDE 0x0
+/**
+ * @brief N-Side Keyword for OPO Module
+ */
 #define OPO_NSIDE 0x1
-//>> OPO PVGND Key Words
+/**
+ * @brief Pin resistor 1K of OPO Channel
+ */
+#define OPO_PIN_RESISTOR_1K  0x1
+/**
+ * @brief Pin resistor 10K of OPO Channel
+ */
+#define OPO_PIN_RESISTOR_10K  0x0
+/**
+ * @brief Bypass enable Keyword of OPO Channel
+ */
+#define OPO_BYPASS_ON   0x1
+/**
+ * @brief Bypass disable Keyword of OPO Channel
+ */
+#define OPO_BYPASS_OFF  0x0
+/**
+ * @brief VCOM
+ */
 #define VCOM 0x1
+/**
+ * @brief Ground Pin Keyword
+ */
 #define GND 0x0
-//>> OPO Single Side Mode Key Words
-#define P_A0P 0x1
-#define P_A1P 0x2
-#define P_A2P 0x4
-#define P_A3P 0x8
-#define N_A0P 0x1
-#define N_A1P 0x2
-#define N_A2P 0x4
-#define N_A3P 0x8
-//>> SD Clock Div Key Words
+/**
+ * @brief P-Side Of Channel 0 Keyword for OPO Module
+ */
+#define OPO_A0P 0x1
+/**
+ * @brief P-Side Of Channel 1 Keyword for OPO Module
+ */
+#define OPO_A1P 0x2
+/**
+ * @brief P-Side Of Channel 2 Keyword for OPO Module
+ */
+#define OPO_A2P 0x4
+/**
+ * @brief P-Side Of Channel 3 Keyword for OPO Module
+ */
+#define OPO_A3P 0x8
+/**
+ * @brief N-Side Of Channel 0 Keyword for OPO Module
+ */
+#define OPO_A0N 0x1
+/**
+ * @brief N-Side Of Channel 1 Keyword for OPO Module
+ */
+#define OPO_A1N 0x2
+/**
+ * @brief N-Side Of Channel 2 Keyword for OPO Module
+ */
+#define OPO_A2N 0x4
+/**
+ * @brief N-Side Of Channel 3 Keyword for OPO Module
+ */
+#define OPO_A3N 0x8
+/**
+ * @brief Pin gain level 480K for OPO Module
+ */
+#define OPO_GAIN_480K   0x1
+/**
+ * @brief Pin gain level 400K for OPO Module
+ */
+#define OPO_GAIN_400K   0x0
+/**
+ * @brief Pin gain level 320K for OPO Module
+ */
+#define OPO_GAIN_320K   0x2
+/**
+ * @brief Pin gain level 240K for OPO Module
+ */
+#define OPO_GAIN_240K   0x4
+/**
+ * @brief Pin gain level 100K for OPO Module
+ */
+#define OPO_GAIN_100K   0x6
+/**
+ * @brief Pin gain level 80K for OPO Module
+ */
+#define OPO_GAIN_80K    0x3
+/**
+ * @brief Pin gain level 40K for OPO Module
+ */
+#define OPO_GAIN_40K    0x5
+/**
+ * @brief Pin gain level 20K for OPO Module
+ */
+#define OPO_GAIN_20K    0x7
+/**
+ * @brief Clock Divider Frequency 3M Hz of Sigma Delta Module
+ */
 #define SD_CLK_3M 0x0
+/**
+ * @brief Clock Divider Frequency 1.5M Hz of Sigma Delta Module
+ */
 #define SD_CLK_1_5M 0x1
+/**
+ * @brief Clock Divider Frequency 781K Hz of Sigma Delta Module
+ */
 #define SD_CLK_781K 0x2
+/**
+ * @brief Clock Divider Frequency 390K Hz of Sigma Delta Module
+ */
 #define SD_CLK_390K 0x3
-//>> SD AD Filter CLK Key Words
+/**
+ * @brief Sample Filter Frequency 1K Hz of Sigma Delta Module
+ */
 #define SD_FCLK_1K 0x0
+/**
+ * @brief Sample Filter Frequency 512 Hz of Sigma Delta Module
+ */
 #define SD_FCLK_512 0x1
+/**
+ * @brief Sample Filter Frequency 256 Hz of Sigma Delta Module
+ */
 #define SD_FCLK_256 0x2
+/**
+ * @brief Sample Filter Frequency 128 Hz of Sigma Delta Module
+ */
 #define SD_FCLK_128 0x3
-//>> SD AD Length Key Words
+/**
+ * @brief Result Length 14-bit of Sigma Delta Module
+ */
 #define SD_14BIT 0x0
+/**
+ * @brief Result Length 16-bit of Sigma Delta Module
+ */
 #define SD_16BIT 0x1
+/**
+ * @brief Result Length 18-bit of Sigma Delta Module
+ */
 #define SD_18BIT 0x2
+/**
+ * @brief Result Length 20-bit of Sigma Delta Module
+ */
 #define SD_20BIT 0x3
-//>> SD Conversion Trigger Key Words
-#define SD_PWM 0x1
-#define SD_WT2READ 0x0
-//>> V2P Resistor Key Words
+/**
+ * @brief Sampling Trigger By TC0 PWM Keyword of Sigma Delta Module
+ */
+#define SD_TRIG_BY_TC0PWM   0x1
+/**
+ * @brief Sampling Trigger By wt<2> of SD_READ_REG Keyword of Sigma Delta Module
+ */
+#define SD_TRIG_BY_WT2READ  0x0
+/**
+ * @brief Resistor 220K Keyword of Voltage-To-PulseWidth Module
+ */
 #define V2P_220K 0x0
+/**
+ * @brief Resistor 256K Keyword of Voltage-To-PulseWidth Module
+ */
 #define V2P_256K 0x1
+/**
+ * @brief Resistor 291K Keyword of Voltage-To-PulseWidth Module
+ */
 #define V2P_291K 0x2
+/**
+ * @brief Resistor 185K Keyword of Voltage-To-PulseWidth Module
+ */
 #define V2P_185K 0x3
 /**
- * @brief This function clears AD_READ_REG
- *
+ * @brief Clear the state of Analog Digit Converter.
  * @return      void
  */
 #define RT_ADC_Clear() MemoryWrite32(AD_CLR_REG, 1)
 /************* OPO setup **************/
-// set OPO on
+/**
+ * @brief Turn the Amplifier on.
+ * @return      void
+ */
 #define RT_OPO_On() MemoryOr32(AD_OPO_REG, 0x1)
-// set OPO off
+/**
+ * @brief Turn the Amplifier off.
+ * @return      void
+ */
 #define RT_OPO_Off() MemoryAnd32(AD_OPO_REG, ~1)
 /**
- * @brief
- * This function selects the opo channel to use, ON for use, Off for not use.
- * @param ch0       channel 0
- * @param ch1       channel 1
- * @param ch2       channel 2
- * @param ch3       channel 3
+ * @brief Set the state of every amplifier channel.
+ * @param ch0       channel 0, ON or OFF
+ * @param ch1       channel 1, ON or OFF
+ * @param ch2       channel 2, ON or OFF
+ * @param ch3       channel 3, ON or OFF
  * @return          void
  */
 #define RT_OPO_SetChannel(ch0, ch1, ch2, ch3)                                        \
@@ -82,12 +216,11 @@
     }
 /**
  * @brief This function sets the amplification of opo.
- *
- * @param Pin       Pin resistor
- * @param Pgain     Pside amplification
- * @param Nin       Nin resistor
- * @param Ngain     Nside amplification
- * @return          void
+ * @param Presistor     Pin resistor, OPO_PIN_RESISTOR_1K or OPO_PIN_RESISTOR_10K
+ * @param Pgain         Pside amplification
+ * @param Nresistor     Nin resistor, OPO_PIN_RESISTOR_1K or OPO_PIN_RESISTOR_10K
+ * @param Ngain         Nside amplification
+ * @return              void
  */
 #define RT_OPO_SetAmplification(Pin, Pgain, Nin, Ngain)                                  \
     {                                                                                    \
