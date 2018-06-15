@@ -8,9 +8,21 @@
 
 Turn on SD.
 
+- Definition
+
+```C
+void RT_ADC_SD_On();
+```
+
 #### RT_ADC_SD_Off
 
 Turn off SD.
+
+- Definition
+
+```C
+void RT_ADC_SD_Off();
+```
 
 #### RT_ADC_SD_Setup
 
@@ -47,7 +59,7 @@ Set the length of the result. This length decides the result precision.
 - Definition
 
 ```C
-void RT_ADC_SD_SetAdWidth(mode)
+void RT_ADC_SD_SetAdWidth(mode);
 ```
 
 - Parameter:
