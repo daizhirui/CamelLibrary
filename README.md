@@ -1,5 +1,5 @@
 # CamelStudio_Library
-Official Library for Camel Micro products.
+Official Library for Camel Micro products. This library is embedded in [CamelStudioX](https://github.com/daizhirui/CamelStudioX_Mac/releases/latest).
 ----
 
 ## Library List
@@ -33,7 +33,7 @@ Official Library for Camel Micro products.
 
 ## Documentation
 
-[DES Library](Official/src/DES/README.md)
+- [DES Library](Official/src/DES/README.md)
 
 ## History
 
