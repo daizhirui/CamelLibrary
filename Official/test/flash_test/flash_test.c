@@ -12,7 +12,7 @@ However, 0x1001fff0 to 0x1001ffff should not be changed.
 
 void user_interrupt(){}
 
-void main() {
+int main() {
     unsigned long address;
     unsigned long index, value, empty;
     while(1) {

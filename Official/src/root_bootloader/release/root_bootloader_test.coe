@@ -1436,8 +1436,13 @@ ac430000
 32203033
 00383130
 00000020
+<<<<<<< HEAD:Official/src/root_bootloader/release/root_bootloader_test.coe
 303a3132
 37313a31
+=======
+353a3931
+30333a37
+>>>>>>> master:Official/src/root_bootloader/release/root_bootloader_test.coe
 00000000
 00000a3a
 6961570a
