@@ -33,6 +33,7 @@ Official Library for Camel Micro products. This library is embedded in [CamelStu
 
 ## Documentation
 
+- [Analog IO Library](Official/src/analogIO/README.md)
 - [DES Library](Official/src/DES/README.md)
 
 ## History

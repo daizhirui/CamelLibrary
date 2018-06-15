@@ -1,6 +1,6 @@
 include Makefile.compiler
 
-LIBRARY_NAME = AFE boot LCD mcu SPI std string time UART0 UART0_Lin UART1 UART1_Lin soft_fp
+LIBRARY_NAME = analogIO boot LCD mcu SPI std string time UART0 UART0_Lin UART1 UART1_Lin soft_fp DES
 TARGET_NAME = $(LIBRARY_NAME:%=lib%.a)
 #libAFE.a libCORE.a libLCD.a libtime.a libUART0.a libUART1.a libUARTx.a libUART0_Lin.a libUART1_Lin.a libSPI.a libstr.a libstring.a libextend_str.a libprobe.a
 

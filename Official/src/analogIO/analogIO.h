@@ -130,22 +130,6 @@
  */
 #define SD_CLK_390K 0x3
 /**
- * @brief Sample Filter Frequency 1K Hz of Sigma Delta Module
- */
-#define SD_FCLK_1K 0x0
-/**
- * @brief Sample Filter Frequency 512 Hz of Sigma Delta Module
- */
-#define SD_FCLK_512 0x1
-/**
- * @brief Sample Filter Frequency 256 Hz of Sigma Delta Module
- */
-#define SD_FCLK_256 0x2
-/**
- * @brief Sample Filter Frequency 128 Hz of Sigma Delta Module
- */
-#define SD_FCLK_128 0x3
-/**
  * @brief Result Length 14-bit of Sigma Delta Module
  */
 #define SD_14BIT 0x0
@@ -343,36 +327,27 @@
         MemoryAnd32(AD_CTL0_REG, ~(0x3 << 3)); \
         MemoryOr32(AD_CTL0_REG, (mode << 3));  \
     }
-/**
- * @brief This function sets the filter frequency, also sets the number adbits
- *
- * @param freq      SD_FCLK_1K, SD_FCLK_512, SD_FCLK_256 or SD_FCLK_128
- * @return          void
- */
-#define RT_ADC_SD_SetFilterCLK(freq)           \
-    {                                          \
-        MemoryAnd32(AD_CTL0_REG, ~(0x3 << 1)); \
-        MemoryOr32(AD_CTL0_REG, (freq << 1));  \
-    }
 // set the digital filter clock freq with ad bits (defined at the beginning)
 /**
  * @brief This function sets the number of ad
- *
+ * @note  This function sets the filter frequency to adjust the ad width.
+ *          1K Hz is for 14bit, 512Hz for 16bit, 256Hz for 18bit, 128Hz for 20bit.
+ *          These frequency is relative to the sd clock frequency.
  * @param mode      SD_14BIT, SD_16BIT, SD_18BIT or SD_20BIT
  * @return          void
  */
-#define RT_ADC_SD_SetAdBits(mode)              \
-    {                                          \
+#define RT_ADC_SD_SetAdWidth(mode)      \
+    {                                   \
         MemoryAnd32(AD_CTL0_REG, ~(0x3 << 1)); \
         MemoryOr32(AD_CTL0_REG, (mode << 1));  \
     }
 /**
  * @brief This function sets the trigger source of RT_ADC_SD
  *
- * @param op        SD_PWM or SD_WT2READ
+ * @param source    SD_PWM or SD_WT2READ
  * @return          void
  */
-#define RT_ADC_SD_SetTrigger(op)             \
+#define RT_ADC_SD_SetTrigger(source)         \
     {                                        \
         MemoryAnd32(AD_CTL0_REG, ~(1 << 6)); \
         MemoryOr32(AD_CTL0_REG, op << 6);    \
@@ -380,14 +355,16 @@
 /**
  * @brief This function sets RT_ADC_SD briefly.
  *
- * @param samplerate    the samplerate of SD
- * @param ad            the number of ad
+ * @param sampleRate    the sample rate of SD
+ * @param adWidth       the precision of the result
+ * @param triggerSource the source to trigger sampling.
  * @return              void
  */
-#define RT_ADC_SD_Setup(samplerate, ad)      \
+#define RT_ADC_SD_Setup(sampleRate, adWidth, triggerSource)  \
     {                                        \
-        RT_ADC_SD_SetSampleRate(samplerate); \
-        RT_ADC_SD_SetAdBits(ad);             \
+        RT_ADC_SD_SetSampleRate(sampleRate); \
+        RT_ADC_SD_SetAdWidth(adWidth);      \
+        RT_ADC_SD_SetTrigger(triggerSource); \
     }
 /**
  * @brief This function starts ADC accumulate

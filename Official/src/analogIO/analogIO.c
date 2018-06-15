@@ -10,30 +10,30 @@
  *         2017/11/3    updated from V2017.07.15
  *--------------------------------------------------------------------*/
 
-#include "AFE.h"
+#include "analogIO.h"
 #include "TC0.h"
 #include "time.h"
 
 /**
- * @brief 
+ * @brief
  * This function is used to get the value of ADC_SD.
  * @return int         ADC_SD result
  */
 int RT_ADC_SD_Read()
-{    
+{
     register int i;
-    MemoryWrite32(AD_CLR_REG, 0);                //clear ADC to prepare reading
+    MemoryWrite32(AD_CLR_REG, 0);                       //clear ADC to prepare reading
     for (i = 0; i < 200; i++)
-        __asm__("nop");                               //add delay for acc_en up
-    if (!(MemoryRead32(AD_CTL0_REG) >> 6) & 1) // use SD_WT2READ as trigger source
-        RT_ADC_SD_Start();                           //kick off the ADC read process
+        __asm__("nop");                                 //add delay for acc_en up
+    if (!((MemoryRead32(AD_CTL0_REG) >> 6) & 1))        // use SD_WT2READ as trigger source
+        RT_ADC_SD_Start();                              //kick off the ADC read process
     while (!(MemoryRead32(AD_CTL0_REG) & 0x80000000))
-        ;                                        //check if rdy bit is ok
-    return MemoryRead32(AD_READ_REG) & 0x3ffff; //read the low 18bit data
+        ;                                               //check if rdy bit is ok
+    return MemoryRead32(AD_READ_REG) & 0x3ffff;         //read the low 18bit data
 } // End of ADC_SD_Read
 
 /**
- * @brief 
+ * @brief
  * This function is used to get the value of ADC_V2P.
  * @return int         ADC_V2P result
  */
