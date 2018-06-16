@@ -11,13 +11,8 @@ cd boot;\
 	make;\
 	make install;\
 	cd ..
-/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-as -EL -o entry.o entry.s
-/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libm2core.a interrupt.o isr.o;\
-
-/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libm2core_autoUart.a autoUart.o isr.o;\
-
-cp autoUart.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
-mv libm2core.a libm2core_autoUart.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+make[2]: Nothing to be done for `all'.
+mv libm2core.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
 mv entry.o /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
 cd LCD;\
 	make;\

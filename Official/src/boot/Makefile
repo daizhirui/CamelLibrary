@@ -16,7 +16,6 @@ libm2core_autoUart.a: autoUart.o isr.o
 
 .PHYONE:install
 install:
-	cp autoUart.h $(PROJECT_PATH)/release/include
 	mv $(LIBFILE_NAME) $(PROJECT_PATH)/release/lib
 	mv entry.o $(PROJECT_PATH)/release/lib
 
