@@ -1,12 +1,12 @@
-cd AFE;\
+cd analogIO;\
 	make;\
 	make install;\
 	cd ..
-/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -I ../mcu -I ../time -I ./ -I ../ AFE.c -o AFE.o
-/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libAFE.a AFE.o
-rm AFE.o
-mv libAFE.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
-cp AFE.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -I ../mcu -I ../time -I ./ -I ../ analogIO.c -o analogIO.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libanalogIO.a analogIO.o
+rm analogIO.o
+mv libanalogIO.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cp analogIO.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
 cd boot;\
 	make;\
 	make install;\
@@ -128,3 +128,12 @@ cd soft_fp;\
 	rm *.o
 mv libsoft_fp.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
 cp soft_fp.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
+cd DES;\
+	make;\
+	make install;\
+	cd ..
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -I ../mcu  -I ./  DES.c -o DES.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libDES.a DES.o
+rm DES.o
+mv libDES.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cp DES.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include

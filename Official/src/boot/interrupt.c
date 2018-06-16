@@ -14,10 +14,16 @@
 #include "mcu.h"
 
 void user_interrupt(void);
-void before_user_interrupt(void);
+void before_user_interrupt(void) __attribute__ ((weak));
+
+void before_user_interrupt(void)
+{
+	user_interrupt();
+}
+
 void interrupt(void)
 {
 	//go to handler @0x10000008
 	MemoryWrite(USER_INT, 0x1);
-	user_interrupt();
+	before_user_interrupt();
 }

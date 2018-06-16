@@ -1,11 +1,10 @@
 /**
- * @brief Standard Library for M2
- * 
- * @file stdlib.c
- * @author Zhirui Dai
- * @date 2018-05-27
- */
-
+* @file stdlib_fp.c
+* @author Zhirui Dai
+* @date 27 May 2018
+* @copyright 2018 Zhirui
+* @brief Standard Library for M2
+*/
 #include <stddef.h>
 #include <math.h>
 #include <stdlib.h>
@@ -13,7 +12,7 @@
 
 /**
  * @brief Convert a string (decimal) to a float value.
- * 
+ *
  * @param str  String (decimal) to be converted to a float value.
  * @return float  A float value.
  */

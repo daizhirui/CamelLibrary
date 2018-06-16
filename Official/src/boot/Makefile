@@ -1,6 +1,6 @@
 include ../Makefile.compiler
 
-LIB_NAME=m2core m2core_autoUart
+LIB_NAME=m2core
 LIBFILE_NAME=$(LIB_NAME:%=lib%.a)
 
 all: entry.o $(LIBFILE_NAME)

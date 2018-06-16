@@ -32,7 +32,9 @@ char * _strcat(char *dest, const char * src)
     char *ret = dest;
     while (*dest)
         dest++;
-    while (*src) *dest++ = *src++;
+    while (*src){
+        *(dest++) = *(src++);
+    }
     return ret;
 }
 

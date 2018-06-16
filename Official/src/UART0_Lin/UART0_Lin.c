@@ -1,16 +1,14 @@
-/*--------------------------------------------------------------------
- * TITLE: M2 Hardware Definition
- * AUTHOR: Astro
- * DATE CREATED: 2017/11/1
- * FILENAME: UART0_Lin.c
- * PROJECT: M2Library
- * COPYRIGHT: Camel Microelectronics, Ltd.
- * DESCRIPTION:
- *--------------------------------------------------------------------*/
+/**
+* @file UART0_Lin.c
+* @author Zhirui Dai
+* @date 1 Nov 2017
+* @copyright 2018 Zhirui
+* @brief UART0 Lin Library for M2.
+*/
 #include "UART0_Lin.h"
 /**
  * @brief This function sends out Lin signal when M2's uart0 works as Master
- * 
+ *
  * @param pattern   Lin Break Pattern, NORMALBREAK or EXTREMEBREAK
  */
 void RT_UART0_LinMaster(char pattern){

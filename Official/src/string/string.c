@@ -1,14 +1,10 @@
-/*--------------------------------------------------------------------
- * TITLE: M2 Hardware Definition
- * AUTHOR: John & Jack
- * DATE CREATED: 2017/11/1
- * FILENAME: string.c
- * PROJECT: M2Library
- * COPYRIGHT: Camel Microelectronics, Ltd.
- * DESCRIPTION:
- * NOTE:
- *      This library has been checked. --Astro, 2017/11/3
- *--------------------------------------------------------------------*/
+/**
+* @file string.c
+* @author John & Jack
+* @date 16 Jun 2018
+* @copyright 2018 Zhirui
+* @brief String Library for M2
+*/
 #include "string.h"
 void *memchr(const void *str, int c, size_t n)
 {

@@ -6,11 +6,7 @@
 * @brief Root Bootloader Initialization
 */
 
-<<<<<<< HEAD
 #include "root_bootloader_mcu.h"
-=======
-#include "mcu.h"
->>>>>>> master
 
 #ifndef __ROOT_BOOTLOADER_INIT_H__
 #define __ROOT_BOOTLOADER_INIT_H__

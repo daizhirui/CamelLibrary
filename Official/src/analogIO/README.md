@@ -99,7 +99,8 @@ uint32_t RT_ADC_SD_Read();
 
 #include "analogIO.h"
 
-void Example_SD_Simplest()
+// This example setups SD simply.
+void Example_SD_SimpleSst()
 {
     RT_ADC_SD_Setup(SD_CLK_3M, SD_20BIT, SD_TRIG_BY_WT2READ);
     // Turn on SD, clear SD, start accumulation are all done in RT_ADC_SD_Read
@@ -107,6 +108,7 @@ void Example_SD_Simplest()
     // ...
 }
 
+// This example reveals more details about SD setup.
 void Example_SD_Basic()
 {
     RT_ADC_SD_SetSampleRate(SD_CLK_3M);

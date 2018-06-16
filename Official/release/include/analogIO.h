@@ -298,7 +298,6 @@
 #define RT_OPO_SetShort(mode)                     \
     {                                             \
         RT_OPO_SetChannel(OFF, OFF, OFF, OFF);    \
-        RT_ADC_V2P_SetResistor(V2P_291K);         \
         if (mode)                                 \
         {                                         \
             MemoryAnd32(AD_OPO_REG, ~(0xf << 4)); \
@@ -401,12 +400,7 @@
  *              be asserted upon conversion completed.
  * @return      void
  */
-#define RT_ADC_SD_Start()              \
-    {                                  \
-        RT_ADC_SD_On();                \
-        RT_ADC_Clear();                \
-        MemoryWrite32(AD_READ_REG, 1); \
-    }
+#define RT_ADC_SD_Start()       MemoryWrite32(AD_READ_REG, 1)
 /**
  * @brief   Check is the accumulation of SD is completed.
  * @return  The result if the accumulation is completed, 1=completed, 0=not completed

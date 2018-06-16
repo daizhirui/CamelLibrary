@@ -53,34 +53,6 @@ void _Uart_sync()
             } else if (tmp == 0)
                     start = cnt;
             else {
-<<<<<<< HEAD
-                if (tmp == 0x81) {
-                    start = ((cnt*7)>>3);
-                    end = cnt;
-                } else if (tmp == 0xc1) {
-                    start = ((cnt*3)>>2);
-                    end = ((cnt*7)>>3);
-                } else if (tmp == 0xc0) {
-                    start = ((cnt*5)>>3);
-                    end = ((cnt*3)>>2);
-                } else if (tmp == 0xe0) {
-                    start = ((cnt*5)>>3);
-                    end = ((cnt*3)>>2);
-                } else if (tmp == 0xf0) {
-                    start = (cnt>>1);
-                    end = ((cnt*5)>>3);
-                } else if (tmp == 0xf8) {
-                    start = ((cnt*3)>>3);
-                    end = (cnt>>1);
-                } else if (tmp == 0xfc) {
-                    start = (cnt>>2);
-                    end = ((cnt*3)>>3);
-                } else if (tmp == 0xfe) {
-                    start = (cnt>>3);
-                    end = (cnt>>2);
-                } else
-                    end = (cnt>>2);
-=======
                     if (tmp == 0x81) {
                             start = ((cnt*7)>>3);
                             end = cnt;
@@ -107,7 +79,6 @@ void _Uart_sync()
                             end = (cnt>>2);
                     } else
                             end = (cnt>>2);
->>>>>>> master
             }
     }
     MemoryWrite32(SYS_GDR_REG, cnt<<1);
@@ -124,109 +95,109 @@ void _Uart_sync()
 
 void print_menu(void)
 {
-        puts("\r##############################\r\n");
-        puts("Hello From MCU             \r\n");
-        puts("Bootloader Version 1.0     \r\n");
-        puts("Camel Microelectronic, Inc.\r\n");
-        puts("##############################\r\n");
+    puts("\r##############################\r\n");
+    puts("Hello From MCU             \r\n");
+    puts("Bootloader Version 1.0     \r\n");
+    puts("Camel Microelectronic, Inc.\r\n");
+    puts("##############################\r\n");
 }
 
 // '\r' is the special char to indicate the end of the one protocol
 //1. w <addr> <count> <v1> ... <vn>\r  //write <count> number of values to memory block from <addr>
 void _w_func()
 {
-        int i;
-        unsigned long address, value, count;
-        address = getnum();
-        count = getnum();
-        for (i = 0; i < count; i++) {
-                value = getnum();
-                MemoryWrite32(address, value);
-                address += 4;
-        }
-        putchar(WRITE_ACK);
+    int i;
+    unsigned long address, value, count;
+    address = getnum();
+    count = getnum();
+    for (i = 0; i < count; i++) {
+            value = getnum();
+            MemoryWrite32(address, value);
+            address += 4;
+    }
+    putchar(WRITE_ACK);
 }
 
 //2. r <addr> <count>\r  //read <count> number of value from memory block from <addr>
 void _r_func()
 {
-        int i;
-        unsigned long address, value, count;
-        address = getnum();
-        count = getnum();
-        putchar(DATA_START);
-        for (i = 0; i < count; i++) {
-                value = MemoryRead32(address);
-                puts(xtoa(value));
-                puts(" ");
-                address += 4;
-        }
-        putchar(DATA_END);
+    int i;
+    unsigned long address, value, count;
+    address = getnum();
+    count = getnum();
+    putchar(DATA_START);
+    for (i = 0; i < count; i++) {
+            value = MemoryRead32(address);
+            puts(xtoa(value));
+            puts(" ");
+            address += 4;
+    }
+    putchar(DATA_END);
 }
 
 //2. R <count> <addr1> <addr2> ... <addrn>\r  //read <count> number of value from memory block from a series address
 void _R_func()
 {
-        int i;
-        unsigned long value, count;
-        unsigned long addrvec[100];
-        count = getnum();
-        for (i = 0; i < count; i++)
-                addrvec[i] = getnum();
-        putchar(DATA_START);
-        for (i = 0; i < count; i++) {
-                value = MemoryRead32(addrvec[i]);
-                puts(xtoa(value));
-                puts(" ");
-        }
-        putchar(DATA_END);
+    int i;
+    unsigned long value, count;
+    unsigned long addrvec[100];
+    count = getnum();
+    for (i = 0; i < count; i++)
+            addrvec[i] = getnum();
+    putchar(DATA_START);
+    for (i = 0; i < count; i++) {
+            value = MemoryRead32(addrvec[i]);
+            puts(xtoa(value));
+            puts(" ");
+    }
+    putchar(DATA_END);
 }
 
 //3. s <addr> <offset> <count> <v1> ... <vn>\r  //write <count> number of values to memory block from the address stored at <addr>
 void _s_func()
 {
-        int i;
-        unsigned long address, value, offset, count;
-        address = getnum();
-        offset = getnum();
-        count = getnum();
-        address = MemoryRead32(address) + offset;
-        for (i = 0; i < count; i++) {
-                value = getnum();
-                MemoryWrite32(address, value);
-                address += 4;
-        }
-        putchar(WRITE_ACK);
+    int i;
+    unsigned long address, value, offset, count;
+    address = getnum();
+    offset = getnum();
+    count = getnum();
+    address = MemoryRead32(address) + offset;
+    for (i = 0; i < count; i++) {
+            value = getnum();
+            MemoryWrite32(address, value);
+            address += 4;
+    }
+    putchar(WRITE_ACK);
 }
 
 //4. l <addr> <offset> <count>\r  //read <count> number of values from memory block from the address stored at <addr>
 void _l_func()
 {
-        int i;
-        unsigned long address, value, offset, count;
-        address = getnum();
-        offset = getnum();
-        count = getnum();
-        address = MemoryRead32(address) + offset;
-        putchar(DATA_START);
-        for (i = 0; i < count; i++) {
-                value = MemoryRead32(address);
-                puts(xtoa(value));
-                puts(" ");
-                address += 4;
-        }
-        putchar(DATA_END);
+    int i;
+    unsigned long address, value, offset, count;
+    address = getnum();
+    offset = getnum();
+    count = getnum();
+    address = MemoryRead32(address) + offset;
+    putchar(DATA_START);
+    for (i = 0; i < count; i++) {
+            value = MemoryRead32(address);
+            puts(xtoa(value));
+            puts(" ");
+            address += 4;
+    }
+    putchar(DATA_END);
 }
 
 //5. j <addr>\r //jump to function at <addr>
 void _j_func()
 {
-        unsigned long address;
-        FuncPtr funcPtr;
-        address = getnum();
-        putchar(WRITE_ACK);
-        funcPtr = (FuncPtr)address;
-        funcPtr();
+    unsigned long address;
+    FuncPtr funcPtr;
+    address = getnum();
+    putchar(WRITE_ACK);
+    funcPtr = (FuncPtr)address;
+    funcPtr();
 }
 
 #endif
