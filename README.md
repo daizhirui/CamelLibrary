@@ -2,6 +2,10 @@
 Official Library for Camel Micro products. This library is embedded in [CamelStudioX](https://github.com/daizhirui/CamelStudioX_Mac/releases/latest).
 ----
 
+## Documentation
+
+[CamelStudio Library Documentation](https://daizhirui.github.io/CamelStudio_Library/)
+
 ## Library List
 - entry.o
 - ~~gdbentry.o~~
@@ -30,11 +34,6 @@ Official Library for Camel Micro products. This library is embedded in [CamelStu
 - libstdlib_fp.a
 - libm2core.a
 - libsoft_fp.a
-
-## Documentation
-
-- [Analog IO Library](Official/src/analogIO/README.md)
-- [DES Library](Official/src/DES/README.md)
 
 ## History
 
