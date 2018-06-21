@@ -17,7 +17,7 @@ var searchData=
   ['rt_5fadc_5fv2p_5fon',['RT_ADC_V2P_On',['../analog_i_o_8h.html#af1002dc4b0d8af47aba6aaa5de06868e',1,'analogIO.h']]],
   ['rt_5fadc_5fv2p_5fread',['RT_ADC_V2P_Read',['../analog_i_o_8c.html#aeb7d0cb0a7849fc5736dae01fe607910',1,'RT_ADC_V2P_Read():&#160;analogIO.c'],['../analog_i_o_8h.html#aeb7d0cb0a7849fc5736dae01fe607910',1,'RT_ADC_V2P_Read():&#160;analogIO.c']]],
   ['rt_5fadc_5fv2p_5fsetresistor',['RT_ADC_V2P_SetResistor',['../analog_i_o_8h.html#ab24203a1eff5816f48761f0e38337d67',1,'analogIO.h']]],
-  ['rt_5fclr_5fsram',['RT_Clr_Sram',['../mcu_8h.html#a42674a2ca7d088e68de4e2aa81ec597c',1,'mcu.c']]],
+  ['rt_5fclr_5fsram',['RT_Clr_Sram',['../mcu_8c.html#a42674a2ca7d088e68de4e2aa81ec597c',1,'RT_Clr_Sram():&#160;mcu.c'],['../mcu_8h.html#a42674a2ca7d088e68de4e2aa81ec597c',1,'RT_Clr_Sram():&#160;mcu.c']]],
   ['rt_5fdelaymiliseconds',['RT_DelayMiliseconds',['../time_8h.html#a960534919351d6e419e70a78521e87da',1,'RT_DelayMiliseconds(unsigned long ms):&#160;time.c'],['../time_8c.html#a960534919351d6e419e70a78521e87da',1,'RT_DelayMiliseconds(unsigned long ms):&#160;time.c']]],
   ['rt_5fexint_5fclear',['RT_EXINT_Clear',['../_interrupt_8h.html#a1bebef46f3eb19ed0c71deb174a4bbaf',1,'Interrupt.h']]],
   ['rt_5fexint_5fclearall',['RT_EXINT_ClearAll',['../_interrupt_8h.html#a4f2cc857d9a0da5f06bbf5ff62babbdb',1,'Interrupt.h']]],

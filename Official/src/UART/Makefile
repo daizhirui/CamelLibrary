@@ -1,6 +1,6 @@
 include ../Makefile.compiler
 
-LIB_NAME=SPI
+LIB_NAME=UART
 LIB_HEADER=$(LIB_NAME:%=%.h)
 LIBFILE_NAME=$(LIB_NAME:%=lib%.a)
 
@@ -17,7 +17,7 @@ clean:
 
 ##############################
 %.o : %.c
-	$(GCC_MIPS) $(GCC_FLAGS) -I ../mcu -I ../UART -I ./ $< -o $@
+	$(GCC_MIPS) $(GCC_FLAGS) -I ../mcu -I ./ -I ../UART0 $< -o $@
 
 lib%.a : %.o
 	$(AR_MIPS) $(AR_FLAGS) $@ $<

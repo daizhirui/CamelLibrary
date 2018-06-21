@@ -71,4 +71,38 @@ MessageData DES(MessageData originalData, DES_Key originalKey, uint8_t mode);
 
 ## Example
 
-An example is showed in [DES_test.c](DES_test.c). This example can be used directly in [CamelStudioX](https://github.com/daizhirui/CamelStudioX_Mac/releases/latest).
+```C
+#include "mcu.h"
+#include "DES.h"
+#include "stdio.h"
+// This is the interrupt function for user
+void user_interrupt() {
+
+}
+
+// This is the main function
+int main() {
+    DES_Key originalKey;
+    originalKey.key = 0x133457799BBCDFF1;
+
+    // Generate 16 subKeys
+    DES_Key* subKeys = DES_generateSubKeys(originalKey);
+    for (uint8_t index = 0; index < 17; index++) {
+        printf("K%d = 0x%x%x\n", index, subKeys[index].apart[1], subKeys[index].apart[0]);
+    }
+
+    MessageData originalData;
+    originalData.data = 0x123456789abcdef;
+    printf("originalData = 0x%x%x\n", originalData.apart[1], originalData.apart[0]);
+
+    // encrypt data
+    MessageData encryptedData = DES_process(originalData, subKeys, DES_ENCRYPT_MODE);
+    printf("encryptedData = 0x%x%x\n", encryptedData.apart[1], encryptedData.apart[0]);
+
+    // decrypt data
+    MessageData decryptedData = DES_process(encryptedData, subKeys, DES_DECRYPT_MODE);
+    printf("decryptedData = 0x%x%x\n", decryptedData.apart[1], decryptedData.apart[0]);
+}
+```
+
+This example can be used directly in [CamelStudioX](https://github.com/daizhirui/CamelStudioX_Mac/releases/latest).

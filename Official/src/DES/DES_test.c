@@ -24,7 +24,8 @@ int main() {
     for (uint8_t index = 0; index < 17; index++) {
         printf("K%d = 0x%x%x\n", index, subKeys[index].apart[1], subKeys[index].apart[0]);
     }
-
+    unsigned int a = 1;
+    unsigned int b = a? 0x1f800000 : 0x1f800801;
     MessageData originalData;
     originalData.data = 0x123456789abcdef;
     printf("originalData = 0x%x%x\n", originalData.apart[1], originalData.apart[0]);

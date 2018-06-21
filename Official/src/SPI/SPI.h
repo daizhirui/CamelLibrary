@@ -9,26 +9,26 @@
 #define __SPI_h__
 
 #include "mcu.h"
-#include "UART1.h"
+#include "UART.h"
 
 /************** Value define *************/
 #define MASTER 0x1
 #define SLAVE 0x0
 /*************** SPI Setup***************/
-#define RT_SPI_ClearState() MemoryWrite32(SPI_IRQ_ACK_REG, 0x6)
+#define RT_SPI_ClearState()         MemoryWrite32(SPI_IRQ_ACK_REG, 0x6)
 #define RT_SPI_Modeset(MorS)             \
     {                                    \
-        RT_UART1_Off();                  \
+        RT_UART0_Off(UART1);             \
         if (MorS)                        \
             MemoryWrite32(SPI_CTL, 0x4); \
         else                             \
             MemoryWrite32(SPI_CTL, 0x0); \
         RT_SPI_ClearState();             \
     }
-#define RT_SPI_ChipSelect() MemoryWrite32(SPI_CTL_REG, 0x6)
-#define RT_SPI_ChipRelease() MemoryWrite32(SPI_CTL_REG, 0x4)
-#define RT_SPI_Busy() MemoryRead32(SPI_BUSY_REG)
-#define RT_SPI_Write_(val) MemoryWrite32(SPI_WRITE_REG, val)
+#define RT_SPI_ChipSelect()         MemoryWrite32(SPI_CTL_REG, 0x6)
+#define RT_SPI_ChipRelease()        MemoryWrite32(SPI_CTL_REG, 0x4)
+#define RT_SPI_Busy()               MemoryRead32(SPI_BUSY_REG)
+#define RT_SPI_Write_(val)          MemoryWrite32(SPI_WRITE_REG, val)
 #define RT_SPI_Write(val)     \
     {                         \
         while (RT_SPI_Busy()) \
@@ -37,8 +37,8 @@
         while (RT_SPI_Busy()) \
             ;                 \
     }
-#define RT_SPI_DataReady() MemoryRead32(SPI_DATA_RDY_REG)
-#define RT_SPI_Read_() MemoryRead32(SPI_READ_REG)
+#define RT_SPI_DataReady()          MemoryRead32(SPI_DATA_RDY_REG)
+#define RT_SPI_Read_()              MemoryRead32(SPI_READ_REG)
 /**
  * @brief This function returns 1 byte from SPI
  *
