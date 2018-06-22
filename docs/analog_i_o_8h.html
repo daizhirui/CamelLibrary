@@ -97,8 +97,7 @@ $(document).ready(function(){initNavTree('analog_i_o_8h.html','');});
 
 <p>Analog Input Output Library for M2.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="mcu_8h_source.html">mcu.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="mcu_8h_source.html">mcu.h</a>&quot;</code><br />
 </div>
 <p><a href="analog_i_o_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -677,7 +676,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                   \</div><div class="line">        RT_ADC_V2P_SetResistor(0);                      \</div><div class="line">        MemoryAnd32(AD_OPO_REG, ~<a class="code" href="analog_i_o_8h.html#a9bf75bd96cc424c955447196c8c32599">OPO_EXCHANGE_PIN</a>);     \</div><div class="line">        MemoryOr32(AD_OPO_REG, <span class="keywordflow">switch</span>);                 \</div><div class="line">    }</div><div class="ttc" id="analog_i_o_8h_html_a9bf75bd96cc424c955447196c8c32599"><div class="ttname"><a href="analog_i_o_8h.html#a9bf75bd96cc424c955447196c8c32599">OPO_EXCHANGE_PIN</a></div><div class="ttdeci">#define OPO_EXCHANGE_PIN</div><div class="ttdef"><b>Definition:</b> analogIO.h:27</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{                                                   \</div><div class="line">        RT_ADC_V2P_SetResistor(0);                      \</div><div class="line">        MemoryAnd32(AD_OPO_REG, ~<a class="code" href="analog_i_o_8h.html#a9bf75bd96cc424c955447196c8c32599">OPO_EXCHANGE_PIN</a>);     \</div><div class="line">        MemoryOr32(AD_OPO_REG, <span class="keywordflow">switch</span>);                 \</div><div class="line">    }</div><div class="ttc" id="analog_i_o_8h_html_a9bf75bd96cc424c955447196c8c32599"><div class="ttname"><a href="analog_i_o_8h.html#a9bf75bd96cc424c955447196c8c32599">OPO_EXCHANGE_PIN</a></div><div class="ttdeci">#define OPO_EXCHANGE_PIN</div><div class="ttdef"><b>Definition:</b> analogIO.h:26</div></div>
 </div><!-- fragment -->
 <p>Set double side mode and exchange P side and N side in double side mode. </p>
 <dl class="section note"><dt>Note</dt><dd>AD_OPO_REG[2]: 1 for inn and inp switch, 0 for not (normal use). AD_OPO_REG[2]: 0 for not exchange, 1 for exchange. </dd></dl>
@@ -748,8 +747,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                               \</div><div class="line">        RT_ADC_V2P_SetResistor(<a class="code" href="analog_i_o_8h.html#aea557159b89812e640ee3e97eed1f034">V2P_185K</a>);           \</div><div class="line">        RT_ADC_TemperatureSensorOff();              \</div><div class="line">        MemoryAnd32(AD_OPO_REG, ~<a class="code" href="analog_i_o_8h.html#a9bf75bd96cc424c955447196c8c32599">OPO_EXCHANGE_PIN</a>); \</div><div class="line">        MemoryOr32(AD_OPO_REG, pin);                \</div><div class="line">    }</div><div class="ttc" id="analog_i_o_8h_html_a9bf75bd96cc424c955447196c8c32599"><div class="ttname"><a href="analog_i_o_8h.html#a9bf75bd96cc424c955447196c8c32599">OPO_EXCHANGE_PIN</a></div><div class="ttdeci">#define OPO_EXCHANGE_PIN</div><div class="ttdef"><b>Definition:</b> analogIO.h:27</div></div>
-<div class="ttc" id="analog_i_o_8h_html_aea557159b89812e640ee3e97eed1f034"><div class="ttname"><a href="analog_i_o_8h.html#aea557159b89812e640ee3e97eed1f034">V2P_185K</a></div><div class="ttdeci">#define V2P_185K</div><div class="ttdoc">Resistor 185K Keyword of Voltage-To-PulseWidth Module. </div><div class="ttdef"><b>Definition:</b> analogIO.h:135</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{                                               \</div><div class="line">        RT_ADC_V2P_SetResistor(<a class="code" href="analog_i_o_8h.html#aea557159b89812e640ee3e97eed1f034">V2P_185K</a>);           \</div><div class="line">        RT_ADC_TemperatureSensorOff();              \</div><div class="line">        MemoryAnd32(AD_OPO_REG, ~<a class="code" href="analog_i_o_8h.html#a9bf75bd96cc424c955447196c8c32599">OPO_EXCHANGE_PIN</a>); \</div><div class="line">        MemoryOr32(AD_OPO_REG, pin);                \</div><div class="line">    }</div><div class="ttc" id="analog_i_o_8h_html_a9bf75bd96cc424c955447196c8c32599"><div class="ttname"><a href="analog_i_o_8h.html#a9bf75bd96cc424c955447196c8c32599">OPO_EXCHANGE_PIN</a></div><div class="ttdeci">#define OPO_EXCHANGE_PIN</div><div class="ttdef"><b>Definition:</b> analogIO.h:26</div></div>
+<div class="ttc" id="analog_i_o_8h_html_aea557159b89812e640ee3e97eed1f034"><div class="ttname"><a href="analog_i_o_8h.html#aea557159b89812e640ee3e97eed1f034">V2P_185K</a></div><div class="ttdeci">#define V2P_185K</div><div class="ttdoc">Resistor 185K Keyword of Voltage-To-PulseWidth Module. </div><div class="ttdef"><b>Definition:</b> analogIO.h:134</div></div>
 </div><!-- fragment --><p>Set single side mode and select P side or N side in single side mode. </p><dl class="section note"><dt>Note</dt><dd>AD_CTL0_REG[10:9]: should be 11(binary) when opo is required to be single mode. Temperature sensor should be turned off. AD_OPO_REG[15]: 1 for single side, 0 for double side. AD_OPO_REG[2]: 0 for n side, 1 for p side. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

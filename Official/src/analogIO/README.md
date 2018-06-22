@@ -103,7 +103,7 @@ uint32_t RT_ADC_SD_Read();
 void Example_SD_SimpleSst()
 {
     RT_ADC_SD_Setup(SD_CLK_3M, SD_20BIT, SD_TRIG_BY_WT2READ);
-    // Turn on SD, clear SD, start accumulation are all done in RT_ADC_SD_Read
+    // Turning on SD, clearing SD and starting accumulation are all done in RT_ADC_SD_Read
     uint32_t result = RT_ADC_SD_Read();
     // ...
 }
@@ -137,10 +137,36 @@ void RT_ADC_V2P_SetResistor();
 uint32_t RT_ADC_V2P_Read();
 ```
 
+### Example
+
+```C
+#include "analogIO.h"
+
+void Example_V2P() {
+    RT_ADC_V2P_On();
+    RT_ADC_V2P_SetResistor(V2P_220K);   // V2P_185K is set in single side mode of the amplifier.
+    uint32_t result = RT_ADC_V2P_Read();
+}
+```
+
 ## Internal Temperature Sensor
 
 ```C
 void RT_ADC_TemperatureSensorOn();
 
 void RT_ADC_TemperatureSensorOff();
+```
+
+### Example
+
+```C
+#include "analogIO.h"
+
+/* If you want to get an absolute value of the temperature,
+ * you should make a calibration at first.
+ */
+void Example_InternalTemperatureSensor() {
+    RT_ADC_TemperatureSensorOn();
+    uint32_t result = RT_ADC_SD_Read();
+}
 ```

@@ -7,7 +7,6 @@
 */
 #include "analogIO.h"
 #include "TC0.h"
-#include "time.h"
 
 /**
  * @brief           Get the result of SD.
