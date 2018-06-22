@@ -11,19 +11,28 @@
 #include "stdio.h"
 #endif
 
+/**
+* @brief Half of the key.
+*/
 typedef uint32_t half_DES_Key;
 
+/**
+* @brief Store the C key and the D key of a DES key.
+*/
 typedef struct {
     half_DES_Key cKey;
     half_DES_Key dKey;
 } DES_Key_pair;
 
+/*! \cond PRIVATE */
 #define __high32__(X)                   (X.apart[1])
 #define __low32__(X)                    (X.apart[0])
 #define __getBitAt__(val, pos)          (((val) & (0x1 << (pos))) >> (pos))
 #define __L_part__(X)                   (X.apart[1])
 #define __R_part__(X)                   (X.apart[0])
+/*! \endcond */
 
+/*! \cond PRIVATE */
 // Table PC-1 for generating permuted key K+ from original key K.
 const uint8_t __permuted_key_table_PC1__[56] = { \
     7,15,23,31,39,47,55, \
@@ -152,6 +161,7 @@ const uint8_t __PERMUTATION_P_1_TABLE__[64] = {
     30, 62, 22, 54, 14, 46, 6, 38, \
     31, 63, 23, 55, 15, 47, 7, 39
 };
+/*! \endcond */
 
 /**
 * @brief Generate 16 subKeys with the original DES key.
@@ -220,6 +230,7 @@ DES_Key* DES_generateSubKeys(const DES_Key originalKey)
     return subKeys;
 }
 
+/*! \cond PRIVATE */
 /**
  * @brief Calculate the R part with the last item and the current key.
  * @param lastItem  The message data combined by the last L part and R part.
@@ -284,6 +295,8 @@ uint32_t __calculate_R_part__(MessageData lastItem, DES_Key key)
     r_part ^= __L_part__(lastItem);   // XOR L(n-1)
     return r_part;
 }
+/*! \endcond */
+
 /**
 * @brief Process data with specific subkeys and specific mode.
 * @param originalData   data to process.

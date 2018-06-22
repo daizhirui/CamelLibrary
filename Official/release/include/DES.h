@@ -11,7 +11,14 @@
 
 #include <stdint.h>
 
+/**
+* @brief Keyword DES_ENCRYPT_MODE
+*/
 #define DES_ENCRYPT_MODE    0x0
+
+/**
+* @brief Keyword DES_DECRYPT_MODE
+*/
 #define DES_DECRYPT_MODE    0x1
 
 /**

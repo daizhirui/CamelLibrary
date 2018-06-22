@@ -1,10 +1,10 @@
-# Data Encryption Standard (DES) Library for M2
+# Data Encryption Standard (DES) Library for M2     {#DES}
 
 Since M2 is a 32-bit chip, some special measurements should be used in the implementation.
 
 ## Data Structure
 
-### DES_Key
+### 1. DES_Key
 
 This is a data structure defined by union.
 DES_Key.key is a 64-bit value.
@@ -23,7 +23,7 @@ originalKey.apart[1] = <#high32OfKey#>;
 originalKey.apart[0] = <#low32OfKey#>;
 ```
 
-### MessageData
+### 2. MessageData
 
 This is a data structure for storing data to encrypt or decrypt.
 
@@ -37,7 +37,7 @@ You can load data byte by byte or uint32_t by uint32_t.
 
 ## Interface
 
-### DES_generateSubKeys
+### 1. DES_generateSubKeys
 
 Generate 16 subKeys with a provided original key.
 
@@ -47,7 +47,7 @@ Generate 16 subKeys with a provided original key.
 DES_Key* DES_generateSubKeys(const DES_Key originalKey);
 ```
 
-### DES_process
+### 2. DES_process
 
 Encrypt or decrypt data, require 16 subKeys provided by DES_generateSubKeys.
 When mode = DES_ENCRYPT_MODE, encrypt data. When DES_DECRYPT_MODE, decrypt data.
@@ -58,7 +58,7 @@ When mode = DES_ENCRYPT_MODE, encrypt data. When DES_DECRYPT_MODE, decrypt data.
 MessageData DES_process(MessageData originalData, DES_Key* subKeys, uint8_t mode);
 ```
 
-### DES
+### 3. DES
 
 Encrypt or decrypt data, require original key.
 When mode = DES_ENCRYPT_MODE, encrypt data. When DES_DECRYPT_MODE, decrypt data.
@@ -104,5 +104,3 @@ int main() {
     printf("decryptedData = 0x%x%x\n", decryptedData.apart[1], decryptedData.apart[0]);
 }
 ```
-
-This example can be used directly in [CamelStudioX](https://github.com/daizhirui/CamelStudioX_Mac/releases/latest).

@@ -8,7 +8,6 @@
 #ifndef __M2_ANALOG_h__
 #define __M2_ANALOG_h__
 
-#include <stdint.h>
 #include "mcu.h"
 
 /*********** Value Definition ************/

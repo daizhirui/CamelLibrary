@@ -21,7 +21,7 @@
  */
 #define OPO_NSIDE 0x0
 /**
- * @breif Keyword for exchanging channel pins.
+ * @brief Keyword for exchanging channel pins.
  */
 #define OPO_EXCHANGE_PIN        0x4
 /**
@@ -139,7 +139,7 @@
 #define RT_ADC_Clear() MemoryWrite32(AD_CLR_REG, 1)
 /************* V2P Setup **************/
 /**
- * @breif       Set ADC_V2P on.
+ * @brief       Set ADC_V2P on.
  * @note        AD_CLR_REG[8]: 1=V2P on, 0=V2P off.
  * @return      void
  */
@@ -162,13 +162,13 @@
         MemoryOr32(AD_CTL0_REG, (resistor << 9));   \
     }
 /**
- * @breif       Set ADC temperature sensor on.
+ * @brief       Set ADC temperature sensor on.
  * @note        AD_CTL0_REG[5]: 1=on, 0=off
  * @return      void
  */
 #define RT_ADC_TemperatureSensorOn()    MemoryOr32(AD_CTL0_REG, 1 << 5)
 /**
- * @breif       Set ADC temperature sensor off.
+ * @brief       Set ADC temperature sensor off.
  * @note        AD_CTL0_REG[5]: 1=on, 0=off
  * @return      void
  */
@@ -243,7 +243,7 @@
         MemoryOr32(AD_OPO_REG, switch);                 \
     }
 /**
- * @breif           Set single side mode and select P side or N side in single side mode.
+ * @brief           Set single side mode and select P side or N side in single side mode.
  * @note            AD_CTL0_REG[10:9]: should be 11(binary) when opo is required to be single mode.
  *                  Temperature sensor should be turned off.
  *                  AD_OPO_REG[15]: 1 for single side, 0 for double side.

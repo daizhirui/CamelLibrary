@@ -1,146 +1,168 @@
+<!-- HTML header for doxygen 1.8.8-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.14"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CamelStudio Library Documentaion: src/WDT.h File Reference</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(initResizable);
-/* @license-end */</script>
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
-<script type="text/javascript" src="search/search.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- For Mobile Devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta name="generator" content="Doxygen 1.8.14" />
+    <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+    <title>CamelStudioX Library Documentaion: /Users/daizhirui/Development/CamelStudio_Library/Official/src/time/time.c File Reference</title>
+    <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
+    <!--script type="text/javascript" src="dynsections.js"></script-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script type="text/javascript" src="bootstrap.min.js"></script>
+    <script type="text/javascript" src="doxy-boot.js"></script>
+    <link rel="stylesheet" href="website-styles.css" />
+    <link href="doxygen.css" rel="stylesheet" type="text/css" /> <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellspacing="0" cellpadding="0">
- <tbody>
- <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="cmstudiox-1.png"/></td>
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">CamelStudio Library Documentaion
-   &#160;<span id="projectnumber">1.1</span>
-   </div>
-  </td>
- </tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
+    <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                 </button>
+            <a href="/" class="navbar-brand"><img src="cmstudio.png" width="32px">&nbsp;CamelStudioX Library Documentaion </a>
+            <nav class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="index.html">Main Page</a></li>
+                    <li><a href="https://rink.hockeyapp.net/apps/798a2dae49b04400bcadaf69bda80417">CamelStudioX For Mac</a></li>
+                    <li><a href="https://github.com/daizhirui/CamelStudio_Library">GitHub Project</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">API Documentation<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">Overview</a></li>
+                            <li><a href="files.html">File&nbsp;List</a></li>
+                            <li><a href="pages.html">Related&nbsp;Pages</a></li>
+                            <li><a href="annotated.html">Data&nbsp;Structure</a></li>
+                            <li><a href="classes.html">Data&nbsp;Structure&nbsp;Index</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+    <!-- nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.1</a>
+        </div>
+        </div>
+        </nav -->
+    <div id="top">
+        <!-- do not remove this div, it is closed by doxygen! -->
+        <div class="content" id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 panel " style="padding-bottom: 15px;">
+                        <div style="margin-bottom: 15px;">
+                            <!-- end header part -->
 <!-- Generated by Doxygen 1.8.14 -->
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Search');
-/* @license-end */
-</script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_1e2686d79518103fbe72c84ad081e52b.html">Official</a></li><li class="navelem"><a class="el" href="dir_a4bb8b9fe445694ead9fc43d863ab5df.html">src</a></li><li class="navelem"><a class="el" href="dir_6fc2ffca4a8fed80f53a305063b1c8ad.html">time</a></li>  </ul>
+</div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a00119.html','');});
-/* @license-end */
-</script>
-<div id="doc-content">
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
-</div>
-
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">WDT.h File Reference</div>  </div>
+<div class="title">time.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Watchdog Library for M2.  
+<p>Real Time Module Library for M2.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="a00041_source.html">mcu.h</a>&quot;</code><br />
-</div>
-<p><a href="a00119_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a369b51538a0ccf57dcdb30e12352a8c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00119.html#a369b51538a0ccf57dcdb30e12352a8c7">RT_WatchDog_Setup</a>(n,  irq,  rst)</td></tr>
-<tr class="memdesc:a369b51538a0ccf57dcdb30e12352a8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function set the WDT app.  <a href="#a369b51538a0ccf57dcdb30e12352a8c7">More...</a><br /></td></tr>
-<tr class="separator:a369b51538a0ccf57dcdb30e12352a8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae976b2fe76d4b216e68a771068434abc"><td class="memItemLeft" align="right" valign="top"><a id="ae976b2fe76d4b216e68a771068434abc"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>RT_WatchDog_Clear</b>()&#160;&#160;&#160;MemoryWrite32(WDT_CLR_REG, 1)</td></tr>
-<tr class="separator:ae976b2fe76d4b216e68a771068434abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdfc8b8f0bddfd7382d49a22a92a5930"><td class="memItemLeft" align="right" valign="top"><a id="acdfc8b8f0bddfd7382d49a22a92a5930"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>RT_WatchDog_ReadValue</b>()&#160;&#160;&#160;MemoryRead32(WDT_READ_REG)</td></tr>
-<tr class="separator:acdfc8b8f0bddfd7382d49a22a92a5930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00053_source.html">mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00122_source.html">time.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae30dec10f77cab56a66ee070fbe6a490"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00119.html#ae30dec10f77cab56a66ee070fbe6a490">RT_RTC_GetTime</a> (unsigned char *d_year, unsigned char *d_mon, unsigned char *d_day, unsigned char *d_hour, unsigned char *d_min, unsigned char *d_sec)</td></tr>
+<tr class="memdesc:ae30dec10f77cab56a66ee070fbe6a490"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function gets the real time clock value.  <a href="#ae30dec10f77cab56a66ee070fbe6a490">More...</a><br /></td></tr>
+<tr class="separator:ae30dec10f77cab56a66ee070fbe6a490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a960534919351d6e419e70a78521e87da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00119.html#a960534919351d6e419e70a78521e87da">RT_DelayMiliseconds</a> (unsigned long ms)</td></tr>
+<tr class="memdesc:a960534919351d6e419e70a78521e87da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a delay.  <a href="#a960534919351d6e419e70a78521e87da">More...</a><br /></td></tr>
+<tr class="separator:a960534919351d6e419e70a78521e87da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Watchdog Library for M2. </p>
-<dl class="section author"><dt>Author</dt><dd>John &amp; Jack, Zhirui Dai </dd></dl>
+<div class="textblock"><p>Real Time Module Library for M2. </p>
+<dl class="section author"><dt>Author</dt><dd>Zhirui Dai </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>16 Jun 2018 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2018 Zhirui </dd></dl>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a369b51538a0ccf57dcdb30e12352a8c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a369b51538a0ccf57dcdb30e12352a8c7">&#9670;&nbsp;</a></span>RT_WatchDog_Setup</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a960534919351d6e419e70a78521e87da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a960534919351d6e419e70a78521e87da">&#9670;&nbsp;</a></span>RT_DelayMiliseconds()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RT_WatchDog_Setup</td>
+          <td class="memname">void RT_DelayMiliseconds </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">n, </td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>ms</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Make a delay. </p>
+<p>This function delays specific time.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ms</td><td>time to delay, the unit is ms. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae30dec10f77cab56a66ee070fbe6a490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae30dec10f77cab56a66ee070fbe6a490">&#9670;&nbsp;</a></span>RT_RTC_GetTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RT_RTC_GetTime </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>d_year</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">irq, </td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>d_mon</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">rst&#160;</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>d_day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>d_hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>d_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>d_sec</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -149,31 +171,34 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                                    \</div><div class="line">        MemoryWrite32(WDT_CTL0_REG, (n &lt;&lt; 4 | irq &lt;&lt; 2 | rst &lt;&lt; 1 | 1)); \</div><div class="line">        MemoryOr32(<a class="code" href="a00041.html#ab34acec79daf4fcc12a662cde9e75df7">SYS_CTL0_REG</a>, irq);                                   \</div><div class="line">    }</div><div class="ttc" id="a00041_html_ab34acec79daf4fcc12a662cde9e75df7"><div class="ttname"><a href="a00041.html#ab34acec79daf4fcc12a662cde9e75df7">SYS_CTL0_REG</a></div><div class="ttdeci">#define SYS_CTL0_REG</div><div class="ttdoc">Hardware address. </div><div class="ttdef"><b>Definition:</b> mcu.h:26</div></div>
-</div><!-- fragment -->
-<p>This function set the WDT app. </p>
+
+<p>This function gets the real time clock value. </p>
+<p>This function returns the RTC time.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td>the number of 1/8s n=1~16 </td></tr>
-    <tr><td class="paramname">irq</td><td>trigger interrupt, ON or oFF </td></tr>
-    <tr><td class="paramname">rst</td><td>whether reset the system, ON or OFF </td></tr>
+    <tr><td class="paramname">d_year</td><td>year </td></tr>
+    <tr><td class="paramname">d_mon</td><td>month </td></tr>
+    <tr><td class="paramname">d_day</td><td>day </td></tr>
+    <tr><td class="paramname">d_hour</td><td>hour </td></tr>
+    <tr><td class="paramname">d_min</td><td>minute </td></tr>
+    <tr><td class="paramname">d_sec</td><td>second </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
-</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="a00119.html">WDT.h</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
-  </ul>
 </div>
+</div>
+</div>
+</div>
+</div>
+<address class="footer">
+  <small>Version: 1.1  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
+</address>
+ <footer class="examples-footer">&copy; Camel Microelectronic 2018</footer>
 </body>
 </html>
