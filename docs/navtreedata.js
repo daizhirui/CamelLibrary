@@ -26,6 +26,7 @@ var NAVTREE =
   [ "CamelStudio Library Documentaion", "index.html", [
     [ "Analog Input Output Library for M2", "md_src_analog_i_o__r_e_a_d_m_e.html", null ],
     [ "Data Encryption Standard (DES) Library for M2", "md_src__d_e_s__r_e_a_d_m_e.html", null ],
+    [ "UART Library for M2", "md_src__u_a_r_t__r_e_a_d_m_e.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ]

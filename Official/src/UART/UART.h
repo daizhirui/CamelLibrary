@@ -192,7 +192,7 @@
  * @param port  Port to use, optional value: \code{.c}UART0, UART1\endcode
  * @return      void
  */
-#define RT_UART_LinSlave(port)          UART_LinSyncOn()                       // Lin slave mode
+#define RT_UART_LinSlave(port)          UART_LinSyncOn(port)                       // Lin slave mode
 
 /**
  * @brief       Send a character via Uart, to print via UART0, putchar() is recommended.
