@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('_s_p_i_8h.html','');});
 <p>SPI Library for M2.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="mcu_8h_source.html">mcu.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_u_a_r_t1_8h_source.html">UART1.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_u_a_r_t_8h_source.html">UART.h</a>&quot;</code><br />
 </div>
 <p><a href="_s_p_i_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -178,7 +178,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                    \</div><div class="line">        RT_UART1_Off();                  \</div><div class="line">        if (MorS)                        \</div><div class="line">            MemoryWrite32(SPI_CTL, 0x4); \</div><div class="line">        else                             \</div><div class="line">            MemoryWrite32(SPI_CTL, 0x0); \</div><div class="line">        RT_SPI_ClearState();             \</div><div class="line">    }</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line">{                                    \</div><div class="line">        RT_UART0_Off(<a class="code" href="_u_a_r_t_8h.html#a8d69bf04d07af4fbbab5a8bd291f65ff">UART1</a>);             \</div><div class="line">        if (MorS)                        \</div><div class="line">            MemoryWrite32(SPI_CTL, 0x4); \</div><div class="line">        else                             \</div><div class="line">            MemoryWrite32(SPI_CTL, 0x0); \</div><div class="line">        RT_SPI_ClearState();             \</div><div class="line">    }</div><div class="ttc" id="_u_a_r_t_8h_html_a8d69bf04d07af4fbbab5a8bd291f65ff"><div class="ttname"><a href="_u_a_r_t_8h.html#a8d69bf04d07af4fbbab5a8bd291f65ff">UART1</a></div><div class="ttdeci">#define UART1</div><div class="ttdoc">Keyword UART0. </div><div class="ttdef"><b>Definition:</b> UART.h:20</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0b2995069d4992ea3676d5eb0a0aa568"></a>
