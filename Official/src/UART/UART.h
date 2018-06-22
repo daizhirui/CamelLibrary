@@ -27,6 +27,7 @@
 */
 #define NORMAL_BREAK    0x0
 
+/*! \cond PRIVATE */
 #define UART_CTL_REG(port)          (port? UART1_CTL_REG : UART0_CTL_REG)
 #define UART_BUSY_REG(port)         (port? UART1_BUSY_REG : UART0_BUSY_REG)
 #define UART_WRITE_REG(port)        (port? UART1_WRITE_REG : UART0_WRITE_REG)
@@ -35,6 +36,7 @@
 #define UART_IRQ_ACK_REG(port)      (port? UART1_IRQ_ACK_REG : UART0_IRQ_ACK_REG)
 #define UART_LIN_BREAK_REG(port)    (port? UART1_LIN_BREAK_REG : UART0_LIN_BREAK_REG)
 #define UART_BRP_REG(port)          (port? UART1_BRP_REG : UART0_BRP_REG)
+/*! \endcond */
 
 /**
  * @brief       Turn off Uart

@@ -1,13 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"mcu_8h.html#ac9b4238c1829d1e3414db560a290e861":[3,0,0,3,1,71],
-"mcu_8h.html#aca69c626499ce2e479703cc526dba84d":[3,0,0,3,1,20],
-"mcu_8h.html#acd4e390eacc4ad056a0aaa603f31b2ef":[3,0,0,3,1,32],
-"mcu_8h.html#ad17cf3aaa6ae5443a01b748050e708a1":[3,0,0,3,1,65],
-"mcu_8h.html#ad271967795fc89594428deff626aace9":[3,0,0,3,1,7],
-"mcu_8h.html#ad76d1750a6cdeebd506bfcd6752554d2":[3,0,0,3,1,34],
-"mcu_8h.html#adaf93e89c438f05ea402aee531c0ac3b":[3,0,0,3,1,66],
-"mcu_8h.html#adb396c9307365d351769d5b390615613":[3,0,0,3,1,92],
 "mcu_8h.html#adbe130a3cc7c3109bab2ae344fcdcc11":[3,0,0,3,1,67],
 "mcu_8h.html#adc8a1acb1d3dc976ed3747d978e7b46e":[3,0,0,3,1,14],
 "mcu_8h.html#adce5415d2f1f3a3461247de814fdd89c":[3,0,0,3,1,31],
