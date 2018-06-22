@@ -1,6 +1,6 @@
 var annotated_dup =
 [
-    [ "DES_Key", "union_d_e_s___key.html", "union_d_e_s___key" ],
-    [ "DES_Key_pair", "struct_d_e_s___key__pair.html", "struct_d_e_s___key__pair" ],
-    [ "MessageData", "union_message_data.html", "union_message_data" ]
+    [ "DES_Key", "a00130.html", "a00130" ],
+    [ "DES_Key_pair", "a00126.html", "a00126" ],
+    [ "MessageData", "a00134.html", "a00134" ]
 ];

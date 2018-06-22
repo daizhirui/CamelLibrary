@@ -24,16 +24,16 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "CamelStudio Library Documentaion", "index.html", [
-    [ "Analog Input Output Library for M2", "md_src_analog_i_o__r_e_a_d_m_e.html", null ],
-    [ "Data Encryption Standard (DES) Library for M2", "md_src__d_e_s__r_e_a_d_m_e.html", null ],
-    [ "UART Library for M2", "md_src__u_a_r_t__r_e_a_d_m_e.html", null ],
-    [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ]
+    [ "Analog Input Output Library for M2", "a00139.html", null ],
+    [ "Data Encryption Standard (DES) Library for M2", "a00140.html", null ],
+    [ "UART Library for M2", "a00141.html", null ],
+    [ "Data Structures", "annotated.html", [
+      [ "Data Structures", "annotated.html", "annotated_dup" ],
+      [ "Data Structure Index", "classes.html", null ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
+      [ "Globals", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", null ],
         [ "Typedefs", "globals_type.html", null ],
@@ -45,9 +45,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_d_e_s_8c.html",
-"_t_c2_8h.html#a80f5ade258504a1243ccb058dd860475",
-"mcu_8h.html#adbe130a3cc7c3109bab2ae344fcdcc11"
+"a00002.html",
+"a00041.html#a42674a2ca7d088e68de4e2aa81ec597c",
+"a00077.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
