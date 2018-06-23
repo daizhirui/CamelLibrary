@@ -8,6 +8,7 @@
 
 #include "soft_fp.h"
 
+/*! \cond PRIVATE */
 #define __float32_to_uint32__(X)    (*(unsigned long*)&(X))
 #define __uint32_to_float32__(X)    (*(float*)&(X))
 #define __high32_of_float64__(X)    (((unsigned long*)&X)[1])
@@ -50,6 +51,7 @@ unsigned long __float64_buffer[2];
 #define __float64_buffer_hi     __float64_buffer[1]
 #define __float64_buffer_lo     __float64_buffer[0]
 #define __float64_buffer_to_float64__()      (*((double*)__float64_buffer))
+/*! \endcond */
 
 /**
  * @brief Calculate the negative value of a_fp.
@@ -64,6 +66,11 @@ float fp_float32_neg(float a_fp)
     return __uint32_to_float32__(a);
 }
 
+/**
+ * @brief           Calculate absolute value.
+ * @param a_fp      The value to calculate absolute value.
+ * @return float    The absolute value of a_fp.
+ */
 float fp_float32_abs(float a_fp)
 {
     if (fp_float32_cmp(a_fp, 0) == -1 ) {

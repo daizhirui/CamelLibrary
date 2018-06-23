@@ -9,11 +9,7 @@ void user_interrupt() {
 // This is the main function
 int main() {
 	// set some varibles here, like:
-<<<<<<< HEAD
 	int a=0;
-=======
-	int a = 0;
->>>>>>> master
 	while (1) {
 		printf("Library Test, version %s\n", TEST_VERSION);
 		puts("Author: Zhirui Dai\n");
@@ -22,11 +18,7 @@ int main() {
 			printf("%d\t%x\n",a,a);
 			a++;
 		}
-<<<<<<< HEAD
 		puts("Repeat?\n");
-=======
-		puts("Repeat?");
->>>>>>> master
 		switch (getchar()) {
 			case 'y':continue;break;
 			case 'n':JumpTo(0x10000000);break;

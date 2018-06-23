@@ -20,7 +20,13 @@ typedef uint32_t half_DES_Key;
 * @brief Store the C key and the D key of a DES key.
 */
 typedef struct {
+    /**
+     * @brief  C key.
+     */
     half_DES_Key cKey;
+    /**
+     * @brief  D key.
+     */
     half_DES_Key dKey;
 } DES_Key_pair;
 

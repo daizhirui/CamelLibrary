@@ -69,7 +69,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -84,12 +84,12 @@
 <p><a href="a00023_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00142.html">DES_Key</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for storing key to be used by DES Algorithm.  <a href="a00142.html#details">More...</a><br /></td></tr>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html">DES_Key</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for storing key to be used by DES Algorithm.  <a href="a00151.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html">MessageData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for storing data to be processed by DES Algorithm.  <a href="a00146.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00155.html">MessageData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for storing data to be processed by DES Algorithm.  <a href="a00155.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -105,13 +105,13 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a3ef9fea40f3c593468a2bb7862abfa0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00142.html">DES_Key</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#a3ef9fea40f3c593468a2bb7862abfa0d">DES_generateSubKeys</a> (const <a class="el" href="a00142.html">DES_Key</a> originalKey)</td></tr>
+<tr class="memitem:a3ef9fea40f3c593468a2bb7862abfa0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00151.html">DES_Key</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#a3ef9fea40f3c593468a2bb7862abfa0d">DES_generateSubKeys</a> (const <a class="el" href="a00151.html">DES_Key</a> originalKey)</td></tr>
 <tr class="memdesc:a3ef9fea40f3c593468a2bb7862abfa0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate 16 subKeys with the original DES key.  <a href="#a3ef9fea40f3c593468a2bb7862abfa0d">More...</a><br /></td></tr>
 <tr class="separator:a3ef9fea40f3c593468a2bb7862abfa0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c6c5c79645bfd3166aeb494b41a82f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00146.html">MessageData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#a0c6c5c79645bfd3166aeb494b41a82f8">DES_process</a> (<a class="el" href="a00146.html">MessageData</a> originalData, <a class="el" href="a00142.html">DES_Key</a> *subKeys, uint8_t mode)</td></tr>
+<tr class="memitem:a0c6c5c79645bfd3166aeb494b41a82f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00155.html">MessageData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#a0c6c5c79645bfd3166aeb494b41a82f8">DES_process</a> (<a class="el" href="a00155.html">MessageData</a> originalData, <a class="el" href="a00151.html">DES_Key</a> *subKeys, uint8_t mode)</td></tr>
 <tr class="memdesc:a0c6c5c79645bfd3166aeb494b41a82f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process data with specific subkeys and specific mode.  <a href="#a0c6c5c79645bfd3166aeb494b41a82f8">More...</a><br /></td></tr>
 <tr class="separator:a0c6c5c79645bfd3166aeb494b41a82f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26f09735ce4f946320fee32bfa4a5ef5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00146.html">MessageData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#a26f09735ce4f946320fee32bfa4a5ef5">DES</a> (<a class="el" href="a00146.html">MessageData</a> originalData, <a class="el" href="a00142.html">DES_Key</a> originalKey, uint8_t mode)</td></tr>
+<tr class="memitem:a26f09735ce4f946320fee32bfa4a5ef5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00155.html">MessageData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#a26f09735ce4f946320fee32bfa4a5ef5">DES</a> (<a class="el" href="a00155.html">MessageData</a> originalData, <a class="el" href="a00151.html">DES_Key</a> originalKey, uint8_t mode)</td></tr>
 <tr class="memdesc:a26f09735ce4f946320fee32bfa4a5ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process data with specific original key and specific mode.  <a href="#a26f09735ce4f946320fee32bfa4a5ef5">More...</a><br /></td></tr>
 <tr class="separator:a26f09735ce4f946320fee32bfa4a5ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -128,15 +128,15 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00146.html">MessageData</a> DES </td>
+          <td class="memname"><a class="el" href="a00155.html">MessageData</a> DES </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00146.html">MessageData</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="a00155.html">MessageData</a>&#160;</td>
           <td class="paramname"><em>originalData</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a00142.html">DES_Key</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="a00151.html">DES_Key</a>&#160;</td>
           <td class="paramname"><em>originalKey</em>, </td>
         </tr>
         <tr>
@@ -162,7 +162,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="a00146.html" title="Type for storing data to be processed by DES Algorithm. ">MessageData</a> Processed data. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="a00155.html" title="Type for storing data to be processed by DES Algorithm. ">MessageData</a> Processed data. </dd></dl>
 
 </div>
 </div>
@@ -173,9 +173,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00142.html">DES_Key</a>* DES_generateSubKeys </td>
+          <td class="memname"><a class="el" href="a00151.html">DES_Key</a>* DES_generateSubKeys </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00142.html">DES_Key</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="a00151.html">DES_Key</a>&#160;</td>
           <td class="paramname"><em>originalKey</em></td><td>)</td>
           <td></td>
         </tr>
@@ -200,15 +200,15 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00146.html">MessageData</a> DES_process </td>
+          <td class="memname"><a class="el" href="a00155.html">MessageData</a> DES_process </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00146.html">MessageData</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="a00155.html">MessageData</a>&#160;</td>
           <td class="paramname"><em>originalData</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a00142.html">DES_Key</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="a00151.html">DES_Key</a> *&#160;</td>
           <td class="paramname"><em>subKeys</em>, </td>
         </tr>
         <tr>
@@ -234,7 +234,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="a00146.html" title="Type for storing data to be processed by DES Algorithm. ">MessageData</a> Processed data. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="a00155.html" title="Type for storing data to be processed by DES Algorithm. ">MessageData</a> Processed data. </dd></dl>
 
 </div>
 </div>

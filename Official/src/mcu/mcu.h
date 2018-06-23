@@ -117,48 +117,88 @@
 
 #define DATA_SIZE 256
 
-/**
- * @brief Memory operation.
- */
+/*! \cond PRIVATE */
 #define MemoryRead(A) (*(volatile unsigned int*)(A))
-#define MemoryRead32(A) (*(volatile unsigned long*)(A))
 #define MemoryWrite(A,V) *(volatile unsigned int*)(A)=(V)
-#define MemoryWrite32(A,V) *(volatile unsigned long*)(A)=(V)
 #define MemoryOr(A,V) (*(volatile unsigned int*)(A)|=(V))
-#define MemoryOr32(A,V) (*(volatile unsigned long*)(A)|=(V))
 #define MemoryAnd(A,V) (*(volatile unsigned int*)(A)&=(V))
-#define MemoryAnd32(A,V) (*(volatile unsigned long*)(A)&=(V))
-#define MemoryBitAt(A,V) ((*(volatile unsigned long*)(A)&=(1<<V))>>V)
-#define MemoryBitOn(A,V) MemoryOr32(A,1<<V)
-#define MemoryBitOff(A,V) MemoryAnd32(A,~(1<<V))
-#define MemoryBitSwitch(A,V) (*(volatile unsigned long*)(A)^=(1<<V))
+/*! \endcond */
 
 /**
- * @brief Flash operation.
+ * @brief Read 32-bit data from a specific address.
+ * @param
+ */
+#define MemoryRead32(addr) (*(volatile unsigned long*)(addr))
+
+/**
+ * @brief Write 32-bit data to a specific address.
+ */
+#define MemoryWrite32(addr,val) *(volatile unsigned long*)(addr)=(val)
+
+/**
+ * @brief Logical OR operation on 32-bit data from a specific address.
+ */
+#define MemoryOr32(addr,val) (*(volatile unsigned long*)(addr)|=(val))
+
+/**
+ * @brief Logical addrND operation on 32-bit data from a specific address.
+ */
+#define MemoryAnd32(addr,val) (*(volatile unsigned long*)(addr)&=(val))
+
+/**
+ * @brief Get a specific bit of a 32-bit data from a specific address.
+ */
+#define MemoryBitAt(addr,val) ((*(volatile unsigned long*)(addr)&=(1<<(val)))>>(val))
+
+/**
+ * @brief Set a specific bit of a 32-bit data from a specific address to 1.
+ */
+#define MemoryBitOn(addr,val) MemoryOr32(addr,1<<(val))
+
+/**
+ * @brief Set a specific bit of a 32-bit data from a specific address to 0.
+ */
+#define MemoryBitOff(addr,val) MemoryAnd32(addr,~(1<<(val)))
+
+/**
+ * @brief Set a specific bit of a 32-bit data from a specific address to opposite state.
+ */
+#define MemoryBitSwitch(addr,val) (*(volatile unsigned long*)(addr)^=(1<<(val)))
+
+/**
+ * @brief Function pointer type (void)->void definition.
  */
 typedef void (*FuncPtr)(void);
-typedef void (*FuncPtr2)(unsigned long, unsigned long);
+
+/**
+ * @brief Function pointer type (unsigned long)->void definition.
+ */
 typedef void (*FuncPtr1)(unsigned long);
-#define flashWrite(value, address) {FuncPtr2 funcptr; funcptr = (FuncPtr2)0x2c4; funcptr(value, address);}
-#define flashErase(address) {unsigned long addr; FuncPtr1 funcptr; funcptr =  (FuncPtr1)0x2f8; addr = (((((address>>16)&0xF)|0x1010)<<16) + (address&0xFFFF)); funcptr(addr);}
+
+/**
+ * @brief Function pointer type (unsigned long, unsigned long)->void definition.
+ */
+typedef void (*FuncPtr2)(unsigned long, unsigned long);
 
 /**
  * @brief Jump to a specific address.
  */
-#define JumpTo(address) {FuncPtr funcptr; funcptr = (FuncPtr)address; funcptr();}
+#define JumpTo(address)             \
+    {                               \
+        FuncPtr funcptr;            \
+        funcptr = (FuncPtr)address; \
+        funcptr();                  \
+    }
 
-// MAC_ID address.
-#define MAC_ID 0x1001f3f0
+#define SYS_CLK_3M  (0x0<<12)
+#define SYS_CLK_6M  (0x1<<12)
+#define SYS_CLK_12M (0x3<<12)
 
-/**
- * @brief Get chip identity(MAC_ID).
- */
-#define getMAC() MemoryRead32(MAC_ID)
-
-/**
- * @brief Set chip identity(MAC_ID).
- */
-#define setMAC(id) flashWrite(id, MAC_ID)
+#define RT_MCU_SetSystemClock(mode)                 \
+    {                                               \
+        MemoryAnd32(SYS_CTL2_REG, ~SYS_CLK_12M);    \
+        MemoryOr32(SYS_CTL2_REG, mode);             \
+    }
 
 void RT_Clr_Sram();
 

@@ -1,0 +1,318 @@
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/Flash.h:19: warning: Member RT_Flash_Write(value, address) (macro definition) of file Flash.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/Flash.h:29: warning: Member RT_Flash_Erase1k(address) (macro definition) of file Flash.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/Flash.h:41: warning: Member RT_Flash_EraseFrom(address) (macro definition) of file Flash.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/Flash.h:49: warning: Member MAC_ID (macro definition) of file Flash.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:23: warning: Member RT_LCD_Initialize() (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:72: warning: Member RT_LCD_ShowAll() (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:81: warning: Member RT_LCD_DispOn() (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:85: warning: Member RT_LCD_DisHiPressure(unsigned int b) (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:152: warning: Member RT_LCD_DisLoPressure(unsigned int b) (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:216: warning: Member RT_LCD_DisHeartRate(unsigned int b) (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:259: warning: Member RT_LCD_DisTime(unsigned int hour, unsigned int minute) (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:327: warning: Member LRT_CD_DisDate(unsigned int month, unsigned int day) (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:383: warning: Member RT_LCD_DisSign(unsigned long x, unsigned long y) (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:391: warning: Member RT_LCD_ClearSign(unsigned long x, unsigned long y) (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:399: warning: Member RT_LCD_GetSegCode1(unsigned int b) (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:414: warning: Member RT_LCD_GetSegCode2(unsigned int b) (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:430: warning: Member RT_LCD_GetSegCode3(unsigned int b) (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:447: warning: Member RT_LCD_ExtractDigit(unsigned int b) (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:459: warning: Member RT_LCD_BlinkSign(unsigned long x, unsigned long y) (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:476: warning: Member RT_LCD_BlinkMinute() (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:503: warning: Member RT_LCD_BlinkHour() (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:528: warning: Member RT_LCD_BlinkDay() (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.c:554: warning: Member RT_LCD_BlinkMonth() (function) of file LCD.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:12: warning: Member LCD_M2 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:13: warning: Member kPa (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:14: warning: Member DP1 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:15: warning: Member mmHg (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:16: warning: Member DN (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:17: warning: Member UP (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:18: warning: Member LB (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:19: warning: Member M1 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:20: warning: Member L3 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:21: warning: Member L4 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:22: warning: Member L5 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:23: warning: Member L6 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:24: warning: Member L2 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:25: warning: Member L1 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:26: warning: Member IHB (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:27: warning: Member AVG (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:28: warning: Member elAGD (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:29: warning: Member DP2 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:30: warning: Member E13 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:31: warning: Member AM (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:32: warning: Member C9 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:33: warning: Member B9 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:34: warning: Member nineAGDE (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:35: warning: Member HT (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:36: warning: Member colon (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:37: warning: Member PM (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:38: warning: Member No (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:39: warning: Member HR (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:40: warning: Member C13 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:41: warning: Member M_2 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:42: warning: Member B13 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:44: warning: Member segment (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:45: warning: Member digit (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:46: warning: Member days (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:47: warning: Member LCDCode1 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:48: warning: Member LCDCode2 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:49: warning: Member LCDCode3 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:51: warning: Member flaga (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:54: warning: Member subsecond (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:55: warning: Member second (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:56: warning: Member minuteg (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:57: warning: Member hourg (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:58: warning: Member dayg (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:59: warning: Member monthg (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:60: warning: Member SetMode (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:65: warning: Member RT_LCD_Initialize() (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:66: warning: Member RT_LCD_ShowAll() (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:67: warning: Member RT_LCD_DispOn() (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:68: warning: Member RT_LCD_DisHiPressure(unsigned int b) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:69: warning: Member RT_LCD_DisLoPressure(unsigned int b) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:70: warning: Member RT_LCD_DisHeartRate(unsigned int b) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:71: warning: Member RT_LCD_DisDate(unsigned int month, unsigned int day) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:72: warning: Member RT_LCD_DisTime(unsigned int hour, unsigned int minute) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:73: warning: Member RT_LCD_DisSign(unsigned long x, unsigned long y) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:74: warning: Member RT_LCD_ClearSign(unsigned long x, unsigned long y) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:75: warning: Member RT_LCD_GetSegCode1(unsigned int b) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:76: warning: Member RT_LCD_GetSegCode2(unsigned int b) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:77: warning: Member RT_LCD_GetSegCode3(unsigned int b) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:78: warning: Member RT_LCD_ExtractDigit(unsigned int b) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:79: warning: Member RT_LCD_BlinkSign(unsigned long x, unsigned long y) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:80: warning: Member RT_LCD_BlinkMinute() (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:81: warning: Member RT_LCD_BlinkHour() (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:82: warning: Member RT_LCD_BlinkDay() (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:83: warning: Member RT_LCD_BlinkMonth() (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/LCD/LCD.h:84: warning: Member RT_LCD_delay(unsigned int a) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:27: warning: Member SYS_CTL2_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:28: warning: Member SYS_IOCTL_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:29: warning: Member SYS_IRQ_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:31: warning: Member USER_INT (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:32: warning: Member PC_LOC (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:33: warning: Member INT_COUNT (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:35: warning: Member INT_CTL0_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:36: warning: Member INT_CTL1_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:37: warning: Member INT_CTL2_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:38: warning: Member INT_CLR_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:40: warning: Member UART0_READ_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:41: warning: Member UART0_BUSY_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:42: warning: Member UART0_WRITE_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:43: warning: Member UART0_IRQ_ACK_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:44: warning: Member UART0_CTL_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:45: warning: Member UART0_DATA_RDY_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:46: warning: Member UART0_LIN_BREAK_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:47: warning: Member UART0_BRP_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:49: warning: Member UART1_READ_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:50: warning: Member UART1_BUSY_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:51: warning: Member UART1_WRITE_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:52: warning: Member UART1_IRQ_ACK_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:53: warning: Member UART1_CTL_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:54: warning: Member UART1_DATA_RDY_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:55: warning: Member UART1_LIN_BREAK_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:56: warning: Member UART1_BRP_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:58: warning: Member SPI_READ_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:59: warning: Member SPI_BUSY_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:60: warning: Member SPI_WRITE_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:61: warning: Member SPI_IRQ_ACK_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:62: warning: Member SPI_CTL_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:63: warning: Member SPI_DATA_RDY_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:65: warning: Member SYS_GDR_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:66: warning: Member SYS_IOCTL_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:67: warning: Member SYS_GPIO0_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:68: warning: Member SYS_GPIO1_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:70: warning: Member T0_CTL0_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:71: warning: Member T0_REF_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:72: warning: Member T0_READ_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:73: warning: Member T0_CLRIRQ_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:74: warning: Member T0_CLK_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:75: warning: Member T0_CLRCNT_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:77: warning: Member T1_CTL0_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:78: warning: Member T1_REF_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:79: warning: Member T1_READ_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:80: warning: Member T1_CLRIRQ_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:81: warning: Member T1_CLK_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:82: warning: Member T1_CLRCNT_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:84: warning: Member T2_CTL0_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:85: warning: Member T2_REF_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:86: warning: Member T2_READ_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:87: warning: Member T2_CLRIRQ_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:88: warning: Member T2_CLK_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:89: warning: Member T2_CLRCNT_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:90: warning: Member T2_PHASE_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:92: warning: Member T4_CTL0_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:93: warning: Member T4_REF0_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:94: warning: Member T4_CLK0_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:95: warning: Member T4_REF1_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:96: warning: Member T4_CLK1_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:98: warning: Member AD_CTL0_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:99: warning: Member AD_OPO_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:100: warning: Member AD_READ_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:101: warning: Member AD_CLR_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:103: warning: Member LCD_CTL0_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:104: warning: Member LCD_RAM_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:105: warning: Member LCD_RAM_LINE0 (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:106: warning: Member LCD_RAM_LINE1 (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:107: warning: Member LCD_RAM_LINE2 (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:108: warning: Member LCD_RAM_LINE3 (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:110: warning: Member WDT_CTL0_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:111: warning: Member WDT_CLR_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:112: warning: Member WDT_READ_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:114: warning: Member RTC_CTL_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:115: warning: Member RTC_TIME_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:116: warning: Member RTC_CLR_REG (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:118: warning: Member DATA_SIZE (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:193: warning: Member SYS_CLK_3M (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:194: warning: Member SYS_CLK_6M (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:195: warning: Member SYS_CLK_12M (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:197: warning: Member RT_MCU_SetSystemClock(mode) (macro definition) of file mcu.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/mcu/mcu.h:129: warning: unexpected end of comment block while parsing the argument of command param
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.c:339: warning: Member fp_float32_to_float64(float a_fp) (function) of file soft_fp.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.c:356: warning: Member fp_float64_to_float32(double a_dfp) (function) of file soft_fp.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.c:377: warning: Member fp_float64_add(double a_dfp, double b_dfp) (function) of file soft_fp.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.c:382: warning: Member fp_float64_sub(double a_dfp, double b_dfp) (function) of file soft_fp.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.c:387: warning: Member fp_float64_mult(double a_dfp, double b_dfp) (function) of file soft_fp.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.c:392: warning: Member fp_float64_div(double a_dfp, double b_dfp) (function) of file soft_fp.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.c:435: warning: Member __ltsf2(float a_fp, float b_fp) (function) of file soft_fp.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.c:440: warning: Member __lesf2(float a_fp, float b_fp) (function) of file soft_fp.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.c:445: warning: Member __gtsf2(float a_fp, float b_fp) (function) of file soft_fp.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.c:450: warning: Member __gesf2(float a_fp, float b_fp) (function) of file soft_fp.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.c:455: warning: Member __eqsf2(float a_fp, float b_fp) (function) of file soft_fp.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.c:460: warning: Member __nesf2(float a_fp, float b_fp) (function) of file soft_fp.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:14: warning: Member assert(A) (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:16: warning: Member fp_float32_neg (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:17: warning: Member fp_float32_add (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:18: warning: Member fp_float32_sub (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:19: warning: Member fp_float32_mult (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:20: warning: Member fp_float32_div (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:21: warning: Member fp_float32_to_int32 (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:22: warning: Member fp_int32_to_float32 (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:23: warning: Member fp_uint32_to_float32 (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:24: warning: Member fp_float32_to_float64 (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:25: warning: Member fp_float64_to_float32 (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:26: warning: Member fp_float64_add (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:27: warning: Member fp_float64_sub (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:28: warning: Member fp_float64_mult (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:29: warning: Member fp_float64_div (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:30: warning: Member abs (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:31: warning: Member sqrt (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:32: warning: Member cos (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:33: warning: Member sin (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:34: warning: Member atan (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:35: warning: Member atan2 (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:36: warning: Member exp (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:37: warning: Member log (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:38: warning: Member pow (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:67: warning: Member PI (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:68: warning: Member HALF_PI (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:69: warning: Member EIGHTH_PI (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:70: warning: Member TWO_PI (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:71: warning: Member ATAN_EIGHTH_PI (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:72: warning: Member E_SQUARE (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:73: warning: Member INV_E_SQUARE (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:74: warning: Member LN_2 (macro definition) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:49: warning: Member fp_float32_to_float64(float a_fp) (function) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:50: warning: Member fp_float64_to_float32(double a_dfp) (function) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:53: warning: Member fp_float64_add(double a_dfp, double b_dfp) (function) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:54: warning: Member fp_float64_sub(double a_dfp, double b_dfp) (function) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:55: warning: Member fp_float64_mult(double a_dfp, double b_dfp) (function) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:56: warning: Member fp_float64_div(double a_dfp, double b_dfp) (function) of file soft_fp.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/std/stdio.c:14: warning: Member _printf(char *buf, const char *format, va_list ap) (function) of file stdio.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/std/stdio.h:18: warning: Member xtoa(A) (macro definition) of file stdio.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:9: warning: Member memchr(const void *str, int c, size_t n) (function) of file string.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:19: warning: Member memcmp(const void *str1, const void *str2, size_t n) (function) of file string.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:29: warning: Member memcpy(void *dest, const void *src, size_t n) (function) of file string.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:37: warning: Member memmove(void *dest, const void *src, size_t n) (function) of file string.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:49: warning: Member memset(void *str, int c, size_t n) (function) of file string.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:56: warning: Member strcat(char *dest, const char *src) (function) of file string.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:64: warning: Member strncat(char *dest, const char *src, size_t n) (function) of file string.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:75: warning: Member strchr(const char *str, int c) (function) of file string.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:82: warning: Member strcmp(const char *s1, const char *s2) (function) of file string.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:88: warning: Member strncmp(const char *s1, const char *s2, size_t n) (function) of file string.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:95: warning: Member strcpy(char *dest, const char *src) (function) of file string.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:101: warning: Member strncpy(char *dest, const char *src, size_t n) (function) of file string.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:113: warning: Member strlen(const char *str) (function) of file string.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:124: warning: Member strstr(const char *s1, const char *s2) (function) of file string.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:11: warning: Member size_t (macro definition) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:13: warning: Member memchr(const void *str, int c, size_t n) (function) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:14: warning: Member memcmp(const void *str1, const void *str2, size_t n) (function) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:15: warning: Member memcpy(void *dest, const void *src, size_t n) (function) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:16: warning: Member memmove(void *dest, const void *src, size_t n) (function) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:17: warning: Member memset(void *str, int c, size_t n) (function) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:18: warning: Member strcat(char *dest, const char *src) (function) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:19: warning: Member strncat(char *dest, const char *src, size_t n) (function) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:20: warning: Member strchr(const char *str, int c) (function) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:21: warning: Member strcmp(const char *s1, const char *s2) (function) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:22: warning: Member strncmp(const char *s1, const char *s2, size_t n) (function) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:23: warning: Member strcpy(char *dest, const char *src) (function) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:24: warning: Member strncpy(char *dest, const char *src, size_t n) (function) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:25: warning: Member strlen(const char *str) (function) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:26: warning: Member strstr(const char *s1, const char *s2) (function) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:14: warning: Member RT_TC0_Stop() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:15: warning: Member RT_TC0_ClearIrq() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:16: warning: Member RT_TC0_ClearCnt() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:17: warning: Member RT_TC0_ClearAll() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:22: warning: Member RT_TC0_TcIrqOn() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:23: warning: Member RT_TC0_TcIrqOff() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:24: warning: Member RT_TC0_PWMIrqOn() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:25: warning: Member RT_TC0_PWMIrqOff() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:26: warning: Member RT_TC0_CheckTcFlag() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:27: warning: Member RT_TC0_CheckPWMFlag() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:31: warning: Member RT_TC0_TimerOn() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:32: warning: Member RT_TC0_TimerOff() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:68: warning: Member RT_TC0_EcntOn() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:69: warning: Member RT_TC0_EcntOff() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:86: warning: Member RT_TC0_PWMOn() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:87: warning: Member RT_TC0_PWMOff() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:105: warning: Member RT_TC0_PWMMOn() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:106: warning: Member RT_TC0_PWMMOff() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:107: warning: Member RT_TC0_PWMMTriggerMode(mode) (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC0.h:126: warning: Member RT_TC0_ReadCnt() (macro definition) of file TC0.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:13: warning: Member RT_TC1_Stop() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:14: warning: Member RT_TC1_ClearIrq() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:15: warning: Member RT_TC1_ClearCnt() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:16: warning: Member RT_TC1_ClearAll() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:21: warning: Member RT_TC1_TcIrqOn() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:22: warning: Member RT_TC1_TcIrqOff() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:23: warning: Member RT_TC1_PWMIrqOn() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:24: warning: Member RT_TC1_PWMIrqOff() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:25: warning: Member RT_TC1_CheckTcFlag() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:26: warning: Member RT_TC1_CheckPWMFlag() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:29: warning: Member RT_TC1_TimerOn() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:30: warning: Member RT_TC1_TimerOff() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:62: warning: Member RT_TC1_EcntOn() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:63: warning: Member RT_TC1_EcntOff() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:80: warning: Member RT_TC1_PWMOn() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:81: warning: Member RT_TC1_PWMOff() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:99: warning: Member RT_TC1_PWMMOn() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:100: warning: Member RT_TC1_PWMMOff() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:101: warning: Member RT_TC1_PWMMTriggerMode(mode) (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC1.h:120: warning: Member RT_TC1_ReadCnt() (macro definition) of file TC1.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:15: warning: Member RT_TC2_Stop() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:16: warning: Member RT_TC2_ClearIrq() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:17: warning: Member RT_TC2_ClearCnt() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:18: warning: Member RT_TC2_ClearAll() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:23: warning: Member RT_TC2_TcIrqOn() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:24: warning: Member RT_TC2_TcIrqOff() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:25: warning: Member RT_TC2_PWM0IrqOn() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:26: warning: Member RT_TC2_PWM0IrqOff() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:27: warning: Member RT_TC2_CheckTcFlag() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:28: warning: Member RT_TC2_CheckPWM0Flag() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:32: warning: Member RT_TC2_TimerOn() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:33: warning: Member RT_TC2_TimerOff() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:70: warning: Member RT_TC2_EcntOn() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:71: warning: Member RT_TC2_EcntOff() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:90: warning: Member RT_TC2_PWM0On() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:91: warning: Member RT_TC2_PWM0Off() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:92: warning: Member RT_TC2_PWM1to3On() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:93: warning: Member RT_TC2_PWM1to3Off() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:121: warning: Member RT_TC2_PWMMOn() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:122: warning: Member RT_TC2_PWMMOff() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:123: warning: Member RT_TC2_PWMMTriggerMode(mode) (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC2.h:142: warning: Member RT_TC2_ReadCnt() (macro definition) of file TC2.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC4.h:15: warning: Member RT_TC4_AllPWM_On() (macro definition) of file TC4.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC4.h:16: warning: Member RT_TC4_AllPWM_Off() (macro definition) of file TC4.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC4.h:17: warning: Member RT_TC4_PWM_On(n) (macro definition) of file TC4.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/TC4.h:18: warning: Member RT_TC4_PWM_Off(n) (macro definition) of file TC4.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/MAINPAGE.md:12: warning: unexpected token TK_EOF as the argument of ref

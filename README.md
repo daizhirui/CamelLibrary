@@ -8,6 +8,11 @@ Official Library for Camel Micro products. This library is embedded in [CamelStu
 
 ## History
 
+### 22.06.2018
+
+- Add documentation about UART.
+- Use a new doxygen theme.
+
 ### 16.06.2018
 
 - Remove some unused libraries. Basic library will focus more on standard requirement.

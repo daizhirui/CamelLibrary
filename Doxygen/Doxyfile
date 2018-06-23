@@ -58,7 +58,7 @@ PROJECT_LOGO           = /Users/daizhirui/Development/CamelStudio_Library/Doxyge
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = /Users/daizhirui/Development/CamelStudio_Library/docs
+OUTPUT_DIRECTORY       = ../docs
 
 # If the CREATE_SUBDIRS tag is set to YES then doxygen will create 4096 sub-
 # directories (in 2 levels) under the output directory of each output format and
@@ -253,7 +253,7 @@ TCL_SUBST              =
 # members will be omitted, etc.
 # The default value is: NO.
 
-OPTIMIZE_OUTPUT_FOR_C  = YES
+OPTIMIZE_OUTPUT_FOR_C  = NO
 
 # Set the OPTIMIZE_OUTPUT_JAVA tag to YES if your project consists of Java or
 # Python sources only. Doxygen will then generate output that is more tailored
@@ -779,7 +779,7 @@ WARN_FORMAT            = "$file:$line: $text"
 # messages should be written. If left blank the output is written to standard
 # error (stderr).
 
-WARN_LOGFILE           = 
+WARN_LOGFILE           = log.txt
 
 #---------------------------------------------------------------------------
 # Configuration options related to the input files
@@ -791,7 +791,7 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = /Users/daizhirui/Development/CamelStudio_Library/Official/src
+INPUT                  = ../Official/src
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
@@ -874,10 +874,10 @@ RECURSIVE              = YES
 # Note that relative paths are relative to the directory from which doxygen is
 # run.
 
-EXCLUDE                = /Users/daizhirui/Development/CamelStudio_Library/Official/src/outdate \
-                         /Users/daizhirui/Development/CamelStudio_Library/Official/src/release \
-                         ../Official/src/root_bootloader \
-                         ../Official/src/boot
+EXCLUDE                = ../Official/src/root_bootloader \
+                         ../Official/src/boot \
+                         ../Official/src/release \
+                         ../Official/src/outdate
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
 # directories that are symbolic links (a Unix file system feature) are excluded
@@ -1091,7 +1091,7 @@ CLANG_ASSISTED_PARSING = NO
 # specified with INPUT and INCLUDE_PATH.
 # This tag requires that the tag CLANG_ASSISTED_PARSING is set to YES.
 
-CLANG_OPTIONS          = 
+CLANG_OPTIONS          = "-I ../Official/release/include"
 
 # If clang assisted parsing is enabled you can provide the clang parser with the
 # path to the compilation database (see:

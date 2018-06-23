@@ -53,6 +53,28 @@
 #define RT_UART_On(port)              {MemoryAnd32(UART_CTL_REG(port),~0x10);}          // UART on
 
 /**
+ * @brief Keyword BAUDRATE_9600.
+ */
+#define BAUDRATE_9600   (0x0<<12)
+
+/**
+ * @brief Keyword BAUDRATE_19200.
+ */
+#define BAUDRATE_19200  (0x1<<12)
+
+/**
+ * @brief Keyword BAUDRATE_38400.
+ */
+#define BAUDRATE_38400  (0x3<<12)
+
+/**
+* @brief        Set the baudrate of UART.
+* @param mode   Baudrate to set, optional value: \code{.c}BAUDRATE_9600, BAUDRATE_19200, BAUDRATE_38400\endcode
+* @return void
+*/
+#define RT_UART_SetBaudrate(mode)   RT_MCU_SetSystemClock(mode)
+
+/**
  * @brief       Check if Uart Tx is busy
  * @param port  Port to use, optional value: \code{.c}UART0, UART1\endcode
  * @return int  1 = Uart Tx busy   0 = Uart Tx not busy
@@ -113,6 +135,7 @@
 /**
  * @brief       Set UART port's compare value
  * @param port  Port to use, optional value: \code{.c}UART0, UART1\endcode
+ * @param val   Value to be compared.
  * @return      void
  */
 #define RT_UART_SetCompare(port, val)   MemoryOr32(UART_CTL_REG(port),val<<8)                // set irq compare bits
