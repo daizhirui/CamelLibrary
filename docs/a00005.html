@@ -49,7 +49,7 @@
     <!-- nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.1</a>
+                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.2</a>
         </div>
         </div>
         </nav -->
@@ -78,7 +78,7 @@
 
 <p>Analog Input Output Library for M2.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="a00059_source.html">mcu.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00065_source.html">mcu.h</a>&quot;</code><br />
 </div>
 <p><a href="a00005_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -204,28 +204,28 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#aea557159b89812e640ee3e97eed1f034">V2P_185K</a>&#160;&#160;&#160;0x3</td></tr>
 <tr class="memdesc:aea557159b89812e640ee3e97eed1f034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resistor 185K Keyword of Voltage-To-PulseWidth Module. <br /></td></tr>
 <tr class="separator:aea557159b89812e640ee3e97eed1f034"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00318bd4fc3ce7ad4f03124b91891f4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a00318bd4fc3ce7ad4f03124b91891f4f">RT_ADC_Clear</a>()&#160;&#160;&#160;<a class="el" href="a00059.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(AD_CLR_REG, 1)</td></tr>
+<tr class="memitem:a00318bd4fc3ce7ad4f03124b91891f4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a00318bd4fc3ce7ad4f03124b91891f4f">RT_ADC_Clear</a>()&#160;&#160;&#160;<a class="el" href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(AD_CLR_REG, 1)</td></tr>
 <tr class="memdesc:a00318bd4fc3ce7ad4f03124b91891f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the state of Analog Digit Converter.  <a href="#a00318bd4fc3ce7ad4f03124b91891f4f">More...</a><br /></td></tr>
 <tr class="separator:a00318bd4fc3ce7ad4f03124b91891f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1002dc4b0d8af47aba6aaa5de06868e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#af1002dc4b0d8af47aba6aaa5de06868e">RT_ADC_V2P_On</a>()&#160;&#160;&#160;<a class="el" href="a00059.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_CTL0_REG, (1 &lt;&lt; 8))</td></tr>
+<tr class="memitem:af1002dc4b0d8af47aba6aaa5de06868e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#af1002dc4b0d8af47aba6aaa5de06868e">RT_ADC_V2P_On</a>()&#160;&#160;&#160;<a class="el" href="a00065.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_CTL0_REG, (1 &lt;&lt; 8))</td></tr>
 <tr class="memdesc:af1002dc4b0d8af47aba6aaa5de06868e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ADC_V2P on.  <a href="#af1002dc4b0d8af47aba6aaa5de06868e">More...</a><br /></td></tr>
 <tr class="separator:af1002dc4b0d8af47aba6aaa5de06868e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a392f47d863065820e42b66b84007dfe0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a392f47d863065820e42b66b84007dfe0">RT_ADC_V2P_Off</a>()&#160;&#160;&#160;<a class="el" href="a00059.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_CTL0_REG, ~(1 &lt;&lt; 8))</td></tr>
+<tr class="memitem:a392f47d863065820e42b66b84007dfe0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a392f47d863065820e42b66b84007dfe0">RT_ADC_V2P_Off</a>()&#160;&#160;&#160;<a class="el" href="a00065.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_CTL0_REG, ~(1 &lt;&lt; 8))</td></tr>
 <tr class="memdesc:a392f47d863065820e42b66b84007dfe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ADC_V2P off.  <a href="#a392f47d863065820e42b66b84007dfe0">More...</a><br /></td></tr>
 <tr class="separator:a392f47d863065820e42b66b84007dfe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab24203a1eff5816f48761f0e38337d67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#ab24203a1eff5816f48761f0e38337d67">RT_ADC_V2P_SetResistor</a>(resistor)</td></tr>
 <tr class="memdesc:ab24203a1eff5816f48761f0e38337d67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the resistor of V2P. When res = 3, single input mode is enabled, vcom will be fed into the P-side of OPO!  <a href="#ab24203a1eff5816f48761f0e38337d67">More...</a><br /></td></tr>
 <tr class="separator:ab24203a1eff5816f48761f0e38337d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a499716b82c53672422efd8ad4fd4c9ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a499716b82c53672422efd8ad4fd4c9ab">RT_ADC_TemperatureSensorOn</a>()&#160;&#160;&#160;<a class="el" href="a00059.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_CTL0_REG, 1 &lt;&lt; 5)</td></tr>
+<tr class="memitem:a499716b82c53672422efd8ad4fd4c9ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a499716b82c53672422efd8ad4fd4c9ab">RT_ADC_TemperatureSensorOn</a>()&#160;&#160;&#160;<a class="el" href="a00065.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_CTL0_REG, 1 &lt;&lt; 5)</td></tr>
 <tr class="memdesc:a499716b82c53672422efd8ad4fd4c9ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ADC temperature sensor on.  <a href="#a499716b82c53672422efd8ad4fd4c9ab">More...</a><br /></td></tr>
 <tr class="separator:a499716b82c53672422efd8ad4fd4c9ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a592b3503c0efb0d01f07c151ea6aaa91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a592b3503c0efb0d01f07c151ea6aaa91">RT_ADC_TemperatureSensorOff</a>()&#160;&#160;&#160;<a class="el" href="a00059.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_CTL0_REG, ~(1 &lt;&lt; 5))</td></tr>
+<tr class="memitem:a592b3503c0efb0d01f07c151ea6aaa91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a592b3503c0efb0d01f07c151ea6aaa91">RT_ADC_TemperatureSensorOff</a>()&#160;&#160;&#160;<a class="el" href="a00065.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_CTL0_REG, ~(1 &lt;&lt; 5))</td></tr>
 <tr class="memdesc:a592b3503c0efb0d01f07c151ea6aaa91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ADC temperature sensor off.  <a href="#a592b3503c0efb0d01f07c151ea6aaa91">More...</a><br /></td></tr>
 <tr class="separator:a592b3503c0efb0d01f07c151ea6aaa91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ce23f7d735a1eedc00c509721b79446"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a6ce23f7d735a1eedc00c509721b79446">RT_OPO_On</a>()&#160;&#160;&#160;<a class="el" href="a00059.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_OPO_REG, 0x1)</td></tr>
+<tr class="memitem:a6ce23f7d735a1eedc00c509721b79446"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a6ce23f7d735a1eedc00c509721b79446">RT_OPO_On</a>()&#160;&#160;&#160;<a class="el" href="a00065.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_OPO_REG, 0x1)</td></tr>
 <tr class="memdesc:a6ce23f7d735a1eedc00c509721b79446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn the Amplifier on.  <a href="#a6ce23f7d735a1eedc00c509721b79446">More...</a><br /></td></tr>
 <tr class="separator:a6ce23f7d735a1eedc00c509721b79446"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaa6d1267ea1064b765948a2ab8dd934"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#aaaa6d1267ea1064b765948a2ab8dd934">RT_OPO_Off</a>()&#160;&#160;&#160;<a class="el" href="a00059.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_OPO_REG, ~0x1)</td></tr>
+<tr class="memitem:aaaa6d1267ea1064b765948a2ab8dd934"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#aaaa6d1267ea1064b765948a2ab8dd934">RT_OPO_Off</a>()&#160;&#160;&#160;<a class="el" href="a00065.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_OPO_REG, ~0x1)</td></tr>
 <tr class="memdesc:aaaa6d1267ea1064b765948a2ab8dd934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn the Amplifier off.  <a href="#aaaa6d1267ea1064b765948a2ab8dd934">More...</a><br /></td></tr>
 <tr class="separator:aaaa6d1267ea1064b765948a2ab8dd934"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5867d7cb8e45d61e08c23747ad488ff8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a5867d7cb8e45d61e08c23747ad488ff8">RT_OPO_SetChannel</a>(ch0,  ch1,  ch2,  ch3)</td></tr>
@@ -258,10 +258,10 @@ Macros</h2></td></tr>
 <tr class="memitem:a92d5325c171f6afbf19fe0002ef5296d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a92d5325c171f6afbf19fe0002ef5296d">RT_OPO_SetVPGND</a>(op)</td></tr>
 <tr class="memdesc:a92d5325c171f6afbf19fe0002ef5296d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set VPGND op=1, PsideGND = vcom; op=0, PsideGND = 0.  <a href="#a92d5325c171f6afbf19fe0002ef5296d">More...</a><br /></td></tr>
 <tr class="separator:a92d5325c171f6afbf19fe0002ef5296d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ed6d7d3daccf57a9ee5a9490d8985ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a3ed6d7d3daccf57a9ee5a9490d8985ad">RT_ADC_SD_On</a>()&#160;&#160;&#160;<a class="el" href="a00059.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_CTL0_REG, 1)</td></tr>
+<tr class="memitem:a3ed6d7d3daccf57a9ee5a9490d8985ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a3ed6d7d3daccf57a9ee5a9490d8985ad">RT_ADC_SD_On</a>()&#160;&#160;&#160;<a class="el" href="a00065.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_CTL0_REG, 1)</td></tr>
 <tr class="memdesc:a3ed6d7d3daccf57a9ee5a9490d8985ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on SD.  <a href="#a3ed6d7d3daccf57a9ee5a9490d8985ad">More...</a><br /></td></tr>
 <tr class="separator:a3ed6d7d3daccf57a9ee5a9490d8985ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac57cb41fced89567b192b3a26bb0cb91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#ac57cb41fced89567b192b3a26bb0cb91">RT_ADC_SD_Off</a>()&#160;&#160;&#160;<a class="el" href="a00059.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_CTL0_REG, ~1)</td></tr>
+<tr class="memitem:ac57cb41fced89567b192b3a26bb0cb91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#ac57cb41fced89567b192b3a26bb0cb91">RT_ADC_SD_Off</a>()&#160;&#160;&#160;<a class="el" href="a00065.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_CTL0_REG, ~1)</td></tr>
 <tr class="memdesc:ac57cb41fced89567b192b3a26bb0cb91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off SD.  <a href="#ac57cb41fced89567b192b3a26bb0cb91">More...</a><br /></td></tr>
 <tr class="separator:ac57cb41fced89567b192b3a26bb0cb91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a246ce987fa2b9f254f4796340eb23ed0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a246ce987fa2b9f254f4796340eb23ed0">RT_ADC_SD_SetSampleRate</a>(mode)</td></tr>
@@ -276,10 +276,10 @@ Macros</h2></td></tr>
 <tr class="memitem:a312f152517ab50c1cda791e118dd4473"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a312f152517ab50c1cda791e118dd4473">RT_ADC_SD_Setup</a>(sampleRate,  adWidth,  triggerSource)</td></tr>
 <tr class="memdesc:a312f152517ab50c1cda791e118dd4473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set SD simply.  <a href="#a312f152517ab50c1cda791e118dd4473">More...</a><br /></td></tr>
 <tr class="separator:a312f152517ab50c1cda791e118dd4473"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a201094f8f020811fe7d1cb26efe47094"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a201094f8f020811fe7d1cb26efe47094">RT_ADC_SD_Start</a>()&#160;&#160;&#160;<a class="el" href="a00059.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(AD_READ_REG, 1)</td></tr>
+<tr class="memitem:a201094f8f020811fe7d1cb26efe47094"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a201094f8f020811fe7d1cb26efe47094">RT_ADC_SD_Start</a>()&#160;&#160;&#160;<a class="el" href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(AD_READ_REG, 1)</td></tr>
 <tr class="memdesc:a201094f8f020811fe7d1cb26efe47094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start SD accumulate.  <a href="#a201094f8f020811fe7d1cb26efe47094">More...</a><br /></td></tr>
 <tr class="separator:a201094f8f020811fe7d1cb26efe47094"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3fc5e0f9802d24cd8c0090c86bf9299"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#aa3fc5e0f9802d24cd8c0090c86bf9299">RT_ADC_SD_DataReady</a>()&#160;&#160;&#160;((<a class="el" href="a00059.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(AD_CTL0_REG) &amp; 0x80000000) &gt;&gt; 31)</td></tr>
+<tr class="memitem:aa3fc5e0f9802d24cd8c0090c86bf9299"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#aa3fc5e0f9802d24cd8c0090c86bf9299">RT_ADC_SD_DataReady</a>()&#160;&#160;&#160;((<a class="el" href="a00065.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(AD_CTL0_REG) &amp; 0x80000000) &gt;&gt; 31)</td></tr>
 <tr class="memdesc:aa3fc5e0f9802d24cd8c0090c86bf9299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check is the accumulation of SD is completed.  <a href="#aa3fc5e0f9802d24cd8c0090c86bf9299">More...</a><br /></td></tr>
 <tr class="separator:aa3fc5e0f9802d24cd8c0090c86bf9299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -308,7 +308,7 @@ Functions</h2></td></tr>
           <td class="memname">#define RT_ADC_Clear</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(AD_CLR_REG, 1)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(AD_CLR_REG, 1)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -328,7 +328,7 @@ Functions</h2></td></tr>
           <td class="memname">#define RT_ADC_SD_DataReady</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;((<a class="el" href="a00059.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(AD_CTL0_REG) &amp; 0x80000000) &gt;&gt; 31)</td>
+          <td>&#160;&#160;&#160;((<a class="el" href="a00065.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(AD_CTL0_REG) &amp; 0x80000000) &gt;&gt; 31)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -348,7 +348,7 @@ Functions</h2></td></tr>
           <td class="memname">#define RT_ADC_SD_Off</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_CTL0_REG, ~1)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00065.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_CTL0_REG, ~1)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -369,7 +369,7 @@ Functions</h2></td></tr>
           <td class="memname">#define RT_ADC_SD_On</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_CTL0_REG, 1)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00065.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_CTL0_REG, 1)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -517,7 +517,7 @@ Functions</h2></td></tr>
           <td class="memname">#define RT_ADC_SD_Start</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(AD_READ_REG, 1)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(AD_READ_REG, 1)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -538,7 +538,7 @@ Functions</h2></td></tr>
           <td class="memname">#define RT_ADC_TemperatureSensorOff</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_CTL0_REG, ~(1 &lt;&lt; 5))</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00065.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_CTL0_REG, ~(1 &lt;&lt; 5))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -559,7 +559,7 @@ Functions</h2></td></tr>
           <td class="memname">#define RT_ADC_TemperatureSensorOn</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_CTL0_REG, 1 &lt;&lt; 5)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00065.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_CTL0_REG, 1 &lt;&lt; 5)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -580,7 +580,7 @@ Functions</h2></td></tr>
           <td class="memname">#define RT_ADC_V2P_Off</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_CTL0_REG, ~(1 &lt;&lt; 8))</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00065.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_CTL0_REG, ~(1 &lt;&lt; 8))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -601,7 +601,7 @@ Functions</h2></td></tr>
           <td class="memname">#define RT_ADC_V2P_On</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_CTL0_REG, (1 &lt;&lt; 8))</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00065.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_CTL0_REG, (1 &lt;&lt; 8))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -678,7 +678,7 @@ Functions</h2></td></tr>
           <td class="memname">#define RT_OPO_Off</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_OPO_REG, ~0x1)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00065.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(AD_OPO_REG, ~0x1)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -699,7 +699,7 @@ Functions</h2></td></tr>
           <td class="memname">#define RT_OPO_On</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_OPO_REG, 0x1)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00065.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(AD_OPO_REG, 0x1)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -813,7 +813,7 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>AD_CTL0_REG[15]: 1=bypass, 0=no bypass </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mode</td><td>bypass switch, optional value:<div class="fragment"><div class="line"><a class="code" href="a00059.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">mode</td><td>bypass switch, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
   </table>
   </dd>
 </dl>
@@ -862,10 +862,10 @@ Functions</h2></td></tr>
 <p>Set the state of every amplifier channel. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ch0</td><td>channel 0, optional value:<div class="fragment"><div class="line"><a class="code" href="a00059.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
-    <tr><td class="paramname">ch1</td><td>channel 1, optional value:<div class="fragment"><div class="line"><a class="code" href="a00059.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
-    <tr><td class="paramname">ch2</td><td>channel 2, optional value:<div class="fragment"><div class="line"><a class="code" href="a00059.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
-    <tr><td class="paramname">ch3</td><td>channel 3, optional value:<div class="fragment"><div class="line"><a class="code" href="a00059.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">ch0</td><td>channel 0, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">ch1</td><td>channel 1, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">ch2</td><td>channel 2, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">ch3</td><td>channel 3, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
   </table>
   </dd>
 </dl>
@@ -920,10 +920,10 @@ Functions</h2></td></tr>
 <p>Set OPO at Differential Mode. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ch0</td><td>channel 0, optional value:<div class="fragment"><div class="line"><a class="code" href="a00059.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
-    <tr><td class="paramname">ch1</td><td>channel 1, optional value:<div class="fragment"><div class="line"><a class="code" href="a00059.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
-    <tr><td class="paramname">ch2</td><td>channel 2, optional value:<div class="fragment"><div class="line"><a class="code" href="a00059.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
-    <tr><td class="paramname">ch3</td><td>channel 3, optional value:<div class="fragment"><div class="line"><a class="code" href="a00059.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">ch0</td><td>channel 0, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">ch1</td><td>channel 1, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">ch2</td><td>channel 2, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">ch3</td><td>channel 3, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
     <tr><td class="paramname">exchange</td><td>Exchange P side and N side or not. optional value:<div class="fragment"><div class="line"><a class="code" href="a00005.html#a9bf75bd96cc424c955447196c8c32599">OPO_EXCHANGE_PIN</a>, <a class="code" href="a00005.html#a60931ceb0df42cf485a8e2244c50a8d5">OPO_NOT_EXCHANGE_PIN</a></div></div><!-- fragment -->. </td></tr>
   </table>
   </dd>
@@ -952,7 +952,7 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Set AD_OPO_REG[3] </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mode</td><td>Pside feedback switch, optional value:<div class="fragment"><div class="line"><a class="code" href="a00059.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">mode</td><td>Pside feedback switch, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
   </table>
   </dd>
 </dl>
@@ -975,13 +975,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                             \</div><div class="line">        RT_OPO_SetChannel(<a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>);    \</div><div class="line">        if (mode)                                 \</div><div class="line">        {                                         \</div><div class="line">            MemoryAnd32(AD_OPO_REG, ~(0xf &lt;&lt; 4)); \</div><div class="line">            MemoryOr32(AD_OPO_REG, (1 &lt;&lt; 1));     \</div><div class="line">        }                                         <a class="code" href="a00059.html#ad87cedffcaadc51db22594fce55173d4">\</a></div><div class="line"><a class="code" href="a00059.html#ad87cedffcaadc51db22594fce55173d4">        else                                      \</a></div><div class="line"><a class="code" href="a00059.html#ad87cedffcaadc51db22594fce55173d4">            MemoryAnd32</a>(AD_OPO_REG, ~(1 &lt;&lt; 1));   \</div><div class="line">    }</div><div class="ttc" id="a00059_html_a29e413f6725b2ba32d165ffaa35b01e5"><div class="ttname"><a href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div><div class="ttdeci">#define OFF</div><div class="ttdoc">Keyword OFF. </div><div class="ttdef"><b>Definition:</b> mcu.h:20</div></div>
-<div class="ttc" id="a00059_html_ad87cedffcaadc51db22594fce55173d4"><div class="ttname"><a href="a00059.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a></div><div class="ttdeci">#define MemoryAnd32(addr, val)</div><div class="ttdoc">Logical addrND operation on 32-bit data from a specific address. </div><div class="ttdef"><b>Definition:</b> mcu.h:146</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{                                             \</div><div class="line">        RT_OPO_SetChannel(<a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>);    \</div><div class="line">        if (mode)                                 \</div><div class="line">        {                                         \</div><div class="line">            MemoryAnd32(AD_OPO_REG, ~(0xf &lt;&lt; 4)); \</div><div class="line">            MemoryOr32(AD_OPO_REG, (1 &lt;&lt; 1));     \</div><div class="line">        }                                         <a class="code" href="a00065.html#ad87cedffcaadc51db22594fce55173d4">\</a></div><div class="line"><a class="code" href="a00065.html#ad87cedffcaadc51db22594fce55173d4">        else                                      \</a></div><div class="line"><a class="code" href="a00065.html#ad87cedffcaadc51db22594fce55173d4">            MemoryAnd32</a>(AD_OPO_REG, ~(1 &lt;&lt; 1));   \</div><div class="line">    }</div><div class="ttc" id="a00065_html_ad87cedffcaadc51db22594fce55173d4"><div class="ttname"><a href="a00065.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a></div><div class="ttdeci">#define MemoryAnd32(addr, val)</div><div class="ttdoc">Logical addrND operation on 32-bit data from a specific address. </div><div class="ttdef"><b>Definition:</b> mcu.h:155</div></div>
+<div class="ttc" id="a00065_html_a29e413f6725b2ba32d165ffaa35b01e5"><div class="ttname"><a href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div><div class="ttdeci">#define OFF</div><div class="ttdoc">Keyword OFF. </div><div class="ttdef"><b>Definition:</b> mcu.h:20</div></div>
 </div><!-- fragment -->
 <p>Set whether to connecte pin and nin to vcom. Channel 0-3 should be closed! </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mode</td><td>short switch, optional value:<div class="fragment"><div class="line"><a class="code" href="a00059.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">mode</td><td>short switch, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
   </table>
   </dd>
 </dl>
@@ -1036,10 +1036,10 @@ Functions</h2></td></tr>
 <p>Set OPO at SingleSide Mode, open specific channel and select specific pin. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ch0</td><td>channel 0, optional value:<div class="fragment"><div class="line"><a class="code" href="a00059.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
-    <tr><td class="paramname">ch1</td><td>channel 1, optional value:<div class="fragment"><div class="line"><a class="code" href="a00059.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
-    <tr><td class="paramname">ch2</td><td>channel 2, optional value:<div class="fragment"><div class="line"><a class="code" href="a00059.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
-    <tr><td class="paramname">ch3</td><td>channel 3, optional value:<div class="fragment"><div class="line"><a class="code" href="a00059.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00059.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">ch0</td><td>channel 0, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">ch1</td><td>channel 1, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">ch2</td><td>channel 2, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">ch3</td><td>channel 3, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
     <tr><td class="paramname">pin</td><td>Select P side or N side. Optional value:<div class="fragment"><div class="line"><a class="code" href="a00005.html#a27ea87270635b005b79ed3c2bdf817b1">OPO_NSIDE</a>, <a class="code" href="a00005.html#a8bcbcccda02f456b9d5395756791c1a4">OPO_PSIDE</a></div></div><!-- fragment -->. </td></tr>
   </table>
   </dd>
@@ -1125,7 +1125,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <address class="footer">
-  <small>Version: 1.1  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
+  <small>Version: 1.2  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
 </address>
  <footer class="examples-footer">&copy; Camel Microelectronic 2018</footer>
 </body>

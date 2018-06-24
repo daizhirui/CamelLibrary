@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
     <meta name="generator" content="Doxygen 1.8.14" />
     <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
-    <title>CamelStudioX Library Documentaion: /Users/daizhirui/Development/CamelStudio_Library/Official/src/WDT.h File Reference</title>
+    <title>CamelStudioX Library Documentaion: /Users/daizhirui/Development/CamelStudio_Library/Official/src/TC4.h File Reference</title>
     <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
     <!--script type="text/javascript" src="dynsections.js"></script-->
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
@@ -49,7 +49,7 @@
     <!-- nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.1</a>
+                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.2</a>
         </div>
         </div>
         </nav -->
@@ -71,97 +71,178 @@
   <div class="summary">
 <a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
-<div class="title">WDT.h File Reference</div>  </div>
+<div class="title">TC4.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Watchdog Library for M2.  
+<p>Timer4 Library for M2.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="a00056_source.html">mcu.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00065_source.html">mcu.h</a>&quot;</code><br />
 </div>
 <p><a href="a00137_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a369b51538a0ccf57dcdb30e12352a8c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a369b51538a0ccf57dcdb30e12352a8c7">RT_WatchDog_Setup</a>(n,  irq,  rst)</td></tr>
-<tr class="memdesc:a369b51538a0ccf57dcdb30e12352a8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function set the WDT app.  <a href="#a369b51538a0ccf57dcdb30e12352a8c7">More...</a><br /></td></tr>
-<tr class="separator:a369b51538a0ccf57dcdb30e12352a8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae976b2fe76d4b216e68a771068434abc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#ae976b2fe76d4b216e68a771068434abc">RT_WatchDog_Clear</a>()&#160;&#160;&#160;<a class="el" href="a00056.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(WDT_CLR_REG, 1)</td></tr>
-<tr class="memdesc:ae976b2fe76d4b216e68a771068434abc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear Watchdog.  <a href="#ae976b2fe76d4b216e68a771068434abc">More...</a><br /></td></tr>
-<tr class="separator:ae976b2fe76d4b216e68a771068434abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdfc8b8f0bddfd7382d49a22a92a5930"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#acdfc8b8f0bddfd7382d49a22a92a5930">RT_WatchDog_ReadValue</a>()&#160;&#160;&#160;<a class="el" href="a00056.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(WDT_READ_REG)</td></tr>
-<tr class="memdesc:acdfc8b8f0bddfd7382d49a22a92a5930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read watchdog value.  <a href="#acdfc8b8f0bddfd7382d49a22a92a5930">More...</a><br /></td></tr>
-<tr class="separator:acdfc8b8f0bddfd7382d49a22a92a5930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7e9317dddf60349a86619afdef1fba8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#af7e9317dddf60349a86619afdef1fba8">RT_TC4_AllPWM_On</a>()&#160;&#160;&#160;<a class="el" href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(T4_CTL0_REG, 3)</td></tr>
+<tr class="memdesc:af7e9317dddf60349a86619afdef1fba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on TC4 PWM0 and PWM1.  <a href="#af7e9317dddf60349a86619afdef1fba8">More...</a><br /></td></tr>
+<tr class="separator:af7e9317dddf60349a86619afdef1fba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a810820140a90f26db974ea72d81fac27"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a810820140a90f26db974ea72d81fac27">RT_TC4_AllPWM_Off</a>()&#160;&#160;&#160;<a class="el" href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(T4_CTL0_REG, 0)</td></tr>
+<tr class="memdesc:a810820140a90f26db974ea72d81fac27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off TC4 PWM0 and PWM1.  <a href="#a810820140a90f26db974ea72d81fac27">More...</a><br /></td></tr>
+<tr class="separator:a810820140a90f26db974ea72d81fac27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a383c7817a2e822ccda0e28744c7d3d76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a383c7817a2e822ccda0e28744c7d3d76">RT_TC4_PWM_On</a>(n)&#160;&#160;&#160;<a class="el" href="a00065.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(T4_CLK0_REG, 1 &lt;&lt; n)</td></tr>
+<tr class="memdesc:a383c7817a2e822ccda0e28744c7d3d76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on TC4 PWM based on selection.  <a href="#a383c7817a2e822ccda0e28744c7d3d76">More...</a><br /></td></tr>
+<tr class="separator:a383c7817a2e822ccda0e28744c7d3d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa61aa650a6b2f59bbcb78ae836c82e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#aaa61aa650a6b2f59bbcb78ae836c82e9">RT_TC4_PWM_Off</a>(n)&#160;&#160;&#160;<a class="el" href="a00065.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(T4_CTL0_REG, ~(1 &lt;&lt; n))</td></tr>
+<tr class="memdesc:aaa61aa650a6b2f59bbcb78ae836c82e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off TC4 PWM based on selection.  <a href="#aaa61aa650a6b2f59bbcb78ae836c82e9">More...</a><br /></td></tr>
+<tr class="separator:aaa61aa650a6b2f59bbcb78ae836c82e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b804bb230129a442fe9ce55e3bd2f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#ad6b804bb230129a442fe9ce55e3bd2f6">RT_TC4_SetAllPWM</a>(pwm0_en,  div0,  ref0,  pwm1_en,  div1,  ref1)</td></tr>
+<tr class="memdesc:ad6b804bb230129a442fe9ce55e3bd2f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sets all the PWM function of TC4.  <a href="#ad6b804bb230129a442fe9ce55e3bd2f6">More...</a><br /></td></tr>
+<tr class="separator:ad6b804bb230129a442fe9ce55e3bd2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada2806f77e8e1cf7e64c5b9e13479119"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#ada2806f77e8e1cf7e64c5b9e13479119">RT_TC4_SetPWM</a>(n,  pwm_en,  div,  ref)</td></tr>
+<tr class="memdesc:ada2806f77e8e1cf7e64c5b9e13479119"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sets single pwm of TC4.  <a href="#ada2806f77e8e1cf7e64c5b9e13479119">More...</a><br /></td></tr>
+<tr class="separator:ada2806f77e8e1cf7e64c5b9e13479119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Watchdog Library for M2. </p>
-<dl class="section author"><dt>Author</dt><dd>John &amp; Jack, Zhirui Dai </dd></dl>
+<div class="textblock"><p>Timer4 Library for M2. </p>
+<dl class="section author"><dt>Author</dt><dd>Zhirui Dai </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>16 Jun 2018 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2018 Zhirui </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ae976b2fe76d4b216e68a771068434abc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae976b2fe76d4b216e68a771068434abc">&#9670;&nbsp;</a></span>RT_WatchDog_Clear</h2>
+<a id="a810820140a90f26db974ea72d81fac27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a810820140a90f26db974ea72d81fac27">&#9670;&nbsp;</a></span>RT_TC4_AllPWM_Off</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RT_WatchDog_Clear</td>
+          <td class="memname">#define RT_TC4_AllPWM_Off</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00056.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(WDT_CLR_REG, 1)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(T4_CTL0_REG, 0)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Clear Watchdog. </p>
+<p>Turn off TC4 PWM0 and PWM1. </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
-<a id="acdfc8b8f0bddfd7382d49a22a92a5930"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdfc8b8f0bddfd7382d49a22a92a5930">&#9670;&nbsp;</a></span>RT_WatchDog_ReadValue</h2>
+<a id="af7e9317dddf60349a86619afdef1fba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7e9317dddf60349a86619afdef1fba8">&#9670;&nbsp;</a></span>RT_TC4_AllPWM_On</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RT_WatchDog_ReadValue</td>
+          <td class="memname">#define RT_TC4_AllPWM_On</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00056.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(WDT_READ_REG)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(T4_CTL0_REG, 3)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Read watchdog value. </p>
-<dl class="section return"><dt>Returns</dt><dd>uint4_t The number of 1/8s. </dd></dl>
+<p>Turn on TC4 PWM0 and PWM1. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
-<a id="a369b51538a0ccf57dcdb30e12352a8c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a369b51538a0ccf57dcdb30e12352a8c7">&#9670;&nbsp;</a></span>RT_WatchDog_Setup</h2>
+<a id="aaa61aa650a6b2f59bbcb78ae836c82e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa61aa650a6b2f59bbcb78ae836c82e9">&#9670;&nbsp;</a></span>RT_TC4_PWM_Off</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RT_WatchDog_Setup</td>
+          <td class="memname">#define RT_TC4_PWM_Off</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">n, </td>
+          <td class="paramname">n</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00065.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(T4_CTL0_REG, ~(1 &lt;&lt; n))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Turn off TC4 PWM based on selection. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>0=PWM0 1=PWM1 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a383c7817a2e822ccda0e28744c7d3d76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a383c7817a2e822ccda0e28744c7d3d76">&#9670;&nbsp;</a></span>RT_TC4_PWM_On</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_TC4_PWM_On</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00065.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(T4_CLK0_REG, 1 &lt;&lt; n)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Turn on TC4 PWM based on selection. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>0=PWM0 1=PWM1 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ad6b804bb230129a442fe9ce55e3bd2f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6b804bb230129a442fe9ce55e3bd2f6">&#9670;&nbsp;</a></span>RT_TC4_SetAllPWM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_TC4_SetAllPWM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pwm0_en, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">irq, </td>
+          <td class="paramname">div0, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">rst&#160;</td>
+          <td class="paramname">ref0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pwm1_en, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">div1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ref1&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -170,14 +251,68 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                                    \</div><div class="line">        MemoryWrite32(WDT_CTL0_REG, (n &lt;&lt; 4 | irq &lt;&lt; 2 | rst &lt;&lt; 1 | 1)); \</div><div class="line">        MemoryOr32(<a class="code" href="a00056.html#ab34acec79daf4fcc12a662cde9e75df7">SYS_CTL0_REG</a>, irq);                                   \</div><div class="line">    }</div><div class="ttc" id="a00056_html_ab34acec79daf4fcc12a662cde9e75df7"><div class="ttname"><a href="a00056.html#ab34acec79daf4fcc12a662cde9e75df7">SYS_CTL0_REG</a></div><div class="ttdeci">#define SYS_CTL0_REG</div><div class="ttdoc">Hardware address. </div><div class="ttdef"><b>Definition:</b> mcu.h:26</div></div>
-</div><!-- fragment -->
-<p>This function set the WDT app. </p>
+<b>Value:</b><div class="fragment"><div class="line">{                                                           \</div><div class="line">        MemoryWrite32(T4_CLK0_REG, div0);                       \</div><div class="line">        MemoryWrite32(T4_REF0_REG, ref0);                       \</div><div class="line">        MemoryWrite32(T4_CLK1_REG, div1);                       \</div><div class="line">        MemoryWrite32(T4_REF1_REG, ref1);                       \</div><div class="line">        MemoryAnd32(T4_CTL0_REG, ~(0x3));                       \</div><div class="line">        MemoryOr32(T4_CTL0_REG, (pwm0_en | pwm1_en &lt;&lt; 1));      \</div><div class="line">    }</div></div><!-- fragment -->
+<p>This function sets all the PWM function of TC4. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td>the number of 1/8s n=1~16 </td></tr>
-    <tr><td class="paramname">irq</td><td>trigger interrupt, ON or oFF </td></tr>
-    <tr><td class="paramname">rst</td><td>whether reset the system, ON or OFF </td></tr>
+    <tr><td class="paramname">pwm0_en</td><td>the switch of TC4-pwm0, ON or OFF </td></tr>
+    <tr><td class="paramname">div0</td><td>the clock freq divider of TC4-pwm0 </td></tr>
+    <tr><td class="paramname">ref0</td><td>15-0, the duty of TC4-pwm0 </td></tr>
+    <tr><td class="paramname">pwm1_en</td><td>the switch of TC4-pwm1, On or OFF </td></tr>
+    <tr><td class="paramname">div1</td><td>the clock freq divider of TC4-pwm1 </td></tr>
+    <tr><td class="paramname">ref1</td><td>15-0, the duty of TC4-pwm1 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ada2806f77e8e1cf7e64c5b9e13479119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada2806f77e8e1cf7e64c5b9e13479119">&#9670;&nbsp;</a></span>RT_TC4_SetPWM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_TC4_SetPWM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pwm_en, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">div, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ref&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                            \</div><div class="line">        MemoryWrite32(T4_CLK0_REG + 2 * n, div); \</div><div class="line">        MemoryWrite32(T4_REF0_REG + 2 * n, ref); \</div><div class="line">        MemoryAnd32(T4_CTL0_REG, ~(1 &lt;&lt; n));     \</div><div class="line">        MemoryOr32(T4_CTL0_REG, pwm_en &lt;&lt; n);    \</div><div class="line">    }</div></div><!-- fragment -->
+<p>This function sets single pwm of TC4. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>the number of pwm, 0 or 1 </td></tr>
+    <tr><td class="paramname">pwm_en</td><td>the switch of the pwm, optional value:<div class="fragment"><div class="line"><a class="code" href="a00065.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00065.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">div</td><td>the clock freq divider of pwm </td></tr>
+    <tr><td class="paramname">ref</td><td>the duty of pwm </td></tr>
   </table>
   </dd>
 </dl>
@@ -194,7 +329,7 @@ Macros</h2></td></tr>
 </div>
 </div>
 <address class="footer">
-  <small>Version: 1.1  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
+  <small>Version: 1.2  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
 </address>
  <footer class="examples-footer">&copy; Camel Microelectronic 2018</footer>
 </body>

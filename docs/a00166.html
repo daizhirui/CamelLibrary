@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
     <meta name="generator" content="Doxygen 1.8.14" />
     <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
-    <title>CamelStudioX Library Documentaion: SPI Library For M2</title>
+    <title>CamelStudioX Library Documentaion: Member List</title>
     <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
     <!--script type="text/javascript" src="dynsections.js"></script-->
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
@@ -49,7 +49,7 @@
     <!-- nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.1</a>
+                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.2</a>
         </div>
         </div>
         </nav -->
@@ -65,12 +65,15 @@
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">SPI Library For M2 </div>  </div>
+<div class="title">DES_Key Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>Interface</h2>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00071.html#a7e29e20d0901d972f48c7910ced01496">RT_SPI_On</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00071.html#af62f1bbca0e2dc624d22fd41d9c4d673">RT_SPI_Off</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00071.html#aaa4fe1ff7cdd82bb01d0e9c8b78f1c4e">RT_SPI_Modeset</a>(MorS);</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00071.html#ab5011f13ab02a1c07b52047efb930cae">RT_SPI_ChipSelect</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00071.html#aa1e150a8154edd8c379c587fa8aa476b">RT_SPI_ChipRelease</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00071.html#a58a483e605dad12bcb7cb0c72645a391">RT_SPI_ClearState</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00071.html#ab1ba89b5bfbcb4765f4c76685cba2955">RT_SPI_Busy</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00071.html#a38a5e77ba10f0d47cf17a5e9865051a7">RT_SPI_Write_</a>(val);</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00071.html#a0b2995069d4992ea3676d5eb0a0aa568">RT_SPI_Write</a>(val);</div><div class="line"></div><div class="line">uint32_t <a class="code" href="a00071.html#ac5873263749266b505bf7389433ba8c0">RT_SPI_DataReady</a>();</div><div class="line"></div><div class="line">uint8_t <a class="code" href="a00071.html#aa54a442303e6bde4682c6e0cbe2bb3c5">RT_SPI_Read_</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="a00068.html#a12247c98a144c67f02e3c0783c430b17">RT_SPI_Read</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="a00068.html#a61938c7db10cdb7d7281c7c796526b59">RT_SPI_MasterTransfer</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> c);</div><div class="line"></div><div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="a00068.html#a86a904500b912f32af83058779a01251">RT_SPI_SlaveTransfer</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> c);</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00068.html#a348daf083179aab5d11d1e019c9b598b">RT_SPI_Delay</a>();</div></div><!-- fragment --><h2>Example</h2>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00071.html">SPI.h</a>&quot;</span></div><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00080.html">stdio.h</a>&quot;</span></div><div class="line"></div><div class="line"><span class="comment">// This example shows how to set M2 SPI as master, send and receive data.</span></div><div class="line"><span class="keywordtype">void</span> master(){</div><div class="line">    <span class="keywordtype">char</span> c;</div><div class="line">    <a class="code" href="a00071.html#aaa4fe1ff7cdd82bb01d0e9c8b78f1c4e">RT_SPI_Modeset</a>(<a class="code" href="a00071.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>);             <span class="comment">// set M2 SPI as Master</span></div><div class="line">    <a class="code" href="a00071.html#ab5011f13ab02a1c07b52047efb930cae">RT_SPI_ChipSelect</a>();</div><div class="line">    <a class="code" href="a00071.html#a58a483e605dad12bcb7cb0c72645a391">RT_SPI_ClearState</a>();</div><div class="line">    <span class="keywordflow">while</span>(1){</div><div class="line">        c=<a class="code" href="a00068.html#a61938c7db10cdb7d7281c7c796526b59">RT_SPI_MasterTransfer</a>(<span class="charliteral">&#39;A&#39;</span>);</div><div class="line">        <a class="code" href="a00080.html#a948b7a0779c308ac5502c57e282e6933">putchar</a>(c);</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">// This example shows how to set M2 SPI as slave, send and receive data.</span></div><div class="line"><span class="keywordtype">void</span> slave(){</div><div class="line">    <span class="keywordtype">char</span> c;</div><div class="line">    <a class="code" href="a00071.html#aaa4fe1ff7cdd82bb01d0e9c8b78f1c4e">RT_SPI_Modeset</a>(<a class="code" href="a00071.html#ae342da5a4630c191c1c983958808edd8">SLAVE</a>);              <span class="comment">// set M2 SPI as Slave</span></div><div class="line">    <a class="code" href="a00071.html#a58a483e605dad12bcb7cb0c72645a391">RT_SPI_ClearState</a>();</div><div class="line">    <a class="code" href="a00071.html#a38a5e77ba10f0d47cf17a5e9865051a7">RT_SPI_Write_</a>(<span class="charliteral">&#39;B&#39;</span>);</div><div class="line">    <span class="keywordflow">while</span>(1){</div><div class="line">        c=<a class="code" href="a00068.html#a86a904500b912f32af83058779a01251">RT_SPI_SlaveTransfer</a>(<span class="charliteral">&#39;B&#39;</span>);</div><div class="line">        <a class="code" href="a00080.html#a948b7a0779c308ac5502c57e282e6933">putchar</a>(c);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --> </div></div><!-- contents -->
+
+<p>This is the complete list of members for <a class="el" href="a00169.html">DES_Key</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="a00169.html#a3e14395e8ac22e9e775a243041daaeeb">apart</a></td><td class="entry"><a class="el" href="a00169.html">DES_Key</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="a00169.html#a48b5dadf7decf3076826072563041f1b">key</a></td><td class="entry"><a class="el" href="a00169.html">DES_Key</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>
@@ -79,7 +82,7 @@
 </div>
 </div>
 <address class="footer">
-  <small>Version: 1.1  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
+  <small>Version: 1.2  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
 </address>
  <footer class="examples-footer">&copy; Camel Microelectronic 2018</footer>
 </body>

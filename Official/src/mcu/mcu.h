@@ -20,6 +20,15 @@
 #define OFF     0x0
 
 /**
+ * @brief Keyword RAISE_TRIGGER.
+ */
+#define RAISE_TRIGGER   0x1
+/**
+ * @brief Keyword FALL_TRIGGER.
+ */
+#define FALL_TRIGGER    0x0
+
+/**
  * @brief Hardware address
  */
 // System

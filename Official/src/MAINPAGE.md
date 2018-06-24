@@ -1,16 +1,16 @@
 # CamelStudioX Library Documentation         {#mainpage}
 
-Version 1.1
+Version 1.2
 
 ## Digital
 
 - [General Input Output](@ref IO)
 - [UART](@ref UART)
 - [SPI](@ref SPI)
-- [Time Counter 0 (TC0)]()
-- [Time Counter 1 (TC1)]()
-- [Time Counter 2 (TC2)]()
-- [Time Counter 4 (TC4)]()
+- [Time Counter 0 (TC0)](@ref TC0)
+- [Time Counter 1 (TC1)](@ref TC1)
+- [Time Counter 2 (TC2)](@ref TC2)
+- [Time Counter 4 (TC4)](@ref TC4)
 - [LCD]()
 - [Real Time Counter Library (RTC)]()
 
@@ -24,10 +24,10 @@ Version 1.1
 
 ## System
 
-- [Micro System Unit (MCU)]()
-- [Interrupt]()
+- [Micro Control Unit (MCU)]()
+- [Interrupt](@ref Interrupt)
 - [Watch Dog](@ref WDT)
-- [Flash Library]()
+- [Flash Library](@ref Flash)
 
 ## Security
 

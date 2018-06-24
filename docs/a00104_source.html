@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
     <meta name="generator" content="Doxygen 1.8.14" />
     <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
-    <title>CamelStudioX Library Documentaion: /Users/daizhirui/Development/CamelStudio_Library/Official/src/std/stdlib_fp.h Source File</title>
+    <title>CamelStudioX Library Documentaion: /Users/daizhirui/Development/CamelStudio_Library/Official/src/std/stdlib.h Source File</title>
     <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
     <!--script type="text/javascript" src="dynsections.js"></script-->
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
@@ -49,7 +49,7 @@
     <!-- nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.1</a>
+                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.2</a>
         </div>
         </div>
         </nav -->
@@ -69,11 +69,11 @@
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">stdlib_fp.h</div>  </div>
+<div class="title">stdlib.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00104.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __M2_STDLIB_FP_H__</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __M2_STDLIB_FP_H__</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">float</span> <a class="code" href="a00104.html#a40bb24dc7d4d98600cd976323cea17e0">atof</a>(<span class="keywordtype">char</span>* str);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00098.html">stdlib.h</a>&gt;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif  // End of __M2_STDLIB_FP_H__</span></div><div class="ttc" id="a00104_html_a40bb24dc7d4d98600cd976323cea17e0"><div class="ttname"><a href="a00104.html#a40bb24dc7d4d98600cd976323cea17e0">atof</a></div><div class="ttdeci">float atof(char *str)</div><div class="ttdoc">Convert a string (decimal) to a float value. </div><div class="ttdef"><b>Definition:</b> stdlib_fp.c:19</div></div>
-<div class="ttc" id="a00098_html"><div class="ttname"><a href="a00098.html">stdlib.h</a></div><div class="ttdoc">Standard Library for M2. </div></div>
+<a href="a00104.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __M2_STDLIB_H__</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __M2_STDLIB_H__</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">long</span> <a class="code" href="a00104.html#a36f90d5de53f568b0fc5266ce013b9c5">atoi</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="a00104.html#a9d6165da864d16ad50c13690c1e7d7ea">xtoi</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif  // End of __M2_STDLIB_H__</span></div><div class="ttc" id="a00104_html_a9d6165da864d16ad50c13690c1e7d7ea"><div class="ttname"><a href="a00104.html#a9d6165da864d16ad50c13690c1e7d7ea">xtoi</a></div><div class="ttdeci">unsigned long xtoi(const char *str)</div><div class="ttdoc">Convert a string (hexadecimal) to an integer value. </div><div class="ttdef"><b>Definition:</b> stdlib.c:19</div></div>
+<div class="ttc" id="a00104_html_a36f90d5de53f568b0fc5266ce013b9c5"><div class="ttname"><a href="a00104.html#a36f90d5de53f568b0fc5266ce013b9c5">atoi</a></div><div class="ttdeci">long atoi(const char *str)</div><div class="ttdoc">Convert a string (decimal) to an integer value. </div><div class="ttdef"><b>Definition:</b> stdlib.c:43</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
@@ -83,7 +83,7 @@
 </div>
 </div>
 <address class="footer">
-  <small>Version: 1.1  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
+  <small>Version: 1.2  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
 </address>
  <footer class="examples-footer">&copy; Camel Microelectronic 2018</footer>
 </body>

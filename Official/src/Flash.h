@@ -16,6 +16,12 @@
 #define FLASH_ERASE_ADDRESS 0x2f8
 /*! \endcond */
 
+/**
+ * @brief       Flash Write procedure, 32-bit write
+ * @param address     The address to write, staring from 0x10000000
+ * @param value       The value to be written, a 32-bit value
+ * @return      void
+ */
 #define RT_Flash_Write(value, address)                  \
     {                                                   \
         FuncPtr2 funcptr;                               \
@@ -26,6 +32,11 @@
         MemoryWrite32(SYS_CTL2_REG, oldVal);            \
     }
 
+/**
+ * @brief       Flash erase procedure, 1K-byte erase from the given address
+ * @param address     The starting address to erase, 1K-byte space to be erased
+ * @return      void
+ */
 #define RT_Flash_Erase1k(address)                       \
     {                                                   \
         unsigned long addr;                             \
@@ -37,7 +48,11 @@
         funcptr(addr);                                  \
         MemoryWrite32(SYS_CTL2_REG, oldVal);            \
     }
-
+/**
+ * @brief       Flash erase from the given address, to the end of the flash
+ * @param address     The starting address to the end (0x10001f400)
+ * @return      void
+ */
 #define RT_Flash_EraseFrom(address)                                     \
     {                                                                   \
         for(unsigned long addr=address;addr<0x10001f400;addr+=0x400) {  \
@@ -45,7 +60,11 @@
         }                                                               \
     }
 
-// MAC_ID address.
+
+/**
+ * @brief       Chip ID location (this will be replaced by NVR chip ID)
+ * @return      void
+ */
 #define MAC_ID 0x1001f3f0
 
 /**

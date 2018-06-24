@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
     <meta name="generator" content="Doxygen 1.8.14" />
     <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
-    <title>CamelStudioX Library Documentaion: /Users/daizhirui/Development/CamelStudio_Library/Official/src/IO.h File Reference</title>
+    <title>CamelStudioX Library Documentaion: /Users/daizhirui/Development/CamelStudio_Library/Official/src/Interrupt.h File Reference</title>
     <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
     <!--script type="text/javascript" src="dynsections.js"></script-->
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
@@ -49,7 +49,7 @@
     <!-- nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.1</a>
+                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.2</a>
         </div>
         </div>
         </nav -->
@@ -71,138 +71,347 @@
   <div class="summary">
 <a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
-<div class="title">IO.h File Reference</div>  </div>
+<div class="title">Interrupt.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>General Input Output Library for M2.  
+<p>Interrupt Library for M2.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="a00059_source.html">mcu.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00065_source.html">mcu.h</a>&quot;</code><br />
 </div>
 <p><a href="a00041_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a61a3c9a18380aafb6e430e79bf596557"><td class="memItemLeft" align="right" valign="top"><a id="a61a3c9a18380aafb6e430e79bf596557"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a61a3c9a18380aafb6e430e79bf596557">OUTPUT</a>&#160;&#160;&#160;0x1</td></tr>
-<tr class="memdesc:a61a3c9a18380aafb6e430e79bf596557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword OUTPUT. <br /></td></tr>
-<tr class="separator:a61a3c9a18380aafb6e430e79bf596557"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bb283bd7893b9855e2f23013891fc82"><td class="memItemLeft" align="right" valign="top"><a id="a1bb283bd7893b9855e2f23013891fc82"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a1bb283bd7893b9855e2f23013891fc82">INPUT</a>&#160;&#160;&#160;0x0</td></tr>
-<tr class="memdesc:a1bb283bd7893b9855e2f23013891fc82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword INPUT. <br /></td></tr>
-<tr class="separator:a1bb283bd7893b9855e2f23013891fc82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bb885982ff66a2e0a0a45a8ee9c35e2"><td class="memItemLeft" align="right" valign="top"><a id="a5bb885982ff66a2e0a0a45a8ee9c35e2"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a5bb885982ff66a2e0a0a45a8ee9c35e2">HIGH</a>&#160;&#160;&#160;0x1</td></tr>
-<tr class="memdesc:a5bb885982ff66a2e0a0a45a8ee9c35e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword HIGH. <br /></td></tr>
-<tr class="separator:a5bb885982ff66a2e0a0a45a8ee9c35e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab811d8c6ff3a505312d3276590444289"><td class="memItemLeft" align="right" valign="top"><a id="ab811d8c6ff3a505312d3276590444289"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#ab811d8c6ff3a505312d3276590444289">LOW</a>&#160;&#160;&#160;0x0</td></tr>
-<tr class="memdesc:ab811d8c6ff3a505312d3276590444289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword LOW. <br /></td></tr>
-<tr class="separator:ab811d8c6ff3a505312d3276590444289"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80f50c7de76076789b624b7fce7531c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a80f50c7de76076789b624b7fce7531c6">RT_IO_SetOutput</a>(io)&#160;&#160;&#160;<a class="el" href="a00059.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(SYS_IOCTL_REG, (1 &lt;&lt; (io)))</td></tr>
-<tr class="memdesc:a80f50c7de76076789b624b7fce7531c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sets a specific channel at OUTPUT mode.  <a href="#a80f50c7de76076789b624b7fce7531c6">More...</a><br /></td></tr>
-<tr class="separator:a80f50c7de76076789b624b7fce7531c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae333f1c232fdcb61b9e6ccaceeca2cec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#ae333f1c232fdcb61b9e6ccaceeca2cec">RT_IO_SetInput</a>(io)&#160;&#160;&#160;<a class="el" href="a00059.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(SYS_IOCTL_REG, ~(1 &lt;&lt; (io)))</td></tr>
-<tr class="memdesc:ae333f1c232fdcb61b9e6ccaceeca2cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sets a specific channel at INPUT mode.  <a href="#ae333f1c232fdcb61b9e6ccaceeca2cec">More...</a><br /></td></tr>
-<tr class="separator:ae333f1c232fdcb61b9e6ccaceeca2cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade4bc867a36445fe0debc59cd5c9d9a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#ade4bc867a36445fe0debc59cd5c9d9a5">RT_IO_SetInputOutput16</a>(mode)&#160;&#160;&#160;<a class="el" href="a00059.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(SYS_IOCTL_REG, mode)</td></tr>
-<tr class="memdesc:ade4bc867a36445fe0debc59cd5c9d9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sets the mode of all GPIO channels.  <a href="#ade4bc867a36445fe0debc59cd5c9d9a5">More...</a><br /></td></tr>
-<tr class="separator:ade4bc867a36445fe0debc59cd5c9d9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a752d981d1948aeae63c1a86070ae8e3a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a752d981d1948aeae63c1a86070ae8e3a">RT_IO_SetHigh</a>(io)&#160;&#160;&#160;<a class="el" href="a00059.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(SYS_GPIO0_REG, (1 &lt;&lt; (io)))</td></tr>
-<tr class="memdesc:a752d981d1948aeae63c1a86070ae8e3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sets a specific output io channel at HIGH level.  <a href="#a752d981d1948aeae63c1a86070ae8e3a">More...</a><br /></td></tr>
-<tr class="separator:a752d981d1948aeae63c1a86070ae8e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0e5eb1313d8307cf1362e997ee6f25e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#ae0e5eb1313d8307cf1362e997ee6f25e">RT_IO_SetLow</a>(io)&#160;&#160;&#160;<a class="el" href="a00059.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(SYS_GPIO0_REG, ~(1 &lt;&lt; (io)))</td></tr>
-<tr class="memdesc:ae0e5eb1313d8307cf1362e997ee6f25e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sets a specific output io channel at LOW level.  <a href="#ae0e5eb1313d8307cf1362e997ee6f25e">More...</a><br /></td></tr>
-<tr class="separator:ae0e5eb1313d8307cf1362e997ee6f25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a3ae496ca3e12098c74c9f13b20c554"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a5a3ae496ca3e12098c74c9f13b20c554">RT_IO_SetLevel16</a>(level)&#160;&#160;&#160;<a class="el" href="a00059.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(SYS_GPIO0_REG, (level))</td></tr>
-<tr class="memdesc:a5a3ae496ca3e12098c74c9f13b20c554"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sets the level of all 16 io channel.  <a href="#a5a3ae496ca3e12098c74c9f13b20c554">More...</a><br /></td></tr>
-<tr class="separator:a5a3ae496ca3e12098c74c9f13b20c554"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa69642c4177a35776090fdcf78d12e3b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#aa69642c4177a35776090fdcf78d12e3b">RT_IO_Read</a>(io)&#160;&#160;&#160;((<a class="el" href="a00059.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(SYS_GPIO1_REG) &gt;&gt; (io)) &amp; 0x1)</td></tr>
-<tr class="memdesc:aa69642c4177a35776090fdcf78d12e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the level of a specific io.  <a href="#aa69642c4177a35776090fdcf78d12e3b">More...</a><br /></td></tr>
-<tr class="separator:aa69642c4177a35776090fdcf78d12e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf9c93d24ffeac5705da2c83ea2303d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#acf9c93d24ffeac5705da2c83ea2303d1">RT_IO_Read16</a>()&#160;&#160;&#160;<a class="el" href="a00059.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(SYS_GPIO1_REG)</td></tr>
-<tr class="memdesc:acf9c93d24ffeac5705da2c83ea2303d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the level of all 16 io.  <a href="#acf9c93d24ffeac5705da2c83ea2303d1">More...</a><br /></td></tr>
-<tr class="separator:acf9c93d24ffeac5705da2c83ea2303d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae845dc41cbf1b32b4d576373d1866d65"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#ae845dc41cbf1b32b4d576373d1866d65">RT_IO_SetInputOutput</a>(io,  mode)</td></tr>
-<tr class="memdesc:ae845dc41cbf1b32b4d576373d1866d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sets the mode of specific GPIO channel.  <a href="#ae845dc41cbf1b32b4d576373d1866d65">More...</a><br /></td></tr>
-<tr class="separator:ae845dc41cbf1b32b4d576373d1866d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95fe40498ba314e1ea68aaa50335e7ef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a95fe40498ba314e1ea68aaa50335e7ef">RT_IO_SetLevel</a>(io,  level)</td></tr>
-<tr class="memdesc:a95fe40498ba314e1ea68aaa50335e7ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sets the level of a specific io channel.  <a href="#a95fe40498ba314e1ea68aaa50335e7ef">More...</a><br /></td></tr>
-<tr class="separator:a95fe40498ba314e1ea68aaa50335e7ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b01c4fb9d69c049d189fea4336e809c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a2b01c4fb9d69c049d189fea4336e809c">SYSINT_SPIINT</a>&#160;&#160;&#160;0x8</td></tr>
+<tr class="memdesc:a2b01c4fb9d69c049d189fea4336e809c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword SYSINT_SPIINT.  <a href="#a2b01c4fb9d69c049d189fea4336e809c">More...</a><br /></td></tr>
+<tr class="separator:a2b01c4fb9d69c049d189fea4336e809c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fe941b86cf5765bd92b867744aef26c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a7fe941b86cf5765bd92b867744aef26c">SYSINT_UART1INT</a>&#160;&#160;&#160;0x7</td></tr>
+<tr class="memdesc:a7fe941b86cf5765bd92b867744aef26c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword SYSINT_UART1INT.  <a href="#a7fe941b86cf5765bd92b867744aef26c">More...</a><br /></td></tr>
+<tr class="separator:a7fe941b86cf5765bd92b867744aef26c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af64d968502ca7ba62141dd55f5647730"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#af64d968502ca7ba62141dd55f5647730">SYSINT_WDTINT</a>&#160;&#160;&#160;0x6</td></tr>
+<tr class="memdesc:af64d968502ca7ba62141dd55f5647730"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword SYSINT_WDTINT.  <a href="#af64d968502ca7ba62141dd55f5647730">More...</a><br /></td></tr>
+<tr class="separator:af64d968502ca7ba62141dd55f5647730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76cdcef76b44ff2f2125afcf05158f00"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a76cdcef76b44ff2f2125afcf05158f00">SYSINT_EXTINT</a>&#160;&#160;&#160;0x5</td></tr>
+<tr class="memdesc:a76cdcef76b44ff2f2125afcf05158f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword SYSINT_EXTINT.  <a href="#a76cdcef76b44ff2f2125afcf05158f00">More...</a><br /></td></tr>
+<tr class="separator:a76cdcef76b44ff2f2125afcf05158f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9abec7bef84c5bc3310714d05e1138dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a9abec7bef84c5bc3310714d05e1138dc">SYSINT_DBGINT</a>&#160;&#160;&#160;0x4</td></tr>
+<tr class="memdesc:a9abec7bef84c5bc3310714d05e1138dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword SYSINT_DBGINT.  <a href="#a9abec7bef84c5bc3310714d05e1138dc">More...</a><br /></td></tr>
+<tr class="separator:a9abec7bef84c5bc3310714d05e1138dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6316f8987b7727eeeeb09e4d5d95db96"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a6316f8987b7727eeeeb09e4d5d95db96">SYSINT_TC2INT</a>&#160;&#160;&#160;0x3</td></tr>
+<tr class="memdesc:a6316f8987b7727eeeeb09e4d5d95db96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword SYSINT_TC2INT.  <a href="#a6316f8987b7727eeeeb09e4d5d95db96">More...</a><br /></td></tr>
+<tr class="separator:a6316f8987b7727eeeeb09e4d5d95db96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa93c611771ffd54f3f00da8b21ed36f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#aa93c611771ffd54f3f00da8b21ed36f2">SYSINT_TC1INT</a>&#160;&#160;&#160;0x2</td></tr>
+<tr class="memdesc:aa93c611771ffd54f3f00da8b21ed36f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword SYSINT_TC1INT.  <a href="#aa93c611771ffd54f3f00da8b21ed36f2">More...</a><br /></td></tr>
+<tr class="separator:aa93c611771ffd54f3f00da8b21ed36f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afda418bf07550de9ce626627e3cc46d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#afda418bf07550de9ce626627e3cc46d0">SYSINT_TC0INT</a>&#160;&#160;&#160;0x1</td></tr>
+<tr class="memdesc:afda418bf07550de9ce626627e3cc46d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword SYSINT_TC0INT.  <a href="#afda418bf07550de9ce626627e3cc46d0">More...</a><br /></td></tr>
+<tr class="separator:afda418bf07550de9ce626627e3cc46d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5443d7bbceafb7ab2592b01489f23499"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a5443d7bbceafb7ab2592b01489f23499">SYSINT_UART0INT</a>&#160;&#160;&#160;0x0</td></tr>
+<tr class="memdesc:a5443d7bbceafb7ab2592b01489f23499"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword SYSINT_UART0INT.  <a href="#a5443d7bbceafb7ab2592b01489f23499">More...</a><br /></td></tr>
+<tr class="separator:a5443d7bbceafb7ab2592b01489f23499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a397366295a7d6d3ed47e5e3d69549448"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a397366295a7d6d3ed47e5e3d69549448">RT_SYSINT_GetFlag</a>(device)&#160;&#160;&#160;(MemoryRead(SYS_IRQ_REG)&amp;(0x1 &lt;&lt; device) &gt;&gt; device)</td></tr>
+<tr class="memdesc:a397366295a7d6d3ed47e5e3d69549448"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check interrupt flag of SPI, UART1, WatchDog, ExternalInterrupt, Debug, Timer2, Timer1, Timer0 or UART0.  <a href="#a397366295a7d6d3ed47e5e3d69549448">More...</a><br /></td></tr>
+<tr class="separator:a397366295a7d6d3ed47e5e3d69549448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ddacb2147f802d2af2f507e41043504"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a5ddacb2147f802d2af2f507e41043504">RT_SYSINT_On</a>()&#160;&#160;&#160;MemoryOr(<a class="el" href="a00065.html#ab34acec79daf4fcc12a662cde9e75df7">SYS_CTL0_REG</a>, 0x1)</td></tr>
+<tr class="memdesc:a5ddacb2147f802d2af2f507e41043504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on system interrupt.  <a href="#a5ddacb2147f802d2af2f507e41043504">More...</a><br /></td></tr>
+<tr class="separator:a5ddacb2147f802d2af2f507e41043504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c68b82296205323f01358d9a27813a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a9c68b82296205323f01358d9a27813a9">RT_SYSINT_Off</a>()&#160;&#160;&#160;MemoryAnd(<a class="el" href="a00065.html#ab34acec79daf4fcc12a662cde9e75df7">SYS_CTL0_REG</a>, ~0x1)</td></tr>
+<tr class="memdesc:a9c68b82296205323f01358d9a27813a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off system interrupt.  <a href="#a9c68b82296205323f01358d9a27813a9">More...</a><br /></td></tr>
+<tr class="separator:a9c68b82296205323f01358d9a27813a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e3f727d359d26314631842394f4a223"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a2e3f727d359d26314631842394f4a223">EXINT0</a>&#160;&#160;&#160;0x0</td></tr>
+<tr class="memdesc:a2e3f727d359d26314631842394f4a223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword EXINT0.  <a href="#a2e3f727d359d26314631842394f4a223">More...</a><br /></td></tr>
+<tr class="separator:a2e3f727d359d26314631842394f4a223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea7d6796165b98f1bc6bf6fe841c3d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a1ea7d6796165b98f1bc6bf6fe841c3d9">EXINT1</a>&#160;&#160;&#160;0x1</td></tr>
+<tr class="memdesc:a1ea7d6796165b98f1bc6bf6fe841c3d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword EXINT1.  <a href="#a1ea7d6796165b98f1bc6bf6fe841c3d9">More...</a><br /></td></tr>
+<tr class="separator:a1ea7d6796165b98f1bc6bf6fe841c3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac959f4d8aed4e04e25c966e6c8315431"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#ac959f4d8aed4e04e25c966e6c8315431">EXINT2</a>&#160;&#160;&#160;0x2</td></tr>
+<tr class="memdesc:ac959f4d8aed4e04e25c966e6c8315431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword EXINT2.  <a href="#ac959f4d8aed4e04e25c966e6c8315431">More...</a><br /></td></tr>
+<tr class="separator:ac959f4d8aed4e04e25c966e6c8315431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8428c0cbd7362b90ea048bcf59aef2c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#ae8428c0cbd7362b90ea048bcf59aef2c">EXINT3</a>&#160;&#160;&#160;0x3</td></tr>
+<tr class="memdesc:ae8428c0cbd7362b90ea048bcf59aef2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword EXINT3.  <a href="#ae8428c0cbd7362b90ea048bcf59aef2c">More...</a><br /></td></tr>
+<tr class="separator:ae8428c0cbd7362b90ea048bcf59aef2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719b5fa27b5469e1fe2844e9930fa249"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a719b5fa27b5469e1fe2844e9930fa249">EXINT4</a>&#160;&#160;&#160;0x4</td></tr>
+<tr class="memdesc:a719b5fa27b5469e1fe2844e9930fa249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword EXINT4.  <a href="#a719b5fa27b5469e1fe2844e9930fa249">More...</a><br /></td></tr>
+<tr class="separator:a719b5fa27b5469e1fe2844e9930fa249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a309fb21107f9f6261cd7e7ca9de6c2f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a309fb21107f9f6261cd7e7ca9de6c2f2">EXINT5</a>&#160;&#160;&#160;0x5</td></tr>
+<tr class="memdesc:a309fb21107f9f6261cd7e7ca9de6c2f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword EXINT5.  <a href="#a309fb21107f9f6261cd7e7ca9de6c2f2">More...</a><br /></td></tr>
+<tr class="separator:a309fb21107f9f6261cd7e7ca9de6c2f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeea2b49478f3b13faedba764985c6e96"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#aeea2b49478f3b13faedba764985c6e96">RISING</a>&#160;&#160;&#160;0x1</td></tr>
+<tr class="memdesc:aeea2b49478f3b13faedba764985c6e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword RISING.  <a href="#aeea2b49478f3b13faedba764985c6e96">More...</a><br /></td></tr>
+<tr class="separator:aeea2b49478f3b13faedba764985c6e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac00eb6fc2047dc399280f31b0c5f4472"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#ac00eb6fc2047dc399280f31b0c5f4472">FALLING</a>&#160;&#160;&#160;0x0</td></tr>
+<tr class="memdesc:ac00eb6fc2047dc399280f31b0c5f4472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword FALLING.  <a href="#ac00eb6fc2047dc399280f31b0c5f4472">More...</a><br /></td></tr>
+<tr class="separator:ac00eb6fc2047dc399280f31b0c5f4472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32678a4a1877f8e6fcae9fad3dd436ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a32678a4a1877f8e6fcae9fad3dd436ed">RT_EXINT_Setup</a>(port,  trigger)</td></tr>
+<tr class="memdesc:a32678a4a1877f8e6fcae9fad3dd436ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the external interrupt.  <a href="#a32678a4a1877f8e6fcae9fad3dd436ed">More...</a><br /></td></tr>
+<tr class="separator:a32678a4a1877f8e6fcae9fad3dd436ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1a62e0954243f0c0fc8ec850ea2eebe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#aa1a62e0954243f0c0fc8ec850ea2eebe">RT_EXINT_Off</a>(port)&#160;&#160;&#160;<a class="el" href="a00065.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(INT_CTL0_REG, ~(1 &lt;&lt; port))</td></tr>
+<tr class="memdesc:aa1a62e0954243f0c0fc8ec850ea2eebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close an external interrupt port.  <a href="#aa1a62e0954243f0c0fc8ec850ea2eebe">More...</a><br /></td></tr>
+<tr class="separator:aa1a62e0954243f0c0fc8ec850ea2eebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bebef46f3eb19ed0c71deb174a4bbaf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a1bebef46f3eb19ed0c71deb174a4bbaf">RT_EXINT_Clear</a>(port)&#160;&#160;&#160;MemoryWrite(INT_CLR_REG, 1 &lt;&lt; port)</td></tr>
+<tr class="memdesc:a1bebef46f3eb19ed0c71deb174a4bbaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear interrupt flag from specific external interrupt port.  <a href="#a1bebef46f3eb19ed0c71deb174a4bbaf">More...</a><br /></td></tr>
+<tr class="separator:a1bebef46f3eb19ed0c71deb174a4bbaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f2cc857d9a0da5f06bbf5ff62babbdb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a4f2cc857d9a0da5f06bbf5ff62babbdb">RT_EXINT_ClearAll</a>()&#160;&#160;&#160;MemoryWrite(INT_CLR_REG, 0xff)</td></tr>
+<tr class="memdesc:a4f2cc857d9a0da5f06bbf5ff62babbdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all external interrupt flag.  <a href="#a4f2cc857d9a0da5f06bbf5ff62babbdb">More...</a><br /></td></tr>
+<tr class="separator:a4f2cc857d9a0da5f06bbf5ff62babbdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8287fc872a2d0ae785c8b3b51a37a5e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#ab8287fc872a2d0ae785c8b3b51a37a5e">RT_EXINT_GetAllFlag</a>()&#160;&#160;&#160;MemoryRead(INT_CTL1_REG)</td></tr>
+<tr class="memdesc:ab8287fc872a2d0ae785c8b3b51a37a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the external interrupt flag table.  <a href="#ab8287fc872a2d0ae785c8b3b51a37a5e">More...</a><br /></td></tr>
+<tr class="separator:ab8287fc872a2d0ae785c8b3b51a37a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae65409aaf69a9f495207ebbe133f161d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#ae65409aaf69a9f495207ebbe133f161d">RT_EXINT_GetFlag</a>(port)&#160;&#160;&#160;((<a class="el" href="a00041.html#ab8287fc872a2d0ae785c8b3b51a37a5e">RT_EXINT_GetAllFlag</a>() &gt;&gt; port) &amp; 0x1)</td></tr>
+<tr class="memdesc:ae65409aaf69a9f495207ebbe133f161d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the flag of specific external interrupt port.  <a href="#ae65409aaf69a9f495207ebbe133f161d">More...</a><br /></td></tr>
+<tr class="separator:ae65409aaf69a9f495207ebbe133f161d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>General Input Output Library for M2. </p>
+<div class="textblock"><p>Interrupt Library for M2. </p>
 <dl class="section author"><dt>Author</dt><dd>Zhirui Dai </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>16 Jun 2018 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2018 Zhirui </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="aa69642c4177a35776090fdcf78d12e3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa69642c4177a35776090fdcf78d12e3b">&#9670;&nbsp;</a></span>RT_IO_Read</h2>
+<a id="a2e3f727d359d26314631842394f4a223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e3f727d359d26314631842394f4a223">&#9670;&nbsp;</a></span>EXINT0</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RT_IO_Read</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">io</td><td>)</td>
-          <td>&#160;&#160;&#160;((<a class="el" href="a00059.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(SYS_GPIO1_REG) &gt;&gt; (io)) &amp; 0x1)</td>
+          <td class="memname">#define EXINT0&#160;&#160;&#160;0x0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function returns the level of a specific io. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">io</td><td>the io channel to read </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the io level </dd></dl>
+<p>Keyword EXINT0. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value used in RT_EXINT_Setup </dd></dl>
 
 </div>
 </div>
-<a id="acf9c93d24ffeac5705da2c83ea2303d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf9c93d24ffeac5705da2c83ea2303d1">&#9670;&nbsp;</a></span>RT_IO_Read16</h2>
+<a id="a1ea7d6796165b98f1bc6bf6fe841c3d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea7d6796165b98f1bc6bf6fe841c3d9">&#9670;&nbsp;</a></span>EXINT1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RT_IO_Read16</td>
+          <td class="memname">#define EXINT1&#160;&#160;&#160;0x1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keyword EXINT1. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value used in RT_EXINT_Setup </dd></dl>
+
+</div>
+</div>
+<a id="ac959f4d8aed4e04e25c966e6c8315431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac959f4d8aed4e04e25c966e6c8315431">&#9670;&nbsp;</a></span>EXINT2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXINT2&#160;&#160;&#160;0x2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keyword EXINT2. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value used in RT_EXINT_Setup </dd></dl>
+
+</div>
+</div>
+<a id="ae8428c0cbd7362b90ea048bcf59aef2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8428c0cbd7362b90ea048bcf59aef2c">&#9670;&nbsp;</a></span>EXINT3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXINT3&#160;&#160;&#160;0x3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keyword EXINT3. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value used in RT_EXINT_Setup </dd></dl>
+
+</div>
+</div>
+<a id="a719b5fa27b5469e1fe2844e9930fa249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a719b5fa27b5469e1fe2844e9930fa249">&#9670;&nbsp;</a></span>EXINT4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXINT4&#160;&#160;&#160;0x4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keyword EXINT4. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value used in RT_EXINT_Setup </dd></dl>
+
+</div>
+</div>
+<a id="a309fb21107f9f6261cd7e7ca9de6c2f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a309fb21107f9f6261cd7e7ca9de6c2f2">&#9670;&nbsp;</a></span>EXINT5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXINT5&#160;&#160;&#160;0x5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keyword EXINT5. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value used in RT_EXINT_Setup </dd></dl>
+
+</div>
+</div>
+<a id="ac00eb6fc2047dc399280f31b0c5f4472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac00eb6fc2047dc399280f31b0c5f4472">&#9670;&nbsp;</a></span>FALLING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FALLING&#160;&#160;&#160;0x0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keyword FALLING. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value used in RT_EXINT_Setup </dd></dl>
+
+</div>
+</div>
+<a id="aeea2b49478f3b13faedba764985c6e96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea2b49478f3b13faedba764985c6e96">&#9670;&nbsp;</a></span>RISING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RISING&#160;&#160;&#160;0x1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keyword RISING. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value used in RT_EXINT_Setup </dd></dl>
+
+</div>
+</div>
+<a id="a1bebef46f3eb19ed0c71deb174a4bbaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bebef46f3eb19ed0c71deb174a4bbaf">&#9670;&nbsp;</a></span>RT_EXINT_Clear</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_EXINT_Clear</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">port</td><td>)</td>
+          <td>&#160;&#160;&#160;MemoryWrite(INT_CLR_REG, 1 &lt;&lt; port)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear interrupt flag from specific external interrupt port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>the external interrupt port to clear irq flag, optional value: <div class="fragment"><div class="line"><a class="code" href="a00041.html#a2e3f727d359d26314631842394f4a223">EXINT0</a>, <a class="code" href="a00041.html#a1ea7d6796165b98f1bc6bf6fe841c3d9">EXINT1</a>, <a class="code" href="a00041.html#ac959f4d8aed4e04e25c966e6c8315431">EXINT2</a>, <a class="code" href="a00041.html#ae8428c0cbd7362b90ea048bcf59aef2c">EXINT3</a>, <a class="code" href="a00041.html#a719b5fa27b5469e1fe2844e9930fa249">EXINT4</a>, <a class="code" href="a00041.html#a309fb21107f9f6261cd7e7ca9de6c2f2">EXINT5</a></div></div><!-- fragment -->. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a4f2cc857d9a0da5f06bbf5ff62babbdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f2cc857d9a0da5f06bbf5ff62babbdb">&#9670;&nbsp;</a></span>RT_EXINT_ClearAll</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_EXINT_ClearAll</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(SYS_GPIO1_REG)</td>
+          <td>&#160;&#160;&#160;MemoryWrite(INT_CLR_REG, 0xff)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function returns the level of all 16 io. </p>
-<dl class="section return"><dt>Returns</dt><dd>uint16_t 16-bit number which defines 16 io channels' level </dd></dl>
+<p>Clear all external interrupt flag. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
-<a id="a752d981d1948aeae63c1a86070ae8e3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a752d981d1948aeae63c1a86070ae8e3a">&#9670;&nbsp;</a></span>RT_IO_SetHigh</h2>
+<a id="ab8287fc872a2d0ae785c8b3b51a37a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8287fc872a2d0ae785c8b3b51a37a5e">&#9670;&nbsp;</a></span>RT_EXINT_GetAllFlag</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RT_IO_SetHigh</td>
+          <td class="memname">#define RT_EXINT_GetAllFlag</td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">io</td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(SYS_GPIO0_REG, (1 &lt;&lt; (io)))</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;MemoryRead(INT_CTL1_REG)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function sets a specific output io channel at HIGH level. </p>
+<p>Get the external interrupt flag table. </p>
+<dl class="section return"><dt>Returns</dt><dd>the external interrupt flag table </dd></dl>
+
+</div>
+</div>
+<a id="ae65409aaf69a9f495207ebbe133f161d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae65409aaf69a9f495207ebbe133f161d">&#9670;&nbsp;</a></span>RT_EXINT_GetFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_EXINT_GetFlag</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">port</td><td>)</td>
+          <td>&#160;&#160;&#160;((<a class="el" href="a00041.html#ab8287fc872a2d0ae785c8b3b51a37a5e">RT_EXINT_GetAllFlag</a>() &gt;&gt; port) &amp; 0x1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the flag of specific external interrupt port. </p>
+<dl class="section return"><dt>Returns</dt><dd>The flag of the external interrupt port. </dd></dl>
+
+</div>
+</div>
+<a id="aa1a62e0954243f0c0fc8ec850ea2eebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1a62e0954243f0c0fc8ec850ea2eebe">&#9670;&nbsp;</a></span>RT_EXINT_Off</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_EXINT_Off</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">port</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00065.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(INT_CTL0_REG, ~(1 &lt;&lt; port))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close an external interrupt port. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">io</td><td>Channel to set. </td></tr>
+    <tr><td class="paramname">port</td><td>the external interrupt port to close, optional value: <div class="fragment"><div class="line"><a class="code" href="a00041.html#a2e3f727d359d26314631842394f4a223">EXINT0</a>, <a class="code" href="a00041.html#a1ea7d6796165b98f1bc6bf6fe841c3d9">EXINT1</a>, <a class="code" href="a00041.html#ac959f4d8aed4e04e25c966e6c8315431">EXINT2</a>, <a class="code" href="a00041.html#ae8428c0cbd7362b90ea048bcf59aef2c">EXINT3</a>, <a class="code" href="a00041.html#a719b5fa27b5469e1fe2844e9930fa249">EXINT4</a>, <a class="code" href="a00041.html#a309fb21107f9f6261cd7e7ca9de6c2f2">EXINT5</a></div></div><!-- fragment -->. </td></tr>
   </table>
   </dd>
 </dl>
@@ -210,50 +419,23 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="ae333f1c232fdcb61b9e6ccaceeca2cec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae333f1c232fdcb61b9e6ccaceeca2cec">&#9670;&nbsp;</a></span>RT_IO_SetInput</h2>
+<a id="a32678a4a1877f8e6fcae9fad3dd436ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32678a4a1877f8e6fcae9fad3dd436ed">&#9670;&nbsp;</a></span>RT_EXINT_Setup</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RT_IO_SetInput</td>
+          <td class="memname">#define RT_EXINT_Setup</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">io</td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(SYS_IOCTL_REG, ~(1 &lt;&lt; (io)))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This function sets a specific channel at INPUT mode. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">io</td><td>Channel to set. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
-<a id="ae845dc41cbf1b32b4d576373d1866d65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae845dc41cbf1b32b4d576373d1866d65">&#9670;&nbsp;</a></span>RT_IO_SetInputOutput</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define RT_IO_SetInputOutput</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">io, </td>
+          <td class="paramname">port, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">mode&#160;</td>
+          <td class="paramname">trigger&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -262,12 +444,13 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                         \</div><div class="line">        if (!mode)            \</div><div class="line">            IO_SetInput(io);  \</div><div class="line">        else                  \</div><div class="line">            IO_SetOutput(io); \</div><div class="line">    }</div></div><!-- fragment -->
-<p>This function sets the mode of specific GPIO channel. </p>
+<b>Value:</b><div class="fragment"><div class="line">{                                                \</div><div class="line">        MemoryOr32(INT_CTL0_REG, 1 &lt;&lt; port);         \</div><div class="line">        MemoryAnd32(INT_CTL2_REG, ~(<a class="code" href="a00041.html#aeea2b49478f3b13faedba764985c6e96">RISING</a> &lt;&lt; port));\</div><div class="line">        MemoryOr32(INT_CTL2_REG, trigger &lt;&lt; port);   \</div><div class="line">    }</div><div class="ttc" id="a00041_html_aeea2b49478f3b13faedba764985c6e96"><div class="ttname"><a href="a00041.html#aeea2b49478f3b13faedba764985c6e96">RISING</a></div><div class="ttdeci">#define RISING</div><div class="ttdoc">Keyword RISING. </div><div class="ttdef"><b>Definition:</b> Interrupt.h:112</div></div>
+</div><!-- fragment -->
+<p>Set the external interrupt. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">io</td><td>the specific io channel to setup </td></tr>
-    <tr><td class="paramname">mode</td><td>the mode, optional value:<div class="fragment"><div class="line"><a class="code" href="a00041.html#a1bb283bd7893b9855e2f23013891fc82">INPUT</a>, <a class="code" href="a00041.html#a61a3c9a18380aafb6e430e79bf596557">OUTPUT</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">port</td><td>the port of external interrupt, optional value: <div class="fragment"><div class="line"><a class="code" href="a00041.html#a2e3f727d359d26314631842394f4a223">EXINT0</a>, <a class="code" href="a00041.html#a1ea7d6796165b98f1bc6bf6fe841c3d9">EXINT1</a>, <a class="code" href="a00041.html#ac959f4d8aed4e04e25c966e6c8315431">EXINT2</a>, <a class="code" href="a00041.html#ae8428c0cbd7362b90ea048bcf59aef2c">EXINT3</a>, <a class="code" href="a00041.html#a719b5fa27b5469e1fe2844e9930fa249">EXINT4</a>, <a class="code" href="a00041.html#a309fb21107f9f6261cd7e7ca9de6c2f2">EXINT5</a></div></div><!-- fragment -->. </td></tr>
+    <tr><td class="paramname">trigger</td><td>the trigger mode, optional value:<div class="fragment"><div class="line"><a class="code" href="a00041.html#aeea2b49478f3b13faedba764985c6e96">RISING</a>, <a class="code" href="a00041.html#ac00eb6fc2047dc399280f31b0c5f4472">FALLING</a></div></div><!-- fragment --> </td></tr>
   </table>
   </dd>
 </dl>
@@ -275,149 +458,223 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="ade4bc867a36445fe0debc59cd5c9d9a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade4bc867a36445fe0debc59cd5c9d9a5">&#9670;&nbsp;</a></span>RT_IO_SetInputOutput16</h2>
+<a id="a397366295a7d6d3ed47e5e3d69549448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a397366295a7d6d3ed47e5e3d69549448">&#9670;&nbsp;</a></span>RT_SYSINT_GetFlag</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RT_IO_SetInputOutput16</td>
+          <td class="memname">#define RT_SYSINT_GetFlag</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">mode</td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(SYS_IOCTL_REG, mode)</td>
+          <td class="paramname">device</td><td>)</td>
+          <td>&#160;&#160;&#160;(MemoryRead(SYS_IRQ_REG)&amp;(0x1 &lt;&lt; device) &gt;&gt; device)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function sets the mode of all GPIO channels. </p>
+<p>Check interrupt flag of SPI, UART1, WatchDog, ExternalInterrupt, Debug, Timer2, Timer1, Timer0 or UART0. </p>
+<dl class="section note"><dt>Note</dt><dd>SYS_IRQ_REG[8:0]: 9 devices. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mode</td><td>16-bit number which defines 16 IO channels' mode </td></tr>
+    <tr><td class="paramname">device</td><td>Optional value:<div class="fragment"><div class="line"><a class="code" href="a00041.html#a2b01c4fb9d69c049d189fea4336e809c">SYSINT_SPIINT</a>, <a class="code" href="a00041.html#a7fe941b86cf5765bd92b867744aef26c">SYSINT_UART1INT</a>,</div><div class="line">                 <a class="code" href="a00041.html#a5443d7bbceafb7ab2592b01489f23499">SYSINT_UART0INT</a>, <a class="code" href="a00041.html#af64d968502ca7ba62141dd55f5647730">SYSINT_WDTINT</a>, <a class="code" href="a00041.html#a76cdcef76b44ff2f2125afcf05158f00">SYSINT_EXTINT</a>, <a class="code" href="a00041.html#a9abec7bef84c5bc3310714d05e1138dc">SYSINT_DBGINT</a>,</div><div class="line">                 <a class="code" href="a00041.html#a6316f8987b7727eeeeb09e4d5d95db96">SYSINT_TC2INT</a>, <a class="code" href="a00041.html#aa93c611771ffd54f3f00da8b21ed36f2">SYSINT_TC1INT</a>. <a class="code" href="a00041.html#afda418bf07550de9ce626627e3cc46d0">SYSINT_TC0INT</a></div></div><!-- fragment -->. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
-<a id="a95fe40498ba314e1ea68aaa50335e7ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95fe40498ba314e1ea68aaa50335e7ef">&#9670;&nbsp;</a></span>RT_IO_SetLevel</h2>
+<a id="a9c68b82296205323f01358d9a27813a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c68b82296205323f01358d9a27813a9">&#9670;&nbsp;</a></span>RT_SYSINT_Off</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RT_IO_SetLevel</td>
+          <td class="memname">#define RT_SYSINT_Off</td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">io, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">level&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;MemoryAnd(<a class="el" href="a00065.html#ab34acec79daf4fcc12a662cde9e75df7">SYS_CTL0_REG</a>, ~0x1)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                       \</div><div class="line">        IO_SetOutput(io);   \</div><div class="line">        if (!level)         \</div><div class="line">            IO_SetLow(io);  \</div><div class="line">        else                \</div><div class="line">            IO_SetHigh(io); \</div><div class="line">    }</div></div><!-- fragment -->
-<p>This function sets the level of a specific io channel. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">io</td><td>the io channel to setup </td></tr>
-    <tr><td class="paramname">level</td><td>the io level, optional value:<div class="fragment"><div class="line"><a class="code" href="a00041.html#a5bb885982ff66a2e0a0a45a8ee9c35e2">HIGH</a>, <a class="code" href="a00041.html#ab811d8c6ff3a505312d3276590444289">LOW</a></div></div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+<p>Turn off system interrupt. </p>
+<dl class="section note"><dt>Note</dt><dd>SYS_CTL0_REG[0]: 1=enable system interrupt, 0=disable system interrupt. </dd></dl>
 
 </div>
 </div>
-<a id="a5a3ae496ca3e12098c74c9f13b20c554"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a3ae496ca3e12098c74c9f13b20c554">&#9670;&nbsp;</a></span>RT_IO_SetLevel16</h2>
+<a id="a5ddacb2147f802d2af2f507e41043504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ddacb2147f802d2af2f507e41043504">&#9670;&nbsp;</a></span>RT_SYSINT_On</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RT_IO_SetLevel16</td>
+          <td class="memname">#define RT_SYSINT_On</td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">level</td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(SYS_GPIO0_REG, (level))</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;MemoryOr(<a class="el" href="a00065.html#ab34acec79daf4fcc12a662cde9e75df7">SYS_CTL0_REG</a>, 0x1)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function sets the level of all 16 io channel. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">level</td><td>16-bit number which defines 16 IO channels' level </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<p>Turn on system interrupt. </p>
+<dl class="section note"><dt>Note</dt><dd>SYS_CTL0_REG[0]: 1=enable system interrupt, 0=disable system interrupt. </dd></dl>
 
 </div>
 </div>
-<a id="ae0e5eb1313d8307cf1362e997ee6f25e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0e5eb1313d8307cf1362e997ee6f25e">&#9670;&nbsp;</a></span>RT_IO_SetLow</h2>
+<a id="a9abec7bef84c5bc3310714d05e1138dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9abec7bef84c5bc3310714d05e1138dc">&#9670;&nbsp;</a></span>SYSINT_DBGINT</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RT_IO_SetLow</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">io</td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(SYS_GPIO0_REG, ~(1 &lt;&lt; (io)))</td>
+          <td class="memname">#define SYSINT_DBGINT&#160;&#160;&#160;0x4</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function sets a specific output io channel at LOW level. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">io</td><td>Channel to set. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<p>Keyword SYSINT_DBGINT. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value for RT_SYSINT_Flag </dd></dl>
 
 </div>
 </div>
-<a id="a80f50c7de76076789b624b7fce7531c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80f50c7de76076789b624b7fce7531c6">&#9670;&nbsp;</a></span>RT_IO_SetOutput</h2>
+<a id="a76cdcef76b44ff2f2125afcf05158f00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76cdcef76b44ff2f2125afcf05158f00">&#9670;&nbsp;</a></span>SYSINT_EXTINT</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RT_IO_SetOutput</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">io</td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="a00059.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(SYS_IOCTL_REG, (1 &lt;&lt; (io)))</td>
+          <td class="memname">#define SYSINT_EXTINT&#160;&#160;&#160;0x5</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function sets a specific channel at OUTPUT mode. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">io</td><td>Channel to set. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<p>Keyword SYSINT_EXTINT. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value for RT_SYSINT_Flag </dd></dl>
+
+</div>
+</div>
+<a id="a2b01c4fb9d69c049d189fea4336e809c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b01c4fb9d69c049d189fea4336e809c">&#9670;&nbsp;</a></span>SYSINT_SPIINT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SYSINT_SPIINT&#160;&#160;&#160;0x8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keyword SYSINT_SPIINT. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value for RT_SYSINT_Flag </dd></dl>
+
+</div>
+</div>
+<a id="afda418bf07550de9ce626627e3cc46d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afda418bf07550de9ce626627e3cc46d0">&#9670;&nbsp;</a></span>SYSINT_TC0INT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SYSINT_TC0INT&#160;&#160;&#160;0x1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keyword SYSINT_TC0INT. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value for RT_SYSINT_Flag </dd></dl>
+
+</div>
+</div>
+<a id="aa93c611771ffd54f3f00da8b21ed36f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93c611771ffd54f3f00da8b21ed36f2">&#9670;&nbsp;</a></span>SYSINT_TC1INT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SYSINT_TC1INT&#160;&#160;&#160;0x2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keyword SYSINT_TC1INT. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value for RT_SYSINT_Flag </dd></dl>
+
+</div>
+</div>
+<a id="a6316f8987b7727eeeeb09e4d5d95db96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6316f8987b7727eeeeb09e4d5d95db96">&#9670;&nbsp;</a></span>SYSINT_TC2INT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SYSINT_TC2INT&#160;&#160;&#160;0x3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keyword SYSINT_TC2INT. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value for RT_SYSINT_Flag </dd></dl>
+
+</div>
+</div>
+<a id="a5443d7bbceafb7ab2592b01489f23499"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5443d7bbceafb7ab2592b01489f23499">&#9670;&nbsp;</a></span>SYSINT_UART0INT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SYSINT_UART0INT&#160;&#160;&#160;0x0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keyword SYSINT_UART0INT. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value for RT_SYSINT_Flag </dd></dl>
+
+</div>
+</div>
+<a id="a7fe941b86cf5765bd92b867744aef26c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fe941b86cf5765bd92b867744aef26c">&#9670;&nbsp;</a></span>SYSINT_UART1INT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SYSINT_UART1INT&#160;&#160;&#160;0x7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keyword SYSINT_UART1INT. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value for RT_SYSINT_Flag </dd></dl>
+
+</div>
+</div>
+<a id="af64d968502ca7ba62141dd55f5647730"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af64d968502ca7ba62141dd55f5647730">&#9670;&nbsp;</a></span>SYSINT_WDTINT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SYSINT_WDTINT&#160;&#160;&#160;0x6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keyword SYSINT_WDTINT. </p>
+<dl class="section note"><dt>Note</dt><dd>Optional value for RT_SYSINT_Flag </dd></dl>
 
 </div>
 </div>
@@ -430,7 +687,7 @@ Macros</h2></td></tr>
 </div>
 </div>
 <address class="footer">
-  <small>Version: 1.1  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
+  <small>Version: 1.2  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
 </address>
  <footer class="examples-footer">&copy; Camel Microelectronic 2018</footer>
 </body>

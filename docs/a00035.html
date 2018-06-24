@@ -49,7 +49,7 @@
     <!-- nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.1</a>
+                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.2</a>
         </div>
         </div>
         </nav -->
@@ -77,27 +77,30 @@
 
 <p>Flash Operation Library for M2.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="a00059_source.html">mcu.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00065_source.html">mcu.h</a>&quot;</code><br />
 </div>
 <p><a href="a00035_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a13fb43316f72b3b1b9467a91fca08d5c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>RT_Flash_Write</b>(value,  address)</td></tr>
+<tr class="memitem:a13fb43316f72b3b1b9467a91fca08d5c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00035.html#a13fb43316f72b3b1b9467a91fca08d5c">RT_Flash_Write</a>(value,  address)</td></tr>
+<tr class="memdesc:a13fb43316f72b3b1b9467a91fca08d5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flash Write procedure, 32-bit write.  <a href="#a13fb43316f72b3b1b9467a91fca08d5c">More...</a><br /></td></tr>
 <tr class="separator:a13fb43316f72b3b1b9467a91fca08d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab65db3c66c91da3a934540a2f8175803"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>RT_Flash_Erase1k</b>(address)</td></tr>
+<tr class="memitem:ab65db3c66c91da3a934540a2f8175803"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00035.html#ab65db3c66c91da3a934540a2f8175803">RT_Flash_Erase1k</a>(address)</td></tr>
+<tr class="memdesc:ab65db3c66c91da3a934540a2f8175803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flash erase procedure, 1K-byte erase from the given address.  <a href="#ab65db3c66c91da3a934540a2f8175803">More...</a><br /></td></tr>
 <tr class="separator:ab65db3c66c91da3a934540a2f8175803"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb9cdf54d7254cfef685cd4012113b27"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>RT_Flash_EraseFrom</b>(address)</td></tr>
+<tr class="memitem:afb9cdf54d7254cfef685cd4012113b27"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00035.html#afb9cdf54d7254cfef685cd4012113b27">RT_Flash_EraseFrom</a>(address)</td></tr>
+<tr class="memdesc:afb9cdf54d7254cfef685cd4012113b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flash erase from the given address, to the end of the flash.  <a href="#afb9cdf54d7254cfef685cd4012113b27">More...</a><br /></td></tr>
 <tr class="separator:afb9cdf54d7254cfef685cd4012113b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca69c626499ce2e479703cc526dba84d"><td class="memItemLeft" align="right" valign="top"><a id="aca69c626499ce2e479703cc526dba84d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAC_ID</b>&#160;&#160;&#160;0x1001f3f0</td></tr>
+<tr class="memitem:aca69c626499ce2e479703cc526dba84d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00035.html#aca69c626499ce2e479703cc526dba84d">MAC_ID</a>&#160;&#160;&#160;0x1001f3f0</td></tr>
+<tr class="memdesc:aca69c626499ce2e479703cc526dba84d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chip ID location (this will be replaced by NVR chip ID)  <a href="#aca69c626499ce2e479703cc526dba84d">More...</a><br /></td></tr>
 <tr class="separator:aca69c626499ce2e479703cc526dba84d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99ec94a33a9126a436139061d9e0136b"><td class="memItemLeft" align="right" valign="top"><a id="a99ec94a33a9126a436139061d9e0136b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00035.html#a99ec94a33a9126a436139061d9e0136b">RT_Flash_SetMAC</a>(id)&#160;&#160;&#160;RT_Flash_Write(id, MAC_ID)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00035.html#a99ec94a33a9126a436139061d9e0136b">RT_Flash_SetMAC</a>(id)&#160;&#160;&#160;<a class="el" href="a00035.html#a13fb43316f72b3b1b9467a91fca08d5c">RT_Flash_Write</a>(id, <a class="el" href="a00035.html#aca69c626499ce2e479703cc526dba84d">MAC_ID</a>)</td></tr>
 <tr class="memdesc:a99ec94a33a9126a436139061d9e0136b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set chip identity(MAC_ID). <br /></td></tr>
 <tr class="separator:a99ec94a33a9126a436139061d9e0136b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad271967795fc89594428deff626aace9"><td class="memItemLeft" align="right" valign="top"><a id="ad271967795fc89594428deff626aace9"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00035.html#ad271967795fc89594428deff626aace9">getMAC</a>()&#160;&#160;&#160;<a class="el" href="a00059.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(MAC_ID)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00035.html#ad271967795fc89594428deff626aace9">getMAC</a>()&#160;&#160;&#160;<a class="el" href="a00065.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(<a class="el" href="a00035.html#aca69c626499ce2e479703cc526dba84d">MAC_ID</a>)</td></tr>
 <tr class="memdesc:ad271967795fc89594428deff626aace9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get chip identity(MAC_ID). <br /></td></tr>
 <tr class="separator:ad271967795fc89594428deff626aace9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -107,6 +110,23 @@ Macros</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>22 Jun 2018 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2018 Zhirui </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aca69c626499ce2e479703cc526dba84d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca69c626499ce2e479703cc526dba84d">&#9670;&nbsp;</a></span>MAC_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAC_ID&#160;&#160;&#160;0x1001f3f0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Chip ID location (this will be replaced by NVR chip ID) </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <a id="ab65db3c66c91da3a934540a2f8175803"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab65db3c66c91da3a934540a2f8175803">&#9670;&nbsp;</a></span>RT_Flash_Erase1k</h2>
 
@@ -122,9 +142,18 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                   \</div><div class="line">        unsigned <span class="keywordtype">long</span> addr;                             \</div><div class="line">        FuncPtr1 funcptr;                               \</div><div class="line">        funcptr =  (<a class="code" href="a00059.html#a1037590670c119c5e909cb5169d69bf2">FuncPtr1</a>)FLASH_ERASE_ADDRESS;       \</div><div class="line">        addr = ((address&amp;0x1ffff) | 0x10100000);        \</div><div class="line">        uint32_t oldVal = <a class="code" href="a00059.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(SYS_CTL2_REG);   \</div><div class="line">        RT_MCU_SetSystemClock(SYS_CLK_6M);              \</div><div class="line">        funcptr(addr);                                  \</div><div class="line">        MemoryWrite32(SYS_CTL2_REG, oldVal);            \</div><div class="line">    }</div><div class="ttc" id="a00059_html_a1037590670c119c5e909cb5169d69bf2"><div class="ttname"><a href="a00059.html#a1037590670c119c5e909cb5169d69bf2">FuncPtr1</a></div><div class="ttdeci">void(* FuncPtr1)(unsigned long)</div><div class="ttdoc">Function pointer type (unsigned long)-&gt;void definition. </div><div class="ttdef"><b>Definition:</b> mcu.h:176</div></div>
-<div class="ttc" id="a00059_html_a2d484dc15bdf30ee11ab3b05f31f0e16"><div class="ttname"><a href="a00059.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a></div><div class="ttdeci">#define MemoryRead32(addr)</div><div class="ttdoc">Read 32-bit data from a specific address. </div><div class="ttdef"><b>Definition:</b> mcu.h:131</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{                                                   \</div><div class="line">        unsigned <span class="keywordtype">long</span> addr;                             \</div><div class="line">        FuncPtr1 funcptr;                               \</div><div class="line">        funcptr =  (<a class="code" href="a00065.html#a1037590670c119c5e909cb5169d69bf2">FuncPtr1</a>)FLASH_ERASE_ADDRESS;       \</div><div class="line">        addr = ((address&amp;0x1ffff) | 0x10100000);        \</div><div class="line">        uint32_t oldVal = <a class="code" href="a00065.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(SYS_CTL2_REG);   \</div><div class="line">        RT_MCU_SetSystemClock(SYS_CLK_6M);              \</div><div class="line">        funcptr(addr);                                  \</div><div class="line">        MemoryWrite32(SYS_CTL2_REG, oldVal);            \</div><div class="line">    }</div><div class="ttc" id="a00065_html_a1037590670c119c5e909cb5169d69bf2"><div class="ttname"><a href="a00065.html#a1037590670c119c5e909cb5169d69bf2">FuncPtr1</a></div><div class="ttdeci">void(* FuncPtr1)(unsigned long)</div><div class="ttdoc">Function pointer type (unsigned long)-&gt;void definition. </div><div class="ttdef"><b>Definition:</b> mcu.h:185</div></div>
+<div class="ttc" id="a00065_html_a2d484dc15bdf30ee11ab3b05f31f0e16"><div class="ttname"><a href="a00065.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a></div><div class="ttdeci">#define MemoryRead32(addr)</div><div class="ttdoc">Read 32-bit data from a specific address. </div><div class="ttdef"><b>Definition:</b> mcu.h:140</div></div>
 </div><!-- fragment -->
+<p>Flash erase procedure, 1K-byte erase from the given address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>The starting address to erase, 1K-byte space to be erased </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
 </div>
 </div>
 <a id="afb9cdf54d7254cfef685cd4012113b27"></a>
@@ -143,6 +172,15 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{                                                                   \</div><div class="line">        for(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> addr=address;addr&lt;0x10001f400;addr+=0x400) {  \</div><div class="line">            RT_Flash_Erase1k(addr);                                     \</div><div class="line">        }                                                               \</div><div class="line">    }</div></div><!-- fragment -->
+<p>Flash erase from the given address, to the end of the flash. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>The starting address to the end (0x10001f400) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
 </div>
 </div>
 <a id="a13fb43316f72b3b1b9467a91fca08d5c"></a>
@@ -170,9 +208,19 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                   \</div><div class="line">        FuncPtr2 funcptr;                               \</div><div class="line">        funcptr = (<a class="code" href="a00059.html#ac42295cbd17c8a02cc5d063013831828">FuncPtr2</a>)FLASH_WRITE_ADDRESS;        \</div><div class="line">        uint32_t oldVal = <a class="code" href="a00059.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(SYS_CTL2_REG);   \</div><div class="line">        RT_MCU_SetSystemClock(SYS_CLK_6M);              \</div><div class="line">        funcptr(value, address);                        \</div><div class="line">        MemoryWrite32(SYS_CTL2_REG, oldVal);            \</div><div class="line">    }</div><div class="ttc" id="a00059_html_a2d484dc15bdf30ee11ab3b05f31f0e16"><div class="ttname"><a href="a00059.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a></div><div class="ttdeci">#define MemoryRead32(addr)</div><div class="ttdoc">Read 32-bit data from a specific address. </div><div class="ttdef"><b>Definition:</b> mcu.h:131</div></div>
-<div class="ttc" id="a00059_html_ac42295cbd17c8a02cc5d063013831828"><div class="ttname"><a href="a00059.html#ac42295cbd17c8a02cc5d063013831828">FuncPtr2</a></div><div class="ttdeci">void(* FuncPtr2)(unsigned long, unsigned long)</div><div class="ttdoc">Function pointer type (unsigned long, unsigned long)-&gt;void definition. </div><div class="ttdef"><b>Definition:</b> mcu.h:181</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{                                                   \</div><div class="line">        FuncPtr2 funcptr;                               \</div><div class="line">        funcptr = (<a class="code" href="a00065.html#ac42295cbd17c8a02cc5d063013831828">FuncPtr2</a>)FLASH_WRITE_ADDRESS;        \</div><div class="line">        uint32_t oldVal = <a class="code" href="a00065.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(SYS_CTL2_REG);   \</div><div class="line">        RT_MCU_SetSystemClock(SYS_CLK_6M);              \</div><div class="line">        funcptr(value, address);                        \</div><div class="line">        MemoryWrite32(SYS_CTL2_REG, oldVal);            \</div><div class="line">    }</div><div class="ttc" id="a00065_html_a2d484dc15bdf30ee11ab3b05f31f0e16"><div class="ttname"><a href="a00065.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a></div><div class="ttdeci">#define MemoryRead32(addr)</div><div class="ttdoc">Read 32-bit data from a specific address. </div><div class="ttdef"><b>Definition:</b> mcu.h:140</div></div>
+<div class="ttc" id="a00065_html_ac42295cbd17c8a02cc5d063013831828"><div class="ttname"><a href="a00065.html#ac42295cbd17c8a02cc5d063013831828">FuncPtr2</a></div><div class="ttdeci">void(* FuncPtr2)(unsigned long, unsigned long)</div><div class="ttdoc">Function pointer type (unsigned long, unsigned long)-&gt;void definition. </div><div class="ttdef"><b>Definition:</b> mcu.h:190</div></div>
 </div><!-- fragment -->
+<p>Flash Write procedure, 32-bit write. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>The address to write, staring from 0x10000000 </td></tr>
+    <tr><td class="paramname">value</td><td>The value to be written, a 32-bit value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->
@@ -184,7 +232,7 @@ Macros</h2></td></tr>
 </div>
 </div>
 <address class="footer">
-  <small>Version: 1.1  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
+  <small>Version: 1.2  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
 </address>
  <footer class="examples-footer">&copy; Camel Microelectronic 2018</footer>
 </body>

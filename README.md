@@ -8,6 +8,14 @@ Official Library for Camel Micro products. This library is embedded in [CamelStu
 
 ## History
 
+### 24.06.2018
+
+- Add documentation about TC0,1,2,4, Flash, Interrupt.
+
+### 23.06.2018
+
+- Add documentation about SPI.
+
 ### 22.06.2018
 
 - Add documentation about UART.
