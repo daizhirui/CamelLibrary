@@ -215,33 +215,26 @@
 /Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:55: warning: Member fp_float64_mult(double a_dfp, double b_dfp) (function) of file soft_fp.h is not documented.
 /Users/daizhirui/Development/CamelStudio_Library/Official/src/soft_fp/soft_fp.h:56: warning: Member fp_float64_div(double a_dfp, double b_dfp) (function) of file soft_fp.h is not documented.
 /Users/daizhirui/Development/CamelStudio_Library/Official/src/std/stdio.c:14: warning: Member _printf(char *buf, const char *format, va_list ap) (function) of file stdio.c is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/std/stdio.h:18: warning: Member xtoa(A) (macro definition) of file stdio.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:9: warning: Member memchr(const void *str, int c, size_t n) (function) of file string.c is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:19: warning: Member memcmp(const void *str1, const void *str2, size_t n) (function) of file string.c is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:29: warning: Member memcpy(void *dest, const void *src, size_t n) (function) of file string.c is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:37: warning: Member memmove(void *dest, const void *src, size_t n) (function) of file string.c is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:49: warning: Member memset(void *str, int c, size_t n) (function) of file string.c is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:56: warning: Member strcat(char *dest, const char *src) (function) of file string.c is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:64: warning: Member strncat(char *dest, const char *src, size_t n) (function) of file string.c is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:75: warning: Member strchr(const char *str, int c) (function) of file string.c is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:82: warning: Member strcmp(const char *s1, const char *s2) (function) of file string.c is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:88: warning: Member strncmp(const char *s1, const char *s2, size_t n) (function) of file string.c is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:95: warning: Member strcpy(char *dest, const char *src) (function) of file string.c is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:101: warning: Member strncpy(char *dest, const char *src, size_t n) (function) of file string.c is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:113: warning: Member strlen(const char *str) (function) of file string.c is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:124: warning: Member strstr(const char *s1, const char *s2) (function) of file string.c is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:84: warning: argument 'str1' of command @param is not found in the argument list of strcmp(const char *s1, const char *s2)
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:84: warning: argument 'str2' of command @param is not found in the argument list of strcmp(const char *s1, const char *s2)
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:82: warning: The following parameters of strcmp(const char *s1, const char *s2) are not documented:
+  parameter 's1'
+  parameter 's2'
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:101: warning: argument 'n' of command @param is not found in the argument list of strcpy(char *dest, const char *src)
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:92: warning: argument 'str1' of command @param is not found in the argument list of strncmp(const char *s1, const char *s2, size_t n)
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:92: warning: argument 'str2' of command @param is not found in the argument list of strncmp(const char *s1, const char *s2, size_t n)
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.c:88: warning: The following parameters of strncmp(const char *s1, const char *s2, size_t n) are not documented:
+  parameter 's1'
+  parameter 's2'
 /Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:11: warning: Member size_t (macro definition) of file string.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:13: warning: Member memchr(const void *str, int c, size_t n) (function) of file string.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:14: warning: Member memcmp(const void *str1, const void *str2, size_t n) (function) of file string.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:15: warning: Member memcpy(void *dest, const void *src, size_t n) (function) of file string.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:16: warning: Member memmove(void *dest, const void *src, size_t n) (function) of file string.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:17: warning: Member memset(void *str, int c, size_t n) (function) of file string.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:18: warning: Member strcat(char *dest, const char *src) (function) of file string.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:19: warning: Member strncat(char *dest, const char *src, size_t n) (function) of file string.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:20: warning: Member strchr(const char *str, int c) (function) of file string.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:21: warning: Member strcmp(const char *s1, const char *s2) (function) of file string.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:22: warning: Member strncmp(const char *s1, const char *s2, size_t n) (function) of file string.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:23: warning: Member strcpy(char *dest, const char *src) (function) of file string.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:24: warning: Member strncpy(char *dest, const char *src, size_t n) (function) of file string.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:25: warning: Member strlen(const char *str) (function) of file string.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:26: warning: Member strstr(const char *s1, const char *s2) (function) of file string.h is not documented.
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:84: warning: argument 'str1' of command @param is not found in the argument list of strcmp(const char *s1, const char *s2)
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:84: warning: argument 'str2' of command @param is not found in the argument list of strcmp(const char *s1, const char *s2)
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:89: warning: The following parameters of strcmp(const char *s1, const char *s2) are not documented:
+  parameter 's1'
+  parameter 's2'
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:101: warning: argument 'n' of command @param is not found in the argument list of strcpy(char *dest, const char *src)
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:92: warning: argument 'str1' of command @param is not found in the argument list of strncmp(const char *s1, const char *s2, size_t n)
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:92: warning: argument 'str2' of command @param is not found in the argument list of strncmp(const char *s1, const char *s2, size_t n)
+/Users/daizhirui/Development/CamelStudio_Library/Official/src/string/string.h:98: warning: The following parameters of strncmp(const char *s1, const char *s2, size_t n) are not documented:
+  parameter 's1'
+  parameter 's2'

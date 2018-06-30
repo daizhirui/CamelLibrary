@@ -1,5 +1,7 @@
 # Input Output Library for M2   {#IO}
 
+To use this library, please include `IO.h`.
+
 ## Interface
 
 ```C

@@ -1,5 +1,7 @@
 # Voltage to Pulse Width    {#V2P}
 
+To use this library, please include `analogIO.h`.
+
 ## Interface
 
 ```C

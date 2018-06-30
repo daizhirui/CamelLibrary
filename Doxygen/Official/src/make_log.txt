@@ -1,0 +1,134 @@
+cd analogIO;\
+	make;\
+	make install;\
+	cd ..
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -I ../mcu -I ../time -I ./ -I ../ analogIO.c -o analogIO.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libanalogIO.a analogIO.o
+rm analogIO.o
+mv libanalogIO.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cp analogIO.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
+cd boot;\
+	make;\
+	make install;\
+	cd ..
+make[2]: Nothing to be done for `all'.
+mv libm2core.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+mv entry.o /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cd LCD;\
+	make;\
+	make install;\
+	cd ..
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -I ../mcu  -I ./  LCD.c -o LCD.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libLCD.a LCD.o
+rm LCD.o
+mv libLCD.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cp LCD.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
+cd mcu;\
+	make;\
+	make install;\
+	cd ..
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall mcu.c -o mcu.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libmcu.a mcu.o
+rm mcu.o
+mv libmcu.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cp mcu.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
+cd SPI;\
+	make;\
+	make install;\
+	cd ..
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -I ../mcu -I ../UART1 -I ./ SPI.c -o SPI.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libSPI.a SPI.o
+rm SPI.o
+mv libSPI.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cp SPI.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
+cd std;\
+	make;\
+	make install;\
+	cd ..
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -fno-builtin -I ../mcu -I ./ stdio.c -o stdio.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libstdio.a stdio.o
+rm stdio.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -fno-builtin -G0 -msoft-float -I ../mcu -I ../soft_fp -I ./ -o stdio_fp.o stdio_fp.c;\
+	/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libstdio_fp.a stdio_fp.o;\
+	rm *.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -fno-builtin -I ../mcu -I ./ stdlib.c -o stdlib.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libstdlib.a stdlib.o
+rm stdlib.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -fno-builtin -G0 -msoft-float -I ../mcu -I ./ -o stdlib.o stdlib.c;\
+	/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -fno-builtin -G0 -msoft-float -I ../mcu -I ./ -o stdlib_fp.o stdlib_fp.c;\
+	/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libstdlib_fp.a stdlib.o stdlib_fp.o;\
+	rm *.o
+mv libstdio.a libstdio_fp.a libstdlib.a libstdlib_fp.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cp stdio.h stdio_fp.h stdlib.h stdlib_fp.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
+cd string;\
+	make;\
+	make install;\
+	cd ..
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -I ../mcu -I ./ string.c -o string.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libstring.a string.o
+rm string.o
+mv libstring.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cp string.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
+cd time;\
+	make;\
+	make install;\
+	cd ..
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -I ../mcu -I ./ time.c -o time.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libtime.a time.o
+rm time.o
+mv libtime.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cp time.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
+cd UART0;\
+	make;\
+	make install;\
+	cd ..
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -I ../mcu -I ./ UART0.c -o UART0.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libUART0.a UART0.o
+rm UART0.o
+mv libUART0.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cp UART0.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
+cd UART0_Lin;\
+	make;\
+	make install;\
+	cd ..
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -I ../mcu -I ./ -I ../UART0 UART0_Lin.c -o UART0_Lin.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libUART0_Lin.a UART0_Lin.o
+rm UART0_Lin.o
+mv libUART0_Lin.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cp UART0_Lin.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
+cd UART1;\
+	make;\
+	make install;\
+	cd ..
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -I ../mcu -I ../SPI -I ./ UART1.c -o UART1.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libUART1.a UART1.o
+rm UART1.o
+mv libUART1.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cp UART1.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
+cd UART1_Lin;\
+	make;\
+	make install;\
+	cd ..
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -I ../mcu -I ./ -I ../UART1 -I ../SPI UART1_Lin.c -o UART1_Lin.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libUART1_Lin.a UART1_Lin.o
+rm UART1_Lin.o
+mv libUART1_Lin.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cp UART1_Lin.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
+cd soft_fp;\
+	make;\
+	make install;\
+	cd ..
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -fno-builtin -G0 -msoft-float -I ../mcu -I ./ -o soft_fp.o soft_fp.c;\
+	/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libsoft_fp.a soft_fp.o;\
+	rm *.o
+mv libsoft_fp.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cp soft_fp.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include
+cd DES;\
+	make;\
+	make install;\
+	cd ..
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-gcc -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -I ../mcu  -I ./  DES.c -o DES.o
+/Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin/mips-netbsd-elf-ar rcs libDES.a DES.o
+rm DES.o
+mv libDES.a /Users/daizhirui/Development/CamelStudio_Library/Official/release/lib
+cp DES.h /Users/daizhirui/Development/CamelStudio_Library/Official/release/include

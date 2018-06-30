@@ -2,6 +2,8 @@
 
 Since M2 is a 32-bit chip, some special measurements should be used in the implementation.
 
+To use this library, please include `DES.h`.
+
 ## Data Structure
 
 ### 1. DES_Key

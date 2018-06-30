@@ -1,5 +1,7 @@
 # Amplifier (OPO)   {#OPO}
 
+To use this library, please include `analogIO.h`.
+
 ## Interface
 
 ```C

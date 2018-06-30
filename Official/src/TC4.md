@@ -1,5 +1,7 @@
 # TC4 Library for M2  {#TC4}
 
+To use this library, please include `TC4.h`.
+
 ## Interface
 
 ```C

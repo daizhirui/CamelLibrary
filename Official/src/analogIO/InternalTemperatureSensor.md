@@ -1,5 +1,7 @@
 # Internal Temperature Sensor   {#InternalTemperatureSensor}
 
+To use this library, please include `analogIO.h`.
+
 ## Interface
 
 ```C

@@ -1,5 +1,7 @@
 # Watch Dog Library for M2  {#WDT}
 
+To use this library, please include `WDT.h`.
+
 ## Interface
 
 ```C

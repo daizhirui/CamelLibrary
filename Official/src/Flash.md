@@ -1,5 +1,7 @@
 # Flash Library for M2  {#Flash}
 
+To use this library, please include `Flash.h`.
+
 ## Interface
 
 ```C

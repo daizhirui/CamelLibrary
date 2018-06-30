@@ -7,16 +7,7 @@
 */
 #include "mcu.h"
 #include "time.h"
-/**
- * @brief This function gets the real time clock value
- *
- * @param d_year     year
- * @param d_mon     month
- * @param d_day     day
- * @param d_hour     hour
- * @param d_min     minute
- * @param d_sec     second
- */
+
 void RT_RTC_GetTime(unsigned char *d_year,unsigned char *d_mon,unsigned char *d_day,
                 unsigned char *d_hour,unsigned char *d_min,unsigned char *d_sec)
 {
@@ -36,10 +27,6 @@ void RT_RTC_GetTime(unsigned char *d_year,unsigned char *d_mon,unsigned char *d_
         *d_sec = (unsigned char)(time&0x3f);            // read d_sec, [5,0], 6bits
 }
 
-/**
- * @brief       Make a delay.
- * @param ms    time to delay, the unit is ms.
- */
 void RT_DelayMiliseconds(unsigned long ms)
 {
     unsigned int i;

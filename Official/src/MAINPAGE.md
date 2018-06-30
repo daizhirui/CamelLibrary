@@ -12,7 +12,7 @@ Version 1.2
 - [Time Counter 2 (TC2)](@ref TC2)
 - [Time Counter 4 (TC4)](@ref TC4)
 - [LCD]()
-- [Real Time Counter Library (RTC)]()
+- [Real Time Counter Library (RTC)](@ref RTC)
 
 ## Analog
 
@@ -35,11 +35,9 @@ Version 1.2
 
 ## Other
 
-- [Standard Input Output Library (stdio)]()
-- [Standard Input Output(float) Library (stdio_fp)]()
-- [Standard Library (stdlib)]()
-- [Standard Library(float) (stdlib_fp)]()
-- [string Library]()
+- [Standard Input Output Library (stdio)](@ref stdio)
+- [Standard Library (stdlib)](@ref stdlib)
+- [string Library](@ref string)
 - [Soft Float Library]()
 
 ## [File List](files.html)

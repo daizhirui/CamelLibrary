@@ -1,5 +1,7 @@
 # Interrupt Library for M2  {#Interrupt}
 
+To use this library, please include `Interrupt.h`.
+
 ## Interface
 
 ```C

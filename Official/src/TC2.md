@@ -1,5 +1,7 @@
 # TC2 Library for M2  {#TC2}
 
+To use this library, please include `TC2.h`.
+
 ## Interface
 
 ```C

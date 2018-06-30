@@ -1,6 +1,7 @@
 # UART Library for M2       {#UART}
 
 UART library provides interface to operate UART0 and UART1 of M2.
+To use this library, please include `UART.h`.
 
 ## Interface
 

@@ -1,5 +1,7 @@
 # Sigma Delta   {#SD}
 
+To use this library, please include `analogIO.h`.
+
 ## Interface
 
 ```C

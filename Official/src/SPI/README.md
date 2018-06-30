@@ -1,5 +1,7 @@
 # SPI Library For M2    {#SPI}
 
+To use this library, please include `SPI.h`.
+
 ## Interface
 
 ```C

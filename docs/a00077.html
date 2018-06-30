@@ -79,7 +79,7 @@
 <p>SPI Library for M2.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="a00065_source.html">mcu.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00152_source.html">UART.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00164_source.html">UART.h</a>&quot;</code><br />
 </div>
 <p><a href="a00077_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -263,8 +263,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                    \</div><div class="line">        RT_UART_Off(<a class="code" href="a00152.html#a8d69bf04d07af4fbbab5a8bd291f65ff">UART1</a>);              \</div><div class="line">        if (MorS)                        \</div><div class="line">            MemoryWrite32(SPI_CTL, 0x4); <a class="code" href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">\</a></div><div class="line"><a class="code" href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">        else                             \</a></div><div class="line"><a class="code" href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">            MemoryWrite32</a>(SPI_CTL, 0x0); \</div><div class="line">        RT_SPI_ClearState();             \</div><div class="line">    }</div><div class="ttc" id="a00065_html_a6b9732365b12e48ddb89fe1028b975b0"><div class="ttname"><a href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a></div><div class="ttdeci">#define MemoryWrite32(addr, val)</div><div class="ttdoc">Write 32-bit data to a specific address. </div><div class="ttdef"><b>Definition:</b> mcu.h:145</div></div>
-<div class="ttc" id="a00152_html_a8d69bf04d07af4fbbab5a8bd291f65ff"><div class="ttname"><a href="a00152.html#a8d69bf04d07af4fbbab5a8bd291f65ff">UART1</a></div><div class="ttdeci">#define UART1</div><div class="ttdoc">Keyword UART0. </div><div class="ttdef"><b>Definition:</b> UART.h:20</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{                                    \</div><div class="line">        RT_UART_Off(<a class="code" href="a00164.html#a8d69bf04d07af4fbbab5a8bd291f65ff">UART1</a>);              \</div><div class="line">        if (MorS)                        \</div><div class="line">            MemoryWrite32(SPI_CTL, 0x4); <a class="code" href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">\</a></div><div class="line"><a class="code" href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">        else                             \</a></div><div class="line"><a class="code" href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">            MemoryWrite32</a>(SPI_CTL, 0x0); \</div><div class="line">        RT_SPI_ClearState();             \</div><div class="line">    }</div><div class="ttc" id="a00065_html_a6b9732365b12e48ddb89fe1028b975b0"><div class="ttname"><a href="a00065.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a></div><div class="ttdeci">#define MemoryWrite32(addr, val)</div><div class="ttdoc">Write 32-bit data to a specific address. </div><div class="ttdef"><b>Definition:</b> mcu.h:145</div></div>
+<div class="ttc" id="a00164_html_a8d69bf04d07af4fbbab5a8bd291f65ff"><div class="ttname"><a href="a00164.html#a8d69bf04d07af4fbbab5a8bd291f65ff">UART1</a></div><div class="ttdeci">#define UART1</div><div class="ttdoc">Keyword UART0. </div><div class="ttdef"><b>Definition:</b> UART.h:20</div></div>
 </div><!-- fragment -->
 <p>SPI mode: master or slave. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -311,7 +311,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                   \</div><div class="line">        RT_UART_Off(<a class="code" href="a00152.html#a8d69bf04d07af4fbbab5a8bd291f65ff">UART1</a>);             \</div><div class="line">        MemoryAnd32(SPI_CTL_REG, ~0x8); \</div><div class="line">    }</div><div class="ttc" id="a00152_html_a8d69bf04d07af4fbbab5a8bd291f65ff"><div class="ttname"><a href="a00152.html#a8d69bf04d07af4fbbab5a8bd291f65ff">UART1</a></div><div class="ttdeci">#define UART1</div><div class="ttdoc">Keyword UART0. </div><div class="ttdef"><b>Definition:</b> UART.h:20</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{                                   \</div><div class="line">        RT_UART_Off(<a class="code" href="a00164.html#a8d69bf04d07af4fbbab5a8bd291f65ff">UART1</a>);             \</div><div class="line">        MemoryAnd32(SPI_CTL_REG, ~0x8); \</div><div class="line">    }</div><div class="ttc" id="a00164_html_a8d69bf04d07af4fbbab5a8bd291f65ff"><div class="ttname"><a href="a00164.html#a8d69bf04d07af4fbbab5a8bd291f65ff">UART1</a></div><div class="ttdeci">#define UART1</div><div class="ttdoc">Keyword UART0. </div><div class="ttdef"><b>Definition:</b> UART.h:20</div></div>
 </div><!-- fragment -->
 <p>Turn on SPI. </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>

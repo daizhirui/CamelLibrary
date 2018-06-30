@@ -83,9 +83,9 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ab1b1876f06eb8953b8c21b11ef27e162"><td class="memItemLeft" align="right" valign="top"><a id="ab1b1876f06eb8953b8c21b11ef27e162"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>xtoa</b>(A)&#160;&#160;&#160;<a class="el" href="a00086.html#ac399b37e5355c704e130b1c6f60b71ec">itoa</a>(A, 16)</td></tr>
-<tr class="separator:ab1b1876f06eb8953b8c21b11ef27e162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b4b01e5fa94dded508adde4ca7e5ce5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00086.html#a3b4b01e5fa94dded508adde4ca7e5ce5">xtoa</a>(value)&#160;&#160;&#160;<a class="el" href="a00086.html#ac399b37e5355c704e130b1c6f60b71ec">itoa</a>((value), 16)</td></tr>
+<tr class="memdesc:a3b4b01e5fa94dded508adde4ca7e5ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an integer to a hex string.  <a href="#a3b4b01e5fa94dded508adde4ca7e5ce5">More...</a><br /></td></tr>
+<tr class="separator:a3b4b01e5fa94dded508adde4ca7e5ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -118,7 +118,35 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Standard Input Outpt Library for M2. </p>
 <dl class="section author"><dt>Author</dt><dd>Zhirui Dai </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2018-05-26 </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a3b4b01e5fa94dded508adde4ca7e5ce5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b4b01e5fa94dded508adde4ca7e5ce5">&#9670;&nbsp;</a></span>xtoa</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xtoa</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00086.html#ac399b37e5355c704e130b1c6f60b71ec">itoa</a>((value), 16)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert an integer to a hex string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Value to be converted to a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>char* A pointer to the resulting null-terminated string. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a0979671914792955a7a68461634ff82d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0979671914792955a7a68461634ff82d">&#9670;&nbsp;</a></span>getchar()</h2>
 

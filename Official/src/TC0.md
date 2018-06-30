@@ -1,5 +1,7 @@
 # TC0 Library for M2  {#TC0}
 
+To use this library, please include `TC0.h`.
+
 ## Interface
 
 ```C

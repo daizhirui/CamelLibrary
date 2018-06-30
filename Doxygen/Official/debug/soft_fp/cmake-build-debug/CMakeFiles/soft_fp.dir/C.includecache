@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/daizhirui/Development/soft_fp/main.c
+soft_fp.h
+/Users/daizhirui/Development/soft_fp/soft_fp.h
+
+/Users/daizhirui/Development/soft_fp/soft_fp.c
+soft_fp.h
+/Users/daizhirui/Development/soft_fp/soft_fp.h
+stdio.h
+/Users/daizhirui/Development/soft_fp/stdio.h
+
+/Users/daizhirui/Development/soft_fp/soft_fp.h
+stdint.h
+-
+
