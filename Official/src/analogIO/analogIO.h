@@ -451,7 +451,7 @@ uint32_t RT_ADC_V2P_Read();
                     AT THE SAME TIME!
 * @return void
 */
-#define RT_ADC_analogWrite(channel, value, p_vdd5)              \
+#define RT_DAC_analogWrite(channel, value, p_vdd5)              \
 {                                                               \
     MemoryOr32((T0_CTL0_REG|channel), 1<<4);                    \
     MemoryAnd32((T0_CTL0_REG|channel), ~(0x3 << 6));            \

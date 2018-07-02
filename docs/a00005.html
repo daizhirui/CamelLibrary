@@ -291,9 +291,9 @@ Macros</h2></td></tr>
 <tr class="memitem:adde43cbb2be7c0732d611363c6e41266"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#adde43cbb2be7c0732d611363c6e41266">ANALOG_OUTPUT_2</a>&#160;&#160;&#160;0x300</td></tr>
 <tr class="memdesc:adde43cbb2be7c0732d611363c6e41266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyword ANALOG_OUTPUT_2.  <a href="#adde43cbb2be7c0732d611363c6e41266">More...</a><br /></td></tr>
 <tr class="separator:adde43cbb2be7c0732d611363c6e41266"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d68ef938ce53afff11e17299fbfd00f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a3d68ef938ce53afff11e17299fbfd00f">RT_ADC_analogWrite</a>(channel,  value,  p_vdd5)</td></tr>
-<tr class="memdesc:a3d68ef938ce53afff11e17299fbfd00f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output an analog value by a selected pwm.  <a href="#a3d68ef938ce53afff11e17299fbfd00f">More...</a><br /></td></tr>
-<tr class="separator:a3d68ef938ce53afff11e17299fbfd00f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab44c37130776b81ef554d8967fcf9e62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#ab44c37130776b81ef554d8967fcf9e62">RT_DAC_analogWrite</a>(channel,  value,  p_vdd5)</td></tr>
+<tr class="memdesc:ab44c37130776b81ef554d8967fcf9e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output an analog value by a selected pwm.  <a href="#ab44c37130776b81ef554d8967fcf9e62">More...</a><br /></td></tr>
+<tr class="separator:ab44c37130776b81ef554d8967fcf9e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -358,61 +358,6 @@ Functions</h2></td></tr>
 
 <p>Keyword ANALOG_OUTPUT_2. </p>
 <dl class="section note"><dt>Note</dt><dd>Relative value of T2_CTL0_REG to T0_CTL0_REG. </dd></dl>
-
-</div>
-</div>
-<a id="a3d68ef938ce53afff11e17299fbfd00f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d68ef938ce53afff11e17299fbfd00f">&#9670;&nbsp;</a></span>RT_ADC_analogWrite</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define RT_ADC_analogWrite</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">channel, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">value, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">p_vdd5&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                               \</div><div class="line">    MemoryOr32((<a class="code" href="a00068.html#ac94b0659ef32086a6752672082c0b3ed">T0_CTL0_REG</a>|channel), 1&lt;&lt;4);                    \</div><div class="line">    MemoryAnd32((<a class="code" href="a00068.html#ac94b0659ef32086a6752672082c0b3ed">T0_CTL0_REG</a>|channel), ~(0x3 &lt;&lt; 6));            \</div><div class="line">    MemoryWrite32((<a class="code" href="a00068.html#a02a329d71e5fe86e9a0a8513ea5e1630">T0_CLK_REG</a>|channel), 1);                     \</div><div class="line">    MemoryWrite32((<a class="code" href="a00068.html#a857679d0d1c771053cac56dc76c38caa">T0_REF_REG</a>|channel), value * 255/p_vdd5);    \</div><div class="line">}</div><div class="ttc" id="a00068_html_ac94b0659ef32086a6752672082c0b3ed"><div class="ttname"><a href="a00068.html#ac94b0659ef32086a6752672082c0b3ed">T0_CTL0_REG</a></div><div class="ttdeci">#define T0_CTL0_REG</div><div class="ttdoc">External register address. </div><div class="ttdef"><b>Definition:</b> mcu.h:191</div></div>
-<div class="ttc" id="a00068_html_a02a329d71e5fe86e9a0a8513ea5e1630"><div class="ttname"><a href="a00068.html#a02a329d71e5fe86e9a0a8513ea5e1630">T0_CLK_REG</a></div><div class="ttdeci">#define T0_CLK_REG</div><div class="ttdoc">External register address. </div><div class="ttdef"><b>Definition:</b> mcu.h:207</div></div>
-<div class="ttc" id="a00068_html_a857679d0d1c771053cac56dc76c38caa"><div class="ttname"><a href="a00068.html#a857679d0d1c771053cac56dc76c38caa">T0_REF_REG</a></div><div class="ttdeci">#define T0_REF_REG</div><div class="ttdoc">External register address. </div><div class="ttdef"><b>Definition:</b> mcu.h:195</div></div>
-</div><!-- fragment -->
-<p>Output an analog value by a selected pwm. </p>
-<dl class="section note"><dt>Note</dt><dd><ol type="1">
-<li>Turn the pwm for selected channel on.</li>
-<li>Turn on the interrupt of the pwm.</li>
-<li>Set the clock divider of the corresponding timer.</li>
-<li>Set the duty of the pwm. </li>
-</ol>
-</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">channel</td><td>The analog channel to output, optional value:<div class="fragment"><div class="line"><a class="code" href="a00005.html#a289f8eaf16192ee4a8c7db77fce3bcf3">ANALOG_OUTPUT_0</a>,<a class="code" href="a00005.html#a6b6de9a2b4ef2aaeaa22350c7b5402a4">ANALOG_OUTPUT_1</a>,<a class="code" href="a00005.html#adde43cbb2be7c0732d611363c6e41266">ANALOG_OUTPUT_2</a></div></div><!-- fragment --> </td></tr>
-    <tr><td class="paramname">value</td><td>The analog value to output. </td></tr>
-    <tr><td class="paramname">p_vdd5</td><td>The vlotage of external power supply, it should be connected to p_vdd5, a pin of M2. On the Oasis V1.1 (black board version) of M2, it is determined by Jumper 6 and Jumper 7. Choose Jumper 6 for 5V and Jumper 7 for 3.3V. ATTENTION! DO NOT CHOOSE JUMPER 6 AND JUMPER 7 AT THE SAME TIME! </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -754,6 +699,61 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">resistor</td><td>optional value:<div class="fragment"><div class="line"><a class="code" href="a00005.html#aea557159b89812e640ee3e97eed1f034">V2P_185K</a>, <a class="code" href="a00005.html#aba4bce3cc0e9abf030d04c4d6c3baaeb">V2P_220K</a>, <a class="code" href="a00005.html#ab41f9944c9650f420a8e649062a78960">V2P_256K</a>, <a class="code" href="a00005.html#a0fcddf880ab8984f18f176b1faaa7cdd">V2P_291K</a></div></div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ab44c37130776b81ef554d8967fcf9e62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab44c37130776b81ef554d8967fcf9e62">&#9670;&nbsp;</a></span>RT_DAC_analogWrite</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_DAC_analogWrite</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">channel, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">p_vdd5&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                                               \</div><div class="line">    MemoryOr32((<a class="code" href="a00068.html#ac94b0659ef32086a6752672082c0b3ed">T0_CTL0_REG</a>|channel), 1&lt;&lt;4);                    \</div><div class="line">    MemoryAnd32((<a class="code" href="a00068.html#ac94b0659ef32086a6752672082c0b3ed">T0_CTL0_REG</a>|channel), ~(0x3 &lt;&lt; 6));            \</div><div class="line">    MemoryWrite32((<a class="code" href="a00068.html#a02a329d71e5fe86e9a0a8513ea5e1630">T0_CLK_REG</a>|channel), 1);                     \</div><div class="line">    MemoryWrite32((<a class="code" href="a00068.html#a857679d0d1c771053cac56dc76c38caa">T0_REF_REG</a>|channel), value * 255/p_vdd5);    \</div><div class="line">}</div><div class="ttc" id="a00068_html_ac94b0659ef32086a6752672082c0b3ed"><div class="ttname"><a href="a00068.html#ac94b0659ef32086a6752672082c0b3ed">T0_CTL0_REG</a></div><div class="ttdeci">#define T0_CTL0_REG</div><div class="ttdoc">External register address. </div><div class="ttdef"><b>Definition:</b> mcu.h:191</div></div>
+<div class="ttc" id="a00068_html_a02a329d71e5fe86e9a0a8513ea5e1630"><div class="ttname"><a href="a00068.html#a02a329d71e5fe86e9a0a8513ea5e1630">T0_CLK_REG</a></div><div class="ttdeci">#define T0_CLK_REG</div><div class="ttdoc">External register address. </div><div class="ttdef"><b>Definition:</b> mcu.h:207</div></div>
+<div class="ttc" id="a00068_html_a857679d0d1c771053cac56dc76c38caa"><div class="ttname"><a href="a00068.html#a857679d0d1c771053cac56dc76c38caa">T0_REF_REG</a></div><div class="ttdeci">#define T0_REF_REG</div><div class="ttdoc">External register address. </div><div class="ttdef"><b>Definition:</b> mcu.h:195</div></div>
+</div><!-- fragment -->
+<p>Output an analog value by a selected pwm. </p>
+<dl class="section note"><dt>Note</dt><dd><ol type="1">
+<li>Turn the pwm for selected channel on.</li>
+<li>Turn on the interrupt of the pwm.</li>
+<li>Set the clock divider of the corresponding timer.</li>
+<li>Set the duty of the pwm. </li>
+</ol>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>The analog channel to output, optional value:<div class="fragment"><div class="line"><a class="code" href="a00005.html#a289f8eaf16192ee4a8c7db77fce3bcf3">ANALOG_OUTPUT_0</a>,<a class="code" href="a00005.html#a6b6de9a2b4ef2aaeaa22350c7b5402a4">ANALOG_OUTPUT_1</a>,<a class="code" href="a00005.html#adde43cbb2be7c0732d611363c6e41266">ANALOG_OUTPUT_2</a></div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">value</td><td>The analog value to output. </td></tr>
+    <tr><td class="paramname">p_vdd5</td><td>The vlotage of external power supply, it should be connected to p_vdd5, a pin of M2. On the Oasis V1.1 (black board version) of M2, it is determined by Jumper 6 and Jumper 7. Choose Jumper 6 for 5V and Jumper 7 for 3.3V. ATTENTION! DO NOT CHOOSE JUMPER 6 AND JUMPER 7 AT THE SAME TIME! </td></tr>
   </table>
   </dd>
 </dl>

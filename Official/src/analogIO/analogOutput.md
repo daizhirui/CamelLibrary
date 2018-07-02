@@ -14,12 +14,12 @@ This library provides the function of DAC (Digital to Analog Converter) by using
 ## Interface
 
 ```C
-void RT_ADC_analogWrite(channel, value, p_vdd5);
+void RT_DAC_analogWrite(channel, value, p_vdd5);
 ```
 
 ## Example
 
 ```C
 // set analog output channel 0 to output 1.5v.
-RTC_ADC_analogWrite(ANALOG_OUTPUT_0, 1.5, 5.0);
+RTC_DAC_analogWrite(ANALOG_OUTPUT_0, 1.5, 5.0);
 ```

@@ -77,8 +77,8 @@
 <h2>Description</h2>
 <p>This library provides the function of DAC (Digital to Analog Converter) by using the PWM0 of Timer Counter 0, 1 and 2. When <code>RT_ADC_analogWrite</code> is used, the frequency of the corresponding timer is changed. If you want to custom the timer frequency, please change it later.</p>
 <h2>Interface</h2>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00005.html#a3d68ef938ce53afff11e17299fbfd00f">RT_ADC_analogWrite</a>(channel, value, p_vdd5);</div></div><!-- fragment --><h2>Example</h2>
-<div class="fragment"><div class="line"><span class="comment">// set analog output channel 0 to output 1.5v.</span></div><div class="line">RTC_ADC_analogWrite(<a class="code" href="a00005.html#a289f8eaf16192ee4a8c7db77fce3bcf3">ANALOG_OUTPUT_0</a>, 1.5, 5.0);</div></div><!-- fragment --> </div></div><!-- contents -->
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00005.html#ab44c37130776b81ef554d8967fcf9e62">RT_DAC_analogWrite</a>(channel, value, p_vdd5);</div></div><!-- fragment --><h2>Example</h2>
+<div class="fragment"><div class="line"><span class="comment">// set analog output channel 0 to output 1.5v.</span></div><div class="line">RTC_DAC_analogWrite(<a class="code" href="a00005.html#a289f8eaf16192ee4a8c7db77fce3bcf3">ANALOG_OUTPUT_0</a>, 1.5, 5.0);</div></div><!-- fragment --> </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>
