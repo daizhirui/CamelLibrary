@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
     <meta name="generator" content="Doxygen 1.8.14" />
     <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
-    <title>CamelStudioX Library Documentaion: TC1 Library for M2</title>
+    <title>CamelStudioX Library Documentaion: Voltage to Pulse Width</title>
     <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
     <!--script type="text/javascript" src="dynsections.js"></script-->
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
@@ -49,7 +49,7 @@
     <!-- nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.2</a>
+                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.3</a>
         </div>
         </div>
         </nav -->
@@ -65,13 +65,13 @@
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">TC1 Library for M2 </div>  </div>
+<div class="title">Voltage to Pulse Width </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>To use this library, please include <code><a class="el" href="a00134.html" title="Timer1 Library for M2. ">TC1.h</a></code>.</p>
+<div class="textblock"><p>To use this library, please include <code><a class="el" href="a00005.html" title="Analog Input Output Library for M2. ">analogIO.h</a></code>.</p>
 <h2>Interface</h2>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#ade1093a6b28016a59b5e5b0c2733ab2c">RT_TC1_Stop</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#ab9c21242bf3ba2144aa45a336a4dc7ea">RT_TC1_ClearIrq</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#abcd4f7c1a53b5d0a31f45076725a1ed6">RT_TC1_ClearCnt</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#a2a7757de241add69f5fffc4e1dfa431a">RT_TC1_ClearAll</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#adbef657c94c7b32f07e4210fbf7f4745">RT_TC1_TcIrqOn</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#ad8775d32f1b8cb982c2abf045e3b6b95">RT_TC1_TcIrqOff</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#a61477182241a8629176801cca44ce09a">RT_TC1_PWMIrqOn</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#a1c33903adfe470964d7eb5126c4ce7d4">RT_TC1_PWMIrqOff</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">int</span>  <a class="code" href="a00134.html#a3395d62010d1ca815676f3086f0dfb4a">RT_TC1_CheckTcFlag</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">int</span>  <a class="code" href="a00134.html#acf0b6d73b626b9f56f9f6fda79d0860c">RT_TC1_CheckPWMFlag</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#ac76393581e0b1d58a9628139db72cdaf">RT_TC1_TimerOn</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#a1bccbc833364c4f1c6ce63a758136817">RT_TC1_TimerOff</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#a69c07e4e9fc56ae94d167f79399e7867">RT_TC1_TimerSet1us</a>(T,irq);</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#ac04f2d9427689062596382399aa7d909">RT_TC1_SetCounter</a>(n);</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#add9b6f778a744d79226f5165a04a38d9">RT_TC1_EcntOn</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#a1c9b9839a03d3e9b1158a2be2feebf42">RT_TC1_EcntOff</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#a4b786bd70b41c950892beeef4cbd2b27">RT_TC1_SetEcnt</a>(n, trigger, irq);</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#a66b006ccc7fcf8165e1bed013985b92e">RT_TC1_PWMOn</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#afbffb90a80851e9a1e6e3dc03938c547">RT_TC1_PWMOff</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#af7f2a1fa7c0f6bf6e61dbc2c1ecb1730">RT_TC1_SetPWM</a>(div, ref, irq);</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#a6f11e47b5a8e7947fc76e9955e94acea">RT_TC1_PWMMOn</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#aa070a043272a38ae84492146683a00d3">RT_TC1_PWMMOff</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#a326645a1e9eb49468e696ba7a186cdba">RT_TC1_PWMMTriggerMode</a>(mode);</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00134.html#a1e92ad68930f990a6437c74432689e1b">RT_TC1_SetPWMM</a>(trigger, irq);</div><div class="line"></div><div class="line"><span class="keywordtype">int</span>  <a class="code" href="a00134.html#a98f0ff60ac42d9ca3eef5f7d6e893df2">RT_TC1_ReadCnt</a>();</div></div><!-- fragment --><h2>Example</h2>
-<div class="fragment"><div class="line"><a class="code" href="a00134.html#abcd4f7c1a53b5d0a31f45076725a1ed6">RT_TC1_ClearCnt</a>();       <span class="comment">// clear TC1 Counter</span></div><div class="line"><a class="code" href="a00134.html#adbef657c94c7b32f07e4210fbf7f4745">RT_TC1_TcIrqOn</a>();          <span class="comment">// set TC1 cnt-IRQ enable</span></div></div><!-- fragment --> </div></div><!-- contents -->
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00005.html#af1002dc4b0d8af47aba6aaa5de06868e">RT_ADC_V2P_On</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00005.html#a392f47d863065820e42b66b84007dfe0">RT_ADC_V2P_Off</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00005.html#ab24203a1eff5816f48761f0e38337d67">RT_ADC_V2P_SetResistor</a>();</div><div class="line"></div><div class="line">uint32_t <a class="code" href="a00002.html#aeb7d0cb0a7849fc5736dae01fe607910">RT_ADC_V2P_Read</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00005.html#a00318bd4fc3ce7ad4f03124b91891f4f">RT_ADC_Clear</a>();</div></div><!-- fragment --><h2>Example</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00005.html">analogIO.h</a>&quot;</span></div><div class="line"></div><div class="line"><span class="keywordtype">void</span> Example_V2P() {</div><div class="line">    <a class="code" href="a00005.html#af1002dc4b0d8af47aba6aaa5de06868e">RT_ADC_V2P_On</a>();</div><div class="line">    <a class="code" href="a00005.html#ab24203a1eff5816f48761f0e38337d67">RT_ADC_V2P_SetResistor</a>(<a class="code" href="a00005.html#aba4bce3cc0e9abf030d04c4d6c3baaeb">V2P_220K</a>);   <span class="comment">// V2P_185K is set in single side mode of the amplifier.</span></div><div class="line">    uint32_t result = <a class="code" href="a00002.html#aeb7d0cb0a7849fc5736dae01fe607910">RT_ADC_V2P_Read</a>();</div><div class="line">}</div></div><!-- fragment --> </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>
@@ -80,7 +80,7 @@
 </div>
 </div>
 <address class="footer">
-  <small>Version: 1.2  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
+  <small>Version: 1.3  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
 </address>
  <footer class="examples-footer">&copy; Camel Microelectronic 2018</footer>
 </body>

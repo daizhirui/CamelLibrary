@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include "stdio_shared.c"
 
+/*! \cond PRIVATE */
 void _printf(char* buf, const char *format, va_list ap)
 {
     _memset(buf, 128, '\0');
@@ -58,3 +59,5 @@ void _printf(char* buf, const char *format, va_list ap)
         } // End of if-else
     } // End of for
 } // End of _printf
+
+/*! \endcond */

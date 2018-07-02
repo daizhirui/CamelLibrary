@@ -336,6 +336,13 @@ float fp_uint32_to_float32(unsigned long af)
     return __uint32_to_float32__(a);
 }
 
+/*! \cond PRIVATE */
+/**
+ * @brief Convert float32 to float64.
+ *
+ * @param a_fp float32 value to be converted to float64.
+ * @return double the float64.
+ */
 double fp_float32_to_float64(float a_fp)
 {
     uint32_t a;             // unit32 expression
@@ -353,6 +360,12 @@ double fp_float32_to_float64(float a_fp)
     return __float64_buffer_to_float64__();
 }
 
+/**
+ * @brief Convert float64 to float32.
+ *
+ * @param a_dfp float64 value to be converted to float32.
+ * @return float the float32.
+ */
 float fp_float64_to_float32(double a_dfp)
 {
     uint32_t a;             // unit32 expression
@@ -393,6 +406,7 @@ double fp_float64_div(double a_dfp, double b_dfp)
 {
     return fp_float32_div(fp_float64_to_float32(a_dfp), fp_float64_to_float32(b_dfp));
 }
+/*! \endcond */
 
 //0 iff a==b; 1 iff a>b; -1 iff a<b
 /**

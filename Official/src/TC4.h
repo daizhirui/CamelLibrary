@@ -4,7 +4,8 @@
 * @date 16 Jun 2018
 * @copyright 2018 Zhirui
 * @brief Timer4 Library for M2
-*/#ifndef __TC4_h__
+*/
+#ifndef __TC4_h__
 #define __TC4_h__
 
 #include "mcu.h"

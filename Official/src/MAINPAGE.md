@@ -1,6 +1,6 @@
 # CamelStudioX Library Documentation         {#mainpage}
 
-Version 1.2
+**Version 1.3**
 
 ## Digital
 
@@ -20,11 +20,11 @@ Version 1.2
 - [Sigma Delta](@ref SD)
 - [Voltage to Pulse Width](@ref V2P)
 - [Internal Temperature Sensor](@ref InternalTemperatureSensor)
-- [Pulse Width Modulation (PWM)]()
+- [Analog Output](@ref analogOutput)
 
 ## System
 
-- [Micro Control Unit (MCU)]()
+- [Micro Control Unit (MCU)](@ref mcu)
 - [Interrupt](@ref Interrupt)
 - [Watch Dog](@ref WDT)
 - [Flash Library](@ref Flash)
@@ -38,6 +38,6 @@ Version 1.2
 - [Standard Input Output Library (stdio)](@ref stdio)
 - [Standard Library (stdlib)](@ref stdlib)
 - [string Library](@ref string)
-- [Soft Float Library]()
+- [Soft Float Library](@ref soft_fp)
 
 ## [File List](files.html)

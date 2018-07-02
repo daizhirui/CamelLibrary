@@ -416,4 +416,47 @@ uint32_t RT_ADC_SD_Read();
  * @return int      V2P result.
  */
 uint32_t RT_ADC_V2P_Read();
-#endif // End of __AFE_h__
+
+/**
+ * @brief   Keyword ANALOG_OUTPUT_0.
+ * @note    Relative value of T0_CTL0_REG to T0_CTL0_REG.
+ */
+#define ANALOG_OUTPUT_0     0x0     // 1f800100
+
+/**
+ * @brief   Keyword ANALOG_OUTPUT_1.
+ * @note    Relative value of T1_CTL0_REG to T0_CTL0_REG.
+ */
+#define ANALOG_OUTPUT_1     0x100   // 1f800200
+
+/**
+ * @brief   Keyword ANALOG_OUTPUT_2.
+ * @note    Relative value of T2_CTL0_REG to T0_CTL0_REG.
+ */
+#define ANALOG_OUTPUT_2     0x300   // 1f800400
+
+/**
+* @brief    Output an analog value by a selected pwm.
+* @note
+            1. Turn the pwm for selected channel on.
+            2. Turn on the interrupt of the pwm.
+            3. Set the clock divider of the corresponding timer.
+            4. Set the duty of the pwm.
+* @param channel    The analog channel to output,
+                    optional value: \code{.c}ANALOG_OUTPUT_0,ANALOG_OUTPUT_1,ANALOG_OUTPUT_2\endcode
+* @param value      The analog value to output.
+* @param p_vdd5     The vlotage of external power supply, it should be connected to p_vdd5, a pin of M2.
+                    On the Oasis V1.1 (black board version) of M2, it is determined by Jumper 6 and Jumper 7. Choose
+                    Jumper 6 for 5V and Jumper 7 for 3.3V. ATTENTION! DO NOT CHOOSE JUMPER 6 AND JUMPER 7
+                    AT THE SAME TIME!
+* @return void
+*/
+#define RT_ADC_analogWrite(channel, value, p_vdd5)              \
+{                                                               \
+    MemoryOr32((T0_CTL0_REG|channel), 1<<4);                    \
+    MemoryAnd32((T0_CTL0_REG|channel), ~(0x3 << 6));            \
+    MemoryWrite32((T0_CLK_REG|channel), 1);                     \
+    MemoryWrite32((T0_REF_REG|channel), value * 255/p_vdd5);    \
+}
+
+#endif // End of __M2_ANALOG_h__

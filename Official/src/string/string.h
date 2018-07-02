@@ -8,6 +8,9 @@
 #ifndef __string_h__
 #define __string_h__
 
+/**
+ * @brief Keyword size_t.
+ */
 #define size_t unsigned int
 
 /**
@@ -50,7 +53,7 @@ void * memmove(void * dest, const void * src, size_t n);
  * @brief           Set n count in *str with character c
  * @param *str      the pointer to the src string
  * @param c         the character to be set
- * @param n         the count   
+ * @param n         the count
  * @return *        the pointer of the new string
  */
 void * memset(void *str, int c, size_t n);
@@ -82,16 +85,16 @@ char * strchr(const char *str, int c);
 
 /**
  * @brief           String compare str1 and str2
- * @param str1      the pointer to the 1st string
- * @param str2      the pointer to the 2nd string
+ * @param s1      the pointer to the 1st string
+ * @param s2      the pointer to the 2nd string
  * @return int      return <0 if str1 < str2; reutnr =0 if str1=str2; return >0 if str1>str2
  */
 int strcmp(const char * s1, const char * s2);
 
 /**
  * @brief           String compare the first n count in str1 and str2
- * @param str1      the pointer to the 1st string
- * @param str2      the pointer to the 2nd string
+ * @param s1        the pointer to the 1st string
+ * @param s2        the pointer to the 2nd string
  * @param n         the first n count to compare
  * @return int      return <0 if str1 < str2; reutnr =0 if str1=str2; return >0 if str1>str2
  */
@@ -101,7 +104,6 @@ int strncmp(const char * s1, const char * s2, size_t n);
  * @brief           Copy string src to dest
  * @param *dest     the pointer to the dest string
  * @param *src      the pointer to the src string
- * @param n         the count
  * @return *        the pointer to the dest string
  */
 char * strcpy(char * dest, const char * src);

@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
     <meta name="generator" content="Doxygen 1.8.14" />
     <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
-    <title>CamelStudioX Library Documentaion: Real Time Counter Library for M2</title>
+    <title>CamelStudioX Library Documentaion: Interrupt Library for M2</title>
     <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
     <!--script type="text/javascript" src="dynsections.js"></script-->
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
@@ -49,7 +49,7 @@
     <!-- nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.2</a>
+                    <a class="navbar-brand">CamelStudioX Library Documentaion 1.3</a>
         </div>
         </div>
         </nav -->
@@ -65,13 +65,13 @@
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Real Time Counter Library for M2 </div>  </div>
+<div class="title">Interrupt Library for M2 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>To use this library, please include <code><a class="el" href="a00155.html" title="Real Time Module Library for M2. ">time.h</a></code>.</p>
+<div class="textblock"><p>To use this library, please include <code><a class="el" href="a00044.html" title="Interrupt Library for M2. ">Interrupt.h</a></code>.</p>
 <h2>Interface</h2>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00155.html#abcec88fd1699e238435a90f1b49f01fc">RT_RTC_On</a>()</div><div class="line"></div><div class="line">void <a class="code" href="a00155.html#ad065bdfa3138a773950a7d5e9e9f863a">RT_RTC_Off</a>()</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00155.html#a4342706ea208fe0adff35bfa3c78b87c">RT_RTC_SetTimeFormat</a>(format)</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00155.html#a8929da3f9ad422dd07f18d603c63b7b7">RT_RTC_SetTime</a>(year, month, day, hour, min, sec)</div><div class="line"></div><div class="line"><span class="keywordtype">long</span> <a class="code" href="a00155.html#a61ac395d30cde55137bf04acaec570f0">RT_RTC_Read32</a>()</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00152.html#ae30dec10f77cab56a66ee070fbe6a490">RT_RTC_GetTime</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *d_year, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *d_mon, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *d_day,</div><div class="line">               <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *d_hour, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *d_min, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *d_sec);</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00152.html#a960534919351d6e419e70a78521e87da">RT_DelayMiliseconds</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> ms);</div></div><!-- fragment --><h2>Example</h2>
-<div class="fragment"><div class="line"><a class="code" href="a00155.html#abcec88fd1699e238435a90f1b49f01fc">RT_RTC_On</a>();     <span class="comment">// turn on RTC</span></div><div class="line"><a class="code" href="a00155.html#ad065bdfa3138a773950a7d5e9e9f863a">RT_RTC_Off</a>();    <span class="comment">// turn off RTC</span></div></div><!-- fragment --> </div></div><!-- contents -->
+<div class="fragment"><div class="line"><span class="keywordtype">int</span>  <a class="code" href="a00044.html#a397366295a7d6d3ed47e5e3d69549448">RT_SYSINT_GetFlag</a>(device);</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00044.html#a5ddacb2147f802d2af2f507e41043504">RT_SYSINT_On</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> <a class="code" href="a00044.html#a9c68b82296205323f01358d9a27813a9">RT_SYSINT_Off</a>();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> RT_EXTINT_Setup(port, trigger);</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> RT_EXTINT_Off(port);</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> RT_EXTINT_Clear(port);</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> RT_EXTINT_ClearAll();</div><div class="line"></div><div class="line"><span class="keywordtype">int</span>  RT_EXTINT_GetAllFlag();</div><div class="line"></div><div class="line"><span class="keywordtype">int</span>  RT_EXTINT_GetFlag(port);</div></div><!-- fragment --><h2>Example</h2>
+<div class="fragment"><div class="line"><a class="code" href="a00044.html#a5ddacb2147f802d2af2f507e41043504">RT_SYSINT_On</a>();             <span class="comment">// turn on system interrupt</span></div><div class="line">RT_EXTINT_Clear(1);         <span class="comment">// clear External Interrupt port 1</span></div></div><!-- fragment --> </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>
@@ -80,7 +80,7 @@
 </div>
 </div>
 <address class="footer">
-  <small>Version: 1.2  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
+  <small>Version: 1.3  | Generated by <a href="http://www.doxygen.org/index.html"> Doxygen 1.8.14</a></small>
 </address>
  <footer class="examples-footer">&copy; Camel Microelectronic 2018</footer>
 </body>
