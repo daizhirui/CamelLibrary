@@ -1,13 +1,28 @@
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    $navpath
-    <li class="footer">$generatedby
-    <a href="http://www.doxygen.org/index.html">
+<div id="nav-path" class="navpath">
+    <!-- id is needed for treeview function! -->
+    <!-- <ul>
+        $navpath
+        <li class="footer">$generatedby
+            <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="$relpath^doxygen.png" alt="doxygen"/></a> $doxygenversion </li>
-  </ul>
+    </ul> -->
+    <div class="card">
+        <!-- <div class="card-header"> -->
+            <!-- Quote -->
+        <!-- </div> -->
+        <div class="card-body">
+            <!-- <h5 class="card-title">Special title treatment</h5> -->
+
+            <p class="card-text d-flex justify-content-between">
+                <a href="#" class="btn btn-primary">Return To Top</a>
+
+                <a href="http://www.doxygen.org/index.html">$generatedby <img class="footer" src="$relpath^doxygen.png" alt="doxygen"/>  $doxygenversion</a>
+            </p>
+        </div>
+    </div>
 </div>
 <!--END GENERATE_TREEVIEW-->
 </div>
@@ -16,11 +31,12 @@
 </div>
 </div>
 <!--BEGIN !GENERATE_TREEVIEW-->
-<hr class="footer"/><address class="footer"><small>
+<hr class="footer" /><address class="footer"><small>
 $generatedby &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="$relpath^doxygen.png" alt="doxygen"/>
 </a> $doxygenversion
 </small></address>
 <!--END !GENERATE_TREEVIEW-->
 </body>
+
 </html>

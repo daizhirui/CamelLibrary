@@ -28,11 +28,8 @@
     <script type="text/javascript" src="$relpath^doxy-boot.js"></script>
 
     <style>
-        /*            a {color: darkblue;}*/
-
-        navpath {
-            background: white
-        }
+        /*a {color: darkblue;}*/
+        container {background-color: white}
     </style>
 </head>
 
@@ -40,18 +37,21 @@
 
     <div class="container">
         <nav class="navbar navbar-expand navbar-light bg-light sticky-top">
-            <a class="navbar-brand" href="#"><img src="cmstudio.png" width="30px">  $projectname</a>
+
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- justify-content-end -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item active align-self-center">
+                        <a class="navbar-brand" href="#"><img src="cmstudio.png" width="30px">  $projectname    </a>
+                    </li>
+                    <li class="nav-item active align-self-center">
                         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown align-self-center">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Related links</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="files.html">File&nbsp;List</a>
@@ -63,20 +63,18 @@
                     </li>
                 </ul>
             </div>
+
+            <div id="MSearchBox" class="MSearchBoxInactive justify-content-end">
+                <span class="left">
+                    <img id="MSearchSelect" src="search/mag_sel.png" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()" alt="">
+                    <input type="text" id="MSearchField" value="Search" accesskey="S" onfocus="searchBox.OnSearchFieldFocus(true)" onblur="searchBox.OnSearchFieldFocus(false)" onkeyup="searchBox.OnSearchFieldChange(event)">
+                </span><span class="right">
+                    <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()" style="display: none;"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""></a>
+                </span>
+            </div>
         </nav>
 
     </div>
-
-    <nav class="navbar navbar-light bg-light sticky-top container">
-        <div id="MSearchBox" class="MSearchBoxInactive">
-            <span class="left">
-                <img id="MSearchSelect" src="search/mag_sel.png" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()" alt="">
-                <input type="text" id="MSearchField" value="Search" accesskey="S" onfocus="searchBox.OnSearchFieldFocus(true)" onblur="searchBox.OnSearchFieldFocus(false)" onkeyup="searchBox.OnSearchFieldChange(event)">
-            </span><span class="right">
-                <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()" style="display: none;"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""></a>
-            </span>
-        </div>
-    </nav>
 
     <div id="top">
         <div id="MSearchSelectWindow" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()" onkeydown="return searchBox.OnSearchSelectKey(event)">
