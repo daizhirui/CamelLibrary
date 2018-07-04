@@ -1,0 +1,66 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00137}{T\+C0.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_a7eb236125fa1773036d72e020419f3ad}{RT\_TC0\_Stop}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_a8758649b0f3c3401f75970ddeab0a8d9}{RT\_TC0\_ClearIrq}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_a17c2c2161dfc43f81e4e887a0d2b62ee}{RT\_TC0\_ClearCnt}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_a455c100511141b1243e8ee7f756e6553}{RT\_TC0\_ClearAll}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_a1ff15e860147b3fff582b7603ba7ffa8}{RT\_TC0\_TcIrqOn}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_a7434ed75487de93c69569c05430967ae}{RT\_TC0\_TcIrqOff}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_a76c2b1a397b2035b2f2f2e64940b790f}{RT\_TC0\_PWMIrqOn}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_aa62df019b0279e8510e465f5e920f555}{RT\_TC0\_PWMIrqOff}}();
+
+\textcolor{keywordtype}{int}  \mbox{\hyperlink{a00137_a41989522dd60679c7c86268b68363a5c}{RT\_TC0\_CheckTcFlag}}();
+
+\textcolor{keywordtype}{int}  \mbox{\hyperlink{a00137_ae20de59a971c4aa0a50a724ac08fb19e}{RT\_TC0\_CheckPWMFlag}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_aa7936fffa8b7bcd47751d2e89f81d4a9}{RT\_TC0\_TimerOn}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_acbfad29faf802168f3281e5754e40aa9}{RT\_TC0\_TimerOff}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_af8994aa8faed7529c93c25df30c020eb}{RT\_TC0\_TimerSet1us}}(T,irq);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_ac299997dc05f47b4b42bfd4e52b98d36}{RT\_TC0\_SetCounter}}(n);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_a4dd8c922ad55805d587d5a73b78d911a}{RT\_TC0\_EcntOn}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_a2c4dcae7aa5753dc38986240b024888f}{RT\_TC0\_EcntOff}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_a2739dbdedbc45242d873c9ecd9f5f56a}{RT\_TC0\_SetEcnt}}(n, trigger, irq);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_a70e69675d0a4e7d5095f938dffa14779}{RT\_TC0\_PWMOn}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_a043d535ff9aad665ddf1521169a0f187}{RT\_TC0\_PWMOff}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_a055e471dbfe89e577e92a0789a2c6ae5}{RT\_TC0\_SetPWM}}(div, ref, irq);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_aac1f2943fc99c1197cda6bc5c0fce669}{RT\_TC0\_PWMMOn}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_ab3d4fe7b156ef14b033ad020108fa386}{RT\_TC0\_PWMMOff}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_a48f8c6b4e5fba0057564f92060449557}{RT\_TC0\_PWMMTriggerMode}}(mode);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00137_ad1c595fd71883cd9a5d5fd5ed7cf4f30}{RT\_TC0\_SetPWMM}}(trigger, irq);
+
+\textcolor{keywordtype}{int}  \mbox{\hyperlink{a00137_acd97abf7aebb4ffa83af031604a67344}{RT\_TC0\_ReadCnt}}();
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\mbox{\hyperlink{a00137_a17c2c2161dfc43f81e4e887a0d2b62ee}{RT\_TC0\_ClearCnt}}();       \textcolor{comment}{// clear TC0 Counter}
+\mbox{\hyperlink{a00137_a1ff15e860147b3fff582b7603ba7ffa8}{RT\_TC0\_TcIrqOn}}();        \textcolor{comment}{// set TC0 cnt-IRQ enable}
+\end{DoxyCode}
+ 

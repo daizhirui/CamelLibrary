@@ -1,0 +1,70 @@
+To use this library, please include {\ttfamily S\+P\+I.\+h}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} RT\_SPI\_On();
+
+\textcolor{keywordtype}{void} RT\_SPI\_Off();
+
+\textcolor{keywordtype}{void} RT\_SPI\_Modeset(MorS);
+
+\textcolor{keywordtype}{void} RT\_SPI\_ChipSelect();
+
+\textcolor{keywordtype}{void} RT\_SPI\_ChipRelease();
+
+\textcolor{keywordtype}{void} RT\_SPI\_ClearState();
+
+\textcolor{keywordtype}{void} RT\_SPI\_Busy();
+
+\textcolor{keywordtype}{void} RT\_SPI\_Write\_(val);
+
+\textcolor{keywordtype}{void} RT\_SPI\_Write(val);
+
+uint32\_t RT\_SPI\_DataReady();
+
+uint8\_t RT\_SPI\_Read\_();
+
+\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} RT\_SPI\_Read();
+
+\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} RT\_SPI\_MasterTransfer(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} c);
+
+\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} RT\_SPI\_SlaveTransfer(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} c);
+
+\textcolor{keywordtype}{void} RT\_SPI\_Delay();
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "SPI.h"}
+\textcolor{preprocessor}{#include "\mbox{\hyperlink{a00026}{stdio.h}}"}
+
+\textcolor{comment}{// This example shows how to set M2 SPI as master, send and receive data.}
+\textcolor{keywordtype}{void} master()\{
+    \textcolor{keywordtype}{char} c;
+    RT\_SPI\_Modeset(MASTER);             \textcolor{comment}{// set M2 SPI as Master}
+    RT\_SPI\_ChipSelect();
+    RT\_SPI\_ClearState();
+    \textcolor{keywordflow}{while}(1)\{
+        c=RT\_SPI\_MasterTransfer(\textcolor{charliteral}{'A'});
+        \mbox{\hyperlink{a00026_a948b7a0779c308ac5502c57e282e6933}{putchar}}(c);
+    \}
+\}
+
+\textcolor{comment}{// This example shows how to set M2 SPI as slave, send and receive data.}
+\textcolor{keywordtype}{void} slave()\{
+    \textcolor{keywordtype}{char} c;
+    RT\_SPI\_Modeset(SLAVE);              \textcolor{comment}{// set M2 SPI as Slave}
+    RT\_SPI\_ClearState();
+    RT\_SPI\_Write\_(\textcolor{charliteral}{'B'});
+    \textcolor{keywordflow}{while}(1)\{
+        c=RT\_SPI\_SlaveTransfer(\textcolor{charliteral}{'B'});
+        \mbox{\hyperlink{a00026_a948b7a0779c308ac5502c57e282e6933}{putchar}}(c);
+    \}
+\}
+\end{DoxyCode}
+ 

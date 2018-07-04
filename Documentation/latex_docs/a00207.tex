@@ -1,0 +1,47 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00050}{I\+O.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00050_a80f50c7de76076789b624b7fce7531c6}{RT\_IO\_SetOutput}}(io);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00050_ae333f1c232fdcb61b9e6ccaceeca2cec}{RT\_IO\_SetInput}}(io);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00050_ae845dc41cbf1b32b4d576373d1866d65}{RT\_IO\_SetInputOutput}}(io, mode);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00050_ade4bc867a36445fe0debc59cd5c9d9a5}{RT\_IO\_SetInputOutput16}}(mode);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00050_a752d981d1948aeae63c1a86070ae8e3a}{RT\_IO\_SetHigh}}(io);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00050_ae0e5eb1313d8307cf1362e997ee6f25e}{RT\_IO\_SetLow}}(io);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00050_a95fe40498ba314e1ea68aaa50335e7ef}{RT\_IO\_SetLevel}}(io, level);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00050_a5a3ae496ca3e12098c74c9f13b20c554}{RT\_IO\_SetLevel16}}(level);
+
+uint8\_t \mbox{\hyperlink{a00050_aa69642c4177a35776090fdcf78d12e3b}{RT\_IO\_Read}}(io);
+
+uint16\_t \mbox{\hyperlink{a00050_acf9c93d24ffeac5705da2c83ea2303d1}{RT\_IO\_Read16}}();
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// set IO as Input}
+\mbox{\hyperlink{a00050_a80f50c7de76076789b624b7fce7531c6}{RT\_IO\_SetOutput}}(5);                 \textcolor{comment}{// set io5 OUTPUT}
+\mbox{\hyperlink{a00050_ae845dc41cbf1b32b4d576373d1866d65}{RT\_IO\_SetInputOutput}}(5, \mbox{\hyperlink{a00050_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT}});    \textcolor{comment}{// also set io5 OUTPUT.}
+\mbox{\hyperlink{a00050_ade4bc867a36445fe0debc59cd5c9d9a5}{RT\_IO\_SetInputOutput16}}(\mbox{\hyperlink{a00050_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT}}<<5);  \textcolor{comment}{// set io5 OUTPUT, but other io input.}
+
+\textcolor{comment}{// set IO output HIGH}
+\mbox{\hyperlink{a00050_a752d981d1948aeae63c1a86070ae8e3a}{RT\_IO\_SetHigh}}(5);           \textcolor{comment}{// set io5 output HIGH.}
+\mbox{\hyperlink{a00050_a95fe40498ba314e1ea68aaa50335e7ef}{RT\_IO\_SetLevel}}(5, \mbox{\hyperlink{a00050_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH}});    \textcolor{comment}{// also set io5 output HIGH.}
+\mbox{\hyperlink{a00050_a5a3ae496ca3e12098c74c9f13b20c554}{RT\_IO\_SetLevel16}}(\mbox{\hyperlink{a00050_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH}}<<5);  \textcolor{comment}{// set io5 output HIGH, but other io output LOW.}
+
+\textcolor{comment}{// read io}
+uint8\_t levelOfOneIO = \mbox{\hyperlink{a00050_aa69642c4177a35776090fdcf78d12e3b}{RT\_IO\_Read}}(5);   \textcolor{comment}{// read io5}
+uint16\_t levelOf16IO = \mbox{\hyperlink{a00050_acf9c93d24ffeac5705da2c83ea2303d1}{RT\_IO\_Read16}}();  \textcolor{comment}{// read all io.}
+\end{DoxyCode}
+ 

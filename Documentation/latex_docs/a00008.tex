@@ -1,0 +1,143 @@
+\hypertarget{a00008}{}\subsection{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/release/include/\+Flash.h File Reference}
+\label{a00008}\index{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/release/include/\+Flash.\+h@{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/release/include/\+Flash.\+h}}
+
+
+Flash Operation Library for M2.  
+
+
+{\ttfamily \#include \char`\"{}mcu.\+h\char`\"{}}\newline
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00008_a13fb43316f72b3b1b9467a91fca08d5c}{R\+T\+\_\+\+Flash\+\_\+\+Write}}(value,  address)
+\begin{DoxyCompactList}\small\item\em Flash Write procedure, 32-\/bit write. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00008_ab65db3c66c91da3a934540a2f8175803}{R\+T\+\_\+\+Flash\+\_\+\+Erase1k}}(address)
+\begin{DoxyCompactList}\small\item\em Flash erase procedure, 1\+K-\/byte erase from the given address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00008_afb9cdf54d7254cfef685cd4012113b27}{R\+T\+\_\+\+Flash\+\_\+\+Erase\+From}}(address)
+\begin{DoxyCompactList}\small\item\em Flash erase from the given address, to the end of the flash. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00008_aca69c626499ce2e479703cc526dba84d}{M\+A\+C\+\_\+\+ID}}~0x1001f3f0
+\begin{DoxyCompactList}\small\item\em Chip ID location (this will be replaced by N\+VR chip ID) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{a00008_a99ec94a33a9126a436139061d9e0136b}\label{a00008_a99ec94a33a9126a436139061d9e0136b}} 
+\#define \mbox{\hyperlink{a00008_a99ec94a33a9126a436139061d9e0136b}{R\+T\+\_\+\+Flash\+\_\+\+Set\+M\+AC}}(id)~\mbox{\hyperlink{a00008_a13fb43316f72b3b1b9467a91fca08d5c}{R\+T\+\_\+\+Flash\+\_\+\+Write}}(id, \mbox{\hyperlink{a00008_aca69c626499ce2e479703cc526dba84d}{M\+A\+C\+\_\+\+ID}})
+\begin{DoxyCompactList}\small\item\em Set chip identity(\+M\+A\+C\+\_\+\+I\+D). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{a00008_ad271967795fc89594428deff626aace9}\label{a00008_ad271967795fc89594428deff626aace9}} 
+\#define \mbox{\hyperlink{a00008_ad271967795fc89594428deff626aace9}{get\+M\+AC}}()~\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00008_aca69c626499ce2e479703cc526dba84d}{M\+A\+C\+\_\+\+ID}})
+\begin{DoxyCompactList}\small\item\em Get chip identity(\+M\+A\+C\+\_\+\+I\+D). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Flash Operation Library for M2. 
+
+\begin{DoxyAuthor}{Author}
+Zhirui Dai 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22 Jun 2018 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+2018 Zhirui 
+\end{DoxyCopyright}
+
+
+\subsubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{a00008_aca69c626499ce2e479703cc526dba84d}\label{a00008_aca69c626499ce2e479703cc526dba84d}} 
+\index{Flash.\+h@{Flash.\+h}!M\+A\+C\+\_\+\+ID@{M\+A\+C\+\_\+\+ID}}
+\index{M\+A\+C\+\_\+\+ID@{M\+A\+C\+\_\+\+ID}!Flash.\+h@{Flash.\+h}}
+\paragraph{\texorpdfstring{M\+A\+C\+\_\+\+ID}{MAC\_ID}}
+{\footnotesize\ttfamily \#define M\+A\+C\+\_\+\+ID~0x1001f3f0}
+
+
+
+Chip ID location (this will be replaced by N\+VR chip ID) 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00008_ab65db3c66c91da3a934540a2f8175803}\label{a00008_ab65db3c66c91da3a934540a2f8175803}} 
+\index{Flash.\+h@{Flash.\+h}!R\+T\+\_\+\+Flash\+\_\+\+Erase1k@{R\+T\+\_\+\+Flash\+\_\+\+Erase1k}}
+\index{R\+T\+\_\+\+Flash\+\_\+\+Erase1k@{R\+T\+\_\+\+Flash\+\_\+\+Erase1k}!Flash.\+h@{Flash.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+Flash\+\_\+\+Erase1k}{RT\_Flash\_Erase1k}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+Flash\+\_\+\+Erase1k(\begin{DoxyParamCaption}\item[{}]{address }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                   \(\backslash\)
+        unsigned \textcolor{keywordtype}{long} addr;                             \(\backslash\)
+        FuncPtr1 funcptr;                               \(\backslash\)
+        funcptr =  (\mbox{\hyperlink{a00020_a0891965816a5b721b07f7bebefaf7430}{FuncPtr1}})FLASH\_ERASE\_ADDRESS;       \(\backslash\)
+        addr = ((address&0x1ffff) | 0x10100000);        \(\backslash\)
+        uint32\_t oldVal = \mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{MemoryRead32}}(\mbox{\hyperlink{a00020_ae6a98a78f9ac0c75c18c7d4e2c62fdcb}{SYS\_CTL2\_REG}});   \(\backslash\)
+        RT\_MCU\_SetSystemClock(\mbox{\hyperlink{a00020_a8ddc6e06a91f5506443cdef0458729df}{SYS\_CLK\_6M}});              \(\backslash\)
+        funcptr(addr);                                  \(\backslash\)
+        MemoryWrite32(\mbox{\hyperlink{a00020_ae6a98a78f9ac0c75c18c7d4e2c62fdcb}{SYS\_CTL2\_REG}}, oldVal);            \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+Flash erase procedure, 1\+K-\/byte erase from the given address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The starting address to erase, 1\+K-\/byte space to be erased \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00008_afb9cdf54d7254cfef685cd4012113b27}\label{a00008_afb9cdf54d7254cfef685cd4012113b27}} 
+\index{Flash.\+h@{Flash.\+h}!R\+T\+\_\+\+Flash\+\_\+\+Erase\+From@{R\+T\+\_\+\+Flash\+\_\+\+Erase\+From}}
+\index{R\+T\+\_\+\+Flash\+\_\+\+Erase\+From@{R\+T\+\_\+\+Flash\+\_\+\+Erase\+From}!Flash.\+h@{Flash.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+Flash\+\_\+\+Erase\+From}{RT\_Flash\_EraseFrom}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+Flash\+\_\+\+Erase\+From(\begin{DoxyParamCaption}\item[{}]{address }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                                   \(\backslash\)
+        for(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} addr=address;addr<0x10001f400;addr+=0x400) \{  \(\backslash\)
+            RT\_Flash\_Erase1k(addr);                                     \(\backslash\)
+        \}                                                               \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+Flash erase from the given address, to the end of the flash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The starting address to the end (0x10001f400) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00008_a13fb43316f72b3b1b9467a91fca08d5c}\label{a00008_a13fb43316f72b3b1b9467a91fca08d5c}} 
+\index{Flash.\+h@{Flash.\+h}!R\+T\+\_\+\+Flash\+\_\+\+Write@{R\+T\+\_\+\+Flash\+\_\+\+Write}}
+\index{R\+T\+\_\+\+Flash\+\_\+\+Write@{R\+T\+\_\+\+Flash\+\_\+\+Write}!Flash.\+h@{Flash.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+Flash\+\_\+\+Write}{RT\_Flash\_Write}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+Flash\+\_\+\+Write(\begin{DoxyParamCaption}\item[{}]{value,  }\item[{}]{address }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                   \(\backslash\)
+        FuncPtr2 funcptr;                               \(\backslash\)
+        funcptr = (\mbox{\hyperlink{a00020_a331a88eeefe11112bb8fe1b43dd777b8}{FuncPtr2}})FLASH\_WRITE\_ADDRESS;        \(\backslash\)
+        uint32\_t oldVal = \mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{MemoryRead32}}(\mbox{\hyperlink{a00020_ae6a98a78f9ac0c75c18c7d4e2c62fdcb}{SYS\_CTL2\_REG}});   \(\backslash\)
+        RT\_MCU\_SetSystemClock(\mbox{\hyperlink{a00020_a8ddc6e06a91f5506443cdef0458729df}{SYS\_CLK\_6M}});              \(\backslash\)
+        funcptr(value, address);                        \(\backslash\)
+        MemoryWrite32(\mbox{\hyperlink{a00020_ae6a98a78f9ac0c75c18c7d4e2c62fdcb}{SYS\_CTL2\_REG}}, oldVal);            \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+Flash Write procedure, 32-\/bit write. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The address to write, staring from 0x10000000 \\
+\hline
+{\em value} & The value to be written, a 32-\/bit value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

@@ -1,0 +1,111 @@
+U\+A\+RT library provides interface to operate U\+A\+R\+T0 and U\+A\+R\+T1 of M2. To use this library, please include {\ttfamily \mbox{\hyperlink{a00056}{U\+A\+R\+T.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_a7c1428a7b16eec7fe710679dd70b4069}{RT\_UART\_On}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_a60de547d761052a56b69e4a75493b831}{RT\_UART\_Off}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_a3ab834a97a200601f16b923a705f3f01}{RT\_UART\_Busy}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_a3c30d4d2e260d1c2f96747e9d7bdaf0d}{RT\_UART\_Write}}(port);
+
+uint32\_t \mbox{\hyperlink{a00056_abd2a573ae35e4f6381f9f9758a12806b}{RT\_UART\_DataReady}}(port);
+
+uint8\_t \mbox{\hyperlink{a00056_a7804645fb092b24545278660f6b66409}{RT\_UART\_Read}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_a5ed058b5d506df45c51358b8451550ad}{RT\_UART\_IrqOn}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_aab5e3da11e9f9d531cab23aa451d2356}{RT\_UART\_CompareOn}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_aab59c28b31f6d93c8400c2af10cc0b05}{RT\_UART\_CompareOff}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_a432520c6f67a10918aa07884250a7cbc}{RT\_UART\_SetCompare}}(port, val);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_a84e87fc64f3149f1d5171ddca5719220}{RT\_UART\_ClearIrq}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_ad8934a303c429b70176995f2dd6ac67b}{RT\_UART\_RaiseIrq}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_a3e29e879f76b82a13419f4d59a1c3053}{RT\_UART\_CheckIrq}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_a49f9d43f5fd87ceed952123010e015fa}{RT\_UART\_LinSyncOn}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_aea01869278bc3c4e332af854c4e660be}{RT\_UART\_LinSyncOff}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_a45d1e1116c5b535f276acc73e522570f}{RT\_UART\_LinBreakNormal}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_a9e7d98206f07485a3347bab6672a971c}{RT\_UART\_LinBreakExtreme}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_ad1e6c13693e5ea54a55ce78635617178}{RT\_UART\_LinSendBreak}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_a2e2715198f9716282584f34a7f472649}{RT\_UART\_LinCheckIrq}}(port);
+
+uint32\_t \mbox{\hyperlink{a00056_a74f1bca1f0b60eeec1f84bcba3e34919}{RT\_UART\_GetBrp}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_a3f9518fa74ec401803fe1d15e0d39ff2}{RT\_UART\_LinSlave}}(port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_ab03e9e1a8d4d9b97583db27174086108}{RT\_UART\_putchar}}(uint32\_t port, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} c);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_ad61c03a00ccd43875563c16f97d61af7}{RT\_UART\_puts}}(uint32\_t port, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string});
+
+\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{a00056_abc136df9d66fe27bf8ffcc319246591e}{RT\_UART\_getchar}}(uint32\_t port);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00056_ab0faf051e642e540b1b9c114eae242bd}{RT\_UART\_LinMaster}}(uint32\_t port, \textcolor{keywordtype}{char} pattern);
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+\paragraph*{Send and receive data via U\+A\+R\+T0 and U\+A\+R\+T1}
+
+
+\begin{DoxyCode}
+\textcolor{comment}{/*}
+\textcolor{comment}{ * Before running this example, please connect pins:}
+\textcolor{comment}{ *      P\_TX <------> SPI\_SI/RX1}
+\textcolor{comment}{ *      P\_RX <------> SPI\_SO/TX1  }
+\textcolor{comment}{ */}
+\textcolor{preprocessor}{#include "\mbox{\hyperlink{a00056}{UART.h}}"}
+
+\textcolor{keywordtype}{void} user\_interrupt()\{\}
+
+\textcolor{keywordtype}{int} main() \{
+    \textcolor{keywordtype}{char} c;
+
+    \textcolor{comment}{// Turn on UART0 and UART1}
+    \mbox{\hyperlink{a00056_a7c1428a7b16eec7fe710679dd70b4069}{RT\_UART\_On}}(\mbox{\hyperlink{a00056_a0508661f121639ffdee7de2353a0def2}{UART0}});
+    \mbox{\hyperlink{a00056_a7c1428a7b16eec7fe710679dd70b4069}{RT\_UART\_On}}(\mbox{\hyperlink{a00056_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}});
+
+    \textcolor{keywordflow}{while}(1) \{
+        c = \mbox{\hyperlink{a00056_abc136df9d66fe27bf8ffcc319246591e}{RT\_UART\_getchar}}(\mbox{\hyperlink{a00056_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}});
+        \mbox{\hyperlink{a00056_ad61c03a00ccd43875563c16f97d61af7}{RT\_UART\_puts}}(\mbox{\hyperlink{a00056_a0508661f121639ffdee7de2353a0def2}{UART0}}, \textcolor{stringliteral}{"Get a character from UART1: "});
+        \mbox{\hyperlink{a00056_ab03e9e1a8d4d9b97583db27174086108}{RT\_UART\_putchar}}(\mbox{\hyperlink{a00056_a0508661f121639ffdee7de2353a0def2}{UART0}}, c);
+        \mbox{\hyperlink{a00056_ab03e9e1a8d4d9b97583db27174086108}{RT\_UART\_putchar}}(\mbox{\hyperlink{a00056_a0508661f121639ffdee7de2353a0def2}{UART0}}, \textcolor{charliteral}{'\(\backslash\)n'});
+    \}
+\}
+\end{DoxyCode}
+
+
+\paragraph*{Send Lin break via U\+A\+R\+T1}
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\mbox{\hyperlink{a00056}{UART.h}}"}
+
+\textcolor{keywordtype}{void} user\_interrupt()
+
+int main() \{
+    \mbox{\hyperlink{a00056_a7c1428a7b16eec7fe710679dd70b4069}{RT\_UART\_On}}(\mbox{\hyperlink{a00056_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}});                          \textcolor{comment}{// Turn on UART1}
+    \textcolor{comment}{// RT\_UART\_LinSlave(UART1);                 // set M2 as Lin slave}
+    \textcolor{comment}{// RT\_UART\_LinMaster(UART1, NORMAL\_BREAK);  // 13-bit break}
+    \mbox{\hyperlink{a00056_ab0faf051e642e540b1b9c114eae242bd}{RT\_UART\_LinMaster}}(\mbox{\hyperlink{a00056_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}}, \mbox{\hyperlink{a00056_a7c76b3ed72795f2085873ee332fdab1b}{EXTREME\_BREAK}});    \textcolor{comment}{// 26-bit break}
+    \textcolor{comment}{// ATTENTION: When RT\_UART\_LinMaster is used, a break will be sent automatically.}
+    \mbox{\hyperlink{a00056_ad1e6c13693e5ea54a55ce78635617178}{RT\_UART\_LinSendBreak}}(\mbox{\hyperlink{a00056_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}});                \textcolor{comment}{// Send break again manually.}
+
+    \textcolor{comment}{// code after Lin sync}
+    \textcolor{comment}{// ...}
+\}
+\end{DoxyCode}
+ 

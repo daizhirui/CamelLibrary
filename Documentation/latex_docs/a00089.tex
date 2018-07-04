@@ -1,0 +1,73 @@
+\hypertarget{a00089}{}\subsection{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/src/library/time.c File Reference}
+\label{a00089}\index{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/src/library/time.\+c@{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/src/library/time.\+c}}
+
+
+Real Time Module Library for M2.  
+
+
+{\ttfamily \#include \char`\"{}mcu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}time.\+h\char`\"{}}\newline
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00089_ae30dec10f77cab56a66ee070fbe6a490}{R\+T\+\_\+\+R\+T\+C\+\_\+\+Get\+Time}} (unsigned char $\ast$d\+\_\+year, unsigned char $\ast$d\+\_\+mon, unsigned char $\ast$d\+\_\+day, unsigned char $\ast$d\+\_\+hour, unsigned char $\ast$d\+\_\+min, unsigned char $\ast$d\+\_\+sec)
+\begin{DoxyCompactList}\small\item\em This function returns the R\+TC time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00089_a960534919351d6e419e70a78521e87da}{R\+T\+\_\+\+Delay\+Miliseconds}} (unsigned long ms)
+\begin{DoxyCompactList}\small\item\em This function delays specific time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Real Time Module Library for M2. 
+
+\begin{DoxyAuthor}{Author}
+Zhirui Dai 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16 Jun 2018 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+2018 Zhirui 
+\end{DoxyCopyright}
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{a00089_a960534919351d6e419e70a78521e87da}\label{a00089_a960534919351d6e419e70a78521e87da}} 
+\index{time.\+c@{time.\+c}!R\+T\+\_\+\+Delay\+Miliseconds@{R\+T\+\_\+\+Delay\+Miliseconds}}
+\index{R\+T\+\_\+\+Delay\+Miliseconds@{R\+T\+\_\+\+Delay\+Miliseconds}!time.\+c@{time.\+c}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+Delay\+Miliseconds()}{RT\_DelayMiliseconds()}}
+{\footnotesize\ttfamily void R\+T\+\_\+\+Delay\+Miliseconds (\begin{DoxyParamCaption}\item[{unsigned long}]{ms }\end{DoxyParamCaption})}
+
+
+
+This function delays specific time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & time to delay, the unit is ms \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00089_ae30dec10f77cab56a66ee070fbe6a490}\label{a00089_ae30dec10f77cab56a66ee070fbe6a490}} 
+\index{time.\+c@{time.\+c}!R\+T\+\_\+\+R\+T\+C\+\_\+\+Get\+Time@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Get\+Time}}
+\index{R\+T\+\_\+\+R\+T\+C\+\_\+\+Get\+Time@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Get\+Time}!time.\+c@{time.\+c}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+R\+T\+C\+\_\+\+Get\+Time()}{RT\_RTC\_GetTime()}}
+{\footnotesize\ttfamily void R\+T\+\_\+\+R\+T\+C\+\_\+\+Get\+Time (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{d\+\_\+year,  }\item[{unsigned char $\ast$}]{d\+\_\+mon,  }\item[{unsigned char $\ast$}]{d\+\_\+day,  }\item[{unsigned char $\ast$}]{d\+\_\+hour,  }\item[{unsigned char $\ast$}]{d\+\_\+min,  }\item[{unsigned char $\ast$}]{d\+\_\+sec }\end{DoxyParamCaption})}
+
+
+
+This function returns the R\+TC time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d\+\_\+year} & year \\
+\hline
+{\em d\+\_\+mon} & month \\
+\hline
+{\em d\+\_\+day} & day \\
+\hline
+{\em d\+\_\+hour} & hour \\
+\hline
+{\em d\+\_\+min} & minute \\
+\hline
+{\em d\+\_\+sec} & second \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,89 @@
+\hypertarget{a00179}{}\subsection{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/\+Official/src/\+W\+DT.h File Reference}
+\label{a00179}\index{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/\+Official/src/\+W\+D\+T.\+h@{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/\+Official/src/\+W\+D\+T.\+h}}
+
+
+Watchdog Library for M2.  
+
+
+{\ttfamily \#include \char`\"{}mcu.\+h\char`\"{}}\newline
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00179_a369b51538a0ccf57dcdb30e12352a8c7}{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Setup}}(n,  irq,  rst)
+\begin{DoxyCompactList}\small\item\em This function set the W\+DT app. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00179_ae976b2fe76d4b216e68a771068434abc}{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear}}()~\mbox{\hyperlink{a00068_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(\mbox{\hyperlink{a00068_a2560b8d7465c0ee0112852677004099f}{W\+D\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG}}, 1)
+\begin{DoxyCompactList}\small\item\em Clear Watchdog. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00179_acdfc8b8f0bddfd7382d49a22a92a5930}{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value}}()~\mbox{\hyperlink{a00068_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00068_ab04902f3d750cf4826ded8350ad5adac}{W\+D\+T\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}})
+\begin{DoxyCompactList}\small\item\em Read watchdog value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Watchdog Library for M2. 
+
+\begin{DoxyAuthor}{Author}
+John \& Jack, Zhirui Dai 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16 Jun 2018 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+2018 Zhirui 
+\end{DoxyCopyright}
+
+
+\subsubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{a00179_ae976b2fe76d4b216e68a771068434abc}\label{a00179_ae976b2fe76d4b216e68a771068434abc}} 
+\index{W\+D\+T.\+h@{W\+D\+T.\+h}!R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear@{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear}}
+\index{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear@{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear}!W\+D\+T.\+h@{W\+D\+T.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear}{RT\_WatchDog\_Clear}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00068_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(\mbox{\hyperlink{a00068_a2560b8d7465c0ee0112852677004099f}{W\+D\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG}}, 1)}
+
+
+
+Clear Watchdog. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00179_acdfc8b8f0bddfd7382d49a22a92a5930}\label{a00179_acdfc8b8f0bddfd7382d49a22a92a5930}} 
+\index{W\+D\+T.\+h@{W\+D\+T.\+h}!R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value@{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value}}
+\index{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value@{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value}!W\+D\+T.\+h@{W\+D\+T.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value}{RT\_WatchDog\_ReadValue}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00068_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00068_ab04902f3d750cf4826ded8350ad5adac}{W\+D\+T\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}})}
+
+
+
+Read watchdog value. 
+
+\begin{DoxyReturn}{Returns}
+uint4\+\_\+t The number of 1/8s. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00179_a369b51538a0ccf57dcdb30e12352a8c7}\label{a00179_a369b51538a0ccf57dcdb30e12352a8c7}} 
+\index{W\+D\+T.\+h@{W\+D\+T.\+h}!R\+T\+\_\+\+Watch\+Dog\+\_\+\+Setup@{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Setup}}
+\index{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Setup@{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Setup}!W\+D\+T.\+h@{W\+D\+T.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Setup}{RT\_WatchDog\_Setup}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+Watch\+Dog\+\_\+\+Setup(\begin{DoxyParamCaption}\item[{}]{n,  }\item[{}]{irq,  }\item[{}]{rst }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                                    \(\backslash\)
+        MemoryWrite32(\mbox{\hyperlink{a00068_a71148e54881898faf1a67c8210fb61b3}{WDT\_CTL0\_REG}}, (n << 4 | irq << 2 | rst << 1 | 1)); \(\backslash\)
+        MemoryOr32(\mbox{\hyperlink{a00068_ab34acec79daf4fcc12a662cde9e75df7}{SYS\_CTL0\_REG}}, irq);                                   \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+This function set the W\+DT app. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of 1/8s n=1$\sim$16 \\
+\hline
+{\em irq} & trigger interrupt, ON or o\+FF \\
+\hline
+{\em rst} & whether reset the system, ON or O\+FF \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

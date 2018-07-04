@@ -1,0 +1,52 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00131}{string.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} *\mbox{\hyperlink{a00128_af2c756015b1cb92274fc019a175ae8bb}{memchr}}(\textcolor{keyword}{const} \textcolor{keywordtype}{void} *str, \textcolor{keywordtype}{int} c, \textcolor{keywordtype}{size\_t} n);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00128_ace6c4869ab3af01c6f27eac47773917a}{memcmp}}(\textcolor{keyword}{const} \textcolor{keywordtype}{void} *str, \textcolor{keywordtype}{int} c, \textcolor{keywordtype}{size\_t} n);
+
+\textcolor{keywordtype}{void} * \mbox{\hyperlink{a00128_a14938524dcbeb59d7117ba5e151ad1b1}{memcpy}}(\textcolor{keywordtype}{void} * dest, \textcolor{keyword}{const} \textcolor{keywordtype}{void} * src, \textcolor{keywordtype}{size\_t} n);
+
+\textcolor{keywordtype}{void} * \mbox{\hyperlink{a00128_a802c986820d3866639922b6bc9484f90}{memmove}}(\textcolor{keywordtype}{void} * dest, \textcolor{keyword}{const} \textcolor{keywordtype}{void} * src, \textcolor{keywordtype}{size\_t} n);
+
+\textcolor{keywordtype}{void} * \mbox{\hyperlink{a00128_a48a16bf628904bdd1b28cbaedf934868}{memset}}(\textcolor{keywordtype}{void} *str, \textcolor{keywordtype}{int} c, \textcolor{keywordtype}{size\_t} n);
+
+\textcolor{keywordtype}{char} * \mbox{\hyperlink{a00128_adb8723e585ed29f2370cddf90f6891bc}{strcat}}(\textcolor{keywordtype}{char} *dest, \textcolor{keyword}{const} \textcolor{keywordtype}{char} * src);
+
+\textcolor{keywordtype}{char} * \mbox{\hyperlink{a00128_a0aee928c2844a269966e4832fd2255c5}{strncat}}(\textcolor{keywordtype}{char} *dest, \textcolor{keyword}{const} \textcolor{keywordtype}{char} * src, \textcolor{keywordtype}{size\_t} n);
+
+\textcolor{keywordtype}{char} * \mbox{\hyperlink{a00128_afcd97f487174f9092b0f23c7ac78a55a}{strchr}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *str, \textcolor{keywordtype}{int} c);
+
+\textcolor{keywordtype}{int} \mbox{\hyperlink{a00128_a11bd144d7d44914099a3aeddf1c8567d}{strcmp}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} * s1, \textcolor{keyword}{const} \textcolor{keywordtype}{char} * s2);
+
+\textcolor{keywordtype}{int} \mbox{\hyperlink{a00128_a07f4a84c11c106e95c32b6ab509346ef}{strncmp}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} * s1, \textcolor{keyword}{const} \textcolor{keywordtype}{char} * s2, \textcolor{keywordtype}{size\_t} n);
+
+\textcolor{keywordtype}{char} * \mbox{\hyperlink{a00128_a7a82515b5d377be04817715c5465b647}{strcpy}}(\textcolor{keywordtype}{char} * dest, \textcolor{keyword}{const} \textcolor{keywordtype}{char} * src);
+
+\textcolor{keywordtype}{char} * \mbox{\hyperlink{a00128_a47d54f24198df56da51078a6c540b9ed}{strncpy}}(\textcolor{keywordtype}{char} * dest, \textcolor{keyword}{const} \textcolor{keywordtype}{char} * src, \textcolor{keywordtype}{size\_t} n);
+
+\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{a00128_a008e171a518fe0e0352f31b245e03875}{strlen}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} * str);
+
+\textcolor{keywordtype}{char} * \mbox{\hyperlink{a00128_aeb923ee2a7a01f82eb1e2f8ae188c6d4}{strstr}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *s1, \textcolor{keyword}{const} \textcolor{keywordtype}{char} * s2);
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\mbox{\hyperlink{a00095}{stdio.h}}"}
+
+\textcolor{keywordtype}{void} Example\_strlen() \{
+    \mbox{\hyperlink{a00095_a133c04c35a1c14c6f8d8078831705661}{printf}}(\textcolor{stringliteral}{"%s has %d chars"}, s, \mbox{\hyperlink{a00128_a008e171a518fe0e0352f31b245e03875}{strlen}}(s));  \textcolor{comment}{// strlen}
+\}
+
+\textcolor{keywordtype}{void} Example\_strncmp() \{
+    \textcolor{keywordtype}{int} ptr;
+    ptr=\mbox{\hyperlink{a00128_a07f4a84c11c106e95c32b6ab509346ef}{strncmp}}(buf2, buf1, 3); \textcolor{comment}{// string comparison}
+\}
+\end{DoxyCode}
+ 

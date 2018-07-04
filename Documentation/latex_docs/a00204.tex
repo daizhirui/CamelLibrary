@@ -1,0 +1,119 @@
+Since M2 is a 32-\/bit chip, some special measurements should be used in the implementation.
+
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00026}{D\+E\+S.\+h}}}.
+
+\subsubsection*{Data Structure}
+
+\paragraph*{1. \mbox{\hyperlink{a00190}{D\+E\+S\+\_\+\+Key}}}
+
+This is a data structure defined by union. \mbox{\hyperlink{a00190_a48b5dadf7decf3076826072563041f1b}{D\+E\+S\+\_\+\+Key.\+key}} is a 64-\/bit value. \mbox{\hyperlink{a00190_a3e14395e8ac22e9e775a243041daaeeb}{D\+E\+S\+\_\+\+Key.\+apart}} is a 2$\ast$32-\/bit array.
+
+To prepare a key for D\+ES algorithm, declare an \mbox{\hyperlink{a00190}{D\+E\+S\+\_\+\+Key}} at first.
+
+
+\begin{DoxyCode}
+\mbox{\hyperlink{a00190}{DES\_Key}} originalKey;
+\end{DoxyCode}
+
+
+Then store high 32 bits and low 32 bits respectively.
+
+
+\begin{DoxyCode}
+originalKey.\mbox{\hyperlink{a00190_a3e14395e8ac22e9e775a243041daaeeb}{apart}}[1] = <#high32OfKey#>;
+originalKey.\mbox{\hyperlink{a00190_a3e14395e8ac22e9e775a243041daaeeb}{apart}}[0] = <#low32OfKey#>;
+\end{DoxyCode}
+
+
+\paragraph*{2. \mbox{\hyperlink{a00194}{Message\+Data}}}
+
+This is a data structure for storing data to encrypt or decrypt.
+
+\mbox{\hyperlink{a00194_a2cf9dd28d0679205048930fe98fa116b}{Message\+Data.\+data}} is a 64-\/bit value. \mbox{\hyperlink{a00194_a43406dd2e72f1230b8f70551a96699c5}{Message\+Data.\+apart}} is a 2$\ast$32-\/bit array. \mbox{\hyperlink{a00194_aaceaebf6f0349dae52e2c1c2a462b654}{Message\+Data.\+bytes}} is an 8$\ast$8-\/bit array.
+
+To prepare a \mbox{\hyperlink{a00194}{Message\+Data}} for D\+ES algorithm, the operation is similar to \mbox{\hyperlink{a00190}{D\+E\+S\+\_\+\+Key}}\textquotesingle{}s.
+
+You can load data byte by byte or uint32\+\_\+t by uint32\+\_\+t.
+
+\subsubsection*{Interface}
+
+\paragraph*{1. D\+E\+S\+\_\+generate\+Sub\+Keys}
+
+Generate 16 sub\+Keys with a provided original key.
+
+\subparagraph*{Definition}
+
+
+\begin{DoxyCode}
+\mbox{\hyperlink{a00190}{DES\_Key}}* \mbox{\hyperlink{a00023_a3ef9fea40f3c593468a2bb7862abfa0d}{DES\_generateSubKeys}}(\textcolor{keyword}{const} \mbox{\hyperlink{a00190}{DES\_Key}} originalKey);
+\end{DoxyCode}
+
+
+\paragraph*{2. D\+E\+S\+\_\+process}
+
+Encrypt or decrypt data, require 16 sub\+Keys provided by D\+E\+S\+\_\+generate\+Sub\+Keys. When mode = D\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+\_\+\+M\+O\+DE, encrypt data. When D\+E\+S\+\_\+\+D\+E\+C\+R\+Y\+P\+T\+\_\+\+M\+O\+DE, decrypt data.
+
+\subparagraph*{Definition}
+
+
+\begin{DoxyCode}
+\mbox{\hyperlink{a00194}{MessageData}} \mbox{\hyperlink{a00023_a0c6c5c79645bfd3166aeb494b41a82f8}{DES\_process}}(\mbox{\hyperlink{a00194}{MessageData}} originalData, 
+      \mbox{\hyperlink{a00190}{DES\_Key}}* subKeys, uint8\_t mode);
+\end{DoxyCode}
+
+
+\paragraph*{3. D\+ES}
+
+Encrypt or decrypt data, require original key. When mode = D\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+\_\+\+M\+O\+DE, encrypt data. When D\+E\+S\+\_\+\+D\+E\+C\+R\+Y\+P\+T\+\_\+\+M\+O\+DE, decrypt data.
+
+\subparagraph*{Definition}
+
+
+\begin{DoxyCode}
+\mbox{\hyperlink{a00194}{MessageData}} \mbox{\hyperlink{a00023_a26f09735ce4f946320fee32bfa4a5ef5}{DES}}(\mbox{\hyperlink{a00194}{MessageData}} originalData, \mbox{\hyperlink{a00190}{DES\_Key}} originalKey, uint8\_t mode
+      );
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\mbox{\hyperlink{a00068}{mcu.h}}"}
+\textcolor{preprocessor}{#include "\mbox{\hyperlink{a00026}{DES.h}}"}
+\textcolor{preprocessor}{#include "\mbox{\hyperlink{a00095}{stdio.h}}"}
+\textcolor{comment}{// This is the interrupt function for user}
+\textcolor{keywordtype}{void} user\_interrupt() \{
+
+\}
+
+\textcolor{comment}{// This is the main function}
+\textcolor{keywordtype}{int} main() \{
+    \mbox{\hyperlink{a00190}{DES\_Key}} originalKey;
+    originalKey.\mbox{\hyperlink{a00190_a48b5dadf7decf3076826072563041f1b}{key}} = 0x133457799BBCDFF1;
+
+    \textcolor{comment}{// Generate 16 subKeys}
+    \mbox{\hyperlink{a00190}{DES\_Key}}* subKeys = \mbox{\hyperlink{a00023_a3ef9fea40f3c593468a2bb7862abfa0d}{DES\_generateSubKeys}}(originalKey);
+    \textcolor{keywordflow}{for} (uint8\_t index = 0; index < 17; index++) \{
+        \mbox{\hyperlink{a00095_a133c04c35a1c14c6f8d8078831705661}{printf}}(\textcolor{stringliteral}{"K%d = 0x%x%x\(\backslash\)n"}, index, subKeys[index].apart[1], subKeys[index].apart[0]);
+    \}
+
+    \mbox{\hyperlink{a00194}{MessageData}} originalData;
+    originalData.\mbox{\hyperlink{a00194_a2cf9dd28d0679205048930fe98fa116b}{data}} = 0x123456789abcdef;
+    \mbox{\hyperlink{a00095_a133c04c35a1c14c6f8d8078831705661}{printf}}(\textcolor{stringliteral}{"originalData = 0x%x%x\(\backslash\)n"}, originalData.\mbox{\hyperlink{a00194_a43406dd2e72f1230b8f70551a96699c5}{apart}}[1], originalData.
+      \mbox{\hyperlink{a00194_a43406dd2e72f1230b8f70551a96699c5}{apart}}[0]);
+
+    \textcolor{comment}{// encrypt data}
+    \mbox{\hyperlink{a00194}{MessageData}} encryptedData = \mbox{\hyperlink{a00023_a0c6c5c79645bfd3166aeb494b41a82f8}{DES\_process}}(originalData, subKeys, 
+      \mbox{\hyperlink{a00026_a73b9a4e1e36c14eb7a44556ee767f106}{DES\_ENCRYPT\_MODE}});
+    \mbox{\hyperlink{a00095_a133c04c35a1c14c6f8d8078831705661}{printf}}(\textcolor{stringliteral}{"encryptedData = 0x%x%x\(\backslash\)n"}, encryptedData.\mbox{\hyperlink{a00194_a43406dd2e72f1230b8f70551a96699c5}{apart}}[1], encryptedData.
+      \mbox{\hyperlink{a00194_a43406dd2e72f1230b8f70551a96699c5}{apart}}[0]);
+
+    \textcolor{comment}{// decrypt data}
+    \mbox{\hyperlink{a00194}{MessageData}} decryptedData = \mbox{\hyperlink{a00023_a0c6c5c79645bfd3166aeb494b41a82f8}{DES\_process}}(encryptedData, subKeys, 
+      \mbox{\hyperlink{a00026_a874730b46afa0dd86cf7e3f60bd51165}{DES\_DECRYPT\_MODE}});
+    \mbox{\hyperlink{a00095_a133c04c35a1c14c6f8d8078831705661}{printf}}(\textcolor{stringliteral}{"decryptedData = 0x%x%x\(\backslash\)n"}, decryptedData.\mbox{\hyperlink{a00194_a43406dd2e72f1230b8f70551a96699c5}{apart}}[1], decryptedData.
+      \mbox{\hyperlink{a00194_a43406dd2e72f1230b8f70551a96699c5}{apart}}[0]);
+\}
+\end{DoxyCode}
+ 

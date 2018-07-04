@@ -1,0 +1,61 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00005}{analog\+I\+O.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a3ed6d7d3daccf57a9ee5a9490d8985ad}{RT\_ADC\_SD\_On}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_ac57cb41fced89567b192b3a26bb0cb91}{RT\_ADC\_SD\_Off}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a246ce987fa2b9f254f4796340eb23ed0}{RT\_ADC\_SD\_SetSampleRate}}(mode);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_acb989d89893ac99af984979cb9e8df2a}{RT\_ADC\_SD\_SetAdWidth}}(mode);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a11bf38478bd196acd1f179115e714dfc}{RT\_ADC\_SD\_SetTrigger}}(source);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a312f152517ab50c1cda791e118dd4473}{RT\_ADC\_SD\_Setup}}(sampleRate, adWidth, triggerSource);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a201094f8f020811fe7d1cb26efe47094}{RT\_ADC\_SD\_Start}}();
+
+uint32\_t \mbox{\hyperlink{a00005_aa3fc5e0f9802d24cd8c0090c86bf9299}{RT\_ADC\_SD\_DataReady}}();
+
+uint32\_t \mbox{\hyperlink{a00002_a5532ac461de55576a3875b29300c8536}{RT\_ADC\_SD\_Read}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a00318bd4fc3ce7ad4f03124b91891f4f}{RT\_ADC\_Clear}}();
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\mbox{\hyperlink{a00005}{analogIO.h}}"}
+
+\textcolor{comment}{// This example setups SD simply.}
+\textcolor{keywordtype}{void} Example\_SD\_SimpleSst()
+\{
+    \mbox{\hyperlink{a00005_a312f152517ab50c1cda791e118dd4473}{RT\_ADC\_SD\_Setup}}(\mbox{\hyperlink{a00005_ac3f1b193f8e1a64c3ad3a3a1bd62a8c2}{SD\_CLK\_3M}}, \mbox{\hyperlink{a00005_a5c87be006597b24e8459700a551a79f7}{SD\_20BIT}}, 
+      \mbox{\hyperlink{a00005_ade23e01358c201e6ae9911841161eb5e}{SD\_TRIG\_BY\_WT2READ}});
+    \textcolor{comment}{// Turning on SD, clearing SD and starting accumulation are all done in RT\_ADC\_SD\_Read}
+    uint32\_t result = \mbox{\hyperlink{a00002_a5532ac461de55576a3875b29300c8536}{RT\_ADC\_SD\_Read}}();
+    \textcolor{comment}{// ...}
+\}
+
+\textcolor{comment}{// This example reveals more details about SD setup.}
+\textcolor{keywordtype}{void} Example\_SD\_Basic()
+\{
+    \mbox{\hyperlink{a00005_a246ce987fa2b9f254f4796340eb23ed0}{RT\_ADC\_SD\_SetSampleRate}}(\mbox{\hyperlink{a00005_ac3f1b193f8e1a64c3ad3a3a1bd62a8c2}{SD\_CLK\_3M}});
+    \mbox{\hyperlink{a00005_acb989d89893ac99af984979cb9e8df2a}{RT\_ADC\_SD\_SetAdWidth}}(\mbox{\hyperlink{a00005_a5c87be006597b24e8459700a551a79f7}{SD\_20BIT}});
+    \mbox{\hyperlink{a00005_a11bf38478bd196acd1f179115e714dfc}{RT\_ADC\_SD\_SetTrigger}}(\mbox{\hyperlink{a00005_a4b3af738628b0b78c69ece743d58f43b}{SD\_TRIG\_BY\_TC0PWM}});
+    \mbox{\hyperlink{a00005_a00318bd4fc3ce7ad4f03124b91891f4f}{RT\_ADC\_Clear}}();
+    \mbox{\hyperlink{a00005_a3ed6d7d3daccf57a9ee5a9490d8985ad}{RT\_ADC\_SD\_On}}();
+    \textcolor{keywordflow}{for} (\textcolor{keyword}{register} uint32\_t i=0; i<200;i++)
+        \_\_asm\_\_(\textcolor{stringliteral}{"nop"});
+    \mbox{\hyperlink{a00005_a201094f8f020811fe7d1cb26efe47094}{RT\_ADC\_SD\_Start}}();
+    \textcolor{keywordflow}{while}(!\mbox{\hyperlink{a00005_aa3fc5e0f9802d24cd8c0090c86bf9299}{RT\_ADC\_SD\_DataReady}}());
+    uint32\_t result = \mbox{\hyperlink{a00068_a2d484dc15bdf30ee11ab3b05f31f0e16}{MemoryRead32}}(\mbox{\hyperlink{a00068_af59f8074e13f7a5c80f07dc7c27c0610}{AD\_READ\_REG}}) & 0xfffff;
+    \textcolor{comment}{// ...}
+\}
+\end{DoxyCode}
+ 

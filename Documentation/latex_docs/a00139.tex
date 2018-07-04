@@ -1,0 +1,30 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00002}{analog\+I\+O.\+h}}} and {\ttfamily \mbox{\hyperlink{a00023}{soft\+\_\+fp.\+h}}}.
+
+{\bfseries A\+T\+T\+E\+N\+T\+I\+ON}
+
+
+\begin{DoxyItemize}
+\item Because analog value ranges from 0 to the voltage of p\+\_\+vdd5, you must use soft float library!
+\item To get a smoother output, please connect a low-\/pass filter, a capacity, to the pin you set as analog output.
+\end{DoxyItemize}
+
+\subsubsection*{Description}
+
+This library provides the function of D\+AC (Digital to Analog Converter) by using the P\+W\+M0 of Timer Counter 0, 1 and 2. When {\ttfamily R\+T\+\_\+\+D\+A\+C\+\_\+analog\+Write} is used, the frequency of the corresponding timer is changed. If you want to custom the timer frequency, please change it later.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00002_ab44c37130776b81ef554d8967fcf9e62}{RT\_DAC\_analogWrite}}(channel, value, p\_vdd5);
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// set analog output channel 0 to output 1.5v.}
+RTC\_DAC\_analogWrite(\mbox{\hyperlink{a00002_a4d490931c48f5330b52533397251335cacddac909ab33947534e48dd4db264d74}{ANALOG\_OUTPUT\_0}}, 1.5, 5.0);
+\end{DoxyCode}
+ 

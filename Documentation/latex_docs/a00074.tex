@@ -1,0 +1,355 @@
+\hypertarget{a00074}{}\subsection{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/src/library/string.h File Reference}
+\label{a00074}\index{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/src/library/string.\+h@{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/src/library/string.\+h}}
+
+
+String Library for M2.  
+
+
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00074_a43b4547e12226fef871eed8afe191ad7}\label{a00074_a43b4547e12226fef871eed8afe191ad7}} 
+\#define \mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}}~unsigned int
+\begin{DoxyCompactList}\small\item\em Keyword size\+\_\+t. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{a00074_af2c756015b1cb92274fc019a175ae8bb}{memchr}} (const void $\ast$str, int c, \mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}} n)
+\begin{DoxyCompactList}\small\item\em Search for character c in the first n bytes in string $\ast$str. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{a00074_ace6c4869ab3af01c6f27eac47773917a}{memcmp}} (const void $\ast$str1, const void $\ast$str2, \mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}} n)
+\begin{DoxyCompactList}\small\item\em String compare the first n count in str1 and str2. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{a00074_a14938524dcbeb59d7117ba5e151ad1b1}{memcpy}} (void $\ast$dest, const void $\ast$src, \mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}} n)
+\begin{DoxyCompactList}\small\item\em Copy n count from src to dest. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{a00074_a802c986820d3866639922b6bc9484f90}{memmove}} (void $\ast$dest, const void $\ast$src, \mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}} n)
+\begin{DoxyCompactList}\small\item\em Same as memcpy, except that it take care of the overlapped area case. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{a00074_a48a16bf628904bdd1b28cbaedf934868}{memset}} (void $\ast$str, int c, \mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}} n)
+\begin{DoxyCompactList}\small\item\em Set n count in $\ast$str with character c. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{a00074_adb8723e585ed29f2370cddf90f6891bc}{strcat}} (char $\ast$dest, const char $\ast$src)
+\begin{DoxyCompactList}\small\item\em Append $\ast$str to the end of $\ast$dest. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{a00074_a0aee928c2844a269966e4832fd2255c5}{strncat}} (char $\ast$dest, const char $\ast$src, \mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}} n)
+\begin{DoxyCompactList}\small\item\em Append n count of $\ast$src to $\ast$dest. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{a00074_afcd97f487174f9092b0f23c7ac78a55a}{strchr}} (const char $\ast$str, int c)
+\begin{DoxyCompactList}\small\item\em Find the location of the 1st occuring of c in $\ast$str. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{a00074_a11bd144d7d44914099a3aeddf1c8567d}{strcmp}} (const char $\ast$s1, const char $\ast$s2)
+\begin{DoxyCompactList}\small\item\em String compare str1 and str2. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{a00074_a07f4a84c11c106e95c32b6ab509346ef}{strncmp}} (const char $\ast$s1, const char $\ast$s2, \mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}} n)
+\begin{DoxyCompactList}\small\item\em String compare the first n count in str1 and str2. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{a00074_a7a82515b5d377be04817715c5465b647}{strcpy}} (char $\ast$dest, const char $\ast$src)
+\begin{DoxyCompactList}\small\item\em Copy string src to dest. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{a00074_a47d54f24198df56da51078a6c540b9ed}{strncpy}} (char $\ast$dest, const char $\ast$src, \mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}} n)
+\begin{DoxyCompactList}\small\item\em Copy n count from src to dest. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}} \mbox{\hyperlink{a00074_a008e171a518fe0e0352f31b245e03875}{strlen}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em String length. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{a00074_aeb923ee2a7a01f82eb1e2f8ae188c6d4}{strstr}} (const char $\ast$s1, const char $\ast$s2)
+\begin{DoxyCompactList}\small\item\em Check if $\ast$s2 is part of $\ast$s1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+String Library for M2. 
+
+\begin{DoxyAuthor}{Author}
+John \& Jack 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16 Jun 2018 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+2018 Zhirui 
+\end{DoxyCopyright}
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{a00074_af2c756015b1cb92274fc019a175ae8bb}\label{a00074_af2c756015b1cb92274fc019a175ae8bb}} 
+\index{string.\+h@{string.\+h}!memchr@{memchr}}
+\index{memchr@{memchr}!string.\+h@{string.\+h}}
+\paragraph{\texorpdfstring{memchr()}{memchr()}}
+{\footnotesize\ttfamily void$\ast$ memchr (\begin{DoxyParamCaption}\item[{const void $\ast$}]{str,  }\item[{int}]{c,  }\item[{\mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}}}]{n }\end{DoxyParamCaption})}
+
+
+
+Search for character c in the first n bytes in string $\ast$str. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & the pointer to the string \\
+\hline
+{\em c} & the matching character \\
+\hline
+{\em n} & the count \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void when the 1st c is found, turn the pointer to the location; return N\+U\+LL if not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00074_ace6c4869ab3af01c6f27eac47773917a}\label{a00074_ace6c4869ab3af01c6f27eac47773917a}} 
+\index{string.\+h@{string.\+h}!memcmp@{memcmp}}
+\index{memcmp@{memcmp}!string.\+h@{string.\+h}}
+\paragraph{\texorpdfstring{memcmp()}{memcmp()}}
+{\footnotesize\ttfamily int memcmp (\begin{DoxyParamCaption}\item[{const void $\ast$}]{str1,  }\item[{const void $\ast$}]{str2,  }\item[{\mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}}}]{n }\end{DoxyParamCaption})}
+
+
+
+String compare the first n count in str1 and str2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str1} & the pointer to the 1st string \\
+\hline
+{\em str2} & the pointer to the 2nd string \\
+\hline
+{\em n} & the first n count to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return $<$0 if str1 $<$ str2; reutnr =0 if str1=str2; return $>$0 if str1$>$str2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00074_a14938524dcbeb59d7117ba5e151ad1b1}\label{a00074_a14938524dcbeb59d7117ba5e151ad1b1}} 
+\index{string.\+h@{string.\+h}!memcpy@{memcpy}}
+\index{memcpy@{memcpy}!string.\+h@{string.\+h}}
+\paragraph{\texorpdfstring{memcpy()}{memcpy()}}
+{\footnotesize\ttfamily void$\ast$ memcpy (\begin{DoxyParamCaption}\item[{void $\ast$}]{dest,  }\item[{const void $\ast$}]{src,  }\item[{\mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}}}]{n }\end{DoxyParamCaption})}
+
+
+
+Copy n count from src to dest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$dest} & the pointer to the dest string \\
+\hline
+{\em $\ast$src} & the pointer to the src string \\
+\hline
+{\em n} & the count \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$ the pointer to the dest string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00074_a802c986820d3866639922b6bc9484f90}\label{a00074_a802c986820d3866639922b6bc9484f90}} 
+\index{string.\+h@{string.\+h}!memmove@{memmove}}
+\index{memmove@{memmove}!string.\+h@{string.\+h}}
+\paragraph{\texorpdfstring{memmove()}{memmove()}}
+{\footnotesize\ttfamily void$\ast$ memmove (\begin{DoxyParamCaption}\item[{void $\ast$}]{dest,  }\item[{const void $\ast$}]{src,  }\item[{\mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}}}]{n }\end{DoxyParamCaption})}
+
+
+
+Same as memcpy, except that it take care of the overlapped area case. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$dest} & the pointer to the dest string \\
+\hline
+{\em $\ast$src} & the pointer to the src string \\
+\hline
+{\em n} & the count \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$ the pointer to the dest string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00074_a48a16bf628904bdd1b28cbaedf934868}\label{a00074_a48a16bf628904bdd1b28cbaedf934868}} 
+\index{string.\+h@{string.\+h}!memset@{memset}}
+\index{memset@{memset}!string.\+h@{string.\+h}}
+\paragraph{\texorpdfstring{memset()}{memset()}}
+{\footnotesize\ttfamily void$\ast$ memset (\begin{DoxyParamCaption}\item[{void $\ast$}]{str,  }\item[{int}]{c,  }\item[{\mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}}}]{n }\end{DoxyParamCaption})}
+
+
+
+Set n count in $\ast$str with character c. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$str} & the pointer to the src string \\
+\hline
+{\em c} & the character to be set \\
+\hline
+{\em n} & the count \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$ the pointer of the new string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00074_adb8723e585ed29f2370cddf90f6891bc}\label{a00074_adb8723e585ed29f2370cddf90f6891bc}} 
+\index{string.\+h@{string.\+h}!strcat@{strcat}}
+\index{strcat@{strcat}!string.\+h@{string.\+h}}
+\paragraph{\texorpdfstring{strcat()}{strcat()}}
+{\footnotesize\ttfamily char$\ast$ strcat (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{const char $\ast$}]{src }\end{DoxyParamCaption})}
+
+
+
+Append $\ast$str to the end of $\ast$dest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$dest} & the pointer to the dest string \\
+\hline
+{\em $\ast$src} & the string to be appended to $\ast$dest \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$ the pointer to the dest string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00074_afcd97f487174f9092b0f23c7ac78a55a}\label{a00074_afcd97f487174f9092b0f23c7ac78a55a}} 
+\index{string.\+h@{string.\+h}!strchr@{strchr}}
+\index{strchr@{strchr}!string.\+h@{string.\+h}}
+\paragraph{\texorpdfstring{strchr()}{strchr()}}
+{\footnotesize\ttfamily char$\ast$ strchr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Find the location of the 1st occuring of c in $\ast$str. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$str} & the pointer to the src string \\
+\hline
+{\em c} & the matching character \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$ the pointer to the first match in $\ast$str; N\+U\+LL if not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00074_a11bd144d7d44914099a3aeddf1c8567d}\label{a00074_a11bd144d7d44914099a3aeddf1c8567d}} 
+\index{string.\+h@{string.\+h}!strcmp@{strcmp}}
+\index{strcmp@{strcmp}!string.\+h@{string.\+h}}
+\paragraph{\texorpdfstring{strcmp()}{strcmp()}}
+{\footnotesize\ttfamily int strcmp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s1,  }\item[{const char $\ast$}]{s2 }\end{DoxyParamCaption})}
+
+
+
+String compare str1 and str2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & the pointer to the 1st string \\
+\hline
+{\em s2} & the pointer to the 2nd string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return $<$0 if str1 $<$ str2; reutnr =0 if str1=str2; return $>$0 if str1$>$str2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00074_a7a82515b5d377be04817715c5465b647}\label{a00074_a7a82515b5d377be04817715c5465b647}} 
+\index{string.\+h@{string.\+h}!strcpy@{strcpy}}
+\index{strcpy@{strcpy}!string.\+h@{string.\+h}}
+\paragraph{\texorpdfstring{strcpy()}{strcpy()}}
+{\footnotesize\ttfamily char$\ast$ strcpy (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{const char $\ast$}]{src }\end{DoxyParamCaption})}
+
+
+
+Copy string src to dest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$dest} & the pointer to the dest string \\
+\hline
+{\em $\ast$src} & the pointer to the src string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$ the pointer to the dest string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00074_a008e171a518fe0e0352f31b245e03875}\label{a00074_a008e171a518fe0e0352f31b245e03875}} 
+\index{string.\+h@{string.\+h}!strlen@{strlen}}
+\index{strlen@{strlen}!string.\+h@{string.\+h}}
+\paragraph{\texorpdfstring{strlen()}{strlen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}} strlen (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+String length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$str} & the pointer to the string src \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size\+\_\+t the string length 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00074_a0aee928c2844a269966e4832fd2255c5}\label{a00074_a0aee928c2844a269966e4832fd2255c5}} 
+\index{string.\+h@{string.\+h}!strncat@{strncat}}
+\index{strncat@{strncat}!string.\+h@{string.\+h}}
+\paragraph{\texorpdfstring{strncat()}{strncat()}}
+{\footnotesize\ttfamily char$\ast$ strncat (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{const char $\ast$}]{src,  }\item[{\mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}}}]{n }\end{DoxyParamCaption})}
+
+
+
+Append n count of $\ast$src to $\ast$dest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$dest} & the pointer to the dest string \\
+\hline
+{\em $\ast$src} & the pointer to the src string (use to append) \\
+\hline
+{\em n} & the count \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$ the pointer to the dest string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00074_a07f4a84c11c106e95c32b6ab509346ef}\label{a00074_a07f4a84c11c106e95c32b6ab509346ef}} 
+\index{string.\+h@{string.\+h}!strncmp@{strncmp}}
+\index{strncmp@{strncmp}!string.\+h@{string.\+h}}
+\paragraph{\texorpdfstring{strncmp()}{strncmp()}}
+{\footnotesize\ttfamily int strncmp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s1,  }\item[{const char $\ast$}]{s2,  }\item[{\mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}}}]{n }\end{DoxyParamCaption})}
+
+
+
+String compare the first n count in str1 and str2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & the pointer to the 1st string \\
+\hline
+{\em s2} & the pointer to the 2nd string \\
+\hline
+{\em n} & the first n count to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return $<$0 if str1 $<$ str2; reutnr =0 if str1=str2; return $>$0 if str1$>$str2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00074_a47d54f24198df56da51078a6c540b9ed}\label{a00074_a47d54f24198df56da51078a6c540b9ed}} 
+\index{string.\+h@{string.\+h}!strncpy@{strncpy}}
+\index{strncpy@{strncpy}!string.\+h@{string.\+h}}
+\paragraph{\texorpdfstring{strncpy()}{strncpy()}}
+{\footnotesize\ttfamily char$\ast$ strncpy (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{const char $\ast$}]{src,  }\item[{\mbox{\hyperlink{a00074_a43b4547e12226fef871eed8afe191ad7}{size\+\_\+t}}}]{n }\end{DoxyParamCaption})}
+
+
+
+Copy n count from src to dest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$dest} & the pointer to the dest string \\
+\hline
+{\em $\ast$src} & the pointer to the src string \\
+\hline
+{\em n} & the count \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$ the pointer to the dest string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00074_aeb923ee2a7a01f82eb1e2f8ae188c6d4}\label{a00074_aeb923ee2a7a01f82eb1e2f8ae188c6d4}} 
+\index{string.\+h@{string.\+h}!strstr@{strstr}}
+\index{strstr@{strstr}!string.\+h@{string.\+h}}
+\paragraph{\texorpdfstring{strstr()}{strstr()}}
+{\footnotesize\ttfamily char$\ast$ strstr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s1,  }\item[{const char $\ast$}]{s2 }\end{DoxyParamCaption})}
+
+
+
+Check if $\ast$s2 is part of $\ast$s1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$s1} & the pointer to the string to be checked \\
+\hline
+{\em $\ast$s2} & the pointer to the substring \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$ the pointer to the 1st occuring of s2 in s1; N\+U\+LL if not found 
+\end{DoxyReturn}

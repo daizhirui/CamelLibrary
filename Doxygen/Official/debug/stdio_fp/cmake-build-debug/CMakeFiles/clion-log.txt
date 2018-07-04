@@ -1,4 +1,0 @@
-"/Users/daizhirui/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/CLion.app/Contents/bin/cmake/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/daizhirui/Development/stdio_fp
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/daizhirui/Development/stdio_fp/cmake-build-debug

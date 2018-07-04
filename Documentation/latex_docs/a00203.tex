@@ -1,0 +1,32 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00005}{analog\+I\+O.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_af1002dc4b0d8af47aba6aaa5de06868e}{RT\_ADC\_V2P\_On}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a392f47d863065820e42b66b84007dfe0}{RT\_ADC\_V2P\_Off}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_ab24203a1eff5816f48761f0e38337d67}{RT\_ADC\_V2P\_SetResistor}}();
+
+uint32\_t \mbox{\hyperlink{a00002_aeb7d0cb0a7849fc5736dae01fe607910}{RT\_ADC\_V2P\_Read}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a00318bd4fc3ce7ad4f03124b91891f4f}{RT\_ADC\_Clear}}();
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\mbox{\hyperlink{a00005}{analogIO.h}}"}
+
+\textcolor{keywordtype}{void} Example\_V2P() \{
+    \mbox{\hyperlink{a00005_af1002dc4b0d8af47aba6aaa5de06868e}{RT\_ADC\_V2P\_On}}();
+    \mbox{\hyperlink{a00005_ab24203a1eff5816f48761f0e38337d67}{RT\_ADC\_V2P\_SetResistor}}(\mbox{\hyperlink{a00005_aba4bce3cc0e9abf030d04c4d6c3baaeb}{V2P\_220K}});   \textcolor{comment}{// V2P\_185K is set in single side
+       mode of the amplifier.}
+    uint32\_t result = \mbox{\hyperlink{a00002_aeb7d0cb0a7849fc5736dae01fe607910}{RT\_ADC\_V2P\_Read}}();
+\}
+\end{DoxyCode}
+ 

@@ -1,0 +1,75 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00005}{analog\+I\+O.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a6ce23f7d735a1eedc00c509721b79446}{RT\_OPO\_On}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_aaaa6d1267ea1064b765948a2ab8dd934}{RT\_OPO\_Off}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a5867d7cb8e45d61e08c23747ad488ff8}{RT\_OPO\_SetChannel}}(ch0, ch1, ch2, ch3);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_ab2a6c21c91c7f05f3de9fefbd30ff95b}{RT\_OPO\_SetAmplification}}(Pin, Pgain, Nin, Ngain);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_ab5cbc0bc53f5cb140673c5213ba30407}{RT\_OPO\_SetPsideFeedback}}(mode);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a1846f829df60ca42a455a1688eee7310}{RT\_OPO\_ExchangeChannelPin}}(\textcolor{keywordflow}{switch});
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_aaa7081959e37104e40e3f637d42d5144}{RT\_OPO\_SelectChannelPin}}(pin);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a6438defc0d6280f2b5baedc039f2e314}{RT\_OPO\_SetSingleSideMode}}(ch0, ch1, ch2, ch3, pin);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_aadbc9c89735814445f0dc8d4b4eb3e54}{RT\_OPO\_SetDifferentialMode}}(ch0, ch1, ch2, ch3, exchange);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_aef61e41bd9fb19c3690ff5a25fb9893d}{RT\_OPO\_SetShort}}(mode);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a3297280ab870eae12b918351e111819a}{RT\_OPO\_SetBypass}}(mode);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a92d5325c171f6afbf19fe0002ef5296d}{RT\_OPO\_SetVPGND}}(op);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a00318bd4fc3ce7ad4f03124b91891f4f}{RT\_ADC\_Clear}}();
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\mbox{\hyperlink{a00005}{analogIO.h}}"}
+
+\textcolor{keywordtype}{void} Example\_OPO\_SingleSide()
+\{
+    \mbox{\hyperlink{a00005_a6438defc0d6280f2b5baedc039f2e314}{RT\_OPO\_SetSingleSideMode}}(\mbox{\hyperlink{a00068_ad76d1750a6cdeebd506bfcd6752554d2}{ON}}, \mbox{\hyperlink{a00068_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}}, \mbox{\hyperlink{a00068_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}}, \mbox{\hyperlink{a00068_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}}, 
+      \mbox{\hyperlink{a00005_a8bcbcccda02f456b9d5395756791c1a4}{OPO\_PSIDE}});
+    \textcolor{comment}{// 20-time amplification}
+    \mbox{\hyperlink{a00005_ab2a6c21c91c7f05f3de9fefbd30ff95b}{RT\_OPO\_SetAmplification}}(\mbox{\hyperlink{a00005_a3e3450fbf20861f9c18264c410a6436d}{OPO\_PIN\_RESISTOR\_1K}}, 
+      \mbox{\hyperlink{a00005_a359161bc139a807e18272ed299751933}{OPO\_GAIN\_20K}}, \(\backslash\)
+                            \mbox{\hyperlink{a00005_a3e3450fbf20861f9c18264c410a6436d}{OPO\_PIN\_RESISTOR\_1K}}, \mbox{\hyperlink{a00005_a359161bc139a807e18272ed299751933}{OPO\_GAIN\_20K}});
+    \mbox{\hyperlink{a00005_a00318bd4fc3ce7ad4f03124b91891f4f}{RT\_ADC\_Clear}}();
+    \mbox{\hyperlink{a00005_a6ce23f7d735a1eedc00c509721b79446}{RT\_OPO\_On}}();
+\}
+
+\textcolor{keywordtype}{void} Example\_OPO\_DifferentialMode()
+\{
+    \mbox{\hyperlink{a00005_aadbc9c89735814445f0dc8d4b4eb3e54}{RT\_OPO\_SetDifferentialMode}}(\mbox{\hyperlink{a00068_ad76d1750a6cdeebd506bfcd6752554d2}{ON}}, \mbox{\hyperlink{a00068_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}}, \mbox{\hyperlink{a00068_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}}, 
+      \mbox{\hyperlink{a00068_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}}, \mbox{\hyperlink{a00005_a60931ceb0df42cf485a8e2244c50a8d5}{OPO\_NOT\_EXCHANGE\_PIN}});
+    \textcolor{comment}{// 20-time amplification}
+    \mbox{\hyperlink{a00005_ab2a6c21c91c7f05f3de9fefbd30ff95b}{RT\_OPO\_SetAmplification}}(\mbox{\hyperlink{a00005_a3e3450fbf20861f9c18264c410a6436d}{OPO\_PIN\_RESISTOR\_1K}}, 
+      \mbox{\hyperlink{a00005_a359161bc139a807e18272ed299751933}{OPO\_GAIN\_20K}}, \(\backslash\)
+                            \mbox{\hyperlink{a00005_a3e3450fbf20861f9c18264c410a6436d}{OPO\_PIN\_RESISTOR\_1K}}, \mbox{\hyperlink{a00005_a359161bc139a807e18272ed299751933}{OPO\_GAIN\_20K}});
+    \mbox{\hyperlink{a00005_a00318bd4fc3ce7ad4f03124b91891f4f}{RT\_ADC\_Clear}}();
+    \mbox{\hyperlink{a00005_a6ce23f7d735a1eedc00c509721b79446}{RT\_OPO\_On}}();
+\}
+
+\textcolor{keywordtype}{void} Example\_OPO\_Calibration()
+\{
+    \mbox{\hyperlink{a00005_aef61e41bd9fb19c3690ff5a25fb9893d}{RT\_OPO\_SetShort}}(\mbox{\hyperlink{a00068_ad76d1750a6cdeebd506bfcd6752554d2}{ON}});
+\}
+
+\textcolor{keywordtype}{void} Example\_OPO\_Bypass()
+\{
+    \mbox{\hyperlink{a00005_a3297280ab870eae12b918351e111819a}{RT\_OPO\_SetBypass}}(\mbox{\hyperlink{a00068_ad76d1750a6cdeebd506bfcd6752554d2}{ON}});
+\}
+\end{DoxyCode}
+ 

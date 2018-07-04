@@ -1,0 +1,24 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00008}{Flash.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00008_a13fb43316f72b3b1b9467a91fca08d5c}{RT\_Flash\_Write}}(value, address);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00008_ab65db3c66c91da3a934540a2f8175803}{RT\_Flash\_Erase1k}}(address);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00008_afb9cdf54d7254cfef685cd4012113b27}{RT\_Flash\_EraseFrom}}(address);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00008_a99ec94a33a9126a436139061d9e0136b}{RT\_Flash\_SetMAC}}(\textcolor{keywordtype}{id});
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\mbox{\hyperlink{a00008_a13fb43316f72b3b1b9467a91fca08d5c}{RT\_Flash\_Write}}(0x123, 0x10000000);     \textcolor{comment}{// write 0x123 to address 0x10000000}
+\mbox{\hyperlink{a00008_ab65db3c66c91da3a934540a2f8175803}{RT\_Flash\_Erase1k}}(0x10000000);          \textcolor{comment}{// erase 1k-byte, starting from address 0x10000000}
+\end{DoxyCode}
+ 

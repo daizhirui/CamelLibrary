@@ -1,0 +1,28 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00155}{T\+C4.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00155_af7e9317dddf60349a86619afdef1fba8}{RT\_TC4\_AllPWM\_On}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00155_a810820140a90f26db974ea72d81fac27}{RT\_TC4\_AllPWM\_Off}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00155_a383c7817a2e822ccda0e28744c7d3d76}{RT\_TC4\_PWM\_On}}(n);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00155_aaa61aa650a6b2f59bbcb78ae836c82e9}{RT\_TC4\_PWM\_Off}}(n);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00155_ad6b804bb230129a442fe9ce55e3bd2f6}{RT\_TC4\_SetAllPWM}}(pw0\_en, div0, ref0, pwm1\_en, div1, ref1);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00155_ada2806f77e8e1cf7e64c5b9e13479119}{RT\_TC4\_SetPWM}}(n, pwm\_en, div, ref);
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\mbox{\hyperlink{a00155_af7e9317dddf60349a86619afdef1fba8}{RT\_TC4\_AllPWM\_On}}();          \textcolor{comment}{// turn on TC4 pwm0 and pwm1}
+\mbox{\hyperlink{a00155_ada2806f77e8e1cf7e64c5b9e13479119}{RT\_TC4\_SetPWM}}(0, \mbox{\hyperlink{a00068_ad76d1750a6cdeebd506bfcd6752554d2}{ON}}, 2, 4);  \textcolor{comment}{// set pwm0, div=2, ref=4}
+\end{DoxyCode}
+ 

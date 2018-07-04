@@ -1,0 +1,58 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00023}{soft\+\_\+fp.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_a4702619cb8ca993b69919e1d7ca71f57}{fp\_float32\_neg}}(\textcolor{keywordtype}{float} a\_fp);
+
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_a50dbb1be8035ed17c71df34d180056e0}{fp\_float32\_abs}}(\textcolor{keywordtype}{float} a\_fp);
+
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_a05d59640c2e2b66e3f13e423c0779ce9}{fp\_float32\_add}}(\textcolor{keywordtype}{float} a\_fp, \textcolor{keywordtype}{float} b\_fp);
+
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_a131916cff95f607242ea6affe3e50382}{fp\_float32\_sub}}(\textcolor{keywordtype}{float} a\_fp, \textcolor{keywordtype}{float} b\_fp);
+
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_a4fb177861851cf018559768551298993}{fp\_float32\_mult}}(\textcolor{keywordtype}{float} a\_fp, \textcolor{keywordtype}{float} b\_fp);
+
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_a02a02cf636799092e56f66a57d90d91b}{fp\_float32\_div}}(\textcolor{keywordtype}{float} a\_fp, \textcolor{keywordtype}{float} b\_fp);
+
+\textcolor{keywordtype}{long} \mbox{\hyperlink{a00023_aab3c64f665ae99d4f267aef56d96be03}{fp\_float32\_to\_int32}}(\textcolor{keywordtype}{float} a\_fp);
+
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_a13d2d336c17fa7ca9867415d017039f9}{fp\_int32\_to\_float32}}(\textcolor{keywordtype}{long} af);
+
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_a096ed4a261247431549a71225761fffc}{fp\_uint32\_to\_float32}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} af);
+
+\textcolor{keywordtype}{double} fp\_float32\_to\_float64(\textcolor{keywordtype}{float} a\_fp);
+
+\textcolor{keywordtype}{float} fp\_float64\_to\_float32(\textcolor{keywordtype}{double} a\_dfp);
+
+\textcolor{keywordtype}{int} \mbox{\hyperlink{a00023_a55ee0ff6cc8f2a97c7079024577d33d3}{fp\_float32\_cmp}}(\textcolor{keywordtype}{float} a\_fp, \textcolor{keywordtype}{float} b\_fp);
+
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_a310b7eb83e737130e48a8d4b0853efd5}{fp\_float32\_sqrt}}(\textcolor{keywordtype}{float} a);
+
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_a76d63763a1fbbbed015ad39ff22a1a99}{fp\_float32\_cos}}(\textcolor{keywordtype}{float} rad);
+
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_ae57383891f734bc754b6ade61fed3677}{fp\_float32\_sin}}(\textcolor{keywordtype}{float} rad);
+
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_afff3776b0834631c841e3799f545f7a0}{fp\_float32\_atan}}(\textcolor{keywordtype}{float} x);
+
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_aa7b8601248d31c15f917e4d8f4f6e9d9}{fp\_float32\_atan2}}(\textcolor{keywordtype}{float} y, \textcolor{keywordtype}{float} x);
+
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_a595d6a7d9a0a116f0db5bd4cfdbcd166}{fp\_float32\_exp}}(\textcolor{keywordtype}{float} x);
+
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_a694db5e30e3f76718f29bacd4e044135}{fp\_float32\_log}}(\textcolor{keywordtype}{float} x);
+
+\textcolor{keywordtype}{float} \mbox{\hyperlink{a00023_ac888f98a6e5d89837b647d2c81725836}{fp\_float32\_pow}}(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y);
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{float} a = fp\_int32\_to\_float32（-123）；  \textcolor{comment}{// convert int -123 -> float type}
+\textcolor{keywordtype}{float} b = \mbox{\hyperlink{a00023_a096ed4a261247431549a71225761fffc}{fp\_uint32\_to\_float32}}(2345);   \textcolor{comment}{// convert unsigned int 2345 -> float type}
+\textcolor{keywordtype}{float} c = \mbox{\hyperlink{a00023_a05d59640c2e2b66e3f13e423c0779ce9}{fp\_float32\_add}}(a, b);         \textcolor{comment}{// floating point add}
+\textcolor{keywordtype}{float} d = fp\_float32\_sqr(b);            \textcolor{comment}{// floating point sqrt}
+\end{DoxyCode}
+ 

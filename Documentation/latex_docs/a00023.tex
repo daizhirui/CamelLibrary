@@ -1,0 +1,509 @@
+\hypertarget{a00023}{}\subsection{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/release/include/soft\+\_\+fp.h File Reference}
+\label{a00023}\index{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/release/include/soft\+\_\+fp.\+h@{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/release/include/soft\+\_\+fp.\+h}}
+
+
+Soft float library.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00023_a7eee275c4550a21c03be987913256c82}{abs}}~\mbox{\hyperlink{a00023_a50dbb1be8035ed17c71df34d180056e0}{fp\+\_\+float32\+\_\+abs}}
+\item 
+\#define \mbox{\hyperlink{a00023_aa8418f27fe28830a7fb62322463f15e0}{sqrt}}~\mbox{\hyperlink{a00023_a310b7eb83e737130e48a8d4b0853efd5}{fp\+\_\+float32\+\_\+sqrt}}
+\item 
+\#define \mbox{\hyperlink{a00023_a57a66355e043ccefc17aca9338a2b748}{cos}}~\mbox{\hyperlink{a00023_a76d63763a1fbbbed015ad39ff22a1a99}{fp\+\_\+float32\+\_\+cos}}
+\item 
+\#define \mbox{\hyperlink{a00023_a28642ecbd9d1e77ab5a140a460f47d83}{sin}}~\mbox{\hyperlink{a00023_ae57383891f734bc754b6ade61fed3677}{fp\+\_\+float32\+\_\+sin}}
+\item 
+\#define \mbox{\hyperlink{a00023_a0526fb3466fec955862c2cee3110a6ab}{atan}}~\mbox{\hyperlink{a00023_afff3776b0834631c841e3799f545f7a0}{fp\+\_\+float32\+\_\+atan}}
+\item 
+\#define \mbox{\hyperlink{a00023_ac371f13b8648d84164686c8f32aa6ed8}{atan2}}~\mbox{\hyperlink{a00023_aa7b8601248d31c15f917e4d8f4f6e9d9}{fp\+\_\+float32\+\_\+atan2}}
+\item 
+\#define \mbox{\hyperlink{a00023_a4bb9b8ff973345c3b4770d31cfb71ea8}{exp}}~\mbox{\hyperlink{a00023_a595d6a7d9a0a116f0db5bd4cfdbcd166}{fp\+\_\+float32\+\_\+exp}}
+\item 
+\#define \mbox{\hyperlink{a00023_a25274c13d478263ec5322541d7bbfeee}{log}}~\mbox{\hyperlink{a00023_a694db5e30e3f76718f29bacd4e044135}{fp\+\_\+float32\+\_\+log}}
+\item 
+\#define \mbox{\hyperlink{a00023_a4b7fecf5b1bc24739831b0aaca6ffaf7}{pow}}~\mbox{\hyperlink{a00023_ac888f98a6e5d89837b647d2c81725836}{fp\+\_\+float32\+\_\+pow}}
+\item 
+\#define \mbox{\hyperlink{a00023_a598a3330b3c21701223ee0ca14316eca}{PI}}~((float)3.\+1415926)
+\item 
+\mbox{\Hypertarget{a00023_ae3ec3219e4eee3b0992bfd59c2e2bc42}\label{a00023_ae3ec3219e4eee3b0992bfd59c2e2bc42}} 
+\#define \mbox{\hyperlink{a00023_ae3ec3219e4eee3b0992bfd59c2e2bc42}{H\+A\+L\+F\+\_\+\+PI}}~((float)(\mbox{\hyperlink{a00023_a598a3330b3c21701223ee0ca14316eca}{PI}}/2.\+0))
+\begin{DoxyCompactList}\small\item\em Keyword H\+A\+L\+F\+\_\+\+PI, P\+I/2.\+0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{a00023_a4e8f7fbed3cb3e8e3636300b37e2dbb3}\label{a00023_a4e8f7fbed3cb3e8e3636300b37e2dbb3}} 
+\#define \mbox{\hyperlink{a00023_a4e8f7fbed3cb3e8e3636300b37e2dbb3}{E\+I\+G\+H\+T\+H\+\_\+\+PI}}~((float)(\mbox{\hyperlink{a00023_a598a3330b3c21701223ee0ca14316eca}{PI}}/8.\+0))
+\begin{DoxyCompactList}\small\item\em Keyword E\+I\+G\+H\+T\+H\+\_\+\+PI, P\+I/8.\+0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{a00023_a3b947f4b635461030ff2d87833e5049e}\label{a00023_a3b947f4b635461030ff2d87833e5049e}} 
+\#define \mbox{\hyperlink{a00023_a3b947f4b635461030ff2d87833e5049e}{T\+W\+O\+\_\+\+PI}}~((float)(\mbox{\hyperlink{a00023_a598a3330b3c21701223ee0ca14316eca}{PI}}$\ast$2.\+0))
+\begin{DoxyCompactList}\small\item\em Keyword T\+W\+O\+\_\+\+PI, 2 $\ast$ PI. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{a00023_a5c8eebe5b0dbd390778ec30422eee7e8}\label{a00023_a5c8eebe5b0dbd390778ec30422eee7e8}} 
+\#define \mbox{\hyperlink{a00023_a5c8eebe5b0dbd390778ec30422eee7e8}{A\+T\+A\+N\+\_\+\+E\+I\+G\+H\+T\+H\+\_\+\+PI}}~((float)0.\+37419668)
+\begin{DoxyCompactList}\small\item\em Keyword A\+T\+A\+N\+\_\+\+E\+I\+G\+H\+T\+H\+\_\+\+PI, atan(P\+I/8.\+0). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{a00023_a09ca0c42bed2331f570a1b64c7cdee3e}\label{a00023_a09ca0c42bed2331f570a1b64c7cdee3e}} 
+\#define \mbox{\hyperlink{a00023_a09ca0c42bed2331f570a1b64c7cdee3e}{E\+\_\+\+S\+Q\+U\+A\+RE}}~((float)7.\+38905609)
+\begin{DoxyCompactList}\small\item\em Keyword E\+\_\+\+S\+Q\+U\+A\+RE, e$^\wedge$2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{a00023_ae6adbf51b830cf254970e774bf5f809a}\label{a00023_ae6adbf51b830cf254970e774bf5f809a}} 
+\#define \mbox{\hyperlink{a00023_ae6adbf51b830cf254970e774bf5f809a}{I\+N\+V\+\_\+\+E\+\_\+\+S\+Q\+U\+A\+RE}}~((float)0.\+13533528)
+\begin{DoxyCompactList}\small\item\em Keyword I\+N\+V\+\_\+\+E\+\_\+\+S\+Q\+U\+A\+RE, the reciprocal of e$^\wedge$2, 1/e$^\wedge$2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{a00023_aa94d5c40b9f567f0bb88c23634f9d106}\label{a00023_aa94d5c40b9f567f0bb88c23634f9d106}} 
+\#define \mbox{\hyperlink{a00023_aa94d5c40b9f567f0bb88c23634f9d106}{L\+N\+\_\+2}}~((float)0.\+69314718)
+\begin{DoxyCompactList}\small\item\em Keyword L\+N\+\_\+2, ln(2). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{a00023_a4702619cb8ca993b69919e1d7ca71f57}{fp\+\_\+float32\+\_\+neg}} (float a\+\_\+fp)
+\begin{DoxyCompactList}\small\item\em Calculate the negative value of a\+\_\+fp. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00023_a50dbb1be8035ed17c71df34d180056e0}{fp\+\_\+float32\+\_\+abs}} (float a\+\_\+fp)
+\begin{DoxyCompactList}\small\item\em Calculate absolute value. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00023_a05d59640c2e2b66e3f13e423c0779ce9}{fp\+\_\+float32\+\_\+add}} (float a\+\_\+fp, float b\+\_\+fp)
+\begin{DoxyCompactList}\small\item\em Add arithmetic operation. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00023_a131916cff95f607242ea6affe3e50382}{fp\+\_\+float32\+\_\+sub}} (float a\+\_\+fp, float b\+\_\+fp)
+\begin{DoxyCompactList}\small\item\em Subtraction arithmetic operation. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00023_a4fb177861851cf018559768551298993}{fp\+\_\+float32\+\_\+mult}} (float a\+\_\+fp, float b\+\_\+fp)
+\begin{DoxyCompactList}\small\item\em Multiplication. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00023_a02a02cf636799092e56f66a57d90d91b}{fp\+\_\+float32\+\_\+div}} (float a\+\_\+fp, float b\+\_\+fp)
+\begin{DoxyCompactList}\small\item\em Float Division. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{a00023_aab3c64f665ae99d4f267aef56d96be03}{fp\+\_\+float32\+\_\+to\+\_\+int32}} (float a\+\_\+fp)
+\begin{DoxyCompactList}\small\item\em Convert float to signed long. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00023_a13d2d336c17fa7ca9867415d017039f9}{fp\+\_\+int32\+\_\+to\+\_\+float32}} (long af)
+\begin{DoxyCompactList}\small\item\em Convert signed long to float. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00023_a096ed4a261247431549a71225761fffc}{fp\+\_\+uint32\+\_\+to\+\_\+float32}} (unsigned long af)
+\begin{DoxyCompactList}\small\item\em Convert unsigned long to float. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{a00023_a55ee0ff6cc8f2a97c7079024577d33d3}{fp\+\_\+float32\+\_\+cmp}} (float a\+\_\+fp, float b\+\_\+fp)
+\begin{DoxyCompactList}\small\item\em Compare two float value. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00023_a310b7eb83e737130e48a8d4b0853efd5}{fp\+\_\+float32\+\_\+sqrt}} (float a)
+\begin{DoxyCompactList}\small\item\em Returns the square root of x. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00023_a76d63763a1fbbbed015ad39ff22a1a99}{fp\+\_\+float32\+\_\+cos}} (float rad)
+\begin{DoxyCompactList}\small\item\em Returns the cosine of an angle of x radians. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00023_ae57383891f734bc754b6ade61fed3677}{fp\+\_\+float32\+\_\+sin}} (float rad)
+\begin{DoxyCompactList}\small\item\em Returns the sine of an angle of x radians. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00023_afff3776b0834631c841e3799f545f7a0}{fp\+\_\+float32\+\_\+atan}} (float x)
+\begin{DoxyCompactList}\small\item\em Returns the principal value of the arc tangent of x, expressed in radians. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00023_aa7b8601248d31c15f917e4d8f4f6e9d9}{fp\+\_\+float32\+\_\+atan2}} (float y, float x)
+\begin{DoxyCompactList}\small\item\em Returns the principal value of the arc tangent of y/x, expressed in radians. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00023_a595d6a7d9a0a116f0db5bd4cfdbcd166}{fp\+\_\+float32\+\_\+exp}} (float x)
+\begin{DoxyCompactList}\small\item\em Returns the base-\/e exponential function of x, which is e raised to the power x. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00023_a694db5e30e3f76718f29bacd4e044135}{fp\+\_\+float32\+\_\+log}} (float x)
+\begin{DoxyCompactList}\small\item\em The natural logarithm is the base-\/e logarithm\+: the inverse of the natural exponential function (fp\+\_\+float32\+\_\+exp). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00023_ac888f98a6e5d89837b647d2c81725836}{fp\+\_\+float32\+\_\+pow}} (float x, float y)
+\begin{DoxyCompactList}\small\item\em Compute power. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Soft float library. 
+
+\begin{DoxyAuthor}{Author}
+Zhirui Dai 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1 Jun 2018 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+2018 Zhirui 
+\end{DoxyCopyright}
+
+
+\subsubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{a00023_a7eee275c4550a21c03be987913256c82}\label{a00023_a7eee275c4550a21c03be987913256c82}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!abs@{abs}}
+\index{abs@{abs}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{abs}{abs}}
+{\footnotesize\ttfamily \#define abs~\mbox{\hyperlink{a00023_a50dbb1be8035ed17c71df34d180056e0}{fp\+\_\+float32\+\_\+abs}}}
+
+fp\+\_\+float32\+\_\+abs \mbox{\Hypertarget{a00023_a0526fb3466fec955862c2cee3110a6ab}\label{a00023_a0526fb3466fec955862c2cee3110a6ab}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!atan@{atan}}
+\index{atan@{atan}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{atan}{atan}}
+{\footnotesize\ttfamily \#define atan~\mbox{\hyperlink{a00023_afff3776b0834631c841e3799f545f7a0}{fp\+\_\+float32\+\_\+atan}}}
+
+fp\+\_\+float32\+\_\+atan \mbox{\Hypertarget{a00023_ac371f13b8648d84164686c8f32aa6ed8}\label{a00023_ac371f13b8648d84164686c8f32aa6ed8}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!atan2@{atan2}}
+\index{atan2@{atan2}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{atan2}{atan2}}
+{\footnotesize\ttfamily \#define atan2~\mbox{\hyperlink{a00023_aa7b8601248d31c15f917e4d8f4f6e9d9}{fp\+\_\+float32\+\_\+atan2}}}
+
+fp\+\_\+float32\+\_\+atan2 \mbox{\Hypertarget{a00023_a57a66355e043ccefc17aca9338a2b748}\label{a00023_a57a66355e043ccefc17aca9338a2b748}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!cos@{cos}}
+\index{cos@{cos}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{cos}{cos}}
+{\footnotesize\ttfamily \#define cos~\mbox{\hyperlink{a00023_a76d63763a1fbbbed015ad39ff22a1a99}{fp\+\_\+float32\+\_\+cos}}}
+
+fp\+\_\+float32\+\_\+cos \mbox{\Hypertarget{a00023_a4bb9b8ff973345c3b4770d31cfb71ea8}\label{a00023_a4bb9b8ff973345c3b4770d31cfb71ea8}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!exp@{exp}}
+\index{exp@{exp}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{exp}{exp}}
+{\footnotesize\ttfamily \#define exp~\mbox{\hyperlink{a00023_a595d6a7d9a0a116f0db5bd4cfdbcd166}{fp\+\_\+float32\+\_\+exp}}}
+
+fp\+\_\+float32\+\_\+exp \mbox{\Hypertarget{a00023_a25274c13d478263ec5322541d7bbfeee}\label{a00023_a25274c13d478263ec5322541d7bbfeee}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!log@{log}}
+\index{log@{log}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily \#define log~\mbox{\hyperlink{a00023_a694db5e30e3f76718f29bacd4e044135}{fp\+\_\+float32\+\_\+log}}}
+
+fp\+\_\+float32\+\_\+log \mbox{\Hypertarget{a00023_a598a3330b3c21701223ee0ca14316eca}\label{a00023_a598a3330b3c21701223ee0ca14316eca}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!PI@{PI}}
+\index{PI@{PI}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{PI}{PI}}
+{\footnotesize\ttfamily \#define PI~((float)3.\+1415926)}
+
+Keyword PI. \mbox{\Hypertarget{a00023_a4b7fecf5b1bc24739831b0aaca6ffaf7}\label{a00023_a4b7fecf5b1bc24739831b0aaca6ffaf7}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!pow@{pow}}
+\index{pow@{pow}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{pow}{pow}}
+{\footnotesize\ttfamily \#define pow~\mbox{\hyperlink{a00023_ac888f98a6e5d89837b647d2c81725836}{fp\+\_\+float32\+\_\+pow}}}
+
+fp\+\_\+float32\+\_\+pow \mbox{\Hypertarget{a00023_a28642ecbd9d1e77ab5a140a460f47d83}\label{a00023_a28642ecbd9d1e77ab5a140a460f47d83}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!sin@{sin}}
+\index{sin@{sin}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{sin}{sin}}
+{\footnotesize\ttfamily \#define sin~\mbox{\hyperlink{a00023_ae57383891f734bc754b6ade61fed3677}{fp\+\_\+float32\+\_\+sin}}}
+
+fp\+\_\+float32\+\_\+sin \mbox{\Hypertarget{a00023_aa8418f27fe28830a7fb62322463f15e0}\label{a00023_aa8418f27fe28830a7fb62322463f15e0}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!sqrt@{sqrt}}
+\index{sqrt@{sqrt}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{sqrt}{sqrt}}
+{\footnotesize\ttfamily \#define sqrt~\mbox{\hyperlink{a00023_a310b7eb83e737130e48a8d4b0853efd5}{fp\+\_\+float32\+\_\+sqrt}}}
+
+fp\+\_\+float32\+\_\+sqrt 
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{a00023_a50dbb1be8035ed17c71df34d180056e0}\label{a00023_a50dbb1be8035ed17c71df34d180056e0}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+abs@{fp\+\_\+float32\+\_\+abs}}
+\index{fp\+\_\+float32\+\_\+abs@{fp\+\_\+float32\+\_\+abs}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+abs()}{fp\_float32\_abs()}}
+{\footnotesize\ttfamily float fp\+\_\+float32\+\_\+abs (\begin{DoxyParamCaption}\item[{float}]{a\+\_\+fp }\end{DoxyParamCaption})}
+
+
+
+Calculate absolute value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+fp} & The value to calculate absolute value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The absolute value of a\+\_\+fp. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_a05d59640c2e2b66e3f13e423c0779ce9}\label{a00023_a05d59640c2e2b66e3f13e423c0779ce9}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+add@{fp\+\_\+float32\+\_\+add}}
+\index{fp\+\_\+float32\+\_\+add@{fp\+\_\+float32\+\_\+add}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+add()}{fp\_float32\_add()}}
+{\footnotesize\ttfamily float fp\+\_\+float32\+\_\+add (\begin{DoxyParamCaption}\item[{float}]{a\+\_\+fp,  }\item[{float}]{b\+\_\+fp }\end{DoxyParamCaption})}
+
+
+
+Add arithmetic operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+fp} & Number 1 to add. \\
+\hline
+{\em b\+\_\+fp} & Number 2 to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sum of a\+\_\+fp and b\+\_\+fp. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_afff3776b0834631c841e3799f545f7a0}\label{a00023_afff3776b0834631c841e3799f545f7a0}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+atan@{fp\+\_\+float32\+\_\+atan}}
+\index{fp\+\_\+float32\+\_\+atan@{fp\+\_\+float32\+\_\+atan}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+atan()}{fp\_float32\_atan()}}
+{\footnotesize\ttfamily float fp\+\_\+float32\+\_\+atan (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})}
+
+
+
+Returns the principal value of the arc tangent of x, expressed in radians. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Value whose arc tangent is computed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Principal arc tangent of x, in the interval \mbox{[}-\/pi/2,+pi/2\mbox{]} radians.\+One radian is equivalent to 180/\+PI degrees. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_aa7b8601248d31c15f917e4d8f4f6e9d9}\label{a00023_aa7b8601248d31c15f917e4d8f4f6e9d9}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+atan2@{fp\+\_\+float32\+\_\+atan2}}
+\index{fp\+\_\+float32\+\_\+atan2@{fp\+\_\+float32\+\_\+atan2}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+atan2()}{fp\_float32\_atan2()}}
+{\footnotesize\ttfamily float fp\+\_\+float32\+\_\+atan2 (\begin{DoxyParamCaption}\item[{float}]{y,  }\item[{float}]{x }\end{DoxyParamCaption})}
+
+
+
+Returns the principal value of the arc tangent of y/x, expressed in radians. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & Value representing the proportion of the y-\/coordinate. \\
+\hline
+{\em x} & Value representing the proportion of the x-\/coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Principal arc tangent of y/x, in the interval \mbox{[}-\/pi,+pi\mbox{]} radians. One radian is equivalent to 180/\+PI degrees. If x is zero, return 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_a55ee0ff6cc8f2a97c7079024577d33d3}\label{a00023_a55ee0ff6cc8f2a97c7079024577d33d3}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+cmp@{fp\+\_\+float32\+\_\+cmp}}
+\index{fp\+\_\+float32\+\_\+cmp@{fp\+\_\+float32\+\_\+cmp}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+cmp()}{fp\_float32\_cmp()}}
+{\footnotesize\ttfamily int fp\+\_\+float32\+\_\+cmp (\begin{DoxyParamCaption}\item[{float}]{a\+\_\+fp,  }\item[{float}]{b\+\_\+fp }\end{DoxyParamCaption})}
+
+
+
+Compare two float value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+fp} & float value a. \\
+\hline
+{\em b\+\_\+fp} & float value b. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if a==b; 1 if a$>$b; -\/1 if a$<$b; 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_a76d63763a1fbbbed015ad39ff22a1a99}\label{a00023_a76d63763a1fbbbed015ad39ff22a1a99}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+cos@{fp\+\_\+float32\+\_\+cos}}
+\index{fp\+\_\+float32\+\_\+cos@{fp\+\_\+float32\+\_\+cos}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+cos()}{fp\_float32\_cos()}}
+{\footnotesize\ttfamily float fp\+\_\+float32\+\_\+cos (\begin{DoxyParamCaption}\item[{float}]{rad }\end{DoxyParamCaption})}
+
+
+
+Returns the cosine of an angle of x radians. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rad} & Value representing an angle expressed in radians. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Cosine of x radians. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_a02a02cf636799092e56f66a57d90d91b}\label{a00023_a02a02cf636799092e56f66a57d90d91b}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+div@{fp\+\_\+float32\+\_\+div}}
+\index{fp\+\_\+float32\+\_\+div@{fp\+\_\+float32\+\_\+div}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+div()}{fp\_float32\_div()}}
+{\footnotesize\ttfamily float fp\+\_\+float32\+\_\+div (\begin{DoxyParamCaption}\item[{float}]{a\+\_\+fp,  }\item[{float}]{b\+\_\+fp }\end{DoxyParamCaption})}
+
+
+
+Float Division. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+fp} & Dividend. \\
+\hline
+{\em b\+\_\+fp} & Divisor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Quotient. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_a595d6a7d9a0a116f0db5bd4cfdbcd166}\label{a00023_a595d6a7d9a0a116f0db5bd4cfdbcd166}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+exp@{fp\+\_\+float32\+\_\+exp}}
+\index{fp\+\_\+float32\+\_\+exp@{fp\+\_\+float32\+\_\+exp}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+exp()}{fp\_float32\_exp()}}
+{\footnotesize\ttfamily float fp\+\_\+float32\+\_\+exp (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})}
+
+
+
+Returns the base-\/e exponential function of x, which is e raised to the power x. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Value of the exponent. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Exponential value of x. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_a694db5e30e3f76718f29bacd4e044135}\label{a00023_a694db5e30e3f76718f29bacd4e044135}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+log@{fp\+\_\+float32\+\_\+log}}
+\index{fp\+\_\+float32\+\_\+log@{fp\+\_\+float32\+\_\+log}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+log()}{fp\_float32\_log()}}
+{\footnotesize\ttfamily float fp\+\_\+float32\+\_\+log (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})}
+
+
+
+The natural logarithm is the base-\/e logarithm\+: the inverse of the natural exponential function (fp\+\_\+float32\+\_\+exp). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Value whose logarithm is calculated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Natural logarithm of x. If x $<$= 0, return 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_a4fb177861851cf018559768551298993}\label{a00023_a4fb177861851cf018559768551298993}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+mult@{fp\+\_\+float32\+\_\+mult}}
+\index{fp\+\_\+float32\+\_\+mult@{fp\+\_\+float32\+\_\+mult}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+mult()}{fp\_float32\_mult()}}
+{\footnotesize\ttfamily float fp\+\_\+float32\+\_\+mult (\begin{DoxyParamCaption}\item[{float}]{a\+\_\+fp,  }\item[{float}]{b\+\_\+fp }\end{DoxyParamCaption})}
+
+
+
+Multiplication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+fp} & The number 1 to multiply. \\
+\hline
+{\em b\+\_\+fp} & The number 2 to multiply. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The product. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_a4702619cb8ca993b69919e1d7ca71f57}\label{a00023_a4702619cb8ca993b69919e1d7ca71f57}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+neg@{fp\+\_\+float32\+\_\+neg}}
+\index{fp\+\_\+float32\+\_\+neg@{fp\+\_\+float32\+\_\+neg}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+neg()}{fp\_float32\_neg()}}
+{\footnotesize\ttfamily float fp\+\_\+float32\+\_\+neg (\begin{DoxyParamCaption}\item[{float}]{a\+\_\+fp }\end{DoxyParamCaption})}
+
+
+
+Calculate the negative value of a\+\_\+fp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+fp} & The value to calculate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The negative value of a\+\_\+fp. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_ac888f98a6e5d89837b647d2c81725836}\label{a00023_ac888f98a6e5d89837b647d2c81725836}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+pow@{fp\+\_\+float32\+\_\+pow}}
+\index{fp\+\_\+float32\+\_\+pow@{fp\+\_\+float32\+\_\+pow}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+pow()}{fp\_float32\_pow()}}
+{\footnotesize\ttfamily float fp\+\_\+float32\+\_\+pow (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+Compute power. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Base value. \\
+\hline
+{\em y} & Exponent value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The result of raising base to the power exponent. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_ae57383891f734bc754b6ade61fed3677}\label{a00023_ae57383891f734bc754b6ade61fed3677}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+sin@{fp\+\_\+float32\+\_\+sin}}
+\index{fp\+\_\+float32\+\_\+sin@{fp\+\_\+float32\+\_\+sin}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+sin()}{fp\_float32\_sin()}}
+{\footnotesize\ttfamily float fp\+\_\+float32\+\_\+sin (\begin{DoxyParamCaption}\item[{float}]{rad }\end{DoxyParamCaption})}
+
+
+
+Returns the sine of an angle of x radians. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rad} & Value representing an angle expressed in radians. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Sine of x radians. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_a310b7eb83e737130e48a8d4b0853efd5}\label{a00023_a310b7eb83e737130e48a8d4b0853efd5}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+sqrt@{fp\+\_\+float32\+\_\+sqrt}}
+\index{fp\+\_\+float32\+\_\+sqrt@{fp\+\_\+float32\+\_\+sqrt}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+sqrt()}{fp\_float32\_sqrt()}}
+{\footnotesize\ttfamily float fp\+\_\+float32\+\_\+sqrt (\begin{DoxyParamCaption}\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+Returns the square root of x. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Value whose square root is computed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Square root of x.\+If x $<$ 0, return 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_a131916cff95f607242ea6affe3e50382}\label{a00023_a131916cff95f607242ea6affe3e50382}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+sub@{fp\+\_\+float32\+\_\+sub}}
+\index{fp\+\_\+float32\+\_\+sub@{fp\+\_\+float32\+\_\+sub}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+sub()}{fp\_float32\_sub()}}
+{\footnotesize\ttfamily float fp\+\_\+float32\+\_\+sub (\begin{DoxyParamCaption}\item[{float}]{a\+\_\+fp,  }\item[{float}]{b\+\_\+fp }\end{DoxyParamCaption})}
+
+
+
+Subtraction arithmetic operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+fp} & The minuend. \\
+\hline
+{\em b\+\_\+fp} & The subtrahend. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_aab3c64f665ae99d4f267aef56d96be03}\label{a00023_aab3c64f665ae99d4f267aef56d96be03}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+float32\+\_\+to\+\_\+int32@{fp\+\_\+float32\+\_\+to\+\_\+int32}}
+\index{fp\+\_\+float32\+\_\+to\+\_\+int32@{fp\+\_\+float32\+\_\+to\+\_\+int32}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+float32\+\_\+to\+\_\+int32()}{fp\_float32\_to\_int32()}}
+{\footnotesize\ttfamily long fp\+\_\+float32\+\_\+to\+\_\+int32 (\begin{DoxyParamCaption}\item[{float}]{a\+\_\+fp }\end{DoxyParamCaption})}
+
+
+
+Convert float to signed long. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+fp} & float to be converted to long. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long the long integer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_a13d2d336c17fa7ca9867415d017039f9}\label{a00023_a13d2d336c17fa7ca9867415d017039f9}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+int32\+\_\+to\+\_\+float32@{fp\+\_\+int32\+\_\+to\+\_\+float32}}
+\index{fp\+\_\+int32\+\_\+to\+\_\+float32@{fp\+\_\+int32\+\_\+to\+\_\+float32}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+int32\+\_\+to\+\_\+float32()}{fp\_int32\_to\_float32()}}
+{\footnotesize\ttfamily float fp\+\_\+int32\+\_\+to\+\_\+float32 (\begin{DoxyParamCaption}\item[{long}]{af }\end{DoxyParamCaption})}
+
+
+
+Convert signed long to float. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em af} & long value to be converted to float. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float the float. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00023_a096ed4a261247431549a71225761fffc}\label{a00023_a096ed4a261247431549a71225761fffc}} 
+\index{soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}!fp\+\_\+uint32\+\_\+to\+\_\+float32@{fp\+\_\+uint32\+\_\+to\+\_\+float32}}
+\index{fp\+\_\+uint32\+\_\+to\+\_\+float32@{fp\+\_\+uint32\+\_\+to\+\_\+float32}!soft\+\_\+fp.\+h@{soft\+\_\+fp.\+h}}
+\paragraph{\texorpdfstring{fp\+\_\+uint32\+\_\+to\+\_\+float32()}{fp\_uint32\_to\_float32()}}
+{\footnotesize\ttfamily float fp\+\_\+uint32\+\_\+to\+\_\+float32 (\begin{DoxyParamCaption}\item[{unsigned long}]{af }\end{DoxyParamCaption})}
+
+
+
+Convert unsigned long to float. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em af} & unsigned long value to be converted to float. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float the float. 
+\end{DoxyReturn}

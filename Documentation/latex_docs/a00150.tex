@@ -1,0 +1,32 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00032}{stdlib.\+h}}}. If you want to use a stdio library supporting soft float, please include {\ttfamily \mbox{\hyperlink{a00029}{stdio\+\_\+fp.\+h}}} instead of {\ttfamily \mbox{\hyperlink{a00026}{stdio.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00026_a948b7a0779c308ac5502c57e282e6933}{putchar}}(\textcolor{keywordtype}{char} c);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00026_a46036bd75b920766eef64eb7910c887d}{puts}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \textcolor{keywordtype}{string});
+
+\textcolor{keywordtype}{char} \mbox{\hyperlink{a00026_a0979671914792955a7a68461634ff82d}{getchar}}();
+
+\textcolor{keywordtype}{long} \mbox{\hyperlink{a00026_a46d9f17d80612d1174eab96f53c7c5b7}{getnum}}();
+
+\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{a00026_af48103646b7cb053e55eb3867a05fc85}{getHexNum}}();
+
+\textcolor{keywordtype}{char}* \mbox{\hyperlink{a00026_ac399b37e5355c704e130b1c6f60b71ec}{itoa}}(\textcolor{keywordtype}{int} value, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} base);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00026_a133c04c35a1c14c6f8d8078831705661}{printf}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *format, ...);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00026_ab416b2a62f47ec0095853e37ba84e78b}{sprintf}}(\textcolor{keywordtype}{char}* buf, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* format, ...);
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} a = \textcolor{charliteral}{'H'}; \mbox{\hyperlink{a00026_a948b7a0779c308ac5502c57e282e6933}{putchar}}(a);            \textcolor{comment}{// print 'H' to Uart0}
+\textcolor{keywordtype}{char} b = \mbox{\hyperlink{a00026_a0979671914792955a7a68461634ff82d}{getchar}}();                  \textcolor{comment}{// get a char from Uart, then assign to b}
+\end{DoxyCode}
+ 

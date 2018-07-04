@@ -1,0 +1,70 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00086}{S\+P\+I.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00086_a7e29e20d0901d972f48c7910ced01496}{RT\_SPI\_On}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00086_af62f1bbca0e2dc624d22fd41d9c4d673}{RT\_SPI\_Off}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00086_aaa4fe1ff7cdd82bb01d0e9c8b78f1c4e}{RT\_SPI\_Modeset}}(MorS);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00086_ab5011f13ab02a1c07b52047efb930cae}{RT\_SPI\_ChipSelect}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00086_aa1e150a8154edd8c379c587fa8aa476b}{RT\_SPI\_ChipRelease}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00086_a58a483e605dad12bcb7cb0c72645a391}{RT\_SPI\_ClearState}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00086_ab1ba89b5bfbcb4765f4c76685cba2955}{RT\_SPI\_Busy}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00086_a38a5e77ba10f0d47cf17a5e9865051a7}{RT\_SPI\_Write\_}}(val);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00086_a0b2995069d4992ea3676d5eb0a0aa568}{RT\_SPI\_Write}}(val);
+
+uint32\_t \mbox{\hyperlink{a00086_ac5873263749266b505bf7389433ba8c0}{RT\_SPI\_DataReady}}();
+
+uint8\_t \mbox{\hyperlink{a00086_aa54a442303e6bde4682c6e0cbe2bb3c5}{RT\_SPI\_Read\_}}();
+
+\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{a00083_a12247c98a144c67f02e3c0783c430b17}{RT\_SPI\_Read}}();
+
+\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{a00083_a61938c7db10cdb7d7281c7c796526b59}{RT\_SPI\_MasterTransfer}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} c);
+
+\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{a00083_a86a904500b912f32af83058779a01251}{RT\_SPI\_SlaveTransfer}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} c);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00083_a348daf083179aab5d11d1e019c9b598b}{RT\_SPI\_Delay}}();
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\mbox{\hyperlink{a00086}{SPI.h}}"}
+\textcolor{preprocessor}{#include "\mbox{\hyperlink{a00095}{stdio.h}}"}
+
+\textcolor{comment}{// This example shows how to set M2 SPI as master, send and receive data.}
+\textcolor{keywordtype}{void} master()\{
+    \textcolor{keywordtype}{char} c;
+    \mbox{\hyperlink{a00086_aaa4fe1ff7cdd82bb01d0e9c8b78f1c4e}{RT\_SPI\_Modeset}}(\mbox{\hyperlink{a00086_a3fa2d3bf1901157f734a584d47b25d8b}{MASTER}});             \textcolor{comment}{// set M2 SPI as Master}
+    \mbox{\hyperlink{a00086_ab5011f13ab02a1c07b52047efb930cae}{RT\_SPI\_ChipSelect}}();
+    \mbox{\hyperlink{a00086_a58a483e605dad12bcb7cb0c72645a391}{RT\_SPI\_ClearState}}();
+    \textcolor{keywordflow}{while}(1)\{
+        c=\mbox{\hyperlink{a00083_a61938c7db10cdb7d7281c7c796526b59}{RT\_SPI\_MasterTransfer}}(\textcolor{charliteral}{'A'});
+        \mbox{\hyperlink{a00095_a948b7a0779c308ac5502c57e282e6933}{putchar}}(c);
+    \}
+\}
+
+\textcolor{comment}{// This example shows how to set M2 SPI as slave, send and receive data.}
+\textcolor{keywordtype}{void} slave()\{
+    \textcolor{keywordtype}{char} c;
+    \mbox{\hyperlink{a00086_aaa4fe1ff7cdd82bb01d0e9c8b78f1c4e}{RT\_SPI\_Modeset}}(\mbox{\hyperlink{a00086_ae342da5a4630c191c1c983958808edd8}{SLAVE}});              \textcolor{comment}{// set M2 SPI as Slave}
+    \mbox{\hyperlink{a00086_a58a483e605dad12bcb7cb0c72645a391}{RT\_SPI\_ClearState}}();
+    \mbox{\hyperlink{a00086_a38a5e77ba10f0d47cf17a5e9865051a7}{RT\_SPI\_Write\_}}(\textcolor{charliteral}{'B'});
+    \textcolor{keywordflow}{while}(1)\{
+        c=\mbox{\hyperlink{a00083_a86a904500b912f32af83058779a01251}{RT\_SPI\_SlaveTransfer}}(\textcolor{charliteral}{'B'});
+        \mbox{\hyperlink{a00095_a948b7a0779c308ac5502c57e282e6933}{putchar}}(c);
+    \}
+\}
+\end{DoxyCode}
+ 

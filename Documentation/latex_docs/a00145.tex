@@ -1,0 +1,39 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00020}{mcu.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{long} \mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{MemoryRead32}}(addr)；
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{MemoryWrite32}}(addr,val)；
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{MemoryOr32}}(addr,val)；
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{MemoryAnd32}}(addr,val)；
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00020_afc530c7e6b49b0ca97c1ad9dac1c4750}{MemoryBitAt}}(addr,val)；
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00020_a99a602346038b54068758ef00c42d1b6}{MemoryBitOn}}(addr,val)；
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00020_a04c34919a950117ae7da2dc5a235622b}{MemoryBitOff}}(addr,val)；
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00020_ae49e41753dbce64185d380d307ade78d}{MemoryBitSwitch}}(addr,val)；
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00020_a38c3a81fc94bff4cb6654061b7d21909}{JumpTo}}(address)；
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00020_a017f8665ec51267680fc0e536db19c13}{RT\_MCU\_SetSystemClock}}(mode);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00020_a42674a2ca7d088e68de4e2aa81ec597c}{RT\_Clr\_Sram}}();
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{long} a = \mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{MemoryRead32}}(0x1000000);      \textcolor{comment}{// read the value @0x1000000}
+\mbox{\hyperlink{a00020_a38c3a81fc94bff4cb6654061b7d21909}{JumpTo}}(0x1000000);                     \textcolor{comment}{// jump the program to the address 0x1000000}
+\mbox{\hyperlink{a00020_a42674a2ca7d088e68de4e2aa81ec597c}{RT\_Clr\_Sram}}();                         \textcolor{comment}{// clear the 2kx32 sram space}
+\end{DoxyCode}
+ 

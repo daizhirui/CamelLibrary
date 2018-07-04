@@ -1,0 +1,278 @@
+\hypertarget{a00014}{}\subsection{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/release/include/\+IO.h File Reference}
+\label{a00014}\index{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/release/include/\+I\+O.\+h@{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/release/include/\+I\+O.\+h}}
+
+
+General Input Output Library for M2.  
+
+
+{\ttfamily \#include \char`\"{}mcu.\+h\char`\"{}}\newline
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00014_a61a3c9a18380aafb6e430e79bf596557}{O\+U\+T\+P\+UT}}~0x1
+\item 
+\#define \mbox{\hyperlink{a00014_a1bb283bd7893b9855e2f23013891fc82}{I\+N\+P\+UT}}~0x0
+\item 
+\#define \mbox{\hyperlink{a00014_a5bb885982ff66a2e0a0a45a8ee9c35e2}{H\+I\+GH}}~0x1
+\item 
+\#define \mbox{\hyperlink{a00014_ab811d8c6ff3a505312d3276590444289}{L\+OW}}~0x0
+\item 
+\#define \mbox{\hyperlink{a00014_a80f50c7de76076789b624b7fce7531c6}{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Output}}(io)~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(\mbox{\hyperlink{a00020_a43d7770fdd59d1c008b789d8e9ae882b}{S\+Y\+S\+\_\+\+I\+O\+C\+T\+L\+\_\+\+R\+EG}}, (1 $<$$<$ (io)))
+\begin{DoxyCompactList}\small\item\em This function sets a specific channel at O\+U\+T\+P\+UT mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00014_ae333f1c232fdcb61b9e6ccaceeca2cec}{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input}}(io)~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(\mbox{\hyperlink{a00020_a43d7770fdd59d1c008b789d8e9ae882b}{S\+Y\+S\+\_\+\+I\+O\+C\+T\+L\+\_\+\+R\+EG}}, $\sim$(1 $<$$<$ (io)))
+\begin{DoxyCompactList}\small\item\em This function sets a specific channel at I\+N\+P\+UT mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00014_ade4bc867a36445fe0debc59cd5c9d9a5}{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input\+Output16}}(mode)~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(\mbox{\hyperlink{a00020_a43d7770fdd59d1c008b789d8e9ae882b}{S\+Y\+S\+\_\+\+I\+O\+C\+T\+L\+\_\+\+R\+EG}}, mode)
+\begin{DoxyCompactList}\small\item\em This function sets the mode of all G\+P\+IO channels. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00014_a752d981d1948aeae63c1a86070ae8e3a}{R\+T\+\_\+\+I\+O\+\_\+\+Set\+High}}(io)~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(\mbox{\hyperlink{a00020_ac12676fdbfbffb9d4114bb751b6d4f74}{S\+Y\+S\+\_\+\+G\+P\+I\+O0\+\_\+\+R\+EG}}, (1 $<$$<$ (io)))
+\begin{DoxyCompactList}\small\item\em This function sets a specific output io channel at H\+I\+GH level. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00014_ae0e5eb1313d8307cf1362e997ee6f25e}{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Low}}(io)~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(\mbox{\hyperlink{a00020_ac12676fdbfbffb9d4114bb751b6d4f74}{S\+Y\+S\+\_\+\+G\+P\+I\+O0\+\_\+\+R\+EG}}, $\sim$(1 $<$$<$ (io)))
+\begin{DoxyCompactList}\small\item\em This function sets a specific output io channel at L\+OW level. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00014_a5a3ae496ca3e12098c74c9f13b20c554}{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Level16}}(level)~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(\mbox{\hyperlink{a00020_ac12676fdbfbffb9d4114bb751b6d4f74}{S\+Y\+S\+\_\+\+G\+P\+I\+O0\+\_\+\+R\+EG}}, (level))
+\begin{DoxyCompactList}\small\item\em This function sets the level of all 16 io channel. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00014_aa69642c4177a35776090fdcf78d12e3b}{R\+T\+\_\+\+I\+O\+\_\+\+Read}}(io)~((\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00020_a5bcff87fa505b928a78a15fb375a0e6f}{S\+Y\+S\+\_\+\+G\+P\+I\+O1\+\_\+\+R\+EG}}) $>$$>$ (io)) \& 0x1)
+\begin{DoxyCompactList}\small\item\em This function returns the level of a specific io. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00014_acf9c93d24ffeac5705da2c83ea2303d1}{R\+T\+\_\+\+I\+O\+\_\+\+Read16}}()~\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00020_a5bcff87fa505b928a78a15fb375a0e6f}{S\+Y\+S\+\_\+\+G\+P\+I\+O1\+\_\+\+R\+EG}})
+\begin{DoxyCompactList}\small\item\em This function returns the level of all 16 io. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00014_ae845dc41cbf1b32b4d576373d1866d65}{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input\+Output}}(io,  mode)
+\begin{DoxyCompactList}\small\item\em This function sets the mode of specific G\+P\+IO channel. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00014_a95fe40498ba314e1ea68aaa50335e7ef}{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Level}}(io,  level)
+\begin{DoxyCompactList}\small\item\em This function sets the level of a specific io channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+General Input Output Library for M2. 
+
+\begin{DoxyAuthor}{Author}
+Zhirui Dai 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16 Jun 2018 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+2018 Zhirui 
+\end{DoxyCopyright}
+
+
+\subsubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{a00014_a5bb885982ff66a2e0a0a45a8ee9c35e2}\label{a00014_a5bb885982ff66a2e0a0a45a8ee9c35e2}} 
+\index{I\+O.\+h@{I\+O.\+h}!H\+I\+GH@{H\+I\+GH}}
+\index{H\+I\+GH@{H\+I\+GH}!I\+O.\+h@{I\+O.\+h}}
+\paragraph{\texorpdfstring{H\+I\+GH}{HIGH}}
+{\footnotesize\ttfamily \#define H\+I\+GH~0x1}
+
+Keyword H\+I\+GH. \mbox{\Hypertarget{a00014_a1bb283bd7893b9855e2f23013891fc82}\label{a00014_a1bb283bd7893b9855e2f23013891fc82}} 
+\index{I\+O.\+h@{I\+O.\+h}!I\+N\+P\+UT@{I\+N\+P\+UT}}
+\index{I\+N\+P\+UT@{I\+N\+P\+UT}!I\+O.\+h@{I\+O.\+h}}
+\paragraph{\texorpdfstring{I\+N\+P\+UT}{INPUT}}
+{\footnotesize\ttfamily \#define I\+N\+P\+UT~0x0}
+
+Keyword I\+N\+P\+UT. \mbox{\Hypertarget{a00014_ab811d8c6ff3a505312d3276590444289}\label{a00014_ab811d8c6ff3a505312d3276590444289}} 
+\index{I\+O.\+h@{I\+O.\+h}!L\+OW@{L\+OW}}
+\index{L\+OW@{L\+OW}!I\+O.\+h@{I\+O.\+h}}
+\paragraph{\texorpdfstring{L\+OW}{LOW}}
+{\footnotesize\ttfamily \#define L\+OW~0x0}
+
+Keyword L\+OW. \mbox{\Hypertarget{a00014_a61a3c9a18380aafb6e430e79bf596557}\label{a00014_a61a3c9a18380aafb6e430e79bf596557}} 
+\index{I\+O.\+h@{I\+O.\+h}!O\+U\+T\+P\+UT@{O\+U\+T\+P\+UT}}
+\index{O\+U\+T\+P\+UT@{O\+U\+T\+P\+UT}!I\+O.\+h@{I\+O.\+h}}
+\paragraph{\texorpdfstring{O\+U\+T\+P\+UT}{OUTPUT}}
+{\footnotesize\ttfamily \#define O\+U\+T\+P\+UT~0x1}
+
+Keyword O\+U\+T\+P\+UT. \mbox{\Hypertarget{a00014_aa69642c4177a35776090fdcf78d12e3b}\label{a00014_aa69642c4177a35776090fdcf78d12e3b}} 
+\index{I\+O.\+h@{I\+O.\+h}!R\+T\+\_\+\+I\+O\+\_\+\+Read@{R\+T\+\_\+\+I\+O\+\_\+\+Read}}
+\index{R\+T\+\_\+\+I\+O\+\_\+\+Read@{R\+T\+\_\+\+I\+O\+\_\+\+Read}!I\+O.\+h@{I\+O.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+I\+O\+\_\+\+Read}{RT\_IO\_Read}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+I\+O\+\_\+\+Read(\begin{DoxyParamCaption}\item[{}]{io }\end{DoxyParamCaption})~((\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00020_a5bcff87fa505b928a78a15fb375a0e6f}{S\+Y\+S\+\_\+\+G\+P\+I\+O1\+\_\+\+R\+EG}}) $>$$>$ (io)) \& 0x1)}
+
+
+
+This function returns the level of a specific io. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io} & the io channel to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the io level 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00014_acf9c93d24ffeac5705da2c83ea2303d1}\label{a00014_acf9c93d24ffeac5705da2c83ea2303d1}} 
+\index{I\+O.\+h@{I\+O.\+h}!R\+T\+\_\+\+I\+O\+\_\+\+Read16@{R\+T\+\_\+\+I\+O\+\_\+\+Read16}}
+\index{R\+T\+\_\+\+I\+O\+\_\+\+Read16@{R\+T\+\_\+\+I\+O\+\_\+\+Read16}!I\+O.\+h@{I\+O.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+I\+O\+\_\+\+Read16}{RT\_IO\_Read16}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+I\+O\+\_\+\+Read16(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00020_a5bcff87fa505b928a78a15fb375a0e6f}{S\+Y\+S\+\_\+\+G\+P\+I\+O1\+\_\+\+R\+EG}})}
+
+
+
+This function returns the level of all 16 io. 
+
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t 16-\/bit number which defines 16 io channels\textquotesingle{} level 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00014_a752d981d1948aeae63c1a86070ae8e3a}\label{a00014_a752d981d1948aeae63c1a86070ae8e3a}} 
+\index{I\+O.\+h@{I\+O.\+h}!R\+T\+\_\+\+I\+O\+\_\+\+Set\+High@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+High}}
+\index{R\+T\+\_\+\+I\+O\+\_\+\+Set\+High@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+High}!I\+O.\+h@{I\+O.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+I\+O\+\_\+\+Set\+High}{RT\_IO\_SetHigh}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+I\+O\+\_\+\+Set\+High(\begin{DoxyParamCaption}\item[{}]{io }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(\mbox{\hyperlink{a00020_ac12676fdbfbffb9d4114bb751b6d4f74}{S\+Y\+S\+\_\+\+G\+P\+I\+O0\+\_\+\+R\+EG}}, (1 $<$$<$ (io)))}
+
+
+
+This function sets a specific output io channel at H\+I\+GH level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io} & Channel to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00014_ae333f1c232fdcb61b9e6ccaceeca2cec}\label{a00014_ae333f1c232fdcb61b9e6ccaceeca2cec}} 
+\index{I\+O.\+h@{I\+O.\+h}!R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input}}
+\index{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input}!I\+O.\+h@{I\+O.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input}{RT\_IO\_SetInput}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input(\begin{DoxyParamCaption}\item[{}]{io }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(\mbox{\hyperlink{a00020_a43d7770fdd59d1c008b789d8e9ae882b}{S\+Y\+S\+\_\+\+I\+O\+C\+T\+L\+\_\+\+R\+EG}}, $\sim$(1 $<$$<$ (io)))}
+
+
+
+This function sets a specific channel at I\+N\+P\+UT mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io} & Channel to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00014_ae845dc41cbf1b32b4d576373d1866d65}\label{a00014_ae845dc41cbf1b32b4d576373d1866d65}} 
+\index{I\+O.\+h@{I\+O.\+h}!R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input\+Output@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input\+Output}}
+\index{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input\+Output@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input\+Output}!I\+O.\+h@{I\+O.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input\+Output}{RT\_IO\_SetInputOutput}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input\+Output(\begin{DoxyParamCaption}\item[{}]{io,  }\item[{}]{mode }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                         \(\backslash\)
+        if (!mode)            \(\backslash\)
+            IO\_SetInput(io);  \(\backslash\)
+        else                  \(\backslash\)
+            IO\_SetOutput(io); \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+This function sets the mode of specific G\+P\+IO channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io} & the specific io channel to setup \\
+\hline
+{\em mode} & the mode, optional value\+: \mbox{\hyperlink{a00014_a1bb283bd7893b9855e2f23013891fc82}{I\+N\+P\+UT}}, \mbox{\hyperlink{a00014_a61a3c9a18380aafb6e430e79bf596557}{O\+U\+T\+P\+UT}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00014_ade4bc867a36445fe0debc59cd5c9d9a5}\label{a00014_ade4bc867a36445fe0debc59cd5c9d9a5}} 
+\index{I\+O.\+h@{I\+O.\+h}!R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input\+Output16@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input\+Output16}}
+\index{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input\+Output16@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input\+Output16}!I\+O.\+h@{I\+O.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input\+Output16}{RT\_IO\_SetInputOutput16}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+I\+O\+\_\+\+Set\+Input\+Output16(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(\mbox{\hyperlink{a00020_a43d7770fdd59d1c008b789d8e9ae882b}{S\+Y\+S\+\_\+\+I\+O\+C\+T\+L\+\_\+\+R\+EG}}, mode)}
+
+
+
+This function sets the mode of all G\+P\+IO channels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & 16-\/bit number which defines 16 IO channels\textquotesingle{} mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00014_a95fe40498ba314e1ea68aaa50335e7ef}\label{a00014_a95fe40498ba314e1ea68aaa50335e7ef}} 
+\index{I\+O.\+h@{I\+O.\+h}!R\+T\+\_\+\+I\+O\+\_\+\+Set\+Level@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Level}}
+\index{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Level@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Level}!I\+O.\+h@{I\+O.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Level}{RT\_IO\_SetLevel}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+I\+O\+\_\+\+Set\+Level(\begin{DoxyParamCaption}\item[{}]{io,  }\item[{}]{level }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                       \(\backslash\)
+        IO\_SetOutput(io);   \(\backslash\)
+        if (!level)         \(\backslash\)
+            IO\_SetLow(io);  \(\backslash\)
+        else                \(\backslash\)
+            IO\_SetHigh(io); \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+This function sets the level of a specific io channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io} & the io channel to setup \\
+\hline
+{\em level} & the io level, optional value\+: \mbox{\hyperlink{a00014_a5bb885982ff66a2e0a0a45a8ee9c35e2}{H\+I\+GH}}, \mbox{\hyperlink{a00014_ab811d8c6ff3a505312d3276590444289}{L\+OW}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00014_a5a3ae496ca3e12098c74c9f13b20c554}\label{a00014_a5a3ae496ca3e12098c74c9f13b20c554}} 
+\index{I\+O.\+h@{I\+O.\+h}!R\+T\+\_\+\+I\+O\+\_\+\+Set\+Level16@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Level16}}
+\index{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Level16@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Level16}!I\+O.\+h@{I\+O.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Level16}{RT\_IO\_SetLevel16}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+I\+O\+\_\+\+Set\+Level16(\begin{DoxyParamCaption}\item[{}]{level }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(\mbox{\hyperlink{a00020_ac12676fdbfbffb9d4114bb751b6d4f74}{S\+Y\+S\+\_\+\+G\+P\+I\+O0\+\_\+\+R\+EG}}, (level))}
+
+
+
+This function sets the level of all 16 io channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & 16-\/bit number which defines 16 IO channels\textquotesingle{} level \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00014_ae0e5eb1313d8307cf1362e997ee6f25e}\label{a00014_ae0e5eb1313d8307cf1362e997ee6f25e}} 
+\index{I\+O.\+h@{I\+O.\+h}!R\+T\+\_\+\+I\+O\+\_\+\+Set\+Low@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Low}}
+\index{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Low@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Low}!I\+O.\+h@{I\+O.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Low}{RT\_IO\_SetLow}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+I\+O\+\_\+\+Set\+Low(\begin{DoxyParamCaption}\item[{}]{io }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(\mbox{\hyperlink{a00020_ac12676fdbfbffb9d4114bb751b6d4f74}{S\+Y\+S\+\_\+\+G\+P\+I\+O0\+\_\+\+R\+EG}}, $\sim$(1 $<$$<$ (io)))}
+
+
+
+This function sets a specific output io channel at L\+OW level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io} & Channel to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00014_a80f50c7de76076789b624b7fce7531c6}\label{a00014_a80f50c7de76076789b624b7fce7531c6}} 
+\index{I\+O.\+h@{I\+O.\+h}!R\+T\+\_\+\+I\+O\+\_\+\+Set\+Output@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Output}}
+\index{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Output@{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Output}!I\+O.\+h@{I\+O.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+I\+O\+\_\+\+Set\+Output}{RT\_IO\_SetOutput}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+I\+O\+\_\+\+Set\+Output(\begin{DoxyParamCaption}\item[{}]{io }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(\mbox{\hyperlink{a00020_a43d7770fdd59d1c008b789d8e9ae882b}{S\+Y\+S\+\_\+\+I\+O\+C\+T\+L\+\_\+\+R\+EG}}, (1 $<$$<$ (io)))}
+
+
+
+This function sets a specific channel at O\+U\+T\+P\+UT mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io} & Channel to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

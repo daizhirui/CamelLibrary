@@ -1,0 +1,22 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00179}{W\+D\+T.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00179_a369b51538a0ccf57dcdb30e12352a8c7}{RT\_WatchDog\_Setup}}(n, irq, rst);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00179_ae976b2fe76d4b216e68a771068434abc}{RT\_WatchDog\_Clear}}();
+
+uint4\_t \mbox{\hyperlink{a00179_acdfc8b8f0bddfd7382d49a22a92a5930}{RT\_WatchDog\_ReadValue}}();
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+RT\_WDT\_Clr();       \textcolor{comment}{// clear watch dog}
+RT\_WDT\_Set(8,0,1);  \textcolor{comment}{// set as 1s (8 * 1/8s), no interrupt, auto-reset}
+\end{DoxyCode}
+ 

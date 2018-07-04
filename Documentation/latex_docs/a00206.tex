@@ -1,0 +1,34 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00044}{Interrupt.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{int}  \mbox{\hyperlink{a00044_a397366295a7d6d3ed47e5e3d69549448}{RT\_SYSINT\_GetFlag}}(device);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00044_a5ddacb2147f802d2af2f507e41043504}{RT\_SYSINT\_On}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00044_a9c68b82296205323f01358d9a27813a9}{RT\_SYSINT\_Off}}();
+
+\textcolor{keywordtype}{void} RT\_EXTINT\_Setup(port, trigger);
+
+\textcolor{keywordtype}{void} RT\_EXTINT\_Off(port);
+
+\textcolor{keywordtype}{void} RT\_EXTINT\_Clear(port);
+
+\textcolor{keywordtype}{void} RT\_EXTINT\_ClearAll();
+
+\textcolor{keywordtype}{int}  RT\_EXTINT\_GetAllFlag();
+
+\textcolor{keywordtype}{int}  RT\_EXTINT\_GetFlag(port);
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\mbox{\hyperlink{a00044_a5ddacb2147f802d2af2f507e41043504}{RT\_SYSINT\_On}}();             \textcolor{comment}{// turn on system interrupt}
+RT\_EXTINT\_Clear(1);         \textcolor{comment}{// clear External Interrupt port 1}
+\end{DoxyCode}
+ 

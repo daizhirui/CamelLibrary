@@ -1,0 +1,31 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00053}{time.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00053_abcec88fd1699e238435a90f1b49f01fc}{RT\_RTC\_On}}()
+
+void \mbox{\hyperlink{a00053_ad065bdfa3138a773950a7d5e9e9f863a}{RT\_RTC\_Off}}()
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00053_a4342706ea208fe0adff35bfa3c78b87c}{RT\_RTC\_SetTimeFormat}}(format)
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00053_a8929da3f9ad422dd07f18d603c63b7b7}{RT\_RTC\_SetTime}}(year, month, day, hour, min, sec)
+
+\textcolor{keywordtype}{long} \mbox{\hyperlink{a00053_a61ac395d30cde55137bf04acaec570f0}{RT\_RTC\_Read32}}()
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00053_ae30dec10f77cab56a66ee070fbe6a490}{RT\_RTC\_GetTime}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *d\_year, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *d\_mon, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *d\_day,
+               \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *d\_hour, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *d\_min, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *d\_sec);
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00053_a960534919351d6e419e70a78521e87da}{RT\_DelayMiliseconds}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} ms);
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\mbox{\hyperlink{a00053_abcec88fd1699e238435a90f1b49f01fc}{RT\_RTC\_On}}();     \textcolor{comment}{// turn on RTC}
+\mbox{\hyperlink{a00053_ad065bdfa3138a773950a7d5e9e9f863a}{RT\_RTC\_Off}}();    \textcolor{comment}{// turn off RTC}
+\end{DoxyCode}
+ 

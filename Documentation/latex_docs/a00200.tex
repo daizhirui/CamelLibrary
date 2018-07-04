@@ -1,0 +1,27 @@
+To use this library, please include {\ttfamily \mbox{\hyperlink{a00005}{analog\+I\+O.\+h}}}.
+
+\subsubsection*{Interface}
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a499716b82c53672422efd8ad4fd4c9ab}{RT\_ADC\_TemperatureSensorOn}}();
+
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00005_a592b3503c0efb0d01f07c151ea6aaa91}{RT\_ADC\_TemperatureSensorOff}}();
+\end{DoxyCode}
+
+
+\subsubsection*{Example}
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\mbox{\hyperlink{a00005}{analogIO.h}}"}
+
+\textcolor{comment}{/* If you want to get an absolute value of the temperature,}
+\textcolor{comment}{ * you should make a calibration at first.}
+\textcolor{comment}{ */}
+\textcolor{keywordtype}{void} Example\_InternalTemperatureSensor() \{
+    \mbox{\hyperlink{a00005_a499716b82c53672422efd8ad4fd4c9ab}{RT\_ADC\_TemperatureSensorOn}}();
+    uint32\_t result = \mbox{\hyperlink{a00002_a5532ac461de55576a3875b29300c8536}{RT\_ADC\_SD\_Read}}();
+\}
+\end{DoxyCode}
+ 

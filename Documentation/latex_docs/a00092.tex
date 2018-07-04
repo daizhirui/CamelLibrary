@@ -1,0 +1,214 @@
+\hypertarget{a00092}{}\subsection{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/src/library/time.h File Reference}
+\label{a00092}\index{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/src/library/time.\+h@{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/src/library/time.\+h}}
+
+
+Real Time Module Library for M2.  
+
+
+{\ttfamily \#include \char`\"{}mcu.\+h\char`\"{}}\newline
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00092_abcec88fd1699e238435a90f1b49f01fc}{R\+T\+\_\+\+R\+T\+C\+\_\+\+On}}()~\mbox{\hyperlink{a00026_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(\mbox{\hyperlink{a00026_a327eb68b27f50c95ed803a79b7e86140}{R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG}}, 1)
+\begin{DoxyCompactList}\small\item\em Turn on R\+TC. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00092_ad065bdfa3138a773950a7d5e9e9f863a}{R\+T\+\_\+\+R\+T\+C\+\_\+\+Off}}()~\mbox{\hyperlink{a00026_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(\mbox{\hyperlink{a00026_a327eb68b27f50c95ed803a79b7e86140}{R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG}}, $\sim$1)
+\begin{DoxyCompactList}\small\item\em Turn off R\+TC. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00092_a6023ebffc90fff4ba8131242c8f4e1ed}{R\+T\+C\+\_\+12\+H\+O\+UR}}~0x1
+\begin{DoxyCompactList}\small\item\em Keyword R\+T\+C\+\_\+12\+H\+O\+UR. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00092_a4bb66ada65a9c9df51dd50402f75e35e}{R\+T\+C\+\_\+24\+H\+O\+UR}}~0x3
+\begin{DoxyCompactList}\small\item\em Keyword R\+T\+C\+\_\+24\+H\+O\+UR. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00092_a4342706ea208fe0adff35bfa3c78b87c}{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time\+Format}}(format)
+\begin{DoxyCompactList}\small\item\em Set the time format of R\+TC. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00092_a8929da3f9ad422dd07f18d603c63b7b7}{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time}}(year,  month,  day,  hour,  min,  sec)~\mbox{\hyperlink{a00026_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(\mbox{\hyperlink{a00026_a8743011c78786509baa272db827d3a12}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG}}, year $<$$<$ 26 $\vert$ mon $<$$<$ 22 $\vert$ day $<$$<$ 17 $\vert$ hour $<$$<$ 12 $\vert$ min $<$$<$ 6 $\vert$ sec);
+\begin{DoxyCompactList}\small\item\em This function sets the time of R\+TC. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00092_a61ac395d30cde55137bf04acaec570f0}{R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32}}()~\mbox{\hyperlink{a00026_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00026_a8743011c78786509baa272db827d3a12}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG}})
+\begin{DoxyCompactList}\small\item\em This function returns the R\+TC time raw value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00092_ae30dec10f77cab56a66ee070fbe6a490}{R\+T\+\_\+\+R\+T\+C\+\_\+\+Get\+Time}} (unsigned char $\ast$d\+\_\+year, unsigned char $\ast$d\+\_\+mon, unsigned char $\ast$d\+\_\+day, unsigned char $\ast$d\+\_\+hour, unsigned char $\ast$d\+\_\+min, unsigned char $\ast$d\+\_\+sec)
+\begin{DoxyCompactList}\small\item\em This function returns the R\+TC time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00092_a960534919351d6e419e70a78521e87da}{R\+T\+\_\+\+Delay\+Miliseconds}} (unsigned long ms)
+\begin{DoxyCompactList}\small\item\em This function delays specific time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Real Time Module Library for M2. 
+
+\begin{DoxyAuthor}{Author}
+Zhirui Dai 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16 Jun 2018 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+2018 Zhirui 
+\end{DoxyCopyright}
+
+
+\subsubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{a00092_ad065bdfa3138a773950a7d5e9e9f863a}\label{a00092_ad065bdfa3138a773950a7d5e9e9f863a}} 
+\index{time.\+h@{time.\+h}!R\+T\+\_\+\+R\+T\+C\+\_\+\+Off@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Off}}
+\index{R\+T\+\_\+\+R\+T\+C\+\_\+\+Off@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Off}!time.\+h@{time.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+R\+T\+C\+\_\+\+Off}{RT\_RTC\_Off}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+R\+T\+C\+\_\+\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00026_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(\mbox{\hyperlink{a00026_a327eb68b27f50c95ed803a79b7e86140}{R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG}}, $\sim$1)}
+
+
+
+Turn off R\+TC. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00092_abcec88fd1699e238435a90f1b49f01fc}\label{a00092_abcec88fd1699e238435a90f1b49f01fc}} 
+\index{time.\+h@{time.\+h}!R\+T\+\_\+\+R\+T\+C\+\_\+\+On@{R\+T\+\_\+\+R\+T\+C\+\_\+\+On}}
+\index{R\+T\+\_\+\+R\+T\+C\+\_\+\+On@{R\+T\+\_\+\+R\+T\+C\+\_\+\+On}!time.\+h@{time.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+R\+T\+C\+\_\+\+On}{RT\_RTC\_On}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+R\+T\+C\+\_\+\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00026_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(\mbox{\hyperlink{a00026_a327eb68b27f50c95ed803a79b7e86140}{R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG}}, 1)}
+
+
+
+Turn on R\+TC. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00092_a61ac395d30cde55137bf04acaec570f0}\label{a00092_a61ac395d30cde55137bf04acaec570f0}} 
+\index{time.\+h@{time.\+h}!R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32}}
+\index{R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32}!time.\+h@{time.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32}{RT\_RTC\_Read32}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00026_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00026_a8743011c78786509baa272db827d3a12}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG}})}
+
+
+
+This function returns the R\+TC time raw value. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00092_a8929da3f9ad422dd07f18d603c63b7b7}\label{a00092_a8929da3f9ad422dd07f18d603c63b7b7}} 
+\index{time.\+h@{time.\+h}!R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time}}
+\index{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time}!time.\+h@{time.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time}{RT\_RTC\_SetTime}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time(\begin{DoxyParamCaption}\item[{}]{year,  }\item[{}]{month,  }\item[{}]{day,  }\item[{}]{hour,  }\item[{}]{min,  }\item[{}]{sec }\end{DoxyParamCaption})~\mbox{\hyperlink{a00026_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(\mbox{\hyperlink{a00026_a8743011c78786509baa272db827d3a12}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG}}, year $<$$<$ 26 $\vert$ mon $<$$<$ 22 $\vert$ day $<$$<$ 17 $\vert$ hour $<$$<$ 12 $\vert$ min $<$$<$ 6 $\vert$ sec);}
+
+
+
+This function sets the time of R\+TC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & year value \\
+\hline
+{\em month} & month value \\
+\hline
+{\em day} & day value \\
+\hline
+{\em hour} & hour value \\
+\hline
+{\em min} & minute value \\
+\hline
+{\em sec} & second value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00092_a4342706ea208fe0adff35bfa3c78b87c}\label{a00092_a4342706ea208fe0adff35bfa3c78b87c}} 
+\index{time.\+h@{time.\+h}!R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time\+Format@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time\+Format}}
+\index{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time\+Format@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time\+Format}!time.\+h@{time.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time\+Format}{RT\_RTC\_SetTimeFormat}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time\+Format(\begin{DoxyParamCaption}\item[{}]{format }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                            \(\backslash\)
+        MemoryWrite32(\mbox{\hyperlink{a00026_a327eb68b27f50c95ed803a79b7e86140}{RTC\_CTL\_REG}}, format);      \(\backslash\)
+        MemoryWrite32(\mbox{\hyperlink{a00026_a8743011c78786509baa272db827d3a12}{RTC\_TIME\_REG}}, 0x00420000); \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+Set the time format of R\+TC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & The time format, optional value\+:
+\begin{DoxyCode}
+\mbox{\hyperlink{a00092_a6023ebffc90fff4ba8131242c8f4e1ed}{RTC\_12HOUR}}, \mbox{\hyperlink{a00092_a4bb66ada65a9c9df51dd50402f75e35e}{RTC\_24HOUR}}
+\end{DoxyCode}
+. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00092_a6023ebffc90fff4ba8131242c8f4e1ed}\label{a00092_a6023ebffc90fff4ba8131242c8f4e1ed}} 
+\index{time.\+h@{time.\+h}!R\+T\+C\+\_\+12\+H\+O\+UR@{R\+T\+C\+\_\+12\+H\+O\+UR}}
+\index{R\+T\+C\+\_\+12\+H\+O\+UR@{R\+T\+C\+\_\+12\+H\+O\+UR}!time.\+h@{time.\+h}}
+\paragraph{\texorpdfstring{R\+T\+C\+\_\+12\+H\+O\+UR}{RTC\_12HOUR}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+12\+H\+O\+UR~0x1}
+
+
+
+Keyword R\+T\+C\+\_\+12\+H\+O\+UR. 
+
+\begin{DoxyNote}{Note}
+Time format used in R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time\+Format 
+\end{DoxyNote}
+\mbox{\Hypertarget{a00092_a4bb66ada65a9c9df51dd50402f75e35e}\label{a00092_a4bb66ada65a9c9df51dd50402f75e35e}} 
+\index{time.\+h@{time.\+h}!R\+T\+C\+\_\+24\+H\+O\+UR@{R\+T\+C\+\_\+24\+H\+O\+UR}}
+\index{R\+T\+C\+\_\+24\+H\+O\+UR@{R\+T\+C\+\_\+24\+H\+O\+UR}!time.\+h@{time.\+h}}
+\paragraph{\texorpdfstring{R\+T\+C\+\_\+24\+H\+O\+UR}{RTC\_24HOUR}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+24\+H\+O\+UR~0x3}
+
+
+
+Keyword R\+T\+C\+\_\+24\+H\+O\+UR. 
+
+\begin{DoxyNote}{Note}
+Time format used in R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time\+Format 
+\end{DoxyNote}
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{a00092_a960534919351d6e419e70a78521e87da}\label{a00092_a960534919351d6e419e70a78521e87da}} 
+\index{time.\+h@{time.\+h}!R\+T\+\_\+\+Delay\+Miliseconds@{R\+T\+\_\+\+Delay\+Miliseconds}}
+\index{R\+T\+\_\+\+Delay\+Miliseconds@{R\+T\+\_\+\+Delay\+Miliseconds}!time.\+h@{time.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+Delay\+Miliseconds()}{RT\_DelayMiliseconds()}}
+{\footnotesize\ttfamily void R\+T\+\_\+\+Delay\+Miliseconds (\begin{DoxyParamCaption}\item[{unsigned long}]{ms }\end{DoxyParamCaption})}
+
+
+
+This function delays specific time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & time to delay, the unit is ms \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00092_ae30dec10f77cab56a66ee070fbe6a490}\label{a00092_ae30dec10f77cab56a66ee070fbe6a490}} 
+\index{time.\+h@{time.\+h}!R\+T\+\_\+\+R\+T\+C\+\_\+\+Get\+Time@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Get\+Time}}
+\index{R\+T\+\_\+\+R\+T\+C\+\_\+\+Get\+Time@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Get\+Time}!time.\+h@{time.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+R\+T\+C\+\_\+\+Get\+Time()}{RT\_RTC\_GetTime()}}
+{\footnotesize\ttfamily void R\+T\+\_\+\+R\+T\+C\+\_\+\+Get\+Time (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{d\+\_\+year,  }\item[{unsigned char $\ast$}]{d\+\_\+mon,  }\item[{unsigned char $\ast$}]{d\+\_\+day,  }\item[{unsigned char $\ast$}]{d\+\_\+hour,  }\item[{unsigned char $\ast$}]{d\+\_\+min,  }\item[{unsigned char $\ast$}]{d\+\_\+sec }\end{DoxyParamCaption})}
+
+
+
+This function returns the R\+TC time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d\+\_\+year} & year \\
+\hline
+{\em d\+\_\+mon} & month \\
+\hline
+{\em d\+\_\+day} & day \\
+\hline
+{\em d\+\_\+hour} & hour \\
+\hline
+{\em d\+\_\+min} & minute \\
+\hline
+{\em d\+\_\+sec} & second \\
+\hline
+\end{DoxyParams}

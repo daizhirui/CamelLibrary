@@ -1,0 +1,50 @@
+\hypertarget{a00005}{}\subsection{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/release/include/\+D\+ES.h File Reference}
+\label{a00005}\index{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/release/include/\+D\+E\+S.\+h@{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/release/include/\+D\+E\+S.\+h}}
+
+
+Data Encryption Standard Library for M2.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{a00134}{D\+E\+S\+\_\+\+Key}}
+\begin{DoxyCompactList}\small\item\em Type for storing key to be used by D\+ES Algorithm. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{a00138}{Message\+Data}}
+\begin{DoxyCompactList}\small\item\em Type for storing data to be processed by D\+ES Algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00005_a73b9a4e1e36c14eb7a44556ee767f106}\label{a00005_a73b9a4e1e36c14eb7a44556ee767f106}} 
+\#define \mbox{\hyperlink{a00005_a73b9a4e1e36c14eb7a44556ee767f106}{D\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+\_\+\+M\+O\+DE}}~0x0
+\begin{DoxyCompactList}\small\item\em Keyword D\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+\_\+\+M\+O\+DE. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{a00005_a874730b46afa0dd86cf7e3f60bd51165}\label{a00005_a874730b46afa0dd86cf7e3f60bd51165}} 
+\#define \mbox{\hyperlink{a00005_a874730b46afa0dd86cf7e3f60bd51165}{D\+E\+S\+\_\+\+D\+E\+C\+R\+Y\+P\+T\+\_\+\+M\+O\+DE}}~0x1
+\begin{DoxyCompactList}\small\item\em Keyword D\+E\+S\+\_\+\+D\+E\+C\+R\+Y\+P\+T\+\_\+\+M\+O\+DE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00005_a3ef9fea40f3c593468a2bb7862abfa0d}\label{a00005_a3ef9fea40f3c593468a2bb7862abfa0d}} 
+\mbox{\hyperlink{a00134}{D\+E\+S\+\_\+\+Key}} $\ast$ {\bfseries D\+E\+S\+\_\+generate\+Sub\+Keys} (const \mbox{\hyperlink{a00134}{D\+E\+S\+\_\+\+Key}} original\+Key)
+\item 
+\mbox{\Hypertarget{a00005_a0c6c5c79645bfd3166aeb494b41a82f8}\label{a00005_a0c6c5c79645bfd3166aeb494b41a82f8}} 
+\mbox{\hyperlink{a00138}{Message\+Data}} {\bfseries D\+E\+S\+\_\+process} (\mbox{\hyperlink{a00138}{Message\+Data}} original\+Data, \mbox{\hyperlink{a00134}{D\+E\+S\+\_\+\+Key}} $\ast$sub\+Keys, uint8\+\_\+t mode)
+\item 
+\mbox{\Hypertarget{a00005_a26f09735ce4f946320fee32bfa4a5ef5}\label{a00005_a26f09735ce4f946320fee32bfa4a5ef5}} 
+\mbox{\hyperlink{a00138}{Message\+Data}} {\bfseries D\+ES} (\mbox{\hyperlink{a00138}{Message\+Data}} original\+Data, \mbox{\hyperlink{a00134}{D\+E\+S\+\_\+\+Key}} original\+Key, uint8\+\_\+t mode)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Data Encryption Standard Library for M2. 
+
+\begin{DoxyAuthor}{Author}
+Zhirui Dai 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14 Jun 2018 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+2018 Zhirui 
+\end{DoxyCopyright}
