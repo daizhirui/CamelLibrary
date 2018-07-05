@@ -1,12 +1,17 @@
-# CamelStudio_Library
+# Camel_Library
 Official Library for Camel Micro products. This library is embedded in [CamelStudioX](https://github.com/daizhirui/CamelStudioX_Mac/releases/latest).
 ----
 
 ## Documentation
 
-[CamelStudio Library Documentation](https://daizhirui.github.io/CamelStudio_Library/)
+[Camel Library Documentation](https://daizhirui.github.io/CamelStudio_Library/)
 
 ## History
+
+### 04.07.2018
+
+- Reorganize the source files.
+- Update the theme of the documentation site.
 
 ### 24.06.2018
 
