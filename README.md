@@ -4,7 +4,7 @@ Official Library for Camel Micro products. This library is embedded in [CamelStu
 
 ## Documentation
 
-[Camel Library Documentation](https://daizhirui.github.io/CamelStudio_Library/)
+[Camel Library Documentation](https://daizhirui.github.io/Camel_Library/)
 
 ## History
 
@@ -12,6 +12,7 @@ Official Library for Camel Micro products. This library is embedded in [CamelStu
 
 - Reorganize the source files.
 - Update the theme of the documentation site.
+- Change the repository name from `CamelStudio_Library` to `Camel_Library`
 
 ### 24.06.2018
 
