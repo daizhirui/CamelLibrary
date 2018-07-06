@@ -11,9 +11,9 @@ Watchdog Library for M2.
 \item 
 \#define \mbox{\hyperlink{a00059_a369b51538a0ccf57dcdb30e12352a8c7}{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Setup}}(n,  irq,  rst)
 \begin{DoxyCompactList}\small\item\em This function set the W\+DT app. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00059_ae976b2fe76d4b216e68a771068434abc}{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear}}()~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(\mbox{\hyperlink{a00020_a2560b8d7465c0ee0112852677004099f}{W\+D\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG}}, 1)
+\#define \mbox{\hyperlink{a00059_ae976b2fe76d4b216e68a771068434abc}{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear}}()~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dabca167e95871e42fa1108c2fd2cae6b3}{W\+D\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG}}, 1)
 \begin{DoxyCompactList}\small\item\em Clear Watchdog. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00059_acdfc8b8f0bddfd7382d49a22a92a5930}{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value}}()~\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00020_ab04902f3d750cf4826ded8350ad5adac}{W\+D\+T\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}})
+\#define \mbox{\hyperlink{a00059_acdfc8b8f0bddfd7382d49a22a92a5930}{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value}}()~\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da91e0f7299a076e5fae19c026a579e1bb}{W\+D\+T\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}})
 \begin{DoxyCompactList}\small\item\em Read watchdog value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -36,7 +36,7 @@ John \& Jack, Zhirui Dai
 \index{W\+D\+T.\+h@{W\+D\+T.\+h}!R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear@{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear}}
 \index{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear@{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear}!W\+D\+T.\+h@{W\+D\+T.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear}{RT\_WatchDog\_Clear}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(\mbox{\hyperlink{a00020_a2560b8d7465c0ee0112852677004099f}{W\+D\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG}}, 1)}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+Watch\+Dog\+\_\+\+Clear(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dabca167e95871e42fa1108c2fd2cae6b3}{W\+D\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG}}, 1)}
 
 
 
@@ -49,7 +49,7 @@ void
 \index{W\+D\+T.\+h@{W\+D\+T.\+h}!R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value@{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value}}
 \index{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value@{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value}!W\+D\+T.\+h@{W\+D\+T.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value}{RT\_WatchDog\_ReadValue}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00020_ab04902f3d750cf4826ded8350ad5adac}{W\+D\+T\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}})}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+Watch\+Dog\+\_\+\+Read\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da91e0f7299a076e5fae19c026a579e1bb}{W\+D\+T\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}})}
 
 
 
@@ -67,8 +67,8 @@ uint4\+\_\+t The number of 1/8s.
 {\bfseries Value\+:}
 \begin{DoxyCode}
 \{                                                                    \(\backslash\)
-        MemoryWrite32(\mbox{\hyperlink{a00020_a71148e54881898faf1a67c8210fb61b3}{WDT\_CTL0\_REG}}, (n << 4 | irq << 2 | rst << 1 | 1)); \(\backslash\)
-        MemoryOr32(\mbox{\hyperlink{a00020_ab34acec79daf4fcc12a662cde9e75df7}{SYS\_CTL0\_REG}}, irq);                                   \(\backslash\)
+        MemoryWrite32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dad29dfaec986c68d5a49517de7f268504}{WDT\_CTL0\_REG}}, (n << 4 | irq << 2 | rst << 1 | 1)); \(\backslash\)
+        MemoryOr32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5}{SYS\_CTL0\_REG}}, irq);                                   \(\backslash\)
     \}
 \end{DoxyCode}
 

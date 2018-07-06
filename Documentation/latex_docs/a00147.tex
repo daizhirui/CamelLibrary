@@ -54,7 +54,7 @@ uint32\_t \mbox{\hyperlink{a00002_a5532ac461de55576a3875b29300c8536}{RT\_ADC\_SD
         \_\_asm\_\_(\textcolor{stringliteral}{"nop"});
     \mbox{\hyperlink{a00002_ac75cab97ce7cce47671dd8ef34e920d8}{RT\_ADC\_SD\_Start}}();
     \textcolor{keywordflow}{while}(!\mbox{\hyperlink{a00002_a7fd97b414a33170e6013c88f37e028a9}{RT\_ADC\_SD\_DataReady}}());
-    uint32\_t result = \mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{MemoryRead32}}(\mbox{\hyperlink{a00020_af59f8074e13f7a5c80f07dc7c27c0610}{AD\_READ\_REG}}) & 0xfffff;
+    uint32\_t result = \mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{MemoryRead32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dacb460996f05b78aea23f3fa2722cc548}{AD\_READ\_REG}}) & 0xfffff;
     \textcolor{comment}{// ...}
 \}
 \end{DoxyCode}

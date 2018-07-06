@@ -5,7 +5,7 @@
 * @copyright 2018 Zhirui
 * @brief M2 micro core unit
 */
-#include <stdint.h>
+
 #include "mcu.h"
 
 inline void RT_MCU_JumpTo(unsigned long address)

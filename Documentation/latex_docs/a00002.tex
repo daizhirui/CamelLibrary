@@ -160,8 +160,8 @@ Ground Pin Keyword \mbox{\Hypertarget{a00002_acb989d89893ac99af984979cb9e8df2a}\
 {\bfseries Value\+:}
 \begin{DoxyCode}
 \{                                          \(\backslash\)
-        MemoryAnd32(\mbox{\hyperlink{a00020_a7c90725a1b307a000a44211bcb115a47}{AD\_CTL0\_REG}}, ~(0x3 << 1)); \(\backslash\)
-        MemoryOr32(\mbox{\hyperlink{a00020_a7c90725a1b307a000a44211bcb115a47}{AD\_CTL0\_REG}}, (mode << 1));  \(\backslash\)
+        MemoryAnd32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da479497b755dee411ad6348cae2ef26b4}{AD\_CTL0\_REG}}, ~(0x3 << 1)); \(\backslash\)
+        MemoryOr32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da479497b755dee411ad6348cae2ef26b4}{AD\_CTL0\_REG}}, (mode << 1));  \(\backslash\)
     \}
 \end{DoxyCode}
 
@@ -188,8 +188,8 @@ void
 {\bfseries Value\+:}
 \begin{DoxyCode}
 \{                                          \(\backslash\)
-        MemoryAnd32(\mbox{\hyperlink{a00020_a7c90725a1b307a000a44211bcb115a47}{AD\_CTL0\_REG}}, ~(0x3 << 3)); \(\backslash\)
-        MemoryOr32(\mbox{\hyperlink{a00020_a7c90725a1b307a000a44211bcb115a47}{AD\_CTL0\_REG}}, (mode << 3));  \(\backslash\)
+        MemoryAnd32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da479497b755dee411ad6348cae2ef26b4}{AD\_CTL0\_REG}}, ~(0x3 << 3)); \(\backslash\)
+        MemoryOr32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da479497b755dee411ad6348cae2ef26b4}{AD\_CTL0\_REG}}, (mode << 3));  \(\backslash\)
     \}
 \end{DoxyCode}
 
@@ -213,8 +213,8 @@ void
 {\bfseries Value\+:}
 \begin{DoxyCode}
 \{                                        \(\backslash\)
-        MemoryAnd32(\mbox{\hyperlink{a00020_a7c90725a1b307a000a44211bcb115a47}{AD\_CTL0\_REG}}, ~(1 << 6)); \(\backslash\)
-        MemoryOr32(\mbox{\hyperlink{a00020_a7c90725a1b307a000a44211bcb115a47}{AD\_CTL0\_REG}}, source << 6);\(\backslash\)
+        MemoryAnd32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da479497b755dee411ad6348cae2ef26b4}{AD\_CTL0\_REG}}, ~(1 << 6)); \(\backslash\)
+        MemoryOr32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da479497b755dee411ad6348cae2ef26b4}{AD\_CTL0\_REG}}, source << 6);\(\backslash\)
     \}
 \end{DoxyCode}
 
@@ -268,8 +268,8 @@ void
 {\bfseries Value\+:}
 \begin{DoxyCode}
 \{                                          \(\backslash\)
-        MemoryAnd32(\mbox{\hyperlink{a00020_a7c90725a1b307a000a44211bcb115a47}{AD\_CTL0\_REG}}, ~(0x3 << 9)); \(\backslash\)
-        MemoryOr32(\mbox{\hyperlink{a00020_a7c90725a1b307a000a44211bcb115a47}{AD\_CTL0\_REG}}, (resistor << 9));   \(\backslash\)
+        MemoryAnd32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da479497b755dee411ad6348cae2ef26b4}{AD\_CTL0\_REG}}, ~(0x3 << 9)); \(\backslash\)
+        MemoryOr32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da479497b755dee411ad6348cae2ef26b4}{AD\_CTL0\_REG}}, (resistor << 9));   \(\backslash\)
     \}
 \end{DoxyCode}
 
@@ -293,10 +293,10 @@ void
 {\bfseries Value\+:}
 \begin{DoxyCode}
 \{                                                               \(\backslash\)
-    MemoryOr32((\mbox{\hyperlink{a00020_ac94b0659ef32086a6752672082c0b3ed}{T0\_CTL0\_REG}}|channel), 1<<4);                    \(\backslash\)
-    MemoryAnd32((\mbox{\hyperlink{a00020_ac94b0659ef32086a6752672082c0b3ed}{T0\_CTL0\_REG}}|channel), ~(0x3 << 6));            \(\backslash\)
-    MemoryWrite32((\mbox{\hyperlink{a00020_a02a329d71e5fe86e9a0a8513ea5e1630}{T0\_CLK\_REG}}|channel), 1);                     \(\backslash\)
-    MemoryWrite32((\mbox{\hyperlink{a00020_a857679d0d1c771053cac56dc76c38caa}{T0\_REF\_REG}}|channel), value * 255/p\_vdd5);    \(\backslash\)
+    MemoryOr32((\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da869abf9d87f78f45a0e07ad352abb39e}{T0\_CTL0\_REG}}|channel), 1<<4);                    \(\backslash\)
+    MemoryAnd32((\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da869abf9d87f78f45a0e07ad352abb39e}{T0\_CTL0\_REG}}|channel), ~(0x3 << 6));            \(\backslash\)
+    MemoryWrite32((\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da944380f6d792e04a4c2e84dc668581a3}{T0\_CLK\_REG}}|channel), 1);                     \(\backslash\)
+    MemoryWrite32((\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da7b512fe986ef45d3f84daa6bf6733200}{T0\_REF\_REG}}|channel), value * 255/p\_vdd5);    \(\backslash\)
 \}
 \end{DoxyCode}
 
@@ -334,8 +334,8 @@ void
 \begin{DoxyCode}
 \{                                                   \(\backslash\)
         RT\_ADC\_V2P\_SetResistor(0);                      \(\backslash\)
-        MemoryAnd32(\mbox{\hyperlink{a00020_aeca2931f15b40d772a94a66e4641619e}{AD\_OPO\_REG}}, ~\mbox{\hyperlink{a00002_af0663f5e9fee7a904ad95d1a4ecdaebda8866b250a87989e76add11875358e4ae}{OPO\_EXCHANGE\_PIN}});     \(\backslash\)
-        MemoryOr32(\mbox{\hyperlink{a00020_aeca2931f15b40d772a94a66e4641619e}{AD\_OPO\_REG}}, \textcolor{keywordflow}{switch});                 \(\backslash\)
+        MemoryAnd32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}{AD\_OPO\_REG}}, ~\mbox{\hyperlink{a00002_af0663f5e9fee7a904ad95d1a4ecdaebda8866b250a87989e76add11875358e4ae}{OPO\_EXCHANGE\_PIN}});     \(\backslash\)
+        MemoryOr32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}{AD\_OPO\_REG}}, \textcolor{keywordflow}{switch});                 \(\backslash\)
     \}
 \end{DoxyCode}
 
@@ -364,8 +364,8 @@ void
 \{                                               \(\backslash\)
         RT\_ADC\_V2P\_SetResistor(\mbox{\hyperlink{a00002_a80255c41c3764feff9b79664f15feb46aa035ba8725fe8565c5505a295c22ea8e}{V2P\_185K}});           \(\backslash\)
         RT\_ADC\_TemperatureSensorOff();              \(\backslash\)
-        MemoryAnd32(\mbox{\hyperlink{a00020_aeca2931f15b40d772a94a66e4641619e}{AD\_OPO\_REG}}, ~\mbox{\hyperlink{a00002_af0663f5e9fee7a904ad95d1a4ecdaebda8866b250a87989e76add11875358e4ae}{OPO\_EXCHANGE\_PIN}}); \(\backslash\)
-        MemoryOr32(\mbox{\hyperlink{a00020_aeca2931f15b40d772a94a66e4641619e}{AD\_OPO\_REG}}, pin);                \(\backslash\)
+        MemoryAnd32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}{AD\_OPO\_REG}}, ~\mbox{\hyperlink{a00002_af0663f5e9fee7a904ad95d1a4ecdaebda8866b250a87989e76add11875358e4ae}{OPO\_EXCHANGE\_PIN}}); \(\backslash\)
+        MemoryOr32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}{AD\_OPO\_REG}}, pin);                \(\backslash\)
     \}
 \end{DoxyCode}
 
@@ -392,8 +392,8 @@ void
 {\bfseries Value\+:}
 \begin{DoxyCode}
 \{                                                                                    \(\backslash\)
-        MemoryAnd32(\mbox{\hyperlink{a00020_aeca2931f15b40d772a94a66e4641619e}{AD\_OPO\_REG}}, ~(0xff << 8));                                           \(\backslash\)
-        MemoryOr32(\mbox{\hyperlink{a00020_aeca2931f15b40d772a94a66e4641619e}{AD\_OPO\_REG}}, (((Pin << 7) + (Pgain << 4) + (Nin << 3) + Ngain) << 8)); \(\backslash\)
+        MemoryAnd32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}{AD\_OPO\_REG}}, ~(0xff << 8));                                           \(\backslash\)
+        MemoryOr32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}{AD\_OPO\_REG}}, (((Pin << 7) + (Pgain << 4) + (Nin << 3) + Ngain) << 8)); \(\backslash\)
     \}
 \end{DoxyCode}
 
@@ -426,8 +426,8 @@ void
 {\bfseries Value\+:}
 \begin{DoxyCode}
 \{                                           \(\backslash\)
-        MemoryAnd32(\mbox{\hyperlink{a00020_a7c90725a1b307a000a44211bcb115a47}{AD\_CTL0\_REG}}, ~(1 << 15));   \(\backslash\)
-        MemoryOr32(\mbox{\hyperlink{a00020_a7c90725a1b307a000a44211bcb115a47}{AD\_CTL0\_REG}}, (mode << 15));  \(\backslash\)
+        MemoryAnd32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da479497b755dee411ad6348cae2ef26b4}{AD\_CTL0\_REG}}, ~(1 << 15));   \(\backslash\)
+        MemoryOr32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da479497b755dee411ad6348cae2ef26b4}{AD\_CTL0\_REG}}, (mode << 15));  \(\backslash\)
     \}
 \end{DoxyCode}
 
@@ -454,8 +454,8 @@ void
 {\bfseries Value\+:}
 \begin{DoxyCode}
 \{                                                                                \(\backslash\)
-        MemoryAnd32(\mbox{\hyperlink{a00020_aeca2931f15b40d772a94a66e4641619e}{AD\_OPO\_REG}}, ~(0xf << 4));                                        \(\backslash\)
-        MemoryOr32(\mbox{\hyperlink{a00020_aeca2931f15b40d772a94a66e4641619e}{AD\_OPO\_REG}}, ((ch0 << 4) + (ch1 << 5) + (ch2 << 6) + (ch3 << 7))); \(\backslash\)
+        MemoryAnd32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}{AD\_OPO\_REG}}, ~(0xf << 4));                                        \(\backslash\)
+        MemoryOr32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}{AD\_OPO\_REG}}, ((ch0 << 4) + (ch1 << 5) + (ch2 << 6) + (ch3 << 7))); \(\backslash\)
     \}
 \end{DoxyCode}
 
@@ -519,8 +519,8 @@ void
 {\bfseries Value\+:}
 \begin{DoxyCode}
 \{                                       \(\backslash\)
-        MemoryAnd32(\mbox{\hyperlink{a00020_aeca2931f15b40d772a94a66e4641619e}{AD\_OPO\_REG}}, ~(1 << 3)); \(\backslash\)
-        MemoryOr32(\mbox{\hyperlink{a00020_aeca2931f15b40d772a94a66e4641619e}{AD\_OPO\_REG}}, mode << 3);  \(\backslash\)
+        MemoryAnd32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}{AD\_OPO\_REG}}, ~(1 << 3)); \(\backslash\)
+        MemoryOr32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}{AD\_OPO\_REG}}, mode << 3);  \(\backslash\)
     \}
 \end{DoxyCode}
 
@@ -550,11 +550,11 @@ void
         RT\_OPO\_SetChannel(\mbox{\hyperlink{a00020_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}}, \mbox{\hyperlink{a00020_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}}, \mbox{\hyperlink{a00020_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}}, \mbox{\hyperlink{a00020_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}});    \(\backslash\)
         if (mode)                                 \(\backslash\)
         \{                                         \(\backslash\)
-            MemoryAnd32(\mbox{\hyperlink{a00020_aeca2931f15b40d772a94a66e4641619e}{AD\_OPO\_REG}}, ~(0xf << 4)); \(\backslash\)
-            MemoryOr32(\mbox{\hyperlink{a00020_aeca2931f15b40d772a94a66e4641619e}{AD\_OPO\_REG}}, (1 << 1));     \(\backslash\)
+            MemoryAnd32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}{AD\_OPO\_REG}}, ~(0xf << 4)); \(\backslash\)
+            MemoryOr32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}{AD\_OPO\_REG}}, (1 << 1));     \(\backslash\)
         \}                                         \mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{\(\backslash\)}}
 \mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{        else                                      \(\backslash\)}}
-\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{            MemoryAnd32}}(\mbox{\hyperlink{a00020_aeca2931f15b40d772a94a66e4641619e}{AD\_OPO\_REG}}, ~(1 << 1));   \(\backslash\)
+\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{            MemoryAnd32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}{AD\_OPO\_REG}}, ~(1 << 1));   \(\backslash\)
     \}
 \end{DoxyCode}
 
@@ -611,8 +611,8 @@ void
 {\bfseries Value\+:}
 \begin{DoxyCode}
 \{                                        \(\backslash\)
-        MemoryAnd32(\mbox{\hyperlink{a00020_a7c90725a1b307a000a44211bcb115a47}{AD\_CTL0\_REG}}, ~(1 << 7)); \(\backslash\)
-        MemoryOr32(\mbox{\hyperlink{a00020_a7c90725a1b307a000a44211bcb115a47}{AD\_CTL0\_REG}}, op << 7);    \(\backslash\)
+        MemoryAnd32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da479497b755dee411ad6348cae2ef26b4}{AD\_CTL0\_REG}}, ~(1 << 7)); \(\backslash\)
+        MemoryOr32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da479497b755dee411ad6348cae2ef26b4}{AD\_CTL0\_REG}}, op << 7);    \(\backslash\)
     \}
 \end{DoxyCode}
 
@@ -644,15 +644,15 @@ V\+C\+OM
 
 Analog output channels. \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+0@{A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+0}!analog\+I\+O.\+h@{analog\+I\+O.\+h}}\index{analog\+I\+O.\+h@{analog\+I\+O.\+h}!A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+0@{A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+0}}}\mbox{\Hypertarget{a00002_a4d490931c48f5330b52533397251335cacddac909ab33947534e48dd4db264d74}\label{a00002_a4d490931c48f5330b52533397251335cacddac909ab33947534e48dd4db264d74}} 
-A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+0&Relative value of \mbox{\hyperlink{a00020_ac94b0659ef32086a6752672082c0b3ed}{T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}} to \mbox{\hyperlink{a00020_ac94b0659ef32086a6752672082c0b3ed}{T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}. \\
+A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+0&Relative value of \mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da869abf9d87f78f45a0e07ad352abb39e}{T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}} to \mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da869abf9d87f78f45a0e07ad352abb39e}{T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+1@{A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+1}!analog\+I\+O.\+h@{analog\+I\+O.\+h}}\index{analog\+I\+O.\+h@{analog\+I\+O.\+h}!A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+1@{A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+1}}}\mbox{\Hypertarget{a00002_a4d490931c48f5330b52533397251335cae3e86cb61e54d2d71a936d57768b2c04}\label{a00002_a4d490931c48f5330b52533397251335cae3e86cb61e54d2d71a936d57768b2c04}} 
-A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+1&Relative value of \mbox{\hyperlink{a00020_a55600694c3c73a1019f78d306f474fa1}{T1\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}} to \mbox{\hyperlink{a00020_ac94b0659ef32086a6752672082c0b3ed}{T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}. \\
+A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+1&Relative value of \mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da38632250c2e72df96fcaa3f8bd8ecc5e}{T1\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}} to \mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da869abf9d87f78f45a0e07ad352abb39e}{T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+2@{A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+2}!analog\+I\+O.\+h@{analog\+I\+O.\+h}}\index{analog\+I\+O.\+h@{analog\+I\+O.\+h}!A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+2@{A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+2}}}\mbox{\Hypertarget{a00002_a4d490931c48f5330b52533397251335ca778485bb7dac9a00dadf2d72aa1606e1}\label{a00002_a4d490931c48f5330b52533397251335ca778485bb7dac9a00dadf2d72aa1606e1}} 
-A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+2&Relative value of \mbox{\hyperlink{a00020_a5853553391e986211306d4f29ab31e47}{T2\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}} to \mbox{\hyperlink{a00020_ac94b0659ef32086a6752672082c0b3ed}{T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}. \\
+A\+N\+A\+L\+O\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+2&Relative value of \mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475}{T2\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}} to \mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da869abf9d87f78f45a0e07ad352abb39e}{T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}. \\
 \hline
 
 \end{DoxyEnumFields}
@@ -846,7 +846,7 @@ V2\+P\+\_\+185K&Resistor 185K \\
 Clear the state of Analog Digit Converter. 
 
 \begin{DoxyNote}{Note}
-Write 1 to \mbox{\hyperlink{a00020_a909cbad2fef284b18a87a5bb1395ef11}{A\+D\+\_\+\+C\+L\+R\+\_\+\+R\+EG}} 
+Write 1 to \mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da03a55605f114ad34a5768f096cec3d9d}{A\+D\+\_\+\+C\+L\+R\+\_\+\+R\+EG}} 
 \end{DoxyNote}
 \begin{DoxyReturn}{Returns}
 void 
@@ -920,7 +920,7 @@ uint32\+\_\+t SD result.
 Start SD accumulate. 
 
 \begin{DoxyNote}{Note}
-When writing to \mbox{\hyperlink{a00020_af59f8074e13f7a5c80f07dc7c27c0610}{A\+D\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}}, it will start df conversion, if SD is enabled and choose trig pwm. SD flag or irq will be asserted upon conversion completed. 
+When writing to \mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dacb460996f05b78aea23f3fa2722cc548}{A\+D\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}}, it will start df conversion, if SD is enabled and choose trig pwm. SD flag or irq will be asserted upon conversion completed. 
 \end{DoxyNote}
 \begin{DoxyReturn}{Returns}
 void 

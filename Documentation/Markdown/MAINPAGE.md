@@ -2,7 +2,7 @@
 
 ## Digital
 
-- [General Input Output](@ref IO)
+- [General Purpose Input Output](@ref IO)
 - [UART](@ref UART)
 - [SPI](@ref SPI)
 - [Time Counter 0 (TC0)](@ref TC0)

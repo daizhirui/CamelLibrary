@@ -180,7 +180,7 @@ var searchData=
   ['real_20time_20counter_20library_20for_20m2',['Real Time Counter Library for M2',['../a00157.html',1,'']]],
   ['rtc_5f12hour',['RTC_12HOUR',['../a00053.html#a6023ebffc90fff4ba8131242c8f4e1ed',1,'time.h']]],
   ['rtc_5f24hour',['RTC_24HOUR',['../a00053.html#a4bb66ada65a9c9df51dd50402f75e35e',1,'time.h']]],
-  ['rtc_5fclr_5freg',['RTC_CLR_REG',['../a00020.html#a5639ee9c54f77e12c49d79e44bfdf60f',1,'mcu.h']]],
-  ['rtc_5fctl_5freg',['RTC_CTL_REG',['../a00020.html#a327eb68b27f50c95ed803a79b7e86140',1,'mcu.h']]],
-  ['rtc_5ftime_5freg',['RTC_TIME_REG',['../a00020.html#a8743011c78786509baa272db827d3a12',1,'mcu.h']]]
+  ['rtc_5fclr_5freg',['RTC_CLR_REG',['../a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dabc51699db6321ee7f233162735869f70',1,'mcu.h']]],
+  ['rtc_5fctl_5freg',['RTC_CTL_REG',['../a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dac218ded0714563f03f40814bf16da7c7',1,'mcu.h']]],
+  ['rtc_5ftime_5freg',['RTC_TIME_REG',['../a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf375f171cb828ab3d87d45724750256d',1,'mcu.h']]]
 ];

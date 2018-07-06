@@ -156,8 +156,5 @@ var searchData=
   ['rt_5fwatchdog_5freadvalue',['RT_WatchDog_ReadValue',['../a00059.html#acdfc8b8f0bddfd7382d49a22a92a5930',1,'WDT.h']]],
   ['rt_5fwatchdog_5fsetup',['RT_WatchDog_Setup',['../a00059.html#a369b51538a0ccf57dcdb30e12352a8c7',1,'WDT.h']]],
   ['rtc_5f12hour',['RTC_12HOUR',['../a00053.html#a6023ebffc90fff4ba8131242c8f4e1ed',1,'time.h']]],
-  ['rtc_5f24hour',['RTC_24HOUR',['../a00053.html#a4bb66ada65a9c9df51dd50402f75e35e',1,'time.h']]],
-  ['rtc_5fclr_5freg',['RTC_CLR_REG',['../a00020.html#a5639ee9c54f77e12c49d79e44bfdf60f',1,'mcu.h']]],
-  ['rtc_5fctl_5freg',['RTC_CTL_REG',['../a00020.html#a327eb68b27f50c95ed803a79b7e86140',1,'mcu.h']]],
-  ['rtc_5ftime_5freg',['RTC_TIME_REG',['../a00020.html#a8743011c78786509baa272db827d3a12',1,'mcu.h']]]
+  ['rtc_5f24hour',['RTC_24HOUR',['../a00053.html#a4bb66ada65a9c9df51dd50402f75e35e',1,'time.h']]]
 ];
