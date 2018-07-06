@@ -25,7 +25,7 @@ void RT_MCU_JumpTo(unsigned long address);
 
 void RT_MCU_SetSystemClock(uint32_t mode);
 
-void RT_Clr_Sram();
+void RT_Sram_Clear();
 ```
 
 ## Example
