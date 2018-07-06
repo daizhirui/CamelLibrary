@@ -1,29 +1,18 @@
-//################################################################
-// TITLE: debugger
-// AUTHOR: Bill
-// DATE CREATED: 09/26/2015
-// FILENAME: gdb.c
-// COPYRIGHT: Copyright (C) Camel Microelectronics, Inc.
-// DESCRIPTION:
-// Rev No.: V1.0
-//
-//
-//
-//################################################################
-
+/**
+* @file interrupt.c
+* @author Zhirui Dai
+* @date 6 Jul 2018
+* @copyright 2018 Zhirui
+* @brief Interrupt function
+* @note  This file is already merged into isr.s !!
+*/
 #include "mcu.h"
 
 void user_interrupt(void);
-void before_user_interrupt(void) __attribute__ ((weak));
-
-void before_user_interrupt(void)
-{
-	user_interrupt();
-}
 
 void interrupt(void)
 {
 	//go to handler @0x10000008
-	MemoryWrite(USER_INT, 0x1);
-	before_user_interrupt();
+	MemoryWrite32(USER_INT, 0x1);
+	user_interrupt();
 }

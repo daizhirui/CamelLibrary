@@ -186,34 +186,33 @@ M2 micro core unit.
 \#define \mbox{\hyperlink{a00020_a04c34919a950117ae7da2dc5a235622b}{Memory\+Bit\+Off}}(addr,  val)~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(addr,$\sim$(1$<$$<$(val)))
 \begin{DoxyCompactList}\small\item\em Set a specific bit of a 32-\/bit data from a specific address to 0. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{a00020_ae49e41753dbce64185d380d307ade78d}{Memory\+Bit\+Switch}}(addr,  val)~($\ast$(volatile uint32\+\_\+t$\ast$)(addr)$^\wedge$=(1$<$$<$(val)))
-\begin{DoxyCompactList}\small\item\em Set a specific bit of a 32-\/bit data from a specific address to opposite state. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00020_a38c3a81fc94bff4cb6654061b7d21909}{Jump\+To}}(address)
-\begin{DoxyCompactList}\small\item\em Jump to a specific address. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00020_adca9cbed6d30219f8812ba08ab0aaa7f}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M}}~(0x0$<$$<$12)
-\item 
-\#define \mbox{\hyperlink{a00020_a8ddc6e06a91f5506443cdef0458729df}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M}}~(0x1$<$$<$12)
-\item 
-\#define \mbox{\hyperlink{a00020_ab6421bc33962d86e356ed816dfac41b6}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M}}~(0x3$<$$<$12)
-\item 
-\#define \mbox{\hyperlink{a00020_a017f8665ec51267680fc0e536db19c13}{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}}(mode)
-\begin{DoxyCompactList}\small\item\em Set the frequency of the system clock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set a specific bit of a 32-\/bit data from a specific address to opposite state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{a00020_a3d987633d7a3ca10c14905a807b62eb1}\label{a00020_a3d987633d7a3ca10c14905a807b62eb1}} 
 typedef void($\ast$ \mbox{\hyperlink{a00020_a3d987633d7a3ca10c14905a807b62eb1}{Func\+Ptr}}) (void)
-\begin{DoxyCompactList}\small\item\em Function pointer type (void)-\/$>$void definition. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{a00020_a0891965816a5b721b07f7bebefaf7430}\label{a00020_a0891965816a5b721b07f7bebefaf7430}} 
+\item 
 typedef void($\ast$ \mbox{\hyperlink{a00020_a0891965816a5b721b07f7bebefaf7430}{Func\+Ptr1}}) (uint32\+\_\+t)
-\begin{DoxyCompactList}\small\item\em Function pointer type (uint32\+\_\+t)-\/$>$void definition. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{a00020_a331a88eeefe11112bb8fe1b43dd777b8}\label{a00020_a331a88eeefe11112bb8fe1b43dd777b8}} 
+\item 
 typedef void($\ast$ \mbox{\hyperlink{a00020_a331a88eeefe11112bb8fe1b43dd777b8}{Func\+Ptr2}}) (uint32\+\_\+t, uint32\+\_\+t)
-\begin{DoxyCompactList}\small\item\em Function pointer type (uint32\+\_\+t, uint32\+\_\+t)-\/$>$void definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5b}{S\+Y\+S\+\_\+\+C\+LK}} \{ \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5baaac7754daa9ff2db35951f3539495122}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M}} = (0x0$<$$<$12), 
+\mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5bad1640aa8c46162a7551abca12293ef39}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M}} = (0x1$<$$<$12), 
+\mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M}} = (0x3$<$$<$12)
+ \}
+\end{DoxyCompactItemize}
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{a00020_a42674a2ca7d088e68de4e2aa81ec597c}{R\+T\+\_\+\+Clr\+\_\+\+Sram}} ()
-\begin{DoxyCompactList}\small\item\em This function is to clear the sram. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{a00020_aa106e3c9181a65a83156bda31f4f61e9}{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To}} (unsigned long address)
+\begin{DoxyCompactList}\small\item\em Jump to a specific address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00020_a1e578ce669735935a1d505c0edf98221}{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}} (uint32\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Set the frequency of the system clock. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00020_ad514417aa2e5a5d061a5eabeceae20c6}{R\+T\+\_\+\+Sram\+\_\+\+Clear}} ()
+\begin{DoxyCompactList}\small\item\em This function is to clear the former 7\+K-\/byte sram. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsubsection{Detailed Description}
@@ -288,33 +287,7 @@ External register address. \mbox{\Hypertarget{a00020_a0f7890a929baefa8c8c2cf341d
 \paragraph{\texorpdfstring{I\+N\+T\+\_\+\+C\+T\+L2\+\_\+\+R\+EG}{INT\_CTL2\_REG}}
 {\footnotesize\ttfamily \#define I\+N\+T\+\_\+\+C\+T\+L2\+\_\+\+R\+EG~(uint32\+\_\+t)0x1f800502}
 
-External register address. \mbox{\Hypertarget{a00020_a38c3a81fc94bff4cb6654061b7d21909}\label{a00020_a38c3a81fc94bff4cb6654061b7d21909}} 
-\index{mcu.\+h@{mcu.\+h}!Jump\+To@{Jump\+To}}
-\index{Jump\+To@{Jump\+To}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Jump\+To}{JumpTo}}
-{\footnotesize\ttfamily \#define Jump\+To(\begin{DoxyParamCaption}\item[{}]{address }\end{DoxyParamCaption})}
-
-{\bfseries Value\+:}
-\begin{DoxyCode}
-\{                               \(\backslash\)
-        FuncPtr funcptr;            \(\backslash\)
-        funcptr = (\mbox{\hyperlink{a00020_a3d987633d7a3ca10c14905a807b62eb1}{FuncPtr}})address; \(\backslash\)
-        funcptr();                  \(\backslash\)
-    \}
-\end{DoxyCode}
-
-
-Jump to a specific address. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em address} & the address to jump \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_adc8a1acb1d3dc976ed3747d978e7b46e}\label{a00020_adc8a1acb1d3dc976ed3747d978e7b46e}} 
+External register address. \mbox{\Hypertarget{a00020_adc8a1acb1d3dc976ed3747d978e7b46e}\label{a00020_adc8a1acb1d3dc976ed3747d978e7b46e}} 
 \index{mcu.\+h@{mcu.\+h}!L\+C\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{L\+C\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}
 \index{L\+C\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{L\+C\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}
 \paragraph{\texorpdfstring{L\+C\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}{LCD\_CTL0\_REG}}
@@ -532,35 +505,7 @@ External register address. \mbox{\Hypertarget{a00020_abda90eda34a640b130f48a6ade
 \paragraph{\texorpdfstring{R\+A\+I\+S\+E\+\_\+\+T\+R\+I\+G\+G\+ER}{RAISE\_TRIGGER}}
 {\footnotesize\ttfamily \#define R\+A\+I\+S\+E\+\_\+\+T\+R\+I\+G\+G\+ER~0x1}
 
-Keyword R\+A\+I\+S\+E\+\_\+\+T\+R\+I\+G\+G\+ER. \mbox{\Hypertarget{a00020_a017f8665ec51267680fc0e536db19c13}\label{a00020_a017f8665ec51267680fc0e536db19c13}} 
-\index{mcu.\+h@{mcu.\+h}!R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}}
-\index{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}{RT\_MCU\_SetSystemClock}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})}
-
-{\bfseries Value\+:}
-\begin{DoxyCode}
-\{                                               \(\backslash\)
-        MemoryAnd32(\mbox{\hyperlink{a00020_ae6a98a78f9ac0c75c18c7d4e2c62fdcb}{SYS\_CTL2\_REG}}, ~\mbox{\hyperlink{a00020_ab6421bc33962d86e356ed816dfac41b6}{SYS\_CLK\_12M}});    \(\backslash\)
-        MemoryOr32(\mbox{\hyperlink{a00020_ae6a98a78f9ac0c75c18c7d4e2c62fdcb}{SYS\_CTL2\_REG}}, mode);             \(\backslash\)
-    \}
-\end{DoxyCode}
-
-
-Set the frequency of the system clock. 
-
-\begin{DoxyNote}{Note}
-This is used in U\+A\+RT to adjust the baudrate. 
-\end{DoxyNote}
-
-\begin{DoxyParams}{Parameters}
-{\em mode} & The frequency of system clock to set. Optional value\+: \mbox{\hyperlink{a00020_adca9cbed6d30219f8812ba08ab0aaa7f}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M}}, \mbox{\hyperlink{a00020_a8ddc6e06a91f5506443cdef0458729df}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M}}, \mbox{\hyperlink{a00020_ab6421bc33962d86e356ed816dfac41b6}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M}}. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_a5639ee9c54f77e12c49d79e44bfdf60f}\label{a00020_a5639ee9c54f77e12c49d79e44bfdf60f}} 
+Keyword R\+A\+I\+S\+E\+\_\+\+T\+R\+I\+G\+G\+ER. \mbox{\Hypertarget{a00020_a5639ee9c54f77e12c49d79e44bfdf60f}\label{a00020_a5639ee9c54f77e12c49d79e44bfdf60f}} 
 \index{mcu.\+h@{mcu.\+h}!R\+T\+C\+\_\+\+C\+L\+R\+\_\+\+R\+EG@{R\+T\+C\+\_\+\+C\+L\+R\+\_\+\+R\+EG}}
 \index{R\+T\+C\+\_\+\+C\+L\+R\+\_\+\+R\+EG@{R\+T\+C\+\_\+\+C\+L\+R\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}
 \paragraph{\texorpdfstring{R\+T\+C\+\_\+\+C\+L\+R\+\_\+\+R\+EG}{RTC\_CLR\_REG}}
@@ -614,25 +559,7 @@ External register address. \mbox{\Hypertarget{a00020_a7fa9769ae86a7da40ab899f17c
 \paragraph{\texorpdfstring{S\+P\+I\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG}{SPI\_WRITE\_REG}}
 {\footnotesize\ttfamily \#define S\+P\+I\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG~(uint32\+\_\+t)0x1f800d02}
 
-External register address. \mbox{\Hypertarget{a00020_ab6421bc33962d86e356ed816dfac41b6}\label{a00020_ab6421bc33962d86e356ed816dfac41b6}} 
-\index{mcu.\+h@{mcu.\+h}!S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M@{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M}}
-\index{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M@{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M}{SYS\_CLK\_12M}}
-{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M~(0x3$<$$<$12)}
-
-Keyword S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M. \mbox{\Hypertarget{a00020_adca9cbed6d30219f8812ba08ab0aaa7f}\label{a00020_adca9cbed6d30219f8812ba08ab0aaa7f}} 
-\index{mcu.\+h@{mcu.\+h}!S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M@{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M}}
-\index{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M@{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M}{SYS\_CLK\_3M}}
-{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M~(0x0$<$$<$12)}
-
-Keyword S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M. \mbox{\Hypertarget{a00020_a8ddc6e06a91f5506443cdef0458729df}\label{a00020_a8ddc6e06a91f5506443cdef0458729df}} 
-\index{mcu.\+h@{mcu.\+h}!S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M@{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M}}
-\index{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M@{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M}{SYS\_CLK\_6M}}
-{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M~(0x1$<$$<$12)}
-
-Keyword S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M. \mbox{\Hypertarget{a00020_ab34acec79daf4fcc12a662cde9e75df7}\label{a00020_ab34acec79daf4fcc12a662cde9e75df7}} 
+External register address. \mbox{\Hypertarget{a00020_ab34acec79daf4fcc12a662cde9e75df7}\label{a00020_ab34acec79daf4fcc12a662cde9e75df7}} 
 \index{mcu.\+h@{mcu.\+h}!S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}
 \index{S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}
 \paragraph{\texorpdfstring{S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}{SYS\_CTL0\_REG}}
@@ -946,17 +873,110 @@ External register address. \mbox{\Hypertarget{a00020_ab04902f3d750cf4826ded8350a
 
 External register address. 
 
+\subsubsection{Typedef Documentation}
+\mbox{\Hypertarget{a00020_a3d987633d7a3ca10c14905a807b62eb1}\label{a00020_a3d987633d7a3ca10c14905a807b62eb1}} 
+\index{mcu.\+h@{mcu.\+h}!Func\+Ptr@{Func\+Ptr}}
+\index{Func\+Ptr@{Func\+Ptr}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Func\+Ptr}{FuncPtr}}
+{\footnotesize\ttfamily typedef void($\ast$ Func\+Ptr) (void)}
+
+Function pointer type (void)-\/$>$void definition. \mbox{\Hypertarget{a00020_a0891965816a5b721b07f7bebefaf7430}\label{a00020_a0891965816a5b721b07f7bebefaf7430}} 
+\index{mcu.\+h@{mcu.\+h}!Func\+Ptr1@{Func\+Ptr1}}
+\index{Func\+Ptr1@{Func\+Ptr1}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Func\+Ptr1}{FuncPtr1}}
+{\footnotesize\ttfamily typedef void($\ast$ Func\+Ptr1) (uint32\+\_\+t)}
+
+Function pointer type (uint32\+\_\+t)-\/$>$void definition. \mbox{\Hypertarget{a00020_a331a88eeefe11112bb8fe1b43dd777b8}\label{a00020_a331a88eeefe11112bb8fe1b43dd777b8}} 
+\index{mcu.\+h@{mcu.\+h}!Func\+Ptr2@{Func\+Ptr2}}
+\index{Func\+Ptr2@{Func\+Ptr2}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Func\+Ptr2}{FuncPtr2}}
+{\footnotesize\ttfamily typedef void($\ast$ Func\+Ptr2) (uint32\+\_\+t, uint32\+\_\+t)}
+
+Function pointer type (uint32\+\_\+t, uint32\+\_\+t)-\/$>$void definition. 
+
+\subsubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{a00020_ae3a2d501b8662e11b969fb4a5e195e5b}\label{a00020_ae3a2d501b8662e11b969fb4a5e195e5b}} 
+\index{mcu.\+h@{mcu.\+h}!S\+Y\+S\+\_\+\+C\+LK@{S\+Y\+S\+\_\+\+C\+LK}}
+\index{S\+Y\+S\+\_\+\+C\+LK@{S\+Y\+S\+\_\+\+C\+LK}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{S\+Y\+S\+\_\+\+C\+LK}{SYS\_CLK}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5b}{S\+Y\+S\+\_\+\+C\+LK}}}
+
+Keyword for setting the system clock frequency. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M@{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M@{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M}}}\mbox{\Hypertarget{a00020_ae3a2d501b8662e11b969fb4a5e195e5baaac7754daa9ff2db35951f3539495122}\label{a00020_ae3a2d501b8662e11b969fb4a5e195e5baaac7754daa9ff2db35951f3539495122}} 
+S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M&Set the system clock frequency at 3 M\+Hz. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M@{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M@{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M}}}\mbox{\Hypertarget{a00020_ae3a2d501b8662e11b969fb4a5e195e5bad1640aa8c46162a7551abca12293ef39}\label{a00020_ae3a2d501b8662e11b969fb4a5e195e5bad1640aa8c46162a7551abca12293ef39}} 
+S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M&Set the system clock frequency at 6 M\+Hz. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M@{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M@{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M}}}\mbox{\Hypertarget{a00020_ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401}\label{a00020_ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401}} 
+S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M&Set the system clock frequency at 12 M\+Hz. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
 \subsubsection{Function Documentation}
-\mbox{\Hypertarget{a00020_a42674a2ca7d088e68de4e2aa81ec597c}\label{a00020_a42674a2ca7d088e68de4e2aa81ec597c}} 
-\index{mcu.\+h@{mcu.\+h}!R\+T\+\_\+\+Clr\+\_\+\+Sram@{R\+T\+\_\+\+Clr\+\_\+\+Sram}}
-\index{R\+T\+\_\+\+Clr\+\_\+\+Sram@{R\+T\+\_\+\+Clr\+\_\+\+Sram}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+Clr\+\_\+\+Sram()}{RT\_Clr\_Sram()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+Clr\+\_\+\+Sram (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{a00020_aa106e3c9181a65a83156bda31f4f61e9}\label{a00020_aa106e3c9181a65a83156bda31f4f61e9}} 
+\index{mcu.\+h@{mcu.\+h}!R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To}}
+\index{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To()}{RT\_MCU\_JumpTo()}}
+{\footnotesize\ttfamily void R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To (\begin{DoxyParamCaption}\item[{unsigned long}]{address }\end{DoxyParamCaption})}
 
 
 
-This function is to clear the sram. 
+Jump to a specific address. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em address} & the address to jump \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+When this function is used, returning to the position where this function is used is impossible. By using R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To, we can make a soft reset. For example, if the entrance address of the program is 0x10000000, it is\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{a00020_aa106e3c9181a65a83156bda31f4f61e9}{RT\_MCU\_JumpTo}}(0x10000000);
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_a1e578ce669735935a1d505c0edf98221}\label{a00020_a1e578ce669735935a1d505c0edf98221}} 
+\index{mcu.\+h@{mcu.\+h}!R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}}
+\index{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock()}{RT\_MCU\_SetSystemClock()}}
+{\footnotesize\ttfamily void R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Set the frequency of the system clock. 
+
+\begin{DoxyNote}{Note}
+This is used in U\+A\+RT to adjust the baudrate. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The frequency of system clock to set. Optional value\+: \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5baaac7754daa9ff2db35951f3539495122}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M}}, \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5bad1640aa8c46162a7551abca12293ef39}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M}}, \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_ad514417aa2e5a5d061a5eabeceae20c6}\label{a00020_ad514417aa2e5a5d061a5eabeceae20c6}} 
+\index{mcu.\+h@{mcu.\+h}!R\+T\+\_\+\+Sram\+\_\+\+Clear@{R\+T\+\_\+\+Sram\+\_\+\+Clear}}
+\index{R\+T\+\_\+\+Sram\+\_\+\+Clear@{R\+T\+\_\+\+Sram\+\_\+\+Clear}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+Sram\+\_\+\+Clear()}{RT\_Sram\_Clear()}}
+{\footnotesize\ttfamily void R\+T\+\_\+\+Sram\+\_\+\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is to clear the former 7\+K-\/byte sram. 
+
+\begin{DoxyWarning}{Warning}
+To avoid possible influence on the stack, this function only clear the former 7K bytes. When it is in interrupt, this function is not recommended because some important data is stored in the sram for the later state recover from the interrupt. 
+\end{DoxyWarning}
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}

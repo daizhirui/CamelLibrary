@@ -8,6 +8,14 @@ Official Library for Camel Micro products. This library is embedded in [CamelStu
 
 ## History
 
+### 06.07.2018
+
+- Merge code in interrupt.c to isr.s to increase the speed of entering the interrupt state.
+- Remove m2core, whose name is quite vague.
+- Add isr(Interrupt Service Routine) library.
+- Convert some functions from macro to inline functions to make them safer.
+- Rename ```RT_Clr_Sram``` to ```RT_Sram_Clear``` and ```RT_Sram_Clear``` now can clear 7k-byte sram space instead of 2k bytes.
+
 ### 04.07.2018
 
 - Reorganize the source files.

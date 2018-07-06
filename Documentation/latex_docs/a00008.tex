@@ -67,7 +67,7 @@ void
         funcptr =  (\mbox{\hyperlink{a00020_a0891965816a5b721b07f7bebefaf7430}{FuncPtr1}})FLASH\_ERASE\_ADDRESS;       \(\backslash\)
         addr = ((address&0x1ffff) | 0x10100000);        \(\backslash\)
         uint32\_t oldVal = \mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{MemoryRead32}}(\mbox{\hyperlink{a00020_ae6a98a78f9ac0c75c18c7d4e2c62fdcb}{SYS\_CTL2\_REG}});   \(\backslash\)
-        RT\_MCU\_SetSystemClock(\mbox{\hyperlink{a00020_a8ddc6e06a91f5506443cdef0458729df}{SYS\_CLK\_6M}});              \(\backslash\)
+        RT\_MCU\_SetSystemClock(\mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5bad1640aa8c46162a7551abca12293ef39}{SYS\_CLK\_6M}});              \(\backslash\)
         funcptr(addr);                                  \(\backslash\)
         MemoryWrite32(\mbox{\hyperlink{a00020_ae6a98a78f9ac0c75c18c7d4e2c62fdcb}{SYS\_CTL2\_REG}}, oldVal);            \(\backslash\)
     \}
@@ -122,7 +122,7 @@ void
         FuncPtr2 funcptr;                               \(\backslash\)
         funcptr = (\mbox{\hyperlink{a00020_a331a88eeefe11112bb8fe1b43dd777b8}{FuncPtr2}})FLASH\_WRITE\_ADDRESS;        \(\backslash\)
         uint32\_t oldVal = \mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{MemoryRead32}}(\mbox{\hyperlink{a00020_ae6a98a78f9ac0c75c18c7d4e2c62fdcb}{SYS\_CTL2\_REG}});   \(\backslash\)
-        RT\_MCU\_SetSystemClock(\mbox{\hyperlink{a00020_a8ddc6e06a91f5506443cdef0458729df}{SYS\_CLK\_6M}});              \(\backslash\)
+        RT\_MCU\_SetSystemClock(\mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5bad1640aa8c46162a7551abca12293ef39}{SYS\_CLK\_6M}});              \(\backslash\)
         funcptr(value, address);                        \(\backslash\)
         MemoryWrite32(\mbox{\hyperlink{a00020_ae6a98a78f9ac0c75c18c7d4e2c62fdcb}{SYS\_CTL2\_REG}}, oldVal);            \(\backslash\)
     \}

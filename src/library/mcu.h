@@ -265,41 +265,36 @@
  */
 #define MemoryBitSwitch(addr,val) (*(volatile uint32_t*)(addr)^=(1<<(val)))
 
-/**
- * @brief Function pointer type (void)->void definition.
- */
+/*! Function pointer type (void)->void definition. */
 typedef void (*FuncPtr)(void);
 
-/**
- * @brief Function pointer type (uint32_t)->void definition.
- */
+/*! Function pointer type (uint32_t)->void definition. */
 typedef void (*FuncPtr1)(uint32_t);
 
-/**
- * @brief Function pointer type (uint32_t, uint32_t)->void definition.
- */
+/*! Function pointer type (uint32_t, uint32_t)->void definition. */
 typedef void (*FuncPtr2)(uint32_t, uint32_t);
 
 /**
- * @brief Jump to a specific address.
+ * @brief           Jump to a specific address.
  * @param address   the address to jump
+ * @note            When this function is used, returning to the position where this function is used is impossible.
+                    By using RT_MCU_JumpTo, we can make a soft reset. For example, if the entrance address of the program is 0x10000000, it is:
+                    \code{.c}
+                    RT_MCU_JumpTo(0x10000000);
+                    \endcode
  * @return void
  */
-#define JumpTo(address)             \
-    {                               \
-        FuncPtr funcptr;            \
-        funcptr = (FuncPtr)address; \
-        funcptr();                  \
-    }
+void RT_MCU_JumpTo(unsigned long address);
 
-/*! Keyword SYS_CLK_3M. */
-#define SYS_CLK_3M  (0x0<<12)
-
-/*! Keyword SYS_CLK_6M. */
-#define SYS_CLK_6M  (0x1<<12)
-
-/*! Keyword SYS_CLK_12M. */
-#define SYS_CLK_12M (0x3<<12)
+/*! Keyword for setting the system clock frequency. */
+enum SYS_CLK {
+    /*! Set the system clock frequency at 3 MHz. */
+    SYS_CLK_3M = (0x0<<12),
+    /*! Set the system clock frequency at 6 MHz. */
+    SYS_CLK_6M = (0x1<<12),
+    /*! Set the system clock frequency at 12 MHz. */
+    SYS_CLK_12M = (0x3<<12)
+};
 
 /**
 * @brief        Set the frequency of the system clock.
@@ -308,17 +303,15 @@ typedef void (*FuncPtr2)(uint32_t, uint32_t);
                 Optional value: #SYS_CLK_3M, #SYS_CLK_6M, #SYS_CLK_12M.
 * @return void
 */
-#define RT_MCU_SetSystemClock(mode)                 \
-    {                                               \
-        MemoryAnd32(SYS_CTL2_REG, ~SYS_CLK_12M);    \
-        MemoryOr32(SYS_CTL2_REG, mode);             \
-    }
+void RT_MCU_SetSystemClock(uint32_t mode);
 
 /**
- * @brief
- * This function is to clear the sram
- * @return void
+ * @brief       This function is to clear the former 7K-byte sram
+ * @warning     To avoid possible influence on the stack, this function only clear the former 7K bytes.
+                When it is in interrupt, this function is not recommended because some important data is stored
+                in the sram for the later state recover from the interrupt.
+ * @return      void
  */
-void RT_Clr_Sram();
+void RT_Sram_Clear();
 
 #endif // End of __M2_MCU__

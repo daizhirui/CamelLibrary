@@ -10,7 +10,6 @@ var a00020 =
     [ "INT_CTL0_REG", "a00020.html#a8de95a7e93d24e973c34d5a2acb174d6", null ],
     [ "INT_CTL1_REG", "a00020.html#a854bd396a90c4c6b4415c106cb64281f", null ],
     [ "INT_CTL2_REG", "a00020.html#a0f7890a929baefa8c8c2cf341d75844e", null ],
-    [ "JumpTo", "a00020.html#a38c3a81fc94bff4cb6654061b7d21909", null ],
     [ "LCD_CTL0_REG", "a00020.html#adc8a1acb1d3dc976ed3747d978e7b46e", null ],
     [ "LCD_RAM_LINE0", "a00020.html#a126a24a9996154747b8a9b515583d405", null ],
     [ "LCD_RAM_LINE1", "a00020.html#aeb932aa8930c0688ce485816d412d56e", null ],
@@ -29,7 +28,6 @@ var a00020 =
     [ "ON", "a00020.html#ad76d1750a6cdeebd506bfcd6752554d2", null ],
     [ "PC_LOC", "a00020.html#a61c6c3e2790298ca9bef424e17010ae5", null ],
     [ "RAISE_TRIGGER", "a00020.html#abda90eda34a640b130f48a6ade23fe22", null ],
-    [ "RT_MCU_SetSystemClock", "a00020.html#a017f8665ec51267680fc0e536db19c13", null ],
     [ "RTC_CLR_REG", "a00020.html#a5639ee9c54f77e12c49d79e44bfdf60f", null ],
     [ "RTC_CTL_REG", "a00020.html#a327eb68b27f50c95ed803a79b7e86140", null ],
     [ "RTC_TIME_REG", "a00020.html#a8743011c78786509baa272db827d3a12", null ],
@@ -39,9 +37,6 @@ var a00020 =
     [ "SPI_IRQ_ACK_REG", "a00020.html#a248babd7289755884a7a2757cddf8d41", null ],
     [ "SPI_READ_REG", "a00020.html#a26215878d57c780dd386b9031ac9e959", null ],
     [ "SPI_WRITE_REG", "a00020.html#a7fa9769ae86a7da40ab899f17cec83d2", null ],
-    [ "SYS_CLK_12M", "a00020.html#ab6421bc33962d86e356ed816dfac41b6", null ],
-    [ "SYS_CLK_3M", "a00020.html#adca9cbed6d30219f8812ba08ab0aaa7f", null ],
-    [ "SYS_CLK_6M", "a00020.html#a8ddc6e06a91f5506443cdef0458729df", null ],
     [ "SYS_CTL0_REG", "a00020.html#ab34acec79daf4fcc12a662cde9e75df7", null ],
     [ "SYS_CTL2_REG", "a00020.html#ae6a98a78f9ac0c75c18c7d4e2c62fdcb", null ],
     [ "SYS_GDR_REG", "a00020.html#a07fb188b7660d1b438f8c2cb8e57396f", null ],
@@ -97,5 +92,12 @@ var a00020 =
     [ "FuncPtr", "a00020.html#a3d987633d7a3ca10c14905a807b62eb1", null ],
     [ "FuncPtr1", "a00020.html#a0891965816a5b721b07f7bebefaf7430", null ],
     [ "FuncPtr2", "a00020.html#a331a88eeefe11112bb8fe1b43dd777b8", null ],
-    [ "RT_Clr_Sram", "a00020.html#a42674a2ca7d088e68de4e2aa81ec597c", null ]
+    [ "SYS_CLK", "a00020.html#ae3a2d501b8662e11b969fb4a5e195e5b", [
+      [ "SYS_CLK_3M", "a00020.html#ae3a2d501b8662e11b969fb4a5e195e5baaac7754daa9ff2db35951f3539495122", null ],
+      [ "SYS_CLK_6M", "a00020.html#ae3a2d501b8662e11b969fb4a5e195e5bad1640aa8c46162a7551abca12293ef39", null ],
+      [ "SYS_CLK_12M", "a00020.html#ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401", null ]
+    ] ],
+    [ "RT_MCU_JumpTo", "a00020.html#aa106e3c9181a65a83156bda31f4f61e9", null ],
+    [ "RT_MCU_SetSystemClock", "a00020.html#a1e578ce669735935a1d505c0edf98221", null ],
+    [ "RT_Sram_Clear", "a00020.html#ad514417aa2e5a5d061a5eabeceae20c6", null ]
 ];

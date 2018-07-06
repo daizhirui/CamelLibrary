@@ -1,12 +1,12 @@
 include ../Makefile.compiler
 
-LIB_NAME=m2core
+LIB_NAME=isr
 LIBFILE_NAME=$(LIB_NAME:%=lib%.a)
 
 all: entry.o $(LIBFILE_NAME)
-	$(AS_MIPS) $(AS_FLAGS) -o $(RELEASE_PATH)/lib/$@ entry.s
+	$(AS_MIPS) $(AS_FLAGS) -o $(RELEASE_PATH)/lib/$< entry.s
 
-libm2core.a: interrupt.o isr.o
+libm2core.a: isr.o interrupt.o
 	$(AR_MIPS) $(AR_FLAGS) $(RELEASE_PATH)/lib/$@ $^;\
 	rm interrupt.o isr.o
 
@@ -21,3 +21,6 @@ clean:
 
 %.o : %.s
 	$(AS_MIPS) $(AS_FLAGS) -o $@ $<
+
+lib%.a : %.o
+	$(AR_MIPS) $(AR_FLAGS) $(RELEASE_PATH)/lib/$@ $<

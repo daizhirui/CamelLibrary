@@ -7,7 +7,7 @@ interrupt_service_routine:
    .set noreorder
    .set noat
 
-   #Registers $26 and $27 are reserved for the OS
+   #Registers $26 and $27 are reserved for the OS: $k0 and $k1
    #Save all temporary registers
    #Slots 0($29) through 12($29) reserved for saving a0-a3
    addi  $29, $29, -108  #adjust sp
@@ -28,31 +28,34 @@ interrupt_service_routine:
    sw    $15, 72($29)    #t7
    sw    $24, 76($29)    #t8
    sw    $25, 80($29)    #t9
-   sw    $31, 84($29)    #lr
-   mfc0  $26, $14        #C0_EPC=14 (Exception PC)
-   sub   $26, $26, 0x4 
-   sw    $26, 88($29)    #pc
-   li    $s0, 0x01001ff8
-   sw    $26, ($s0) #save pc to PC_LOC for debug continue option use
+   sw    $31, 84($29)    #ra (return address)
+   mfc0  $26, $14        #C0_EPC=14 (Exception Program Counter: the address of where to restart after exception)
+   sub   $26, $26, 0x4   #Skip the address of the instruction which results in this exception
+   sw    $26, 88($29)    #store C0_EPC
+   li    $s0, 0x01001ff8 #0x01001ff8 is an address in the sram for debug usage
+   sw    $26, ($s0)      #save pc to PC_LOC for debug continue option use
    mfhi  $27
    sw    $27, 92($29)    #hi
    mflo  $27
    sw    $27, 96($29)    #lo
-   sw    $30, 100($29)
-   li    $8, 0x01001ff4   #get the current interrupt depth
-   lw    $9, ($8)
-   addi  $9, $9, 1       #increment the interrupt depth
-   sw    $9, ($8)       #update the interrupt count
-   sll   $9, $9, 2       #calculate the difference between INT_COUNT and current SP storage location
-   sub   $8, $8, $9      # this is the location to store SP
-   sw    $29, ($8)      #save SP to the location near INT_COUNT
-   jal interrupt
+   sw    $30, 100($29)   #fp
+   li    $8, 0x01001ff4  #0x01001ff4 is an address in the sram to store the current interrupt depth(INT_COUNT)
+   lw    $9, ($8)        #load the current interrupt depth
+   addi  $9, $9, 1       #increase the interrupt depth
+   sw    $9, ($8)        #update the interrupt count in the sram
+   sll   $9, $9, 2       #($9=$9*4)calculate the distance from the address for storing $sp to the address of INT_COUNT
+   sub   $8, $8, $9      #this is the location to store $sp
+   sw    $29, ($8)       #save $sp to the location near INT_COUNT
+   li    $2, 0x1001ffc   #0x01001ffc is an address in the sram for recording if the interrupt is from the user.
+   li    $3, 0x1
+   sw    $3, 0($2)       #set USER_INT as true(1)
+   jal   user_interrupt  #jump to user's interrupt function
    nop
-   addi  $5,  $29, 0
-   li    $8, 0x01001ff4   #get the current interrupt depth
-   lw    $9, ($8)
-   sub   $9, $9, 1       #decrement the interrupt depth
-   sw    $9, ($8)       #update the interrupt count
+   addi  $5,  $29, 0     #load the current $sp to $5
+   li    $8, 0x01001ff4  #0x01001ff4 is an address in the sram to store the current interrupt depth
+   lw    $9, ($8)        #load the current interrupt depth
+   sub   $9, $9, 1       #decrease the interrupt depth
+   sw    $9, ($8)        #update the interrupt count
 
    #Restore all temporary registers
    lw    $1,  16($29)    #at
@@ -72,21 +75,22 @@ interrupt_service_routine:
    lw    $15, 72($29)    #t7
    lw    $24, 76($29)    #t8
    lw    $25, 80($29)    #t9
-   lw    $31, 84($29)    #lr
+   lw    $31, 84($29)    #ra
    lw    $26, 88($29)    #pc
    lw    $27, 92($29)    #hi
    mthi  $27
    lw    $27, 96($29)    #lo
    mtlo  $27
-   lw    $30, 100($29)
+   lw    $30, 100($29)   #fp
    addi  $29, $29, 108   #adjust sp
 
    #check if the interrupt is from user or not
-   li    $s0, 0x01001ffc  #get the user_int value
+   #this part doesn't do any work now!
+   li    $s0, 0x01001ffc #0x01001ffc is an address in the sram for recording if the interrupt is from the user.
    lw    $s1, ($s0)
-   addi  $s1, $s1, -1		
-   #beqz  $s1, goto_user_isr 	
-   
+   addi  $s1, $s1, -1
+   #beqz  $s1, goto_user_isr
+
    jr    $26
    rfe                    # this is important, restore STATUS
    nop

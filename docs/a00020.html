@@ -133,6 +133,7 @@ $(document).ready(function(){initNavTree('a00020.html','');});
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">mcu.h File Reference</div>  </div>
@@ -331,39 +332,35 @@ Macros</h2></td></tr>
 <tr class="memitem:ae49e41753dbce64185d380d307ade78d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#ae49e41753dbce64185d380d307ade78d">MemoryBitSwitch</a>(addr,  val)&#160;&#160;&#160;(*(volatile uint32_t*)(addr)^=(1&lt;&lt;(val)))</td></tr>
 <tr class="memdesc:ae49e41753dbce64185d380d307ade78d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a specific bit of a 32-bit data from a specific address to opposite state.  <a href="#ae49e41753dbce64185d380d307ade78d">More...</a><br /></td></tr>
 <tr class="separator:ae49e41753dbce64185d380d307ade78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38c3a81fc94bff4cb6654061b7d21909"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a38c3a81fc94bff4cb6654061b7d21909">JumpTo</a>(address)</td></tr>
-<tr class="memdesc:a38c3a81fc94bff4cb6654061b7d21909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jump to a specific address.  <a href="#a38c3a81fc94bff4cb6654061b7d21909">More...</a><br /></td></tr>
-<tr class="separator:a38c3a81fc94bff4cb6654061b7d21909"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adca9cbed6d30219f8812ba08ab0aaa7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#adca9cbed6d30219f8812ba08ab0aaa7f">SYS_CLK_3M</a>&#160;&#160;&#160;(0x0&lt;&lt;12)</td></tr>
-<tr class="separator:adca9cbed6d30219f8812ba08ab0aaa7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ddc6e06a91f5506443cdef0458729df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a8ddc6e06a91f5506443cdef0458729df">SYS_CLK_6M</a>&#160;&#160;&#160;(0x1&lt;&lt;12)</td></tr>
-<tr class="separator:a8ddc6e06a91f5506443cdef0458729df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6421bc33962d86e356ed816dfac41b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#ab6421bc33962d86e356ed816dfac41b6">SYS_CLK_12M</a>&#160;&#160;&#160;(0x3&lt;&lt;12)</td></tr>
-<tr class="separator:ab6421bc33962d86e356ed816dfac41b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a017f8665ec51267680fc0e536db19c13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a017f8665ec51267680fc0e536db19c13">RT_MCU_SetSystemClock</a>(mode)</td></tr>
-<tr class="memdesc:a017f8665ec51267680fc0e536db19c13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the frequency of the system clock.  <a href="#a017f8665ec51267680fc0e536db19c13">More...</a><br /></td></tr>
-<tr class="separator:a017f8665ec51267680fc0e536db19c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a3d987633d7a3ca10c14905a807b62eb1"><td class="memItemLeft" align="right" valign="top"><a id="a3d987633d7a3ca10c14905a807b62eb1"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a3d987633d7a3ca10c14905a807b62eb1">FuncPtr</a>) (void)</td></tr>
-<tr class="memdesc:a3d987633d7a3ca10c14905a807b62eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function pointer type (void)-&gt;void definition. <br /></td></tr>
+<tr class="memitem:a3d987633d7a3ca10c14905a807b62eb1"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a3d987633d7a3ca10c14905a807b62eb1">FuncPtr</a>) (void)</td></tr>
 <tr class="separator:a3d987633d7a3ca10c14905a807b62eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0891965816a5b721b07f7bebefaf7430"><td class="memItemLeft" align="right" valign="top"><a id="a0891965816a5b721b07f7bebefaf7430"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a0891965816a5b721b07f7bebefaf7430">FuncPtr1</a>) (uint32_t)</td></tr>
-<tr class="memdesc:a0891965816a5b721b07f7bebefaf7430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function pointer type (uint32_t)-&gt;void definition. <br /></td></tr>
+<tr class="memitem:a0891965816a5b721b07f7bebefaf7430"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a0891965816a5b721b07f7bebefaf7430">FuncPtr1</a>) (uint32_t)</td></tr>
 <tr class="separator:a0891965816a5b721b07f7bebefaf7430"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a331a88eeefe11112bb8fe1b43dd777b8"><td class="memItemLeft" align="right" valign="top"><a id="a331a88eeefe11112bb8fe1b43dd777b8"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a331a88eeefe11112bb8fe1b43dd777b8">FuncPtr2</a>) (uint32_t, uint32_t)</td></tr>
-<tr class="memdesc:a331a88eeefe11112bb8fe1b43dd777b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function pointer type (uint32_t, uint32_t)-&gt;void definition. <br /></td></tr>
+<tr class="memitem:a331a88eeefe11112bb8fe1b43dd777b8"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a331a88eeefe11112bb8fe1b43dd777b8">FuncPtr2</a>) (uint32_t, uint32_t)</td></tr>
 <tr class="separator:a331a88eeefe11112bb8fe1b43dd777b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ae3a2d501b8662e11b969fb4a5e195e5b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5b">SYS_CLK</a> { <a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5baaac7754daa9ff2db35951f3539495122">SYS_CLK_3M</a> = (0x0&lt;&lt;12), 
+<a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5bad1640aa8c46162a7551abca12293ef39">SYS_CLK_6M</a> = (0x1&lt;&lt;12), 
+<a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401">SYS_CLK_12M</a> = (0x3&lt;&lt;12)
+ }</td></tr>
+<tr class="separator:ae3a2d501b8662e11b969fb4a5e195e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a42674a2ca7d088e68de4e2aa81ec597c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a42674a2ca7d088e68de4e2aa81ec597c">RT_Clr_Sram</a> ()</td></tr>
-<tr class="memdesc:a42674a2ca7d088e68de4e2aa81ec597c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is to clear the sram.  <a href="#a42674a2ca7d088e68de4e2aa81ec597c">More...</a><br /></td></tr>
-<tr class="separator:a42674a2ca7d088e68de4e2aa81ec597c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa106e3c9181a65a83156bda31f4f61e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#aa106e3c9181a65a83156bda31f4f61e9">RT_MCU_JumpTo</a> (unsigned long address)</td></tr>
+<tr class="memdesc:aa106e3c9181a65a83156bda31f4f61e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jump to a specific address.  <a href="#aa106e3c9181a65a83156bda31f4f61e9">More...</a><br /></td></tr>
+<tr class="separator:aa106e3c9181a65a83156bda31f4f61e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e578ce669735935a1d505c0edf98221"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a1e578ce669735935a1d505c0edf98221">RT_MCU_SetSystemClock</a> (uint32_t mode)</td></tr>
+<tr class="memdesc:a1e578ce669735935a1d505c0edf98221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the frequency of the system clock.  <a href="#a1e578ce669735935a1d505c0edf98221">More...</a><br /></td></tr>
+<tr class="separator:a1e578ce669735935a1d505c0edf98221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad514417aa2e5a5d061a5eabeceae20c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#ad514417aa2e5a5d061a5eabeceae20c6">RT_Sram_Clear</a> ()</td></tr>
+<tr class="memdesc:ad514417aa2e5a5d061a5eabeceae20c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is to clear the former 7K-byte sram.  <a href="#ad514417aa2e5a5d061a5eabeceae20c6">More...</a><br /></td></tr>
+<tr class="separator:ad514417aa2e5a5d061a5eabeceae20c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>M2 micro core unit. </p>
@@ -517,34 +514,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>External register address. </p>
-
-</div>
-</div>
-<a id="a38c3a81fc94bff4cb6654061b7d21909"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38c3a81fc94bff4cb6654061b7d21909">&#9670;&nbsp;</a></span>JumpTo</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define JumpTo</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">address</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                               \</div><div class="line">        FuncPtr funcptr;            \</div><div class="line">        funcptr = (<a class="code" href="a00020.html#a3d987633d7a3ca10c14905a807b62eb1">FuncPtr</a>)address; \</div><div class="line">        funcptr();                  \</div><div class="line">    }</div><div class="ttc" id="a00020_html_a3d987633d7a3ca10c14905a807b62eb1"><div class="ttname"><a href="a00020.html#a3d987633d7a3ca10c14905a807b62eb1">FuncPtr</a></div><div class="ttdeci">void(* FuncPtr)(void)</div><div class="ttdoc">Function pointer type (void)-&gt;void definition. </div><div class="ttdef"><b>Definition:</b> mcu.h:271</div></div>
-</div><!-- fragment -->
-<p>Jump to a specific address. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">address</td><td>the address to jump </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -991,36 +960,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a017f8665ec51267680fc0e536db19c13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a017f8665ec51267680fc0e536db19c13">&#9670;&nbsp;</a></span>RT_MCU_SetSystemClock</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define RT_MCU_SetSystemClock</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">mode</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                               \</div><div class="line">        MemoryAnd32(<a class="code" href="a00020.html#ae6a98a78f9ac0c75c18c7d4e2c62fdcb">SYS_CTL2_REG</a>, ~<a class="code" href="a00020.html#ab6421bc33962d86e356ed816dfac41b6">SYS_CLK_12M</a>);    \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#ae6a98a78f9ac0c75c18c7d4e2c62fdcb">SYS_CTL2_REG</a>, mode);             \</div><div class="line">    }</div><div class="ttc" id="a00020_html_ab6421bc33962d86e356ed816dfac41b6"><div class="ttname"><a href="a00020.html#ab6421bc33962d86e356ed816dfac41b6">SYS_CLK_12M</a></div><div class="ttdeci">#define SYS_CLK_12M</div><div class="ttdef"><b>Definition:</b> mcu.h:302</div></div>
-<div class="ttc" id="a00020_html_ae6a98a78f9ac0c75c18c7d4e2c62fdcb"><div class="ttname"><a href="a00020.html#ae6a98a78f9ac0c75c18c7d4e2c62fdcb">SYS_CTL2_REG</a></div><div class="ttdeci">#define SYS_CTL2_REG</div><div class="ttdef"><b>Definition:</b> mcu.h:28</div></div>
-</div><!-- fragment -->
-<p>Set the frequency of the system clock. </p>
-<dl class="section note"><dt>Note</dt><dd>This is used in UART to adjust the baudrate. </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mode</td><td>The frequency of system clock to set. Optional value: <a class="el" href="a00020.html#adca9cbed6d30219f8812ba08ab0aaa7f">SYS_CLK_3M</a>, <a class="el" href="a00020.html#a8ddc6e06a91f5506443cdef0458729df">SYS_CLK_6M</a>, <a class="el" href="a00020.html#ab6421bc33962d86e356ed816dfac41b6">SYS_CLK_12M</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
 <a id="a5639ee9c54f77e12c49d79e44bfdf60f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5639ee9c54f77e12c49d79e44bfdf60f">&#9670;&nbsp;</a></span>RTC_CLR_REG</h2>
 
@@ -1153,51 +1092,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>External register address. </p>
-
-</div>
-</div>
-<a id="ab6421bc33962d86e356ed816dfac41b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6421bc33962d86e356ed816dfac41b6">&#9670;&nbsp;</a></span>SYS_CLK_12M</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SYS_CLK_12M&#160;&#160;&#160;(0x3&lt;&lt;12)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Keyword SYS_CLK_12M. </p>
-
-</div>
-</div>
-<a id="adca9cbed6d30219f8812ba08ab0aaa7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adca9cbed6d30219f8812ba08ab0aaa7f">&#9670;&nbsp;</a></span>SYS_CLK_3M</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SYS_CLK_3M&#160;&#160;&#160;(0x0&lt;&lt;12)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Keyword SYS_CLK_3M. </p>
-
-</div>
-</div>
-<a id="a8ddc6e06a91f5506443cdef0458729df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ddc6e06a91f5506443cdef0458729df">&#9670;&nbsp;</a></span>SYS_CLK_6M</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SYS_CLK_6M&#160;&#160;&#160;(0x1&lt;&lt;12)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Keyword SYS_CLK_6M. </p>
 
 </div>
 </div>
@@ -1981,15 +1875,141 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a42674a2ca7d088e68de4e2aa81ec597c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42674a2ca7d088e68de4e2aa81ec597c">&#9670;&nbsp;</a></span>RT_Clr_Sram()</h2>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a3d987633d7a3ca10c14905a807b62eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d987633d7a3ca10c14905a807b62eb1">&#9670;&nbsp;</a></span>FuncPtr</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void RT_Clr_Sram </td>
+          <td class="memname">typedef void(* FuncPtr) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function pointer type (void)-&gt;void definition. </p>
+
+</div>
+</div>
+<a id="a0891965816a5b721b07f7bebefaf7430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0891965816a5b721b07f7bebefaf7430">&#9670;&nbsp;</a></span>FuncPtr1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* FuncPtr1) (uint32_t)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function pointer type (uint32_t)-&gt;void definition. </p>
+
+</div>
+</div>
+<a id="a331a88eeefe11112bb8fe1b43dd777b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a331a88eeefe11112bb8fe1b43dd777b8">&#9670;&nbsp;</a></span>FuncPtr2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* FuncPtr2) (uint32_t, uint32_t)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function pointer type (uint32_t, uint32_t)-&gt;void definition. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ae3a2d501b8662e11b969fb4a5e195e5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3a2d501b8662e11b969fb4a5e195e5b">&#9670;&nbsp;</a></span>SYS_CLK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5b">SYS_CLK</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Keyword for setting the system clock frequency. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae3a2d501b8662e11b969fb4a5e195e5baaac7754daa9ff2db35951f3539495122"></a>SYS_CLK_3M&#160;</td><td class="fielddoc"><p>Set the system clock frequency at 3 MHz. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae3a2d501b8662e11b969fb4a5e195e5bad1640aa8c46162a7551abca12293ef39"></a>SYS_CLK_6M&#160;</td><td class="fielddoc"><p>Set the system clock frequency at 6 MHz. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401"></a>SYS_CLK_12M&#160;</td><td class="fielddoc"><p>Set the system clock frequency at 12 MHz. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aa106e3c9181a65a83156bda31f4f61e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa106e3c9181a65a83156bda31f4f61e9">&#9670;&nbsp;</a></span>RT_MCU_JumpTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RT_MCU_JumpTo </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Jump to a specific address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>the address to jump </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>When this function is used, returning to the position where this function is used is impossible. By using RT_MCU_JumpTo, we can make a soft reset. For example, if the entrance address of the program is 0x10000000, it is: <div class="fragment"><div class="line"><a class="code" href="a00020.html#aa106e3c9181a65a83156bda31f4f61e9">RT_MCU_JumpTo</a>(0x10000000);</div></div><!-- fragment --> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a1e578ce669735935a1d505c0edf98221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e578ce669735935a1d505c0edf98221">&#9670;&nbsp;</a></span>RT_MCU_SetSystemClock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RT_MCU_SetSystemClock </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the frequency of the system clock. </p>
+<dl class="section note"><dt>Note</dt><dd>This is used in UART to adjust the baudrate. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>The frequency of system clock to set. Optional value: <a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5baaac7754daa9ff2db35951f3539495122">SYS_CLK_3M</a>, <a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5bad1640aa8c46162a7551abca12293ef39">SYS_CLK_6M</a>, <a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401">SYS_CLK_12M</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ad514417aa2e5a5d061a5eabeceae20c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad514417aa2e5a5d061a5eabeceae20c6">&#9670;&nbsp;</a></span>RT_Sram_Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RT_Sram_Clear </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1997,7 +2017,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function is to clear the sram. </p>
+<p>This function is to clear the former 7K-byte sram. </p>
+<dl class="section warning"><dt>Warning</dt><dd>To avoid possible influence on the stack, this function only clear the former 7K bytes. When it is in interrupt, this function is not recommended because some important data is stored in the sram for the later state recover from the interrupt. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
@@ -2010,7 +2031,7 @@ Functions</h2></td></tr>
     <!-- id is needed for treeview function! -->
     <!-- <ul>
         <li class="navelem"><a class="el" href="dir_9c8c494a5e1ae1f33037b0e9d49f06c7.html">release</a></li><li class="navelem"><a class="el" href="dir_42743c43973611cb0b05144d150e48a5.html">include</a></li><li class="navelem"><a class="el" href="a00020.html">mcu.h</a></li>
-        <li class="footer">Generated on Thu Jul 5 2018 00:24:24 for Camel Library Documentaion by
+        <li class="footer">Generated on Fri Jul 6 2018 20:21:07 for Camel Library Documentaion by
             <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
     </ul> -->
@@ -2022,7 +2043,7 @@ Functions</h2></td></tr>
             <!-- <h5 class="card-title">Special title treatment</h5> -->
             <p class="card-text d-flex justify-content-between">
                 <a href="#" class="btn btn-primary">Return To Top</a>
-                <a href="http://www.doxygen.org/index.html">Generated on Thu Jul 5 2018 00:24:24 for Camel Library Documentaion by <img class="footer" src="doxygen.png" alt="doxygen"/>  1.8.14</a>
+                <a href="http://www.doxygen.org/index.html">Generated on Fri Jul 6 2018 20:21:07 for Camel Library Documentaion by <img class="footer" src="doxygen.png" alt="doxygen"/>  1.8.14</a>
             </p>
         </div>
     </div>
