@@ -1,8 +1,8 @@
-\hypertarget{a00041}{}\subsection{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/release/include/\+T\+C0.h File Reference}
-\label{a00041}\index{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/release/include/\+T\+C0.\+h@{/\+Users/daizhirui/\+Development/\+Camel\+Studio\+\_\+\+Library/release/include/\+T\+C0.\+h}}
+\hypertarget{a00041}{}\subsection{/\+Users/daizhirui/\+Development/\+Camel\+\_\+\+Library/release/include/\+T\+C0.h File Reference}
+\label{a00041}\index{/\+Users/daizhirui/\+Development/\+Camel\+\_\+\+Library/release/include/\+T\+C0.\+h@{/\+Users/daizhirui/\+Development/\+Camel\+\_\+\+Library/release/include/\+T\+C0.\+h}}
 
 
-Timer0 Library for M2.  
+Timer Counter 0 Library for M2.  
 
 
 {\ttfamily \#include \char`\"{}mcu.\+h\char`\"{}}\newline
@@ -33,8 +33,6 @@ Timer0 Library for M2.
 \begin{DoxyCompactList}\small\item\em Turn on T\+C0 Timer. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{a00041_acbfad29faf802168f3281e5754e40aa9}{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Off}}()~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da869abf9d87f78f45a0e07ad352abb39e}{T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}, $\sim$(1 $<$$<$ 1))
 \begin{DoxyCompactList}\small\item\em Turn off T\+C0 Timer. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_af8994aa8faed7529c93c25df30c020eb}{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us}}(T,  irq)
-\begin{DoxyCompactList}\small\item\em This function sets the timer function of T\+C0. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{a00041_ac299997dc05f47b4b42bfd4e52b98d36}{R\+T\+\_\+\+T\+C0\+\_\+\+Set\+Counter}}(n)
 \begin{DoxyCompactList}\small\item\em This function sets the frequency counter of T\+C0 The base frequency of the counter is 45\+Hz. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{a00041_a4dd8c922ad55805d587d5a73b78d911a}{R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+On}}()~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da869abf9d87f78f45a0e07ad352abb39e}{T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}, 1)
@@ -59,10 +57,15 @@ Timer0 Library for M2.
 \begin{DoxyCompactList}\small\item\em This function sets the Pulse width measure for T\+C0. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{a00041_acd97abf7aebb4ffa83af031604a67344}{R\+T\+\_\+\+T\+C0\+\_\+\+Read\+Cnt}}()~\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6bfc1cf6a584321dfac7d842bab4f7d4}{T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}})
 \begin{DoxyCompactList}\small\item\em Read T\+C0 Counter Register Value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00041_a8e0656cd8304f2e28517ca46b8f854a0}{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us}} (uint32\+\_\+t T, switch\+\_\+t irq\+En)
+\begin{DoxyCompactList}\small\item\em This function sets the timer function of T\+C0. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsubsection{Detailed Description}
-Timer0 Library for M2. 
+Timer Counter 0 Library for M2. 
 
 \begin{DoxyAuthor}{Author}
 Zhirui Dai 
@@ -472,31 +475,24 @@ Turn on T\+C0 Timer.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{a00041_af8994aa8faed7529c93c25df30c020eb}\label{a00041_af8994aa8faed7529c93c25df30c020eb}} 
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{a00041_a8e0656cd8304f2e28517ca46b8f854a0}\label{a00041_a8e0656cd8304f2e28517ca46b8f854a0}} 
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us@{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us@{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us}!T\+C0.\+h@{T\+C0.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us}{RT\_TC0\_TimerSet1us}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{irq }\end{DoxyParamCaption})}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us()}{RT\_TC0\_TimerSet1us()}}
+{\footnotesize\ttfamily void R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{T,  }\item[{switch\+\_\+t}]{irq\+En }\end{DoxyParamCaption})}
 
-{\bfseries Value\+:}
-\begin{DoxyCode}
-\{                                                  \(\backslash\)
-        MemoryAnd32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da869abf9d87f78f45a0e07ad352abb39e}{T0\_CTL0\_REG}}, ~(1 << 7));           \(\backslash\)
-        MemoryWrite32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da944380f6d792e04a4c2e84dc668581a3}{T0\_CLK\_REG}}, T / 81 + 1);         \(\backslash\)
-        MemoryWrite32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da7b512fe986ef45d3f84daa6bf6733200}{T0\_REF\_REG}}, 243 * T / (T + 81)); \(\backslash\)
-        MemoryOr32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da869abf9d87f78f45a0e07ad352abb39e}{T0\_CTL0\_REG}}, (0x02 | (irq << 7)));  \(\backslash\)
-        MemoryOr32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5}{SYS\_CTL0\_REG}}, irq);                 \(\backslash\)
-    \}
-\end{DoxyCode}
 
 
 This function sets the timer function of T\+C0. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em T} & the target time to reach \\
+{\em T} & the target time to reach, the uint is us. \\
 \hline
-{\em irq} & when ON, the interrupt is enabled; when O\+FF, disabled \\
+{\em irq\+En} & when \mbox{\hyperlink{a00020_ad76d1750a6cdeebd506bfcd6752554d2}{ON}}, the interrupt is enabled; when \mbox{\hyperlink{a00020_a29e413f6725b2ba32d165ffaa35b01e5}{O\+FF}}, disabled \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

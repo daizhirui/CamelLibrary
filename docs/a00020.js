@@ -95,6 +95,10 @@ var a00020 =
       [ "RTC_TIME_REG", "a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf375f171cb828ab3d87d45724750256d", null ],
       [ "RTC_CLR_REG", "a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dabc51699db6321ee7f233162735869f70", null ]
     ] ],
+    [ "switch_t", "a00020.html#ab43e533f3793920486fb81c580f71564", [
+      [ "ON", "a00020.html#ab43e533f3793920486fb81c580f71564a977d478dacaae531f95695750d1e9d03", null ],
+      [ "OFF", "a00020.html#ab43e533f3793920486fb81c580f71564aac132f2982b98bcaa3445e535a03ff75", null ]
+    ] ],
     [ "SYS_CLK", "a00020.html#ae3a2d501b8662e11b969fb4a5e195e5b", [
       [ "SYS_CLK_3M", "a00020.html#ae3a2d501b8662e11b969fb4a5e195e5baaac7754daa9ff2db35951f3539495122", null ],
       [ "SYS_CLK_6M", "a00020.html#ae3a2d501b8662e11b969fb4a5e195e5bad1640aa8c46162a7551abca12293ef39", null ],

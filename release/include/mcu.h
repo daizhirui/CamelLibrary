@@ -10,6 +10,11 @@
 
 #include <stdint.h>
 
+typedef enum {
+    ON = 0x1,
+    OFF = 0x0
+} switch_t;
+
 /*! Keyword ON. */
 #define ON      0x1
 /*! Keyword OFF. */

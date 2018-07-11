@@ -1,5 +1,5 @@
 # Project path
-PROJECT_PATH = /Users/daizhirui/Development/CamelStudio_Library
+PROJECT_PATH = /Users/daizhirui/Development/Camel_Library
 PROJECT_SRC_PATH = $(PROJECT_PATH)/src
 BUILD_PATH = $(PROJECT_PATH)/build
 RELEASE_PATH = $(PROJECT_PATH)/release
@@ -9,7 +9,7 @@ CAMELSTUDIOX_LIB_PATH=/Users/daizhirui/Development/CamelStudioX_Mac/CamelStudioX
 # Compiler definition
 TARTGET_ADDRESS = 10000000
 DATA_ADDRESS = 01000010
-TOOLCHAINS_DIR = /Users/daizhirui/Development/CamelStudio_Library/ToolChains/bin
+TOOLCHAINS_DIR = /Users/daizhirui/Development/Camel_Library/ToolChains/bin
 GCC_MIPS = $(TOOLCHAINS_DIR)/mips-netbsd-elf-gcc
 GXX_MIPS = $(TOOLCHAINS_DIR)/mips-netbsd-elf-g++
 GCC_FLAGS = -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -fno-builtin -msoft-float

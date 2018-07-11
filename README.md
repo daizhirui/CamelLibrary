@@ -8,6 +8,10 @@ Official Library for Camel Micro products. This library is embedded in [CamelStu
 
 ## History
 
+### 11.07.2018
+
+- Improve ```void RT_TCx_TimerSet1us(uint32_t T, switch_t irqEn)```, transform them to inline functions and use a better algorithm to determine the ```clk``` and ```ref```.
+
 ### 06.07.2018
 
 - Merge code in interrupt.c to isr.s to increase the speed of entering the interrupt state.

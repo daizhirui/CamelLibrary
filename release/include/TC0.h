@@ -3,7 +3,7 @@
 * @author Zhirui Dai
 * @date 16 Jun 2018
 * @copyright 2018 Zhirui
-* @brief Timer0 Library for M2
+* @brief Timer Counter 0 Library for M2
 */
 #ifndef __TC0_h__
 #define __TC0_h__
@@ -90,21 +90,15 @@
  * @return      void
  */
 #define RT_TC0_TimerOff() MemoryAnd32(T0_CTL0_REG, ~(1 << 1))
+
 /**
  * @brief
  * This function sets the timer function of TC0
- * @param T         the target time to reach
- * @param irq       when ON, the interrupt is enabled; when OFF, disabled
+ * @param T         the target time to reach, the uint is us.
+ * @param irqEn     when #ON, the interrupt is enabled; when #OFF, disabled
  * @return          void
  */
-#define RT_TC0_TimerSet1us(T, irq)                        \
-    {                                                  \
-        MemoryAnd32(T0_CTL0_REG, ~(1 << 7));           \
-        MemoryWrite32(T0_CLK_REG, T / 81 + 1);         \
-        MemoryWrite32(T0_REF_REG, 243 * T / (T + 81)); \
-        MemoryOr32(T0_CTL0_REG, (0x02 | (irq << 7)));  \
-        MemoryOr32(SYS_CTL0_REG, irq);                 \
-    }
+void RT_TC0_TimerSet1us(uint32_t T, switch_t irqEn);
 
 /**
  * @brief

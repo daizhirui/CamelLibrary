@@ -1,73 +1,74 @@
-/Users/daizhirui/Development/CamelStudio_Library/release/include/DES.h:56: warning: Member DES_generateSubKeys(const DES_Key originalKey) (function) of file DES.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/DES.h:57: warning: Member DES_process(MessageData originalData, DES_Key *subKeys, uint8_t mode) (function) of file DES.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/DES.h:58: warning: Member DES(MessageData originalData, DES_Key originalKey, uint8_t mode) (function) of file DES.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:12: warning: Member LCD_M2 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:13: warning: Member kPa (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:14: warning: Member DP1 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:15: warning: Member mmHg (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:16: warning: Member DN (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:17: warning: Member UP (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:18: warning: Member LB (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:19: warning: Member M1 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:20: warning: Member L3 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:21: warning: Member L4 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:22: warning: Member L5 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:23: warning: Member L6 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:24: warning: Member L2 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:25: warning: Member L1 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:26: warning: Member IHB (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:27: warning: Member AVG (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:28: warning: Member elAGD (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:29: warning: Member DP2 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:30: warning: Member E13 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:31: warning: Member AM (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:32: warning: Member C9 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:33: warning: Member B9 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:34: warning: Member nineAGDE (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:35: warning: Member HT (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:36: warning: Member colon (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:37: warning: Member PM (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:38: warning: Member No (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:39: warning: Member HR (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:40: warning: Member C13 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:41: warning: Member M_2 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:42: warning: Member B13 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:44: warning: Member segment (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:45: warning: Member digit (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:46: warning: Member days (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:47: warning: Member LCDCode1 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:48: warning: Member LCDCode2 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:49: warning: Member LCDCode3 (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:51: warning: Member flaga (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:54: warning: Member subsecond (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:55: warning: Member second (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:56: warning: Member minuteg (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:57: warning: Member hourg (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:58: warning: Member dayg (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:59: warning: Member monthg (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:60: warning: Member SetMode (macro definition) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:65: warning: Member RT_LCD_Initialize() (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:66: warning: Member RT_LCD_ShowAll() (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:67: warning: Member RT_LCD_DispOn() (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:68: warning: Member RT_LCD_DisHiPressure(unsigned int b) (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:69: warning: Member RT_LCD_DisLoPressure(unsigned int b) (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:70: warning: Member RT_LCD_DisHeartRate(unsigned int b) (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:71: warning: Member RT_LCD_DisDate(unsigned int month, unsigned int day) (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:72: warning: Member RT_LCD_DisTime(unsigned int hour, unsigned int minute) (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:73: warning: Member RT_LCD_DisSign(unsigned long x, unsigned long y) (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:74: warning: Member RT_LCD_ClearSign(unsigned long x, unsigned long y) (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:75: warning: Member RT_LCD_GetSegCode1(unsigned int b) (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:76: warning: Member RT_LCD_GetSegCode2(unsigned int b) (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:77: warning: Member RT_LCD_GetSegCode3(unsigned int b) (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:78: warning: Member RT_LCD_ExtractDigit(unsigned int b) (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:79: warning: Member RT_LCD_BlinkSign(unsigned long x, unsigned long y) (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:80: warning: Member RT_LCD_BlinkMinute() (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:81: warning: Member RT_LCD_BlinkHour() (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:82: warning: Member RT_LCD_BlinkDay() (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:83: warning: Member RT_LCD_BlinkMonth() (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/LCD.h:84: warning: Member RT_LCD_delay(unsigned int a) (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/soft_fp.h:153: warning: argument 'x' of command @param is not found in the argument list of fp_float32_sqrt(float a)
-/Users/daizhirui/Development/CamelStudio_Library/release/include/soft_fp.h:158: warning: The following parameters of fp_float32_sqrt(float a) are not documented:
+/Users/daizhirui/Development/Camel_Library/release/include/DES.h:56: warning: Member DES_generateSubKeys(const DES_Key originalKey) (function) of file DES.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/DES.h:57: warning: Member DES_process(MessageData originalData, DES_Key *subKeys, uint8_t mode) (function) of file DES.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/DES.h:58: warning: Member DES(MessageData originalData, DES_Key originalKey, uint8_t mode) (function) of file DES.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:12: warning: Member LCD_M2 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:13: warning: Member kPa (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:14: warning: Member DP1 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:15: warning: Member mmHg (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:16: warning: Member DN (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:17: warning: Member UP (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:18: warning: Member LB (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:19: warning: Member M1 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:20: warning: Member L3 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:21: warning: Member L4 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:22: warning: Member L5 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:23: warning: Member L6 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:24: warning: Member L2 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:25: warning: Member L1 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:26: warning: Member IHB (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:27: warning: Member AVG (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:28: warning: Member elAGD (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:29: warning: Member DP2 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:30: warning: Member E13 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:31: warning: Member AM (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:32: warning: Member C9 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:33: warning: Member B9 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:34: warning: Member nineAGDE (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:35: warning: Member HT (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:36: warning: Member colon (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:37: warning: Member PM (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:38: warning: Member No (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:39: warning: Member HR (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:40: warning: Member C13 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:41: warning: Member M_2 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:42: warning: Member B13 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:44: warning: Member segment (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:45: warning: Member digit (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:46: warning: Member days (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:47: warning: Member LCDCode1 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:48: warning: Member LCDCode2 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:49: warning: Member LCDCode3 (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:51: warning: Member flaga (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:54: warning: Member subsecond (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:55: warning: Member second (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:56: warning: Member minuteg (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:57: warning: Member hourg (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:58: warning: Member dayg (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:59: warning: Member monthg (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:60: warning: Member SetMode (macro definition) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:65: warning: Member RT_LCD_Initialize() (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:66: warning: Member RT_LCD_ShowAll() (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:67: warning: Member RT_LCD_DispOn() (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:68: warning: Member RT_LCD_DisHiPressure(unsigned int b) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:69: warning: Member RT_LCD_DisLoPressure(unsigned int b) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:70: warning: Member RT_LCD_DisHeartRate(unsigned int b) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:71: warning: Member RT_LCD_DisDate(unsigned int month, unsigned int day) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:72: warning: Member RT_LCD_DisTime(unsigned int hour, unsigned int minute) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:73: warning: Member RT_LCD_DisSign(unsigned long x, unsigned long y) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:74: warning: Member RT_LCD_ClearSign(unsigned long x, unsigned long y) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:75: warning: Member RT_LCD_GetSegCode1(unsigned int b) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:76: warning: Member RT_LCD_GetSegCode2(unsigned int b) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:77: warning: Member RT_LCD_GetSegCode3(unsigned int b) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:78: warning: Member RT_LCD_ExtractDigit(unsigned int b) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:79: warning: Member RT_LCD_BlinkSign(unsigned long x, unsigned long y) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:80: warning: Member RT_LCD_BlinkMinute() (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:81: warning: Member RT_LCD_BlinkHour() (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:82: warning: Member RT_LCD_BlinkDay() (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:83: warning: Member RT_LCD_BlinkMonth() (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/LCD.h:84: warning: Member RT_LCD_delay(unsigned int a) (function) of file LCD.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/mcu.h:13: warning: Member switch_t (enumeration) of file mcu.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/soft_fp.h:153: warning: argument 'x' of command @param is not found in the argument list of fp_float32_sqrt(float a)
+/Users/daizhirui/Development/Camel_Library/release/include/soft_fp.h:158: warning: The following parameters of fp_float32_sqrt(float a) are not documented:
   parameter 'a'
-/Users/daizhirui/Development/CamelStudio_Library/release/include/stdio_fp.h:12: warning: Member ftoa(float a_fp) (function) of file stdio_fp.h is not documented.
-/Users/daizhirui/Development/CamelStudio_Library/release/include/stdlib_fp.h:12: warning: Member atof(char *str) (function) of file stdlib_fp.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/stdio_fp.h:12: warning: Member ftoa(float a_fp) (function) of file stdio_fp.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/stdlib_fp.h:12: warning: Member atof(char *str) (function) of file stdlib_fp.h is not documented.

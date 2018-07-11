@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
     <meta name="generator" content="Doxygen 1.8.14" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <title>Camel Library Documentaion: /Users/daizhirui/Development/CamelStudio_Library/release/include/TC2.h File Reference</title>
+    <title>Camel Library Documentaion: /Users/daizhirui/Development/Camel_Library/release/include/TC2.h File Reference</title>
     <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
     <script type="text/javascript" src="dynsections.js"></script>
     <link href="navtree.css" rel="stylesheet" type="text/css"/>
@@ -131,7 +131,8 @@ $(document).ready(function(){initNavTree('a00047.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">TC2.h File Reference</div>  </div>
 </div><!--header-->
@@ -179,9 +180,6 @@ Macros</h2></td></tr>
 <tr class="memitem:a4328299fe0323ef75508eadf9b937ba1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00047.html#a4328299fe0323ef75508eadf9b937ba1">RT_TC2_TimerOff</a>()&#160;&#160;&#160;<a class="el" href="a00020.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(<a class="el" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ~(1 &lt;&lt; 1))</td></tr>
 <tr class="memdesc:a4328299fe0323ef75508eadf9b937ba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off TC2 Timer.  <a href="#a4328299fe0323ef75508eadf9b937ba1">More...</a><br /></td></tr>
 <tr class="separator:a4328299fe0323ef75508eadf9b937ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a005265e28d070ee73720939fca9a815a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00047.html#a005265e28d070ee73720939fca9a815a">RT_TC2_TimerSet1us</a>(T,  irq)</td></tr>
-<tr class="memdesc:a005265e28d070ee73720939fca9a815a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sets the timer function of TC2.  <a href="#a005265e28d070ee73720939fca9a815a">More...</a><br /></td></tr>
-<tr class="separator:a005265e28d070ee73720939fca9a815a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28ff54e7b5cd20e082ea21b6731d5b51"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00047.html#a28ff54e7b5cd20e082ea21b6731d5b51">RT_TC2_SetCounter</a>(n)</td></tr>
 <tr class="memdesc:a28ff54e7b5cd20e082ea21b6731d5b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sets the frequency counter of TC2 The base frequency of the counter is 45Hz.  <a href="#a28ff54e7b5cd20e082ea21b6731d5b51">More...</a><br /></td></tr>
 <tr class="separator:a28ff54e7b5cd20e082ea21b6731d5b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,6 +222,12 @@ Macros</h2></td></tr>
 <tr class="memitem:a6591a513f367f6e7be0a90cb72aa3d49"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00047.html#a6591a513f367f6e7be0a90cb72aa3d49">RT_TC2_ReadCnt</a>()&#160;&#160;&#160;<a class="el" href="a00020.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(<a class="el" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da2ce860fb68efa5daaac3e07dd534dd54">T2_READ_REG</a>)</td></tr>
 <tr class="memdesc:a6591a513f367f6e7be0a90cb72aa3d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read TC2 Counter Register Value.  <a href="#a6591a513f367f6e7be0a90cb72aa3d49">More...</a><br /></td></tr>
 <tr class="separator:a6591a513f367f6e7be0a90cb72aa3d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a295c11e348fa97400f36ddf1ece55368"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00047.html#a295c11e348fa97400f36ddf1ece55368">RT_TC2_TimerSet1us</a> (uint32_t T, switch_t irqEn)</td></tr>
+<tr class="memdesc:a295c11e348fa97400f36ddf1ece55368"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sets the timer function of TC0.  <a href="#a295c11e348fa97400f36ddf1ece55368">More...</a><br /></td></tr>
+<tr class="separator:a295c11e348fa97400f36ddf1ece55368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Timer2 Library for M2. </p>
@@ -285,8 +289,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                    \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da505b90f4de2b8b5b23d7154861265863">T2_CLRIRQ_REG</a>, 0); \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da9b4ab7bd6ab1e6514a439bd0056fb099">T2_CLRCNT_REG</a>, 0); \</div><div class="line">    }</div><div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44da9b4ab7bd6ab1e6514a439bd0056fb099"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da9b4ab7bd6ab1e6514a439bd0056fb099">T2_CLRCNT_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:147</div></div>
-<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44da505b90f4de2b8b5b23d7154861265863"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da505b90f4de2b8b5b23d7154861265863">T2_CLRIRQ_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:143</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{                                    \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da505b90f4de2b8b5b23d7154861265863">T2_CLRIRQ_REG</a>, 0); \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da9b4ab7bd6ab1e6514a439bd0056fb099">T2_CLRCNT_REG</a>, 0); \</div><div class="line">    }</div><div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44da9b4ab7bd6ab1e6514a439bd0056fb099"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da9b4ab7bd6ab1e6514a439bd0056fb099">T2_CLRCNT_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:152</div></div>
+<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44da505b90f4de2b8b5b23d7154861265863"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da505b90f4de2b8b5b23d7154861265863">T2_CLRIRQ_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:148</div></div>
 </div><!-- fragment -->
 <p>Clear TC2 TC-IRQ, PWM-IRQ and Counter value. </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
@@ -548,7 +552,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                        \</div><div class="line">        MemoryAnd32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ~(1 &lt;&lt; 2)); \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, mode &lt;&lt; 2);  \</div><div class="line">    }</div><div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:137</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{                                        \</div><div class="line">        MemoryAnd32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ~(1 &lt;&lt; 2)); \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, mode &lt;&lt; 2);  \</div><div class="line">    }</div><div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:142</div></div>
 </div><!-- fragment -->
 <p>Set TC2 Trigger Mode of Pulse Width Measurement. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -660,10 +664,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                                                               \</div><div class="line">        MemoryAnd32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ~(0x3 &lt;&lt; 4));                                                      \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ((pwm0 &lt;&lt; 4) | (pwm13 &lt;&lt; 5)));                                      \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6">T2_CLK_REG</a>, div);                                                             \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251">T2_REF_REG</a>, (duty0 + (duty1 &lt;&lt; 8) + (duty2 &lt;&lt; 16) + (duty3 &lt;&lt; 24)));          \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da0e4e92920a475b537196369ae8274e7e">T2_PHASE_REG</a>, (phase0 + (phase1 &lt;&lt; 8) + (phase2 &lt;&lt; 16) + (phase3 &lt;&lt; 24)));    \</div><div class="line">    }</div><div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44da0e4e92920a475b537196369ae8274e7e"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da0e4e92920a475b537196369ae8274e7e">T2_PHASE_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:149</div></div>
-<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:137</div></div>
-<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251">T2_REF_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:139</div></div>
-<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6">T2_CLK_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:145</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{                                                                                               \</div><div class="line">        MemoryAnd32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ~(0x3 &lt;&lt; 4));                                                      \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ((pwm0 &lt;&lt; 4) | (pwm13 &lt;&lt; 5)));                                      \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6">T2_CLK_REG</a>, div);                                                             \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251">T2_REF_REG</a>, (duty0 + (duty1 &lt;&lt; 8) + (duty2 &lt;&lt; 16) + (duty3 &lt;&lt; 24)));          \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da0e4e92920a475b537196369ae8274e7e">T2_PHASE_REG</a>, (phase0 + (phase1 &lt;&lt; 8) + (phase2 &lt;&lt; 16) + (phase3 &lt;&lt; 24)));    \</div><div class="line">    }</div><div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44da0e4e92920a475b537196369ae8274e7e"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da0e4e92920a475b537196369ae8274e7e">T2_PHASE_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:154</div></div>
+<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:142</div></div>
+<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251">T2_REF_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:144</div></div>
+<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6">T2_CLK_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:150</div></div>
 </div><!-- fragment -->
 <p>This function sets the PWM function of TC2. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -701,9 +705,9 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                        \</div><div class="line">        MemoryAnd32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ~(1 &lt;&lt; 7)); \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6">T2_CLK_REG</a>, n);        \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251">T2_REF_REG</a>, 0x0);      \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, (0x02));     \</div><div class="line">    }</div><div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:137</div></div>
-<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251">T2_REF_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:139</div></div>
-<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6">T2_CLK_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:145</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{                                        \</div><div class="line">        MemoryAnd32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ~(1 &lt;&lt; 7)); \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6">T2_CLK_REG</a>, n);        \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251">T2_REF_REG</a>, 0x0);      \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, (0x02));     \</div><div class="line">    }</div><div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:142</div></div>
+<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251">T2_REF_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:144</div></div>
+<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6">T2_CLK_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:150</div></div>
 </div><!-- fragment -->
 <p>This function sets the frequency counter of TC2 The base frequency of the counter is 45Hz. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -747,9 +751,9 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                                 \</div><div class="line">        MemoryAnd32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ~((0x1 &lt;&lt; 7) + (0x1 &lt;&lt; 2)));         \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ((trigger &lt;&lt; 2) | (irq &lt;&lt; 7) | 0x1)); \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251">T2_REF_REG</a>, n);                                 \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5">SYS_CTL0_REG</a>, irq);                                \</div><div class="line">    }</div><div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:137</div></div>
-<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251">T2_REF_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:139</div></div>
-<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5">SYS_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:38</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{                                                                 \</div><div class="line">        MemoryAnd32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ~((0x1 &lt;&lt; 7) + (0x1 &lt;&lt; 2)));         \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ((trigger &lt;&lt; 2) | (irq &lt;&lt; 7) | 0x1)); \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251">T2_REF_REG</a>, n);                                 \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5">SYS_CTL0_REG</a>, irq);                                \</div><div class="line">    }</div><div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:142</div></div>
+<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251">T2_REF_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:144</div></div>
+<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5">SYS_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:43</div></div>
 </div><!-- fragment -->
 <p>This function sets the ECNT function of TC2. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -789,8 +793,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                               \</div><div class="line">        MemoryAnd32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ~((0x1 &lt;&lt; 7) + (0x1 &lt;&lt; 2)));       \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, (0x18 | (irq &lt;&lt; 7) | (rise &lt;&lt; 2))); \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5">SYS_CTL0_REG</a>, irq);                              \</div><div class="line">    }</div><div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:137</div></div>
-<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5">SYS_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:38</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{                                                               \</div><div class="line">        MemoryAnd32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ~((0x1 &lt;&lt; 7) + (0x1 &lt;&lt; 2)));       \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, (0x18 | (irq &lt;&lt; 7) | (rise &lt;&lt; 2))); \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5">SYS_CTL0_REG</a>, irq);                              \</div><div class="line">    }</div><div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:142</div></div>
+<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5">SYS_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:43</div></div>
 </div><!-- fragment -->
 <p>This function sets the Pulse width measure for TC2. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -904,23 +908,24 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a005265e28d070ee73720939fca9a815a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a005265e28d070ee73720939fca9a815a">&#9670;&nbsp;</a></span>RT_TC2_TimerSet1us</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a295c11e348fa97400f36ddf1ece55368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a295c11e348fa97400f36ddf1ece55368">&#9670;&nbsp;</a></span>RT_TC2_TimerSet1us()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RT_TC2_TimerSet1us</td>
+          <td class="memname">void RT_TC2_TimerSet1us </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">T, </td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>T</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">irq&#160;</td>
+          <td class="paramtype">switch_t&#160;</td>
+          <td class="paramname"><em>irqEn</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -929,16 +934,12 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                  \</div><div class="line">        MemoryAnd32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, ~(1 &lt;&lt; 7));           \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6">T2_CLK_REG</a>, T / 81 + 1);             \</div><div class="line">        MemoryWrite32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251">T2_REF_REG</a>, 243 * T / (T + 81)); \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a>, (0x02 | (irq &lt;&lt; 7)));  \</div><div class="line">        MemoryOr32(<a class="code" href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5">SYS_CTL0_REG</a>, irq);                 \</div><div class="line">    }</div><div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475">T2_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:137</div></div>
-<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251">T2_REF_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:139</div></div>
-<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5">SYS_CTL0_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:38</div></div>
-<div class="ttc" id="a00020_html_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6"><div class="ttname"><a href="a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6">T2_CLK_REG</a></div><div class="ttdef"><b>Definition:</b> mcu.h:145</div></div>
-</div><!-- fragment -->
-<p>This function sets the timer function of TC2. </p>
+
+<p>This function sets the timer function of TC0. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">T</td><td>the target time to reach </td></tr>
-    <tr><td class="paramname">irq</td><td>when ON, the interrupt is enabled; when OFF, disabled </td></tr>
+    <tr><td class="paramname">T</td><td>the target time to reach, the uint is us. </td></tr>
+    <tr><td class="paramname">irqEn</td><td>when <a class="el" href="a00020.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, the interrupt is enabled; when <a class="el" href="a00020.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, disabled </td></tr>
   </table>
   </dd>
 </dl>
@@ -954,7 +955,7 @@ Macros</h2></td></tr>
     <!-- id is needed for treeview function! -->
     <!-- <ul>
         <li class="navelem"><a class="el" href="dir_9c8c494a5e1ae1f33037b0e9d49f06c7.html">release</a></li><li class="navelem"><a class="el" href="dir_42743c43973611cb0b05144d150e48a5.html">include</a></li><li class="navelem"><a class="el" href="a00047.html">TC2.h</a></li>
-        <li class="footer">Generated on Fri Jul 6 2018 20:47:39 for Camel Library Documentaion by
+        <li class="footer">Generated on Wed Jul 11 2018 15:21:28 for Camel Library Documentaion by
             <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
     </ul> -->
@@ -966,7 +967,7 @@ Macros</h2></td></tr>
             <!-- <h5 class="card-title">Special title treatment</h5> -->
             <p class="card-text d-flex justify-content-between">
                 <a href="#" class="btn btn-primary">Return To Top</a>
-                <a href="http://www.doxygen.org/index.html">Generated on Fri Jul 6 2018 20:47:39 for Camel Library Documentaion by <img class="footer" src="doxygen.png" alt="doxygen"/>  1.8.14</a>
+                <a href="http://www.doxygen.org/index.html">Generated on Wed Jul 11 2018 15:21:28 for Camel Library Documentaion by <img class="footer" src="doxygen.png" alt="doxygen"/>  1.8.14</a>
             </p>
         </div>
     </div>
