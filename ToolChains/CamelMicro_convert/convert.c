@@ -24,6 +24,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define DEBUG 0
 #define BUF_SIZE (1024*1024*4)
 /*Assumes running on PC little endian*/
 /*
@@ -138,9 +139,11 @@ int main(int argc, char *argv[])
     (void)stack_pointer;
     int op, adst, debug=0;
 
+    #if DEBUG
     printf("Size of ElfHeader: %lu\n", sizeof(ElfHeader));
     printf("Size of Elf32_Phdr: %lu\n", sizeof(Elf32_Phdr));
     printf("Size of Elf32_Shdr: %lu\n", sizeof(Elf32_Shdr));
+    #endif
 
     // Parse parameters
     if (argc <2)
@@ -174,7 +177,7 @@ int main(int argc, char *argv[])
         printf ("-> m0 converting, 28\n");
     }
     else {
-        printf("none valid: -n, -p, -m\n");
+        perror("none valid: -n, -p, -m\n");
         return 0;
     }
 
@@ -183,8 +186,8 @@ int main(int argc, char *argv[])
     infile = fopen(argv[2], "rb");
     if(infile == NULL)
     {
-        printf("Can't open %s", argv[2]);
-        return 0;
+        fprintf(stderr, "Can't open %s", argv[2]);
+        return -2;
     }
     buf = (uint8*)malloc(BUF_SIZE);
     size = (int)fread(buf, 1, BUF_SIZE, infile);
@@ -194,8 +197,8 @@ int main(int argc, char *argv[])
     elfHeader = (ElfHeader *)buf;
     if(strncmp((char*)elfHeader->e_ident + 1, "ELF", 3))
     {
-        printf("Error:  Not an ELF file!\n");
-        printf("Use the gccmips_elf.zip from opencores/projects/plasma!\n");
+        perror("Error:  Not an ELF file!\n");
+        perror("Use the gccmips_elf.zip from opencores/projects/plasma!\n");
         return -1;
     }
 
@@ -584,13 +587,15 @@ int main(int argc, char *argv[])
     return 0;
 }
 
-//This is here to determine what __BYTE_ORDER is set to in netinet/in.h.
-// Not in original code
-#if __DARWIN_BYTE_ORDER == BIG_ENDIAN
-#warning BIG ENDIAN BYTE ORDER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#endif
-//This is here to determine what __BYTE_ORDER is set to in netinet/in.h.
-// Not in original code
-#if __DARWIN_BYTE_ORDER == LITTLE_ENDIAN
-#warning YAY LITTLE ENDIAN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#if DEBUG
+    //This is here to determine what __BYTE_ORDER is set to in netinet/in.h.
+    // Not in original code
+    #if __DARWIN_BYTE_ORDER == BIG_ENDIAN
+    #warning BIG ENDIAN BYTE ORDER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    #endif
+    //This is here to determine what __BYTE_ORDER is set to in netinet/in.h.
+    // Not in original code
+    #if __DARWIN_BYTE_ORDER == LITTLE_ENDIAN
+    #warning YAY LITTLE ENDIAN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    #endif
 #endif

@@ -8,6 +8,14 @@ Official Library for Camel Micro products. This library is embedded in [CamelStu
 
 ## History
 
+### 13.07.2018
+
+- Fix a bug of RT_SYSINT_GetFlag
+- use more inline functions
+- recompile with -O2 -msoft-float
+- Improve soft_fp by using union to convert between float and uint32 or double and uint32[2]
+- Update documentation
+
 ### 11.07.2018
 
 - Improve ```void RT_TCx_TimerSet1us(uint32_t T, switch_t irqEn)```, transform them to inline functions and use a better algorithm to determine the ```clk``` and ```ref```.

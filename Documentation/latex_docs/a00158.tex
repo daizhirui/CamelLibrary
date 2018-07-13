@@ -75,14 +75,14 @@ uint32\_t \mbox{\hyperlink{a00056_a74f1bca1f0b60eeec1f84bcba3e34919}{RT\_UART\_G
     \textcolor{keywordtype}{char} c;
 
     \textcolor{comment}{// Turn on UART0 and UART1}
-    \mbox{\hyperlink{a00056_a7c1428a7b16eec7fe710679dd70b4069}{RT\_UART\_On}}(\mbox{\hyperlink{a00056_a0508661f121639ffdee7de2353a0def2}{UART0}});
-    \mbox{\hyperlink{a00056_a7c1428a7b16eec7fe710679dd70b4069}{RT\_UART\_On}}(\mbox{\hyperlink{a00056_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}});
+    \mbox{\hyperlink{a00056_a7c1428a7b16eec7fe710679dd70b4069}{RT\_UART\_On}}(UART0);
+    \mbox{\hyperlink{a00056_a7c1428a7b16eec7fe710679dd70b4069}{RT\_UART\_On}}(UART1);
 
     \textcolor{keywordflow}{while}(1) \{
-        c = \mbox{\hyperlink{a00056_abc136df9d66fe27bf8ffcc319246591e}{RT\_UART\_getchar}}(\mbox{\hyperlink{a00056_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}});
-        \mbox{\hyperlink{a00056_ad61c03a00ccd43875563c16f97d61af7}{RT\_UART\_puts}}(\mbox{\hyperlink{a00056_a0508661f121639ffdee7de2353a0def2}{UART0}}, \textcolor{stringliteral}{"Get a character from UART1: "});
-        \mbox{\hyperlink{a00056_ab03e9e1a8d4d9b97583db27174086108}{RT\_UART\_putchar}}(\mbox{\hyperlink{a00056_a0508661f121639ffdee7de2353a0def2}{UART0}}, c);
-        \mbox{\hyperlink{a00056_ab03e9e1a8d4d9b97583db27174086108}{RT\_UART\_putchar}}(\mbox{\hyperlink{a00056_a0508661f121639ffdee7de2353a0def2}{UART0}}, \textcolor{charliteral}{'\(\backslash\)n'});
+        c = \mbox{\hyperlink{a00056_abc136df9d66fe27bf8ffcc319246591e}{RT\_UART\_getchar}}(UART1);
+        \mbox{\hyperlink{a00056_ad61c03a00ccd43875563c16f97d61af7}{RT\_UART\_puts}}(UART0, \textcolor{stringliteral}{"Get a character from UART1: "});
+        \mbox{\hyperlink{a00056_ab03e9e1a8d4d9b97583db27174086108}{RT\_UART\_putchar}}(UART0, c);
+        \mbox{\hyperlink{a00056_ab03e9e1a8d4d9b97583db27174086108}{RT\_UART\_putchar}}(UART0, \textcolor{charliteral}{'\(\backslash\)n'});
     \}
 \}
 \end{DoxyCode}
@@ -97,12 +97,12 @@ uint32\_t \mbox{\hyperlink{a00056_a74f1bca1f0b60eeec1f84bcba3e34919}{RT\_UART\_G
 \textcolor{keywordtype}{void} user\_interrupt()
 
 int main() \{
-    \mbox{\hyperlink{a00056_a7c1428a7b16eec7fe710679dd70b4069}{RT\_UART\_On}}(\mbox{\hyperlink{a00056_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}});                          \textcolor{comment}{// Turn on UART1}
+    \mbox{\hyperlink{a00056_a7c1428a7b16eec7fe710679dd70b4069}{RT\_UART\_On}}(UART1);                          \textcolor{comment}{// Turn on UART1}
     \textcolor{comment}{// RT\_UART\_LinSlave(UART1);                 // set M2 as Lin slave}
     \textcolor{comment}{// RT\_UART\_LinMaster(UART1, NORMAL\_BREAK);  // 13-bit break}
-    \mbox{\hyperlink{a00056_ab0faf051e642e540b1b9c114eae242bd}{RT\_UART\_LinMaster}}(\mbox{\hyperlink{a00056_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}}, \mbox{\hyperlink{a00056_a7c76b3ed72795f2085873ee332fdab1b}{EXTREME\_BREAK}});    \textcolor{comment}{// 26-bit break}
+    \mbox{\hyperlink{a00056_ab0faf051e642e540b1b9c114eae242bd}{RT\_UART\_LinMaster}}(UART1, \mbox{\hyperlink{a00056_a7c76b3ed72795f2085873ee332fdab1b}{EXTREME\_BREAK}});    \textcolor{comment}{// 26-bit break}
     \textcolor{comment}{// ATTENTION: When RT\_UART\_LinMaster is used, a break will be sent automatically.}
-    \mbox{\hyperlink{a00056_ad1e6c13693e5ea54a55ce78635617178}{RT\_UART\_LinSendBreak}}(\mbox{\hyperlink{a00056_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}});                \textcolor{comment}{// Send break again manually.}
+    \mbox{\hyperlink{a00056_ad1e6c13693e5ea54a55ce78635617178}{RT\_UART\_LinSendBreak}}(UART1);                \textcolor{comment}{// Send break again manually.}
 
     \textcolor{comment}{// code after Lin sync}
     \textcolor{comment}{// ...}

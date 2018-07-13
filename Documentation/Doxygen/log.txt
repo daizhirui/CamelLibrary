@@ -1,6 +1,27 @@
+/Users/daizhirui/Development/Camel_Library/release/include/analogIO.h:450: warning: explicit link request to 'T0_CTL0_REG' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/analogIO.h:450: warning: explicit link request to 'T0_CTL0_REG' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/analogIO.h:452: warning: explicit link request to 'T1_CTL0_REG' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/analogIO.h:452: warning: explicit link request to 'T0_CTL0_REG' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/analogIO.h:454: warning: explicit link request to 'T2_CTL0_REG' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/analogIO.h:454: warning: explicit link request to 'T0_CTL0_REG' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/analogIO.h:101: warning: explicit link request to 'AD_CLR_REG' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/analogIO.h:384: warning: explicit link request to 'AD_READ_REG' could not be resolved
 /Users/daizhirui/Development/Camel_Library/release/include/DES.h:56: warning: Member DES_generateSubKeys(const DES_Key originalKey) (function) of file DES.h is not documented.
 /Users/daizhirui/Development/Camel_Library/release/include/DES.h:57: warning: Member DES_process(MessageData originalData, DES_Key *subKeys, uint8_t mode) (function) of file DES.h is not documented.
 /Users/daizhirui/Development/Camel_Library/release/include/DES.h:58: warning: Member DES(MessageData originalData, DES_Key originalKey, uint8_t mode) (function) of file DES.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/Interrupt.h:14: warning: Member SYSINT_DEVICE (enumeration) of file Interrupt.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/Interrupt.h:53: warning: Member EXTINT_PORT (enumeration) of file Interrupt.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/Interrupt.h:85: warning: argument 'port' of command @param is not found in the argument list of RT_EXINT_Clear(port)
+/Users/daizhirui/Development/Camel_Library/release/include/Interrupt.h:85: warning: explicit link request to 'EXINT0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/Interrupt.h:74: warning: argument 'port' of command @param is not found in the argument list of RT_EXINT_Off(port)
+/Users/daizhirui/Development/Camel_Library/release/include/Interrupt.h:75: warning: explicit link request to 'EXINT0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/Interrupt.h:62: warning: explicit link request to 'EXINT0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/Interrupt.h:62: warning: argument 'trigger' of command @param is not found in the argument list of RT_EXINT_Setup(EXTINT_PORT port, trigger_mode_t mode)
+/Users/daizhirui/Development/Camel_Library/release/include/Interrupt.h:63: warning: explicit link request to 'RISING' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/Interrupt.h:63: warning: explicit link request to 'FALLING' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/Interrupt.h:67: warning: The following parameters of RT_EXINT_Setup(EXTINT_PORT port, trigger_mode_t mode) are not documented:
+  parameter 'mode'
+/Users/daizhirui/Development/Camel_Library/release/include/Interrupt.h:28: warning: explicit link request to 'SYSINT_SPIINT' could not be resolved
 /Users/daizhirui/Development/Camel_Library/release/include/LCD.h:12: warning: Member LCD_M2 (macro definition) of file LCD.h is not documented.
 /Users/daizhirui/Development/Camel_Library/release/include/LCD.h:13: warning: Member kPa (macro definition) of file LCD.h is not documented.
 /Users/daizhirui/Development/Camel_Library/release/include/LCD.h:14: warning: Member DP1 (macro definition) of file LCD.h is not documented.
@@ -66,9 +87,67 @@
 /Users/daizhirui/Development/Camel_Library/release/include/LCD.h:82: warning: Member RT_LCD_BlinkDay() (function) of file LCD.h is not documented.
 /Users/daizhirui/Development/Camel_Library/release/include/LCD.h:83: warning: Member RT_LCD_BlinkMonth() (function) of file LCD.h is not documented.
 /Users/daizhirui/Development/Camel_Library/release/include/LCD.h:84: warning: Member RT_LCD_delay(unsigned int a) (function) of file LCD.h is not documented.
-/Users/daizhirui/Development/Camel_Library/release/include/mcu.h:13: warning: Member switch_t (enumeration) of file mcu.h is not documented.
-/Users/daizhirui/Development/Camel_Library/release/include/soft_fp.h:153: warning: argument 'x' of command @param is not found in the argument list of fp_float32_sqrt(float a)
-/Users/daizhirui/Development/Camel_Library/release/include/soft_fp.h:158: warning: The following parameters of fp_float32_sqrt(float a) are not documented:
+/Users/daizhirui/Development/Camel_Library/release/include/soft_fp.h:162: warning: argument 'x' of command @param is not found in the argument list of fp_float32_sqrt(float a)
+/Users/daizhirui/Development/Camel_Library/release/include/soft_fp.h:167: warning: The following parameters of fp_float32_sqrt(float a) are not documented:
   parameter 'a'
 /Users/daizhirui/Development/Camel_Library/release/include/stdio_fp.h:12: warning: Member ftoa(float a_fp) (function) of file stdio_fp.h is not documented.
 /Users/daizhirui/Development/Camel_Library/release/include/stdlib_fp.h:12: warning: Member atof(char *str) (function) of file stdlib_fp.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/TC0.h:213: warning: argument 'trigger' of command @param is not found in the argument list of RT_TC0_SetPWMM(trigger_mode_t mode, switch_t irq)
+/Users/daizhirui/Development/Camel_Library/release/include/TC0.h:219: warning: The following parameters of RT_TC0_SetPWMM(trigger_mode_t mode, switch_t irq) are not documented:
+  parameter 'mode'
+/Users/daizhirui/Development/Camel_Library/release/include/TC1.h:213: warning: argument 'trigger' of command @param is not found in the argument list of RT_TC1_SetPWMM(trigger_mode_t mode, switch_t irq)
+/Users/daizhirui/Development/Camel_Library/release/include/TC1.h:219: warning: The following parameters of RT_TC1_SetPWMM(trigger_mode_t mode, switch_t irq) are not documented:
+  parameter 'mode'
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:13: warning: Member UART_DEVICE (enumeration) of file UART.h is not documented.
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:57: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:57: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:137: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:137: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:123: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:123: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:108: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:108: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:100: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:100: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:72: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:72: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:186: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:186: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:93: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:93: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:86: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:86: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:165: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:165: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:158: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:158: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:179: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:179: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:172: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:172: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:193: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:193: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:151: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:151: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:144: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:144: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:27: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:27: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:34: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:34: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:130: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:130: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:79: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:79: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:115: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:115: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:64: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:64: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:229: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:229: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:240: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:240: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:200: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:200: warning: explicit link request to 'UART1' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:213: warning: explicit link request to 'UART0' could not be resolved
+/Users/daizhirui/Development/Camel_Library/release/include/UART.h:213: warning: explicit link request to 'UART1' could not be resolved

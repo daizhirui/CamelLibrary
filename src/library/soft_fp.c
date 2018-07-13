@@ -9,11 +9,21 @@
 #include "soft_fp.h"
 
 /*! \cond PRIVATE */
-#define __float32_to_uint32__(X)    (*(unsigned long*)&(X))
-#define __uint32_to_float32__(X)    (*(float*)&(X))
-#define __high32_of_float64__(X)    (((unsigned long*)&X)[1])
-#define __low32_of_float64__(X)     (((unsigned long*)&X)[0])
-#define __uint32x2_to_float64__(X)  (*(unsigned long*)&(X))
+static float32_container volatile float32_converter;
+static float64_container volatile float64_converter;
+
+static inline uint32_t __float32_to_uint32__(float f)
+{
+    float32_converter.floatValue = f;
+    return float32_converter.uint32Value;
+}
+
+static inline float __uint32_to_float32__(uint32_t a)
+{
+    float32_converter.uint32Value = a;
+    return float32_converter.floatValue;
+}
+
 // float32
 #define FLOAT32_SIGN_POS            31
 #define FLOAT32_EXPO_POS            23
@@ -27,16 +37,13 @@
 #define __float32_expo__(X)         ((X>>FLOAT32_EXPO_POS)&FLOAT32_EXPO_MASK)
 #define __float32_frac__(X)         (0x00800000 | (X&FLOAT32_FRAC_MASK))
 #define __assemble_float32__(S,E,F) ((S << FLOAT32_SIGN_POS) | ((E) << FLOAT32_EXPO_POS) | ((F) & FLOAT32_FRAC_MASK))
-unsigned long __NAN__ = 0x7f800000;
-#define FLOAT32_NaN()               (*(float*)&(__NAN__))
+#define __NAN__                     0x7f800000
 // float64
 #define FLOAT64_SIGN_POS                    63
 #define FLOAT64_EXPO_POS                    52
 #define FLOAT64_EXPO_HI_POS                 20
 #define FLOAT64_EXPO_BASE                   0x400   // 0x400 - 1
 #define FLOAT64_EXPO_MASK                   0x7FF
-#define __float64_lo(X)                     (((unsigned long*)(&X))[0])
-#define __float64_hi(X)                     (((unsigned long*)(&X))[1])
 // float32 to float64
 #define FLOAT32_TO64_FRAC_LO_MASK           0x7
 #define FLOAT32_TO64_FRAC_HI_MASK           0x7FFFF8
@@ -47,10 +54,8 @@ unsigned long __NAN__ = 0x7f800000;
 #define __float32_expo_from_float64__(X)    ((((X>>FLOAT64_EXPO_HI_POS)&FLOAT32_EXPO_MASK) - FLOAT64_EXPO_BASE + FLOAT32_EXPO_BASE)&FLOAT32_EXPO_MASK)
 #define __float32_frac_from_float64__(H,L)  (((H&FLOAT32_TO64_FRAC_HI_MASK)<<3)|((L>>29)&FLOAT32_TO64_FRAC_LO_MASK)|0x00800000)
 // For float64
-unsigned long __float64_buffer[2];
-#define __float64_buffer_hi     __float64_buffer[1]
-#define __float64_buffer_lo     __float64_buffer[0]
-#define __float64_buffer_to_float64__()      (*((double*)__float64_buffer))
+#define __float64_converter_hi     float64_converter.uint32Value[1]
+#define __float64_converter_lo     float64_converter.uint32Value[0]
 /*! \endcond */
 
 /**
@@ -61,6 +66,7 @@ unsigned long __float64_buffer[2];
 float fp_float32_neg(float a_fp)
 {
     uint32_t a;
+
     a = __float32_to_uint32__(a_fp);
     a ^= 0x80000000;
     return __uint32_to_float32__(a);
@@ -91,6 +97,7 @@ float fp_float32_add(float a_fp, float b_fp)
     uint32_t a,b,c;             // unit32 expression
     uint32_t as,bs,cs;          // sign
     int32_t ae,be,ce,af,bf,cf;  // exponent and fraction
+
     a = __float32_to_uint32__(a_fp);
     b = __float32_to_uint32__(b_fp);
     as = __float32_sign__(a);            //sign
@@ -154,6 +161,7 @@ float fp_float32_mult(float a_fp, float b_fp)
     int32_t ae,be,ce,af,bf,cf;  // exponent and fraction
     uint32_t a1,a2,b1,b2,med1,med2,lo,hi;   // for multiply
     // conversion
+
     a = __float32_to_uint32__(a_fp);
     b = __float32_to_uint32__(b_fp);
     as = __float32_sign__(a);            //sign
@@ -204,6 +212,7 @@ float fp_float32_div(float a_fp, float b_fp)
     int32_t ae,be,ce,af,bf,cf;  // exponent and fraction
     uint32_t a1,a2,b1,b2,med1,med2,lo,hi;   // for division
     int32_t d;
+
     a = __float32_to_uint32__(a_fp);
     b = __float32_to_uint32__(b_fp);
     as = __float32_sign__(a);            //sign
@@ -264,6 +273,7 @@ long fp_float32_to_int32(float a_fp)
     uint32_t as;    // sign
     int32_t ae, af; // exponent and fraction
     long shift;
+
     a = __float32_to_uint32__(a_fp);
     as = __float32_sign__(a);            //sign
     ae = __float32_expo__(a);            //exponent
@@ -348,6 +358,7 @@ double fp_float32_to_float64(float a_fp)
     uint32_t a;             // unit32 expression
     uint32_t as,bs;          // sign
     int32_t ae,be,af;  // exponent and fraction
+
     a = __float32_to_uint32__(a_fp);
     as = __float32_sign__(a);
     ae = __float32_expo__(a);
@@ -355,9 +366,9 @@ double fp_float32_to_float64(float a_fp)
 
     bs = as;
     be = __float64_expo_from_float32__(ae);
-    __float64_buffer_lo = __float64_lo_from_float32__(af);
-    __float64_buffer_hi = __float64_hi_from_float32__(bs, be, af);
-    return __float64_buffer_to_float64__();
+    __float64_converter_lo = __float64_lo_from_float32__(af);
+    __float64_converter_hi = __float64_hi_from_float32__(bs, be, af);
+    return float64_converter.doubleValue;
 }
 
 /**
@@ -371,16 +382,16 @@ float fp_float64_to_float32(double a_dfp)
     uint32_t a;             // unit32 expression
     uint32_t as;          // sign
     int32_t ae,af;  // exponent and fraction
-    __float64_buffer_hi = __float64_hi(a_dfp);
-    __float64_buffer_lo = __float64_lo(a_dfp);
-    as = __float32_sign__(__float64_buffer_hi);
-    ae = __float32_expo_from_float64__(__float64_buffer_hi);
+    float64_converter.doubleValue = a_dfp;
+    as = __float32_sign__(__float64_converter_hi);
+    ae = __float32_expo_from_float64__(__float64_converter_hi);
     if (ae >= 256) {
-        return FLOAT32_NaN();
+        float32_converter.uint32Value = __NAN__;
+        return float32_converter.floatValue;
     } else if (ae <= 0) {
         return fp_int32_to_float32(0);
     } else {    // 0 < ae < 256
-        af = __float32_frac_from_float64__(__float64_buffer_hi, __float64_buffer_lo);
+        af = __float32_frac_from_float64__(__float64_converter_hi, __float64_converter_lo);
         a = __assemble_float32__(as,ae,af);
         float a_fp = __uint32_to_float32__(a);
         return a_fp;
@@ -421,6 +432,7 @@ int fp_float32_cmp(float a_fp, float b_fp)
     unsigned long a, b;
     unsigned long as, ae, af, bs, be, bf;
     int gt;
+
     a = __float32_to_uint32__(a_fp);
     b = __float32_to_uint32__(b_fp);
     //      puts("cmp: a="); print_hex(a); puts(" b="); print_hex(b);
@@ -469,7 +481,7 @@ int __gesf2(float a_fp, float b_fp)
 
 int __eqsf2(float a_fp, float b_fp)
 {
-    return __float32_to_uint32__(a_fp) != __float32_to_uint32__(b_fp);
+    return __float32_to_uint32__(a_fp) != __float32_to_uint32__(b_fp);  // return 0 when equal
 }
 
 int __nesf2(float a_fp, float b_fp)

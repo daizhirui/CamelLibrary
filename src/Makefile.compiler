@@ -12,7 +12,7 @@ DATA_ADDRESS = 01000010
 TOOLCHAINS_DIR = /Users/daizhirui/Development/Camel_Library/ToolChains/bin
 GCC_MIPS = $(TOOLCHAINS_DIR)/mips-netbsd-elf-gcc
 GXX_MIPS = $(TOOLCHAINS_DIR)/mips-netbsd-elf-g++
-GCC_FLAGS = -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -fno-builtin -msoft-float
+GCC_FLAGS = -EL -DPRT_UART -march=mips1 -std=c99 -c -G0 -Wall -Wextra -fno-builtin -msoft-float -O2
 GXX_FLAGS = -EL -DPRT_UART -march=mips1 -c -G0
 AS_MIPS =  $(TOOLCHAINS_DIR)/mips-netbsd-elf-as
 AS_FLAGS = -EL

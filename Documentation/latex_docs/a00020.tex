@@ -6,35 +6,10 @@ M2 micro core unit.
 
 
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
-\subsubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \mbox{\hyperlink{a00020_ad76d1750a6cdeebd506bfcd6752554d2}{ON}}~0x1
-\item 
-\#define \mbox{\hyperlink{a00020_a29e413f6725b2ba32d165ffaa35b01e5}{O\+FF}}~0x0
-\item 
-\#define \mbox{\hyperlink{a00020_abda90eda34a640b130f48a6ade23fe22}{R\+A\+I\+S\+E\+\_\+\+T\+R\+I\+G\+G\+ER}}~0x1
-\item 
-\#define \mbox{\hyperlink{a00020_a9bbaf5b9e2125c7597249c7113b20e6c}{F\+A\+L\+L\+\_\+\+T\+R\+I\+G\+G\+ER}}~0x0
-\item 
-\#define \mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(addr)~($\ast$(volatile uint32\+\_\+t$\ast$)(addr))
-\begin{DoxyCompactList}\small\item\em Read 32-\/bit data from a specific address. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(addr,  val)~$\ast$(volatile uint32\+\_\+t$\ast$)(addr)=(val)
-\begin{DoxyCompactList}\small\item\em Write 32-\/bit data to a specific address. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(addr,  val)~($\ast$(volatile uint32\+\_\+t$\ast$)(addr)$\vert$=(val))
-\begin{DoxyCompactList}\small\item\em Logical OR operation on 32-\/bit data at a specific address. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(addr,  val)~($\ast$(volatile uint32\+\_\+t$\ast$)(addr)\&=(val))
-\begin{DoxyCompactList}\small\item\em Logical addr\+ND operation on 32-\/bit data from a specific address. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00020_afc530c7e6b49b0ca97c1ad9dac1c4750}{Memory\+Bit\+At}}(addr,  val)~(($\ast$(volatile uint32\+\_\+t$\ast$)(addr)\&=(1$<$$<$(val)))$>$$>$(val))
-\begin{DoxyCompactList}\small\item\em Get a specific bit of a 32-\/bit data from a specific address. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00020_a99a602346038b54068758ef00c42d1b6}{Memory\+Bit\+On}}(addr,  val)~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(addr,1$<$$<$(val))
-\begin{DoxyCompactList}\small\item\em Set a specific bit of a 32-\/bit data from a specific address to 1. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00020_a04c34919a950117ae7da2dc5a235622b}{Memory\+Bit\+Off}}(addr,  val)~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(addr,$\sim$(1$<$$<$(val)))
-\begin{DoxyCompactList}\small\item\em Set a specific bit of a 32-\/bit data from a specific address to 0. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00020_ae49e41753dbce64185d380d307ade78d}{Memory\+Bit\+Switch}}(addr,  val)~($\ast$(volatile uint32\+\_\+t$\ast$)(addr)$^\wedge$=(1$<$$<$(val)))
-\begin{DoxyCompactList}\small\item\em Set a specific bit of a 32-\/bit data from a specific address to opposite state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
+\item 
+typedef unsigned long \mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}
 \item 
 typedef void($\ast$ \mbox{\hyperlink{a00020_a3d987633d7a3ca10c14905a807b62eb1}{Func\+Ptr}}) (void)
 \item 
@@ -45,9 +20,12 @@ typedef void($\ast$ \mbox{\hyperlink{a00020_a331a88eeefe11112bb8fe1b43dd777b8}{F
 \subsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{a00020_ab43e533f3793920486fb81c580f71564}\label{a00020_ab43e533f3793920486fb81c580f71564}} 
-enum {\bfseries switch\+\_\+t} \{ {\bfseries ON} = 0x1, 
-{\bfseries O\+FF} = 0x0
+enum \mbox{\hyperlink{a00020_ab43e533f3793920486fb81c580f71564}{switch\+\_\+t}} \{ \mbox{\hyperlink{a00020_ab43e533f3793920486fb81c580f71564a977d478dacaae531f95695750d1e9d03}{ON}} = 0x1, 
+\mbox{\hyperlink{a00020_ab43e533f3793920486fb81c580f71564aac132f2982b98bcaa3445e535a03ff75}{O\+FF}} = 0x0
+ \}
+\item 
+enum \mbox{\hyperlink{a00020_a6d33f21be3f0c5cf91c5d638e8aca086}{trigger\+\_\+mode\+\_\+t}} \{ \mbox{\hyperlink{a00020_a6d33f21be3f0c5cf91c5d638e8aca086a60a109ab1ab372f4e3935064a3f0a26c}{R\+I\+S\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER}} = 0x1, 
+\mbox{\hyperlink{a00020_a6d33f21be3f0c5cf91c5d638e8aca086a75134708fc2093222ca5a56acefc5d3f}{F\+A\+L\+L\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER}} = 0x0
  \}
 \item 
 enum \mbox{\hyperlink{a00020_a4ecccde27f29cedbe9bc6a22e3aad16f}{K\+E\+R\+N\+A\+L\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}} \{ \mbox{\hyperlink{a00020_a4ecccde27f29cedbe9bc6a22e3aad16fa2c882d4b03fdd083b40f2807ea7c0bf2}{U\+S\+E\+R\+\_\+\+I\+NT}} = (uint32\+\_\+t)0x01001\+F\+FC, 
@@ -56,82 +34,82 @@ enum \mbox{\hyperlink{a00020_a4ecccde27f29cedbe9bc6a22e3aad16f}{K\+E\+R\+N\+A\+L
  \}
 \item 
 enum \mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44d}{M2\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+R\+EG}} \{ \newline
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5}{S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800700, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da7dd70f67b5962a7974603376399afb49}{S\+Y\+S\+\_\+\+C\+T\+L2\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800702, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da9c4ce03a199984a23165617318767eca}{S\+Y\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800707, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da417bb62509b1343f4685a023c8ec4b09}{I\+N\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800500, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dabc5f0d33bb47527f3d8a9c20250d5c5b}{I\+N\+T\+\_\+\+C\+T\+L1\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800501, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dafba45e74edabe7b9fd6d0c36e8492bcd}{I\+N\+T\+\_\+\+C\+T\+L2\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800502, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da33cabaff7369092ec0e29dd2ffb0cb3d}{I\+N\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800503, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da744e0b80c93cc5242d28ebff68af035c}{U\+A\+R\+T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800000, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf27c578db5f1c598bc68d35594c46c3b}{U\+A\+R\+T0\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800001, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daa28fa5d3d15be1e18c88f0a9b49ae354}{U\+A\+R\+T0\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800002, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dae600bdbea9d783e73b98dfd4f0bfa22c}{U\+A\+R\+T0\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800003, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab46484503c27cdfdacd27c42e56d734e}{U\+A\+R\+T0\+\_\+\+C\+T\+L\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800004, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daddbf0424b34467727095fd485368539f}{U\+A\+R\+T0\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800005, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da69d448f38cd5d7af00eeb4028fd85278}{U\+A\+R\+T0\+\_\+\+L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800006, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da0a2dc1266e40d64afec2e365629ec5a8}{U\+A\+R\+T0\+\_\+\+B\+R\+P\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800007, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da3e17c3b68a2da78b68a7ee3ebc9f2ed3}{U\+A\+R\+T1\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800800, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da4f51ce223b69a742a6ea6235bbaed115}{U\+A\+R\+T1\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800801, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da80f7501c68809d7b6688c150c7b7eca6}{U\+A\+R\+T1\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800802, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da183266487e95910e93d82f505a6e1999}{U\+A\+R\+T1\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800803, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dad12ffc8607a04d98e1926c7fdaebf424}{U\+A\+R\+T1\+\_\+\+C\+T\+L\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800804, 
+{\bfseries S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800700, 
+{\bfseries S\+Y\+S\+\_\+\+C\+T\+L2\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800702, 
+{\bfseries S\+Y\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800707, 
+{\bfseries I\+N\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800500, 
+{\bfseries I\+N\+T\+\_\+\+C\+T\+L1\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800501, 
+{\bfseries I\+N\+T\+\_\+\+C\+T\+L2\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800502, 
+{\bfseries I\+N\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800503, 
+{\bfseries U\+A\+R\+T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800000, 
+{\bfseries U\+A\+R\+T0\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800001, 
+{\bfseries U\+A\+R\+T0\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800002, 
+{\bfseries U\+A\+R\+T0\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800003, 
+{\bfseries U\+A\+R\+T0\+\_\+\+C\+T\+L\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800004, 
+{\bfseries U\+A\+R\+T0\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800005, 
+{\bfseries U\+A\+R\+T0\+\_\+\+L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800006, 
+{\bfseries U\+A\+R\+T0\+\_\+\+B\+R\+P\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800007, 
+{\bfseries U\+A\+R\+T1\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800800, 
+{\bfseries U\+A\+R\+T1\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800801, 
+{\bfseries U\+A\+R\+T1\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800802, 
+{\bfseries U\+A\+R\+T1\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800803, 
+{\bfseries U\+A\+R\+T1\+\_\+\+C\+T\+L\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800804, 
 \newline
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dae9ec65704ae72f3decc61aba5354425b}{U\+A\+R\+T1\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800805, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da827a2b1f5ea5bfe4f6d0e37f474e4269}{U\+A\+R\+T1\+\_\+\+L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800806, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da91f19cac907baa4a3578702d31790706}{U\+A\+R\+T1\+\_\+\+B\+R\+P\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800807, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab0b73430c96c50b3d64bba4ddd4a5dce}{S\+P\+I\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800d00, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da2c1d161fe3c119cda59515c9934565be}{S\+P\+I\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800d01, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da7ba51faa410f67aa26265d946e53dcfd}{S\+P\+I\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800d02, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da13987c84f71b7a0ccd7e9e5360391e99}{S\+P\+I\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800d03, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daca8d646ede65fc2ccdd0442b78e5de83}{S\+P\+I\+\_\+\+C\+T\+L\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800d04, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf4cfc6f69d1f1c1f9493b1cfbc17323c}{S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800d05, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da81072e84e040f3ee8c531655c60e325d}{S\+Y\+S\+\_\+\+G\+D\+R\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800703, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da835280d31e2f3f5bc44bb1eb58024d80}{S\+Y\+S\+\_\+\+I\+O\+C\+T\+L\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800704, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dabc4ad11c216d218134b37833679bab11}{S\+Y\+S\+\_\+\+G\+P\+I\+O0\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800705, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da394e80146590b4c461618c0c8ba298a9}{S\+Y\+S\+\_\+\+G\+P\+I\+O1\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800706, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da869abf9d87f78f45a0e07ad352abb39e}{T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800100, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da7b512fe986ef45d3f84daa6bf6733200}{T0\+\_\+\+R\+E\+F\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800101, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6bfc1cf6a584321dfac7d842bab4f7d4}{T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800102, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da605de2dfe6755d8f8fad197c5f407167}{T0\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800103, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da944380f6d792e04a4c2e84dc668581a3}{T0\+\_\+\+C\+L\+K\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800104, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da420bf6168c45c07b5b47903f3409acc7}{T0\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800105, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da38632250c2e72df96fcaa3f8bd8ecc5e}{T1\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800200, 
+{\bfseries U\+A\+R\+T1\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800805, 
+{\bfseries U\+A\+R\+T1\+\_\+\+L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800806, 
+{\bfseries U\+A\+R\+T1\+\_\+\+B\+R\+P\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800807, 
+{\bfseries S\+P\+I\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800d00, 
+{\bfseries S\+P\+I\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800d01, 
+{\bfseries S\+P\+I\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800d02, 
+{\bfseries S\+P\+I\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800d03, 
+{\bfseries S\+P\+I\+\_\+\+C\+T\+L\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800d04, 
+{\bfseries S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800d05, 
+\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da81072e84e040f3ee8c531655c60e325d}{S\+Y\+S\+\_\+\+G\+D\+R\+\_\+\+R\+EG}} = (memory\+\_\+addr\+\_\+t)0x1f800703, 
+\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da835280d31e2f3f5bc44bb1eb58024d80}{S\+Y\+S\+\_\+\+I\+O\+C\+T\+L\+\_\+\+R\+EG}} = (memory\+\_\+addr\+\_\+t)0x1f800704, 
+\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dabc4ad11c216d218134b37833679bab11}{S\+Y\+S\+\_\+\+G\+P\+I\+O0\+\_\+\+R\+EG}} = (memory\+\_\+addr\+\_\+t)0x1f800705, 
+\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da394e80146590b4c461618c0c8ba298a9}{S\+Y\+S\+\_\+\+G\+P\+I\+O1\+\_\+\+R\+EG}} = (memory\+\_\+addr\+\_\+t)0x1f800706, 
+{\bfseries T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800100, 
+{\bfseries T0\+\_\+\+R\+E\+F\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800101, 
+{\bfseries T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800102, 
+{\bfseries T0\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800103, 
+{\bfseries T0\+\_\+\+C\+L\+K\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800104, 
+{\bfseries T0\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800105, 
+{\bfseries T1\+\_\+\+C\+T\+L0\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800200, 
 \newline
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab7bb28fcf87a9c631bc17c016065c2da}{T1\+\_\+\+R\+E\+F\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800201, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da317e9d68df901e9bb407bddbc2ced61b}{T1\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800202, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf10911af3fb19f6d248097500d6ab3cd}{T1\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800203, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dad4c8dc76a3496583d94443a52d7c5606}{T1\+\_\+\+C\+L\+K\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800204, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da8d9e7af787d31f28782260c199cc8bd5}{T1\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800205, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475}{T2\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800400, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251}{T2\+\_\+\+R\+E\+F\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800401, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da2ce860fb68efa5daaac3e07dd534dd54}{T2\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800402, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da505b90f4de2b8b5b23d7154861265863}{T2\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800403, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6}{T2\+\_\+\+C\+L\+K\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800404, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da9b4ab7bd6ab1e6514a439bd0056fb099}{T2\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800405, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da0e4e92920a475b537196369ae8274e7e}{T2\+\_\+\+P\+H\+A\+S\+E\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800406, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dafd9396894f78b2346881d9f21f33ddac}{T4\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800a00, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf3defc137aefe85b83bf5a60ce3aa500}{T4\+\_\+\+R\+E\+F0\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800a01, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da823ff62ae93ababd0e40840c75bcea22}{T4\+\_\+\+C\+L\+K0\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800a02, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da95c58fa920043643bf6860a4901d617a}{T4\+\_\+\+R\+E\+F1\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800a03, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dac2903974c7bce2ee41ec919d76393952}{T4\+\_\+\+C\+L\+K1\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800a04, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da479497b755dee411ad6348cae2ef26b4}{A\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800600, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}{A\+D\+\_\+\+O\+P\+O\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800601, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dacb460996f05b78aea23f3fa2722cc548}{A\+D\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800602, 
+{\bfseries T1\+\_\+\+R\+E\+F\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800201, 
+{\bfseries T1\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800202, 
+{\bfseries T1\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800203, 
+{\bfseries T1\+\_\+\+C\+L\+K\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800204, 
+{\bfseries T1\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800205, 
+{\bfseries T2\+\_\+\+C\+T\+L0\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800400, 
+{\bfseries T2\+\_\+\+R\+E\+F\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800401, 
+{\bfseries T2\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800402, 
+{\bfseries T2\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800403, 
+{\bfseries T2\+\_\+\+C\+L\+K\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800404, 
+{\bfseries T2\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800405, 
+{\bfseries T2\+\_\+\+P\+H\+A\+S\+E\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800406, 
+{\bfseries T4\+\_\+\+C\+T\+L0\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800a00, 
+{\bfseries T4\+\_\+\+R\+E\+F0\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800a01, 
+{\bfseries T4\+\_\+\+C\+L\+K0\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800a02, 
+{\bfseries T4\+\_\+\+R\+E\+F1\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800a03, 
+{\bfseries T4\+\_\+\+C\+L\+K1\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800a04, 
+{\bfseries A\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800600, 
+{\bfseries A\+D\+\_\+\+O\+P\+O\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800601, 
+{\bfseries A\+D\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800602, 
 \newline
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da03a55605f114ad34a5768f096cec3d9d}{A\+D\+\_\+\+C\+L\+R\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800603, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da77e003aedc8fe70bc48b6ddd38033080}{L\+C\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800300, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da315bb739346889cfc0eb2ec89096b842}{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800380, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dac108471ba346ec94645fb57f1f55162c}{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E0}} = (uint32\+\_\+t)0x1f800380, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da9637d64359f6c0fe921c7e0918e5fbcf}{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E1}} = (uint32\+\_\+t)0x1f800384, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da518df685b2b96a604a1f035be4b94cb0}{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E2}} = (uint32\+\_\+t)0x1f800388, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da20958f68fcfbeb67683a7c72ff2adc74}{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E3}} = (uint32\+\_\+t)0x1f80038c, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dad29dfaec986c68d5a49517de7f268504}{W\+D\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800b00, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dabca167e95871e42fa1108c2fd2cae6b3}{W\+D\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800b03, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da91e0f7299a076e5fae19c026a579e1bb}{W\+D\+T\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800b02, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dac218ded0714563f03f40814bf16da7c7}{R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800f00, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf375f171cb828ab3d87d45724750256d}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800f01, 
-\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dabc51699db6321ee7f233162735869f70}{R\+T\+C\+\_\+\+C\+L\+R\+\_\+\+R\+EG}} = (uint32\+\_\+t)0x1f800f03
+{\bfseries A\+D\+\_\+\+C\+L\+R\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800603, 
+{\bfseries L\+C\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800300, 
+{\bfseries L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800380, 
+{\bfseries L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E0} = (memory\+\_\+addr\+\_\+t)0x1f800380, 
+{\bfseries L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E1} = (memory\+\_\+addr\+\_\+t)0x1f800384, 
+{\bfseries L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E2} = (memory\+\_\+addr\+\_\+t)0x1f800388, 
+{\bfseries L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E3} = (memory\+\_\+addr\+\_\+t)0x1f80038c, 
+{\bfseries W\+D\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800b00, 
+{\bfseries W\+D\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800b03, 
+{\bfseries W\+D\+T\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800b02, 
+{\bfseries R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800f00, 
+{\bfseries R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800f01, 
+{\bfseries R\+T\+C\+\_\+\+C\+L\+R\+\_\+\+R\+EG} = (memory\+\_\+addr\+\_\+t)0x1f800f03
  \}
 \item 
 enum \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5b}{S\+Y\+S\+\_\+\+C\+LK}} \{ \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5baaac7754daa9ff2db35951f3539495122}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M}} = (0x0$<$$<$12), 
@@ -142,9 +120,25 @@ enum \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5b}{S\+Y\+S\+\_\+\+C
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{a00020_aa106e3c9181a65a83156bda31f4f61e9}{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To}} (unsigned long address)
+uint32\+\_\+t \mbox{\hyperlink{a00020_a706b02571285f92589fbb0b964d7d0bb}{Memory\+Read32}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr)
+\begin{DoxyCompactList}\small\item\em Read 32-\/bit data from a specific address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00020_ad9953f631a539cfaa35baf94f878b3ec}{Memory\+Write32}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr, uint32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Write 32-\/bit data to a specific address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr, uint32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Logical OR operation on 32-\/bit data at a specific address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr, uint32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Logical addr\+ND operation on 32-\/bit data from a specific address. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{a00020_aaa87daf3a7b5e127c21919e520e58282}{Memory\+Bit\+At}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr, uint32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Get a specific bit of a 32-\/bit data from a specific address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00020_a23e80593caa37b5d932a8320dc561830}{Memory\+Bit\+On}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr, uint32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Set a specific bit of a 32-\/bit data from a specific address to 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00020_a29fb2c978051c0cff760432e2378f3a3}{Memory\+Bit\+Off}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr, uint32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Set a specific bit of a 32-\/bit data from a specific address to 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00020_a7a3766694541dd5c639d4a11897aaeb9}{Memory\+Bit\+Switch}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr, uint32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Set a specific bit of a 32-\/bit data from a specific address to opposite state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00020_a81b750927e5dc24f1595c15e7dd7bdf5}{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} address)
 \begin{DoxyCompactList}\small\item\em Jump to a specific address. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00020_a1e578ce669735935a1d505c0edf98221}{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}} (uint32\+\_\+t mode)
+void \mbox{\hyperlink{a00020_a8e87aa8d85986723da69a68cd0d1e51c}{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}} (\mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5b}{S\+Y\+S\+\_\+\+C\+LK}} mode)
 \begin{DoxyCompactList}\small\item\em Set the frequency of the system clock. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{a00020_ad514417aa2e5a5d061a5eabeceae20c6}{R\+T\+\_\+\+Sram\+\_\+\+Clear}} ()
 \begin{DoxyCompactList}\small\item\em This function is to clear the former 7\+K-\/byte sram. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -160,191 +154,6 @@ Zhirui Dai
 2018-\/05-\/25 
 \end{DoxyDate}
 
-
-\subsubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{a00020_a9bbaf5b9e2125c7597249c7113b20e6c}\label{a00020_a9bbaf5b9e2125c7597249c7113b20e6c}} 
-\index{mcu.\+h@{mcu.\+h}!F\+A\+L\+L\+\_\+\+T\+R\+I\+G\+G\+ER@{F\+A\+L\+L\+\_\+\+T\+R\+I\+G\+G\+ER}}
-\index{F\+A\+L\+L\+\_\+\+T\+R\+I\+G\+G\+ER@{F\+A\+L\+L\+\_\+\+T\+R\+I\+G\+G\+ER}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{F\+A\+L\+L\+\_\+\+T\+R\+I\+G\+G\+ER}{FALL\_TRIGGER}}
-{\footnotesize\ttfamily \#define F\+A\+L\+L\+\_\+\+T\+R\+I\+G\+G\+ER~0x0}
-
-Keyword F\+A\+L\+L\+\_\+\+T\+R\+I\+G\+G\+ER. \mbox{\Hypertarget{a00020_ad87cedffcaadc51db22594fce55173d4}\label{a00020_ad87cedffcaadc51db22594fce55173d4}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+And32@{Memory\+And32}}
-\index{Memory\+And32@{Memory\+And32}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+And32}{MemoryAnd32}}
-{\footnotesize\ttfamily \#define Memory\+And32(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{val }\end{DoxyParamCaption})~($\ast$(volatile uint32\+\_\+t$\ast$)(addr)\&=(val))}
-
-
-
-Logical addr\+ND operation on 32-\/bit data from a specific address. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address to be A\+ND \\
-\hline
-{\em val} & the A\+ND mask \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_afc530c7e6b49b0ca97c1ad9dac1c4750}\label{a00020_afc530c7e6b49b0ca97c1ad9dac1c4750}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+At@{Memory\+Bit\+At}}
-\index{Memory\+Bit\+At@{Memory\+Bit\+At}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+Bit\+At}{MemoryBitAt}}
-{\footnotesize\ttfamily \#define Memory\+Bit\+At(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{val }\end{DoxyParamCaption})~(($\ast$(volatile uint32\+\_\+t$\ast$)(addr)\&=(1$<$$<$(val)))$>$$>$(val))}
-
-
-
-Get a specific bit of a 32-\/bit data from a specific address. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address \\
-\hline
-{\em val} & the bit location (in the 32-\/bit data) \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-long the bit 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_a04c34919a950117ae7da2dc5a235622b}\label{a00020_a04c34919a950117ae7da2dc5a235622b}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+Off@{Memory\+Bit\+Off}}
-\index{Memory\+Bit\+Off@{Memory\+Bit\+Off}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+Bit\+Off}{MemoryBitOff}}
-{\footnotesize\ttfamily \#define Memory\+Bit\+Off(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{val }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(addr,$\sim$(1$<$$<$(val)))}
-
-
-
-Set a specific bit of a 32-\/bit data from a specific address to 0. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address \\
-\hline
-{\em val} & the bit location (in the 32-\/bit data) \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_a99a602346038b54068758ef00c42d1b6}\label{a00020_a99a602346038b54068758ef00c42d1b6}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+On@{Memory\+Bit\+On}}
-\index{Memory\+Bit\+On@{Memory\+Bit\+On}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+Bit\+On}{MemoryBitOn}}
-{\footnotesize\ttfamily \#define Memory\+Bit\+On(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{val }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(addr,1$<$$<$(val))}
-
-
-
-Set a specific bit of a 32-\/bit data from a specific address to 1. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address \\
-\hline
-{\em val} & the bit location (in the 32-\/bit data) \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_ae49e41753dbce64185d380d307ade78d}\label{a00020_ae49e41753dbce64185d380d307ade78d}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+Switch@{Memory\+Bit\+Switch}}
-\index{Memory\+Bit\+Switch@{Memory\+Bit\+Switch}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+Bit\+Switch}{MemoryBitSwitch}}
-{\footnotesize\ttfamily \#define Memory\+Bit\+Switch(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{val }\end{DoxyParamCaption})~($\ast$(volatile uint32\+\_\+t$\ast$)(addr)$^\wedge$=(1$<$$<$(val)))}
-
-
-
-Set a specific bit of a 32-\/bit data from a specific address to opposite state. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address \\
-\hline
-{\em val} & the bit location (in the 32-\/bit data) \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_a27874a97deab7cecdde5ddecf466e31e}\label{a00020_a27874a97deab7cecdde5ddecf466e31e}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+Or32@{Memory\+Or32}}
-\index{Memory\+Or32@{Memory\+Or32}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+Or32}{MemoryOr32}}
-{\footnotesize\ttfamily \#define Memory\+Or32(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{val }\end{DoxyParamCaption})~($\ast$(volatile uint32\+\_\+t$\ast$)(addr)$\vert$=(val))}
-
-
-
-Logical OR operation on 32-\/bit data at a specific address. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address to be OR \\
-\hline
-{\em val} & the OR mask \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}\label{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+Read32@{Memory\+Read32}}
-\index{Memory\+Read32@{Memory\+Read32}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+Read32}{MemoryRead32}}
-{\footnotesize\ttfamily \#define Memory\+Read32(\begin{DoxyParamCaption}\item[{}]{addr }\end{DoxyParamCaption})~($\ast$(volatile uint32\+\_\+t$\ast$)(addr))}
-
-
-
-Read 32-\/bit data from a specific address. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address to read \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-long the read value 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_a6b9732365b12e48ddb89fe1028b975b0}\label{a00020_a6b9732365b12e48ddb89fe1028b975b0}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+Write32@{Memory\+Write32}}
-\index{Memory\+Write32@{Memory\+Write32}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+Write32}{MemoryWrite32}}
-{\footnotesize\ttfamily \#define Memory\+Write32(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{val }\end{DoxyParamCaption})~$\ast$(volatile uint32\+\_\+t$\ast$)(addr)=(val)}
-
-
-
-Write 32-\/bit data to a specific address. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address to write \\
-\hline
-{\em val} & the value to be written \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_a29e413f6725b2ba32d165ffaa35b01e5}\label{a00020_a29e413f6725b2ba32d165ffaa35b01e5}} 
-\index{mcu.\+h@{mcu.\+h}!O\+FF@{O\+FF}}
-\index{O\+FF@{O\+FF}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{O\+FF}{OFF}}
-{\footnotesize\ttfamily \#define O\+FF~0x0}
-
-Keyword O\+FF. \mbox{\Hypertarget{a00020_ad76d1750a6cdeebd506bfcd6752554d2}\label{a00020_ad76d1750a6cdeebd506bfcd6752554d2}} 
-\index{mcu.\+h@{mcu.\+h}!ON@{ON}}
-\index{ON@{ON}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{ON}{ON}}
-{\footnotesize\ttfamily \#define ON~0x1}
-
-Keyword ON. \mbox{\Hypertarget{a00020_abda90eda34a640b130f48a6ade23fe22}\label{a00020_abda90eda34a640b130f48a6ade23fe22}} 
-\index{mcu.\+h@{mcu.\+h}!R\+A\+I\+S\+E\+\_\+\+T\+R\+I\+G\+G\+ER@{R\+A\+I\+S\+E\+\_\+\+T\+R\+I\+G\+G\+ER}}
-\index{R\+A\+I\+S\+E\+\_\+\+T\+R\+I\+G\+G\+ER@{R\+A\+I\+S\+E\+\_\+\+T\+R\+I\+G\+G\+ER}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{R\+A\+I\+S\+E\+\_\+\+T\+R\+I\+G\+G\+ER}{RAISE\_TRIGGER}}
-{\footnotesize\ttfamily \#define R\+A\+I\+S\+E\+\_\+\+T\+R\+I\+G\+G\+ER~0x1}
-
-Keyword R\+A\+I\+S\+E\+\_\+\+T\+R\+I\+G\+G\+ER. 
 
 \subsubsection{Typedef Documentation}
 \mbox{\Hypertarget{a00020_a3d987633d7a3ca10c14905a807b62eb1}\label{a00020_a3d987633d7a3ca10c14905a807b62eb1}} 
@@ -365,7 +174,13 @@ Function pointer type (uint32\+\_\+t)-\/$>$void definition. \mbox{\Hypertarget{a
 \paragraph{\texorpdfstring{Func\+Ptr2}{FuncPtr2}}
 {\footnotesize\ttfamily typedef void($\ast$ Func\+Ptr2) (uint32\+\_\+t, uint32\+\_\+t)}
 
-Function pointer type (uint32\+\_\+t, uint32\+\_\+t)-\/$>$void definition. 
+Function pointer type (uint32\+\_\+t, uint32\+\_\+t)-\/$>$void definition. \mbox{\Hypertarget{a00020_a06da901348542a481c297d9b700e2001}\label{a00020_a06da901348542a481c297d9b700e2001}} 
+\index{mcu.\+h@{mcu.\+h}!memory\+\_\+addr\+\_\+t@{memory\+\_\+addr\+\_\+t}}
+\index{memory\+\_\+addr\+\_\+t@{memory\+\_\+addr\+\_\+t}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{memory\+\_\+addr\+\_\+t}{memory\_addr\_t}}
+{\footnotesize\ttfamily typedef unsigned long \mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}
+
+memory address type 
 
 \subsubsection{Enumeration Type Documentation}
 \mbox{\Hypertarget{a00020_a4ecccde27f29cedbe9bc6a22e3aad16f}\label{a00020_a4ecccde27f29cedbe9bc6a22e3aad16f}} 
@@ -395,122 +210,6 @@ I\+N\+T\+\_\+\+C\+O\+U\+NT&S\+R\+AM address to store current interrupt depth, nu
 {\footnotesize\ttfamily enum \mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44d}{M2\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+R\+EG}}}
 
 M2\textquotesingle{}s external registers. \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab61d9968d782d6c00e9de838e38913f5}} 
-S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+C\+T\+L2\+\_\+\+R\+EG@{S\+Y\+S\+\_\+\+C\+T\+L2\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!S\+Y\+S\+\_\+\+C\+T\+L2\+\_\+\+R\+EG@{S\+Y\+S\+\_\+\+C\+T\+L2\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da7dd70f67b5962a7974603376399afb49}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da7dd70f67b5962a7974603376399afb49}} 
-S\+Y\+S\+\_\+\+C\+T\+L2\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+EG@{S\+Y\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!S\+Y\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+EG@{S\+Y\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da9c4ce03a199984a23165617318767eca}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da9c4ce03a199984a23165617318767eca}} 
-S\+Y\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{I\+N\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!I\+N\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{I\+N\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da417bb62509b1343f4685a023c8ec4b09}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da417bb62509b1343f4685a023c8ec4b09}} 
-I\+N\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+T\+\_\+\+C\+T\+L1\+\_\+\+R\+EG@{I\+N\+T\+\_\+\+C\+T\+L1\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!I\+N\+T\+\_\+\+C\+T\+L1\+\_\+\+R\+EG@{I\+N\+T\+\_\+\+C\+T\+L1\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dabc5f0d33bb47527f3d8a9c20250d5c5b}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dabc5f0d33bb47527f3d8a9c20250d5c5b}} 
-I\+N\+T\+\_\+\+C\+T\+L1\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+T\+\_\+\+C\+T\+L2\+\_\+\+R\+EG@{I\+N\+T\+\_\+\+C\+T\+L2\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!I\+N\+T\+\_\+\+C\+T\+L2\+\_\+\+R\+EG@{I\+N\+T\+\_\+\+C\+T\+L2\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dafba45e74edabe7b9fd6d0c36e8492bcd}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dafba45e74edabe7b9fd6d0c36e8492bcd}} 
-I\+N\+T\+\_\+\+C\+T\+L2\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG@{I\+N\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!I\+N\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG@{I\+N\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da33cabaff7369092ec0e29dd2ffb0cb3d}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da33cabaff7369092ec0e29dd2ffb0cb3d}} 
-I\+N\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da744e0b80c93cc5242d28ebff68af035c}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da744e0b80c93cc5242d28ebff68af035c}} 
-U\+A\+R\+T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T0\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T0\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf27c578db5f1c598bc68d35594c46c3b}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf27c578db5f1c598bc68d35594c46c3b}} 
-U\+A\+R\+T0\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T0\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T0\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daa28fa5d3d15be1e18c88f0a9b49ae354}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daa28fa5d3d15be1e18c88f0a9b49ae354}} 
-U\+A\+R\+T0\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T0\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T0\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dae600bdbea9d783e73b98dfd4f0bfa22c}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dae600bdbea9d783e73b98dfd4f0bfa22c}} 
-U\+A\+R\+T0\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T0\+\_\+\+C\+T\+L\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+C\+T\+L\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T0\+\_\+\+C\+T\+L\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+C\+T\+L\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab46484503c27cdfdacd27c42e56d734e}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab46484503c27cdfdacd27c42e56d734e}} 
-U\+A\+R\+T0\+\_\+\+C\+T\+L\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T0\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T0\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daddbf0424b34467727095fd485368539f}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daddbf0424b34467727095fd485368539f}} 
-U\+A\+R\+T0\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T0\+\_\+\+L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T0\+\_\+\+L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da69d448f38cd5d7af00eeb4028fd85278}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da69d448f38cd5d7af00eeb4028fd85278}} 
-U\+A\+R\+T0\+\_\+\+L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T0\+\_\+\+B\+R\+P\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+B\+R\+P\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T0\+\_\+\+B\+R\+P\+\_\+\+R\+EG@{U\+A\+R\+T0\+\_\+\+B\+R\+P\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da0a2dc1266e40d64afec2e365629ec5a8}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da0a2dc1266e40d64afec2e365629ec5a8}} 
-U\+A\+R\+T0\+\_\+\+B\+R\+P\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T1\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T1\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da3e17c3b68a2da78b68a7ee3ebc9f2ed3}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da3e17c3b68a2da78b68a7ee3ebc9f2ed3}} 
-U\+A\+R\+T1\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T1\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T1\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da4f51ce223b69a742a6ea6235bbaed115}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da4f51ce223b69a742a6ea6235bbaed115}} 
-U\+A\+R\+T1\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T1\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T1\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da80f7501c68809d7b6688c150c7b7eca6}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da80f7501c68809d7b6688c150c7b7eca6}} 
-U\+A\+R\+T1\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T1\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T1\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da183266487e95910e93d82f505a6e1999}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da183266487e95910e93d82f505a6e1999}} 
-U\+A\+R\+T1\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T1\+\_\+\+C\+T\+L\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+C\+T\+L\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T1\+\_\+\+C\+T\+L\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+C\+T\+L\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dad12ffc8607a04d98e1926c7fdaebf424}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dad12ffc8607a04d98e1926c7fdaebf424}} 
-U\+A\+R\+T1\+\_\+\+C\+T\+L\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T1\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T1\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dae9ec65704ae72f3decc61aba5354425b}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dae9ec65704ae72f3decc61aba5354425b}} 
-U\+A\+R\+T1\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T1\+\_\+\+L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T1\+\_\+\+L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da827a2b1f5ea5bfe4f6d0e37f474e4269}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da827a2b1f5ea5bfe4f6d0e37f474e4269}} 
-U\+A\+R\+T1\+\_\+\+L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T1\+\_\+\+B\+R\+P\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+B\+R\+P\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!U\+A\+R\+T1\+\_\+\+B\+R\+P\+\_\+\+R\+EG@{U\+A\+R\+T1\+\_\+\+B\+R\+P\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da91f19cac907baa4a3578702d31790706}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da91f19cac907baa4a3578702d31790706}} 
-U\+A\+R\+T1\+\_\+\+B\+R\+P\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+P\+I\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{S\+P\+I\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!S\+P\+I\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{S\+P\+I\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab0b73430c96c50b3d64bba4ddd4a5dce}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab0b73430c96c50b3d64bba4ddd4a5dce}} 
-S\+P\+I\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+P\+I\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG@{S\+P\+I\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!S\+P\+I\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG@{S\+P\+I\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da2c1d161fe3c119cda59515c9934565be}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da2c1d161fe3c119cda59515c9934565be}} 
-S\+P\+I\+\_\+\+B\+U\+S\+Y\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+P\+I\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG@{S\+P\+I\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!S\+P\+I\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG@{S\+P\+I\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da7ba51faa410f67aa26265d946e53dcfd}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da7ba51faa410f67aa26265d946e53dcfd}} 
-S\+P\+I\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+P\+I\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG@{S\+P\+I\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!S\+P\+I\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG@{S\+P\+I\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da13987c84f71b7a0ccd7e9e5360391e99}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da13987c84f71b7a0ccd7e9e5360391e99}} 
-S\+P\+I\+\_\+\+I\+R\+Q\+\_\+\+A\+C\+K\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+P\+I\+\_\+\+C\+T\+L\+\_\+\+R\+EG@{S\+P\+I\+\_\+\+C\+T\+L\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!S\+P\+I\+\_\+\+C\+T\+L\+\_\+\+R\+EG@{S\+P\+I\+\_\+\+C\+T\+L\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daca8d646ede65fc2ccdd0442b78e5de83}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daca8d646ede65fc2ccdd0442b78e5de83}} 
-S\+P\+I\+\_\+\+C\+T\+L\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG@{S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG@{S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf4cfc6f69d1f1c1f9493b1cfbc17323c}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf4cfc6f69d1f1c1f9493b1cfbc17323c}} 
-S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+R\+D\+Y\+\_\+\+R\+EG&External register address. \\
-\hline
-
 \raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+G\+D\+R\+\_\+\+R\+EG@{S\+Y\+S\+\_\+\+G\+D\+R\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!S\+Y\+S\+\_\+\+G\+D\+R\+\_\+\+R\+EG@{S\+Y\+S\+\_\+\+G\+D\+R\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da81072e84e040f3ee8c531655c60e325d}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da81072e84e040f3ee8c531655c60e325d}} 
 S\+Y\+S\+\_\+\+G\+D\+R\+\_\+\+R\+EG&G\+DR register. \\
 \hline
@@ -527,164 +226,20 @@ S\+Y\+S\+\_\+\+G\+P\+I\+O0\+\_\+\+R\+EG&G\+P\+IO output control register(16-\/bi
 S\+Y\+S\+\_\+\+G\+P\+I\+O1\+\_\+\+R\+EG&G\+P\+IO input value register(16-\/bit). \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da869abf9d87f78f45a0e07ad352abb39e}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da869abf9d87f78f45a0e07ad352abb39e}} 
-T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG&External register address. \\
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{a00020_ab43e533f3793920486fb81c580f71564}\label{a00020_ab43e533f3793920486fb81c580f71564}} 
+\index{mcu.\+h@{mcu.\+h}!switch\+\_\+t@{switch\+\_\+t}}
+\index{switch\+\_\+t@{switch\+\_\+t}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{switch\+\_\+t}{switch\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{a00020_ab43e533f3793920486fb81c580f71564}{switch\+\_\+t}}}
+
+switch type \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ON@{ON}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!ON@{ON}}}\mbox{\Hypertarget{a00020_ab43e533f3793920486fb81c580f71564a977d478dacaae531f95695750d1e9d03}\label{a00020_ab43e533f3793920486fb81c580f71564a977d478dacaae531f95695750d1e9d03}} 
+ON&Turn on \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T0\+\_\+\+R\+E\+F\+\_\+\+R\+EG@{T0\+\_\+\+R\+E\+F\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T0\+\_\+\+R\+E\+F\+\_\+\+R\+EG@{T0\+\_\+\+R\+E\+F\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da7b512fe986ef45d3f84daa6bf6733200}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da7b512fe986ef45d3f84daa6bf6733200}} 
-T0\+\_\+\+R\+E\+F\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6bfc1cf6a584321dfac7d842bab4f7d4}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6bfc1cf6a584321dfac7d842bab4f7d4}} 
-T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T0\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG@{T0\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T0\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG@{T0\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da605de2dfe6755d8f8fad197c5f407167}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da605de2dfe6755d8f8fad197c5f407167}} 
-T0\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T0\+\_\+\+C\+L\+K\+\_\+\+R\+EG@{T0\+\_\+\+C\+L\+K\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T0\+\_\+\+C\+L\+K\+\_\+\+R\+EG@{T0\+\_\+\+C\+L\+K\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da944380f6d792e04a4c2e84dc668581a3}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da944380f6d792e04a4c2e84dc668581a3}} 
-T0\+\_\+\+C\+L\+K\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T0\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG@{T0\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T0\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG@{T0\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da420bf6168c45c07b5b47903f3409acc7}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da420bf6168c45c07b5b47903f3409acc7}} 
-T0\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T1\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{T1\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T1\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{T1\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da38632250c2e72df96fcaa3f8bd8ecc5e}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da38632250c2e72df96fcaa3f8bd8ecc5e}} 
-T1\+\_\+\+C\+T\+L0\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T1\+\_\+\+R\+E\+F\+\_\+\+R\+EG@{T1\+\_\+\+R\+E\+F\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T1\+\_\+\+R\+E\+F\+\_\+\+R\+EG@{T1\+\_\+\+R\+E\+F\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab7bb28fcf87a9c631bc17c016065c2da}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab7bb28fcf87a9c631bc17c016065c2da}} 
-T1\+\_\+\+R\+E\+F\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T1\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{T1\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T1\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{T1\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da317e9d68df901e9bb407bddbc2ced61b}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da317e9d68df901e9bb407bddbc2ced61b}} 
-T1\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T1\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG@{T1\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T1\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG@{T1\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf10911af3fb19f6d248097500d6ab3cd}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf10911af3fb19f6d248097500d6ab3cd}} 
-T1\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T1\+\_\+\+C\+L\+K\+\_\+\+R\+EG@{T1\+\_\+\+C\+L\+K\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T1\+\_\+\+C\+L\+K\+\_\+\+R\+EG@{T1\+\_\+\+C\+L\+K\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dad4c8dc76a3496583d94443a52d7c5606}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dad4c8dc76a3496583d94443a52d7c5606}} 
-T1\+\_\+\+C\+L\+K\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T1\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG@{T1\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T1\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG@{T1\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da8d9e7af787d31f28782260c199cc8bd5}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da8d9e7af787d31f28782260c199cc8bd5}} 
-T1\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T2\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{T2\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T2\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{T2\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf2e9deb36631241181cbf09e8d959475}} 
-T2\+\_\+\+C\+T\+L0\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T2\+\_\+\+R\+E\+F\+\_\+\+R\+EG@{T2\+\_\+\+R\+E\+F\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T2\+\_\+\+R\+E\+F\+\_\+\+R\+EG@{T2\+\_\+\+R\+E\+F\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da840de759e5083c864ed1c57dad568251}} 
-T2\+\_\+\+R\+E\+F\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T2\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{T2\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T2\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{T2\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da2ce860fb68efa5daaac3e07dd534dd54}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da2ce860fb68efa5daaac3e07dd534dd54}} 
-T2\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T2\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG@{T2\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T2\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG@{T2\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da505b90f4de2b8b5b23d7154861265863}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da505b90f4de2b8b5b23d7154861265863}} 
-T2\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T2\+\_\+\+C\+L\+K\+\_\+\+R\+EG@{T2\+\_\+\+C\+L\+K\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T2\+\_\+\+C\+L\+K\+\_\+\+R\+EG@{T2\+\_\+\+C\+L\+K\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dab67d86aa158825e559813e0df3f74cc6}} 
-T2\+\_\+\+C\+L\+K\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T2\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG@{T2\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T2\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG@{T2\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da9b4ab7bd6ab1e6514a439bd0056fb099}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da9b4ab7bd6ab1e6514a439bd0056fb099}} 
-T2\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T2\+\_\+\+P\+H\+A\+S\+E\+\_\+\+R\+EG@{T2\+\_\+\+P\+H\+A\+S\+E\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T2\+\_\+\+P\+H\+A\+S\+E\+\_\+\+R\+EG@{T2\+\_\+\+P\+H\+A\+S\+E\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da0e4e92920a475b537196369ae8274e7e}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da0e4e92920a475b537196369ae8274e7e}} 
-T2\+\_\+\+P\+H\+A\+S\+E\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T4\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{T4\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T4\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{T4\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dafd9396894f78b2346881d9f21f33ddac}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dafd9396894f78b2346881d9f21f33ddac}} 
-T4\+\_\+\+C\+T\+L0\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T4\+\_\+\+R\+E\+F0\+\_\+\+R\+EG@{T4\+\_\+\+R\+E\+F0\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T4\+\_\+\+R\+E\+F0\+\_\+\+R\+EG@{T4\+\_\+\+R\+E\+F0\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf3defc137aefe85b83bf5a60ce3aa500}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf3defc137aefe85b83bf5a60ce3aa500}} 
-T4\+\_\+\+R\+E\+F0\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T4\+\_\+\+C\+L\+K0\+\_\+\+R\+EG@{T4\+\_\+\+C\+L\+K0\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T4\+\_\+\+C\+L\+K0\+\_\+\+R\+EG@{T4\+\_\+\+C\+L\+K0\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da823ff62ae93ababd0e40840c75bcea22}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da823ff62ae93ababd0e40840c75bcea22}} 
-T4\+\_\+\+C\+L\+K0\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T4\+\_\+\+R\+E\+F1\+\_\+\+R\+EG@{T4\+\_\+\+R\+E\+F1\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T4\+\_\+\+R\+E\+F1\+\_\+\+R\+EG@{T4\+\_\+\+R\+E\+F1\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da95c58fa920043643bf6860a4901d617a}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da95c58fa920043643bf6860a4901d617a}} 
-T4\+\_\+\+R\+E\+F1\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T4\+\_\+\+C\+L\+K1\+\_\+\+R\+EG@{T4\+\_\+\+C\+L\+K1\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!T4\+\_\+\+C\+L\+K1\+\_\+\+R\+EG@{T4\+\_\+\+C\+L\+K1\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dac2903974c7bce2ee41ec919d76393952}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dac2903974c7bce2ee41ec919d76393952}} 
-T4\+\_\+\+C\+L\+K1\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{A\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!A\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{A\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da479497b755dee411ad6348cae2ef26b4}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da479497b755dee411ad6348cae2ef26b4}} 
-A\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+\_\+\+O\+P\+O\+\_\+\+R\+EG@{A\+D\+\_\+\+O\+P\+O\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!A\+D\+\_\+\+O\+P\+O\+\_\+\+R\+EG@{A\+D\+\_\+\+O\+P\+O\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da6dc7e2b1252e5ac208ae78d9c46e8e7e}} 
-A\+D\+\_\+\+O\+P\+O\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{A\+D\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!A\+D\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{A\+D\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dacb460996f05b78aea23f3fa2722cc548}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dacb460996f05b78aea23f3fa2722cc548}} 
-A\+D\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+\_\+\+C\+L\+R\+\_\+\+R\+EG@{A\+D\+\_\+\+C\+L\+R\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!A\+D\+\_\+\+C\+L\+R\+\_\+\+R\+EG@{A\+D\+\_\+\+C\+L\+R\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da03a55605f114ad34a5768f096cec3d9d}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da03a55605f114ad34a5768f096cec3d9d}} 
-A\+D\+\_\+\+C\+L\+R\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+C\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{L\+C\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!L\+C\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{L\+C\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da77e003aedc8fe70bc48b6ddd38033080}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da77e003aedc8fe70bc48b6ddd38033080}} 
-L\+C\+D\+\_\+\+C\+T\+L0\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+R\+EG@{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+R\+EG@{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da315bb739346889cfc0eb2ec89096b842}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da315bb739346889cfc0eb2ec89096b842}} 
-L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E0@{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E0}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E0@{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E0}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dac108471ba346ec94645fb57f1f55162c}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dac108471ba346ec94645fb57f1f55162c}} 
-L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E0&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E1@{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E1}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E1@{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E1}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da9637d64359f6c0fe921c7e0918e5fbcf}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da9637d64359f6c0fe921c7e0918e5fbcf}} 
-L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E1&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E2@{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E2}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E2@{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E2}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da518df685b2b96a604a1f035be4b94cb0}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da518df685b2b96a604a1f035be4b94cb0}} 
-L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E2&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E3@{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E3}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E3@{L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E3}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da20958f68fcfbeb67683a7c72ff2adc74}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da20958f68fcfbeb67683a7c72ff2adc74}} 
-L\+C\+D\+\_\+\+R\+A\+M\+\_\+\+L\+I\+N\+E3&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+D\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{W\+D\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!W\+D\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG@{W\+D\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dad29dfaec986c68d5a49517de7f268504}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dad29dfaec986c68d5a49517de7f268504}} 
-W\+D\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+D\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG@{W\+D\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!W\+D\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG@{W\+D\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dabca167e95871e42fa1108c2fd2cae6b3}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dabca167e95871e42fa1108c2fd2cae6b3}} 
-W\+D\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+D\+T\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{W\+D\+T\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!W\+D\+T\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG@{W\+D\+T\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da91e0f7299a076e5fae19c026a579e1bb}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44da91e0f7299a076e5fae19c026a579e1bb}} 
-W\+D\+T\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG@{R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG@{R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dac218ded0714563f03f40814bf16da7c7}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dac218ded0714563f03f40814bf16da7c7}} 
-R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG@{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG@{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf375f171cb828ab3d87d45724750256d}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf375f171cb828ab3d87d45724750256d}} 
-R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG&External register address. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+C\+L\+R\+\_\+\+R\+EG@{R\+T\+C\+\_\+\+C\+L\+R\+\_\+\+R\+EG}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!R\+T\+C\+\_\+\+C\+L\+R\+\_\+\+R\+EG@{R\+T\+C\+\_\+\+C\+L\+R\+\_\+\+R\+EG}}}\mbox{\Hypertarget{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dabc51699db6321ee7f233162735869f70}\label{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dabc51699db6321ee7f233162735869f70}} 
-R\+T\+C\+\_\+\+C\+L\+R\+\_\+\+R\+EG&External register address. \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+FF@{O\+FF}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!O\+FF@{O\+FF}}}\mbox{\Hypertarget{a00020_ab43e533f3793920486fb81c580f71564aac132f2982b98bcaa3445e535a03ff75}\label{a00020_ab43e533f3793920486fb81c580f71564aac132f2982b98bcaa3445e535a03ff75}} 
+O\+FF&Turn off \\
 \hline
 
 \end{DoxyEnumFields}
@@ -708,14 +263,188 @@ S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M&Set the system clock frequency at 12 M\+Hz. \\
 \hline
 
 \end{DoxyEnumFields}
+\mbox{\Hypertarget{a00020_a6d33f21be3f0c5cf91c5d638e8aca086}\label{a00020_a6d33f21be3f0c5cf91c5d638e8aca086}} 
+\index{mcu.\+h@{mcu.\+h}!trigger\+\_\+mode\+\_\+t@{trigger\+\_\+mode\+\_\+t}}
+\index{trigger\+\_\+mode\+\_\+t@{trigger\+\_\+mode\+\_\+t}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{trigger\+\_\+mode\+\_\+t}{trigger\_mode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{a00020_a6d33f21be3f0c5cf91c5d638e8aca086}{trigger\+\_\+mode\+\_\+t}}}
+
+trigger mode type \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+I\+S\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER@{R\+I\+S\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!R\+I\+S\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER@{R\+I\+S\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER}}}\mbox{\Hypertarget{a00020_a6d33f21be3f0c5cf91c5d638e8aca086a60a109ab1ab372f4e3935064a3f0a26c}\label{a00020_a6d33f21be3f0c5cf91c5d638e8aca086a60a109ab1ab372f4e3935064a3f0a26c}} 
+R\+I\+S\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER&Rising trigger \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+A\+L\+L\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER@{F\+A\+L\+L\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER}!mcu.\+h@{mcu.\+h}}\index{mcu.\+h@{mcu.\+h}!F\+A\+L\+L\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER@{F\+A\+L\+L\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER}}}\mbox{\Hypertarget{a00020_a6d33f21be3f0c5cf91c5d638e8aca086a75134708fc2093222ca5a56acefc5d3f}\label{a00020_a6d33f21be3f0c5cf91c5d638e8aca086a75134708fc2093222ca5a56acefc5d3f}} 
+F\+A\+L\+L\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER&Falling trigger \\
+\hline
+
+\end{DoxyEnumFields}
 
 
 \subsubsection{Function Documentation}
-\mbox{\Hypertarget{a00020_aa106e3c9181a65a83156bda31f4f61e9}\label{a00020_aa106e3c9181a65a83156bda31f4f61e9}} 
+\mbox{\Hypertarget{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}\label{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+And32@{Memory\+And32}}
+\index{Memory\+And32@{Memory\+And32}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+And32()}{MemoryAnd32()}}
+{\footnotesize\ttfamily void Memory\+And32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr,  }\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Logical addr\+ND operation on 32-\/bit data from a specific address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address to be A\+ND \\
+\hline
+{\em val} & the A\+ND mask \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_aaa87daf3a7b5e127c21919e520e58282}\label{a00020_aaa87daf3a7b5e127c21919e520e58282}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+At@{Memory\+Bit\+At}}
+\index{Memory\+Bit\+At@{Memory\+Bit\+At}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+Bit\+At()}{MemoryBitAt()}}
+{\footnotesize\ttfamily uint32\+\_\+t Memory\+Bit\+At (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr,  }\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a specific bit of a 32-\/bit data from a specific address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address \\
+\hline
+{\em val} & the bit location (in the 32-\/bit data) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long the bit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_a29fb2c978051c0cff760432e2378f3a3}\label{a00020_a29fb2c978051c0cff760432e2378f3a3}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+Off@{Memory\+Bit\+Off}}
+\index{Memory\+Bit\+Off@{Memory\+Bit\+Off}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+Bit\+Off()}{MemoryBitOff()}}
+{\footnotesize\ttfamily void Memory\+Bit\+Off (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr,  }\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set a specific bit of a 32-\/bit data from a specific address to 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address \\
+\hline
+{\em val} & the bit location (in the 32-\/bit data) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_a23e80593caa37b5d932a8320dc561830}\label{a00020_a23e80593caa37b5d932a8320dc561830}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+On@{Memory\+Bit\+On}}
+\index{Memory\+Bit\+On@{Memory\+Bit\+On}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+Bit\+On()}{MemoryBitOn()}}
+{\footnotesize\ttfamily void Memory\+Bit\+On (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr,  }\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set a specific bit of a 32-\/bit data from a specific address to 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address \\
+\hline
+{\em val} & the bit location (in the 32-\/bit data) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_a7a3766694541dd5c639d4a11897aaeb9}\label{a00020_a7a3766694541dd5c639d4a11897aaeb9}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+Switch@{Memory\+Bit\+Switch}}
+\index{Memory\+Bit\+Switch@{Memory\+Bit\+Switch}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+Bit\+Switch()}{MemoryBitSwitch()}}
+{\footnotesize\ttfamily void Memory\+Bit\+Switch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr,  }\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set a specific bit of a 32-\/bit data from a specific address to opposite state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address \\
+\hline
+{\em val} & the bit location (in the 32-\/bit data) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}\label{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+Or32@{Memory\+Or32}}
+\index{Memory\+Or32@{Memory\+Or32}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+Or32()}{MemoryOr32()}}
+{\footnotesize\ttfamily void Memory\+Or32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr,  }\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Logical OR operation on 32-\/bit data at a specific address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address to be OR \\
+\hline
+{\em val} & the OR mask \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_a706b02571285f92589fbb0b964d7d0bb}\label{a00020_a706b02571285f92589fbb0b964d7d0bb}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+Read32@{Memory\+Read32}}
+\index{Memory\+Read32@{Memory\+Read32}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+Read32()}{MemoryRead32()}}
+{\footnotesize\ttfamily uint32\+\_\+t Memory\+Read32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Read 32-\/bit data from a specific address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long the read value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_ad9953f631a539cfaa35baf94f878b3ec}\label{a00020_ad9953f631a539cfaa35baf94f878b3ec}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+Write32@{Memory\+Write32}}
+\index{Memory\+Write32@{Memory\+Write32}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+Write32()}{MemoryWrite32()}}
+{\footnotesize\ttfamily void Memory\+Write32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr,  }\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Write 32-\/bit data to a specific address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address to write \\
+\hline
+{\em val} & the value to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_a81b750927e5dc24f1595c15e7dd7bdf5}\label{a00020_a81b750927e5dc24f1595c15e7dd7bdf5}} 
 \index{mcu.\+h@{mcu.\+h}!R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To}}
 \index{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To}!mcu.\+h@{mcu.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To()}{RT\_MCU\_JumpTo()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To (\begin{DoxyParamCaption}\item[{unsigned long}]{address }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -729,18 +458,18 @@ Jump to a specific address.
 \begin{DoxyNote}{Note}
 When this function is used, returning to the position where this function is used is impossible. By using R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To, we can make a soft reset. For example, if the entrance address of the program is 0x10000000, it is\+: 
 \begin{DoxyCode}
-\mbox{\hyperlink{a00020_aa106e3c9181a65a83156bda31f4f61e9}{RT\_MCU\_JumpTo}}(0x10000000);
+\mbox{\hyperlink{a00020_a81b750927e5dc24f1595c15e7dd7bdf5}{RT\_MCU\_JumpTo}}(0x10000000);
 \end{DoxyCode}
  
 \end{DoxyNote}
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{a00020_a1e578ce669735935a1d505c0edf98221}\label{a00020_a1e578ce669735935a1d505c0edf98221}} 
+\mbox{\Hypertarget{a00020_a8e87aa8d85986723da69a68cd0d1e51c}\label{a00020_a8e87aa8d85986723da69a68cd0d1e51c}} 
 \index{mcu.\+h@{mcu.\+h}!R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}}
 \index{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}!mcu.\+h@{mcu.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock()}{RT\_MCU\_SetSystemClock()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{mode }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5b}{S\+Y\+S\+\_\+\+C\+LK}}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -761,7 +490,7 @@ void
 \index{mcu.\+h@{mcu.\+h}!R\+T\+\_\+\+Sram\+\_\+\+Clear@{R\+T\+\_\+\+Sram\+\_\+\+Clear}}
 \index{R\+T\+\_\+\+Sram\+\_\+\+Clear@{R\+T\+\_\+\+Sram\+\_\+\+Clear}!mcu.\+h@{mcu.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+Sram\+\_\+\+Clear()}{RT\_Sram\_Clear()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+Sram\+\_\+\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void R\+T\+\_\+\+Sram\+\_\+\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

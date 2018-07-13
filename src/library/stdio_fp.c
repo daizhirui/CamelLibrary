@@ -23,7 +23,9 @@ char* ftoa(float a_fp)
     _memset(buf,33,0);
     if (a_fp < 1.0f) {
         unsigned char pos = 0;
-        if ((*(unsigned long*)&(a_fp))&0x80000000) { // check sign
+        float32_container converter;
+        converter.floatValue = a_fp;
+        if (converter.uint32Value & 0x80000000) { // check sign
             buf[0] = '-';
             buf[1] = '0';
             buf[2] = '.';

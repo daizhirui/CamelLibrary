@@ -9,9 +9,9 @@ Real Time Module Library for M2.
 \subsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{a00053_abcec88fd1699e238435a90f1b49f01fc}{R\+T\+\_\+\+R\+T\+C\+\_\+\+On}}()~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dac218ded0714563f03f40814bf16da7c7}{R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG}}, 1)
+\#define \mbox{\hyperlink{a00053_abcec88fd1699e238435a90f1b49f01fc}{R\+T\+\_\+\+R\+T\+C\+\_\+\+On}}()~\mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}}(R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG, 1)
 \begin{DoxyCompactList}\small\item\em Turn on R\+TC. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00053_ad065bdfa3138a773950a7d5e9e9f863a}{R\+T\+\_\+\+R\+T\+C\+\_\+\+Off}}()~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dac218ded0714563f03f40814bf16da7c7}{R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG}}, $\sim$1)
+\#define \mbox{\hyperlink{a00053_ad065bdfa3138a773950a7d5e9e9f863a}{R\+T\+\_\+\+R\+T\+C\+\_\+\+Off}}()~\mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}}(R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG, $\sim$1)
 \begin{DoxyCompactList}\small\item\em Turn off R\+TC. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{a00053_a6023ebffc90fff4ba8131242c8f4e1ed}{R\+T\+C\+\_\+12\+H\+O\+UR}}~0x1
 \begin{DoxyCompactList}\small\item\em Keyword R\+T\+C\+\_\+12\+H\+O\+UR. \end{DoxyCompactList}\item 
@@ -19,9 +19,9 @@ Real Time Module Library for M2.
 \begin{DoxyCompactList}\small\item\em Keyword R\+T\+C\+\_\+24\+H\+O\+UR. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{a00053_a4342706ea208fe0adff35bfa3c78b87c}{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time\+Format}}(format)
 \begin{DoxyCompactList}\small\item\em Set the time format of R\+TC. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00053_a8929da3f9ad422dd07f18d603c63b7b7}{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time}}(year,  month,  day,  hour,  min,  sec)~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf375f171cb828ab3d87d45724750256d}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG}}, year $<$$<$ 26 $\vert$ mon $<$$<$ 22 $\vert$ day $<$$<$ 17 $\vert$ hour $<$$<$ 12 $\vert$ min $<$$<$ 6 $\vert$ sec);
+\#define \mbox{\hyperlink{a00053_a8929da3f9ad422dd07f18d603c63b7b7}{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time}}(year,  month,  day,  hour,  min,  sec)~\mbox{\hyperlink{a00020_ad9953f631a539cfaa35baf94f878b3ec}{Memory\+Write32}}(R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG, year $<$$<$ 26 $\vert$ mon $<$$<$ 22 $\vert$ day $<$$<$ 17 $\vert$ hour $<$$<$ 12 $\vert$ min $<$$<$ 6 $\vert$ sec);
 \begin{DoxyCompactList}\small\item\em This function sets the time of R\+TC. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00053_a61ac395d30cde55137bf04acaec570f0}{R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32}}()~\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf375f171cb828ab3d87d45724750256d}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG}})
+\#define \mbox{\hyperlink{a00053_a61ac395d30cde55137bf04acaec570f0}{R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32}}()~\mbox{\hyperlink{a00020_a706b02571285f92589fbb0b964d7d0bb}{Memory\+Read32}}(R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG)
 \begin{DoxyCompactList}\small\item\em This function returns the R\+TC time raw value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -51,7 +51,7 @@ Zhirui Dai
 \index{time.\+h@{time.\+h}!R\+T\+\_\+\+R\+T\+C\+\_\+\+Off@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Off}}
 \index{R\+T\+\_\+\+R\+T\+C\+\_\+\+Off@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Off}!time.\+h@{time.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+R\+T\+C\+\_\+\+Off}{RT\_RTC\_Off}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+R\+T\+C\+\_\+\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dac218ded0714563f03f40814bf16da7c7}{R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG}}, $\sim$1)}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+R\+T\+C\+\_\+\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}}(R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG, $\sim$1)}
 
 
 
@@ -64,7 +64,7 @@ void
 \index{time.\+h@{time.\+h}!R\+T\+\_\+\+R\+T\+C\+\_\+\+On@{R\+T\+\_\+\+R\+T\+C\+\_\+\+On}}
 \index{R\+T\+\_\+\+R\+T\+C\+\_\+\+On@{R\+T\+\_\+\+R\+T\+C\+\_\+\+On}!time.\+h@{time.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+R\+T\+C\+\_\+\+On}{RT\_RTC\_On}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+R\+T\+C\+\_\+\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dac218ded0714563f03f40814bf16da7c7}{R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG}}, 1)}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+R\+T\+C\+\_\+\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}}(R\+T\+C\+\_\+\+C\+T\+L\+\_\+\+R\+EG, 1)}
 
 
 
@@ -77,7 +77,7 @@ void
 \index{time.\+h@{time.\+h}!R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32}}
 \index{R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32}!time.\+h@{time.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32}{RT\_RTC\_Read32}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf375f171cb828ab3d87d45724750256d}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG}})}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+R\+T\+C\+\_\+\+Read32(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a706b02571285f92589fbb0b964d7d0bb}{Memory\+Read32}}(R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG)}
 
 
 
@@ -90,7 +90,7 @@ void
 \index{time.\+h@{time.\+h}!R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time}}
 \index{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time@{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time}!time.\+h@{time.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time}{RT\_RTC\_SetTime}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time(\begin{DoxyParamCaption}\item[{}]{year,  }\item[{}]{month,  }\item[{}]{day,  }\item[{}]{hour,  }\item[{}]{min,  }\item[{}]{sec }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf375f171cb828ab3d87d45724750256d}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG}}, year $<$$<$ 26 $\vert$ mon $<$$<$ 22 $\vert$ day $<$$<$ 17 $\vert$ hour $<$$<$ 12 $\vert$ min $<$$<$ 6 $\vert$ sec);}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+R\+T\+C\+\_\+\+Set\+Time(\begin{DoxyParamCaption}\item[{}]{year,  }\item[{}]{month,  }\item[{}]{day,  }\item[{}]{hour,  }\item[{}]{min,  }\item[{}]{sec }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad9953f631a539cfaa35baf94f878b3ec}{Memory\+Write32}}(R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+R\+EG, year $<$$<$ 26 $\vert$ mon $<$$<$ 22 $\vert$ day $<$$<$ 17 $\vert$ hour $<$$<$ 12 $\vert$ min $<$$<$ 6 $\vert$ sec);}
 
 
 
@@ -123,8 +123,8 @@ void
 {\bfseries Value\+:}
 \begin{DoxyCode}
 \{                                            \(\backslash\)
-        MemoryWrite32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44dac218ded0714563f03f40814bf16da7c7}{RTC\_CTL\_REG}}, format);      \(\backslash\)
-        MemoryWrite32(\mbox{\hyperlink{a00020_adadaa0ab1ebbd7ba9b70dfd24c3ed44daf375f171cb828ab3d87d45724750256d}{RTC\_TIME\_REG}}, 0x00420000); \(\backslash\)
+        MemoryWrite32(RTC\_CTL\_REG, format);      \(\backslash\)
+        MemoryWrite32(RTC\_TIME\_REG, 0x00420000); \(\backslash\)
     \}
 \end{DoxyCode}
 
