@@ -26,5 +26,5 @@ var a00047 =
     [ "RT_TC2_TcIrqOn", "a00047.html#a0d385385ff809f653b9e7a6d6a111838", null ],
     [ "RT_TC2_TimerOff", "a00047.html#a4328299fe0323ef75508eadf9b937ba1", null ],
     [ "RT_TC2_TimerOn", "a00047.html#ab274ee44af2080d68745b2ec3af06648", null ],
-    [ "RT_TC2_TimerSet1us", "a00047.html#a295c11e348fa97400f36ddf1ece55368", null ]
+    [ "RT_TC2_TimerSet1us", "a00047.html#aadfafcd102be9335f47c244450854c15", null ]
 ];

@@ -1,6 +1,6 @@
 include ../Makefile.compiler
 
-LIBRARY_NAME = DES LCD soft_fp stdio stdio_fp stdlib stdlib_fp string time
+LIBRARY_NAME = DES LCD soft_fp stdio stdio_fp stdlib stdlib_fp string time SPI 
 TARGET_NAME = $(LIBRARY_NAME:%=lib%.a)
 TARGET_PATH = $(LIBRARY_NAME:%=$(RELEASE_PATH)/lib/lib%.a)
 HEADER_NAME = $(LIBRARY_NAME:%=%.h)

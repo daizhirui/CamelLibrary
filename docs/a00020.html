@@ -131,9 +131,9 @@ $(document).ready(function(){initNavTree('a00020.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">mcu.h File Reference</div>  </div>
 </div><!--header-->
@@ -143,6 +143,42 @@ $(document).ready(function(){initNavTree('a00020.html','');});
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a2d484dc15bdf30ee11ab3b05f31f0e16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a2d484dc15bdf30ee11ab3b05f31f0e16">MemoryRead32</a>(addr)&#160;&#160;&#160;(*(volatile <a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>*)(addr))</td></tr>
+<tr class="memdesc:a2d484dc15bdf30ee11ab3b05f31f0e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read 32-bit data from a specific address.  <a href="#a2d484dc15bdf30ee11ab3b05f31f0e16">More...</a><br /></td></tr>
+<tr class="separator:a2d484dc15bdf30ee11ab3b05f31f0e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b9732365b12e48ddb89fe1028b975b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a6b9732365b12e48ddb89fe1028b975b0">MemoryWrite32</a>(addr,  val)&#160;&#160;&#160;(*(volatile <a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>*)(addr)) = (val)</td></tr>
+<tr class="memdesc:a6b9732365b12e48ddb89fe1028b975b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write 32-bit data to a specific address.  <a href="#a6b9732365b12e48ddb89fe1028b975b0">More...</a><br /></td></tr>
+<tr class="separator:a6b9732365b12e48ddb89fe1028b975b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27874a97deab7cecdde5ddecf466e31e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(addr,  val)&#160;&#160;&#160;((*(volatile <a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>*)(addr)) |= (val))</td></tr>
+<tr class="memdesc:a27874a97deab7cecdde5ddecf466e31e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical OR operation on 32-bit data at a specific address.  <a href="#a27874a97deab7cecdde5ddecf466e31e">More...</a><br /></td></tr>
+<tr class="separator:a27874a97deab7cecdde5ddecf466e31e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad87cedffcaadc51db22594fce55173d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(addr,  val)&#160;&#160;&#160;((*(volatile <a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>*)(addr)) &amp;= (val))</td></tr>
+<tr class="memdesc:ad87cedffcaadc51db22594fce55173d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical addrND operation on 32-bit data from a specific address.  <a href="#ad87cedffcaadc51db22594fce55173d4">More...</a><br /></td></tr>
+<tr class="separator:ad87cedffcaadc51db22594fce55173d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc530c7e6b49b0ca97c1ad9dac1c4750"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#afc530c7e6b49b0ca97c1ad9dac1c4750">MemoryBitAt</a>(addr,  val)&#160;&#160;&#160;(( *(volatile <a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>*)(addr) &gt;&gt; val ) &amp;0x1)</td></tr>
+<tr class="memdesc:afc530c7e6b49b0ca97c1ad9dac1c4750"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a specific bit of a 32-bit data from a specific address.  <a href="#afc530c7e6b49b0ca97c1ad9dac1c4750">More...</a><br /></td></tr>
+<tr class="separator:afc530c7e6b49b0ca97c1ad9dac1c4750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a602346038b54068758ef00c42d1b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a99a602346038b54068758ef00c42d1b6">MemoryBitOn</a>(addr,  val)&#160;&#160;&#160;<a class="el" href="a00020.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(addr,1&lt;&lt;(val))</td></tr>
+<tr class="memdesc:a99a602346038b54068758ef00c42d1b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a specific bit of a 32-bit data from a specific address to 1.  <a href="#a99a602346038b54068758ef00c42d1b6">More...</a><br /></td></tr>
+<tr class="separator:a99a602346038b54068758ef00c42d1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04c34919a950117ae7da2dc5a235622b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a04c34919a950117ae7da2dc5a235622b">MemoryBitOff</a>(addr,  val)&#160;&#160;&#160;<a class="el" href="a00020.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(addr,~(1&lt;&lt;(val)))</td></tr>
+<tr class="memdesc:a04c34919a950117ae7da2dc5a235622b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a specific bit of a 32-bit data from a specific address to 0.  <a href="#a04c34919a950117ae7da2dc5a235622b">More...</a><br /></td></tr>
+<tr class="separator:a04c34919a950117ae7da2dc5a235622b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae49e41753dbce64185d380d307ade78d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#ae49e41753dbce64185d380d307ade78d">MemoryBitSwitch</a>(addr,  val)&#160;&#160;&#160;(*(volatile <a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>*)(addr)^=(1&lt;&lt;(val)))</td></tr>
+<tr class="memdesc:ae49e41753dbce64185d380d307ade78d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a specific bit of a 32-bit data from a specific address to opposite state.  <a href="#ae49e41753dbce64185d380d307ade78d">More...</a><br /></td></tr>
+<tr class="separator:ae49e41753dbce64185d380d307ade78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c864ced65734e7f17f208d7b532c251"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a8c864ced65734e7f17f208d7b532c251">RT_MCU_JumpTo</a>(address)</td></tr>
+<tr class="memdesc:a8c864ced65734e7f17f208d7b532c251"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jump to a specific address.  <a href="#a8c864ced65734e7f17f208d7b532c251">More...</a><br /></td></tr>
+<tr class="separator:a8c864ced65734e7f17f208d7b532c251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a017f8665ec51267680fc0e536db19c13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a017f8665ec51267680fc0e536db19c13">RT_MCU_SetSystemClock</a>(mode)</td></tr>
+<tr class="memdesc:a017f8665ec51267680fc0e536db19c13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the frequency of the system clock.  <a href="#a017f8665ec51267680fc0e536db19c13">More...</a><br /></td></tr>
+<tr class="separator:a017f8665ec51267680fc0e536db19c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae64bbc76e9536602350b7ec801d010c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#ae64bbc76e9536602350b7ec801d010c1">RT_Sram_Clear</a>()</td></tr>
+<tr class="memdesc:ae64bbc76e9536602350b7ec801d010c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is to clear the former 7K-byte sram.  <a href="#ae64bbc76e9536602350b7ec801d010c1">More...</a><br /></td></tr>
+<tr class="separator:ae64bbc76e9536602350b7ec801d010c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a06da901348542a481c297d9b700e2001"><td class="memItemLeft" align="right" valign="top">typedef unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a></td></tr>
@@ -254,48 +290,385 @@ Enumerations</h2></td></tr>
 <a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401">SYS_CLK_12M</a> = (0x3&lt;&lt;12)
  }</td></tr>
 <tr class="separator:ae3a2d501b8662e11b969fb4a5e195e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a706b02571285f92589fbb0b964d7d0bb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a706b02571285f92589fbb0b964d7d0bb">MemoryRead32</a> (<a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a> addr)</td></tr>
-<tr class="memdesc:a706b02571285f92589fbb0b964d7d0bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read 32-bit data from a specific address.  <a href="#a706b02571285f92589fbb0b964d7d0bb">More...</a><br /></td></tr>
-<tr class="separator:a706b02571285f92589fbb0b964d7d0bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9953f631a539cfaa35baf94f878b3ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#ad9953f631a539cfaa35baf94f878b3ec">MemoryWrite32</a> (<a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a> addr, uint32_t val)</td></tr>
-<tr class="memdesc:ad9953f631a539cfaa35baf94f878b3ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write 32-bit data to a specific address.  <a href="#ad9953f631a539cfaa35baf94f878b3ec">More...</a><br /></td></tr>
-<tr class="separator:ad9953f631a539cfaa35baf94f878b3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ea92ebccdef6bdaca4d00210cc7266d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a9ea92ebccdef6bdaca4d00210cc7266d">MemoryOr32</a> (<a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a> addr, uint32_t val)</td></tr>
-<tr class="memdesc:a9ea92ebccdef6bdaca4d00210cc7266d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical OR operation on 32-bit data at a specific address.  <a href="#a9ea92ebccdef6bdaca4d00210cc7266d">More...</a><br /></td></tr>
-<tr class="separator:a9ea92ebccdef6bdaca4d00210cc7266d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c1a2bd4c1bd4c2f429d8042a45327ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a5c1a2bd4c1bd4c2f429d8042a45327ff">MemoryAnd32</a> (<a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a> addr, uint32_t val)</td></tr>
-<tr class="memdesc:a5c1a2bd4c1bd4c2f429d8042a45327ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical addrND operation on 32-bit data from a specific address.  <a href="#a5c1a2bd4c1bd4c2f429d8042a45327ff">More...</a><br /></td></tr>
-<tr class="separator:a5c1a2bd4c1bd4c2f429d8042a45327ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa87daf3a7b5e127c21919e520e58282"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#aaa87daf3a7b5e127c21919e520e58282">MemoryBitAt</a> (<a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a> addr, uint32_t val)</td></tr>
-<tr class="memdesc:aaa87daf3a7b5e127c21919e520e58282"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a specific bit of a 32-bit data from a specific address.  <a href="#aaa87daf3a7b5e127c21919e520e58282">More...</a><br /></td></tr>
-<tr class="separator:aaa87daf3a7b5e127c21919e520e58282"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23e80593caa37b5d932a8320dc561830"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a23e80593caa37b5d932a8320dc561830">MemoryBitOn</a> (<a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a> addr, uint32_t val)</td></tr>
-<tr class="memdesc:a23e80593caa37b5d932a8320dc561830"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a specific bit of a 32-bit data from a specific address to 1.  <a href="#a23e80593caa37b5d932a8320dc561830">More...</a><br /></td></tr>
-<tr class="separator:a23e80593caa37b5d932a8320dc561830"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29fb2c978051c0cff760432e2378f3a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a29fb2c978051c0cff760432e2378f3a3">MemoryBitOff</a> (<a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a> addr, uint32_t val)</td></tr>
-<tr class="memdesc:a29fb2c978051c0cff760432e2378f3a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a specific bit of a 32-bit data from a specific address to 0.  <a href="#a29fb2c978051c0cff760432e2378f3a3">More...</a><br /></td></tr>
-<tr class="separator:a29fb2c978051c0cff760432e2378f3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a3766694541dd5c639d4a11897aaeb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a7a3766694541dd5c639d4a11897aaeb9">MemoryBitSwitch</a> (<a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a> addr, uint32_t val)</td></tr>
-<tr class="memdesc:a7a3766694541dd5c639d4a11897aaeb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a specific bit of a 32-bit data from a specific address to opposite state.  <a href="#a7a3766694541dd5c639d4a11897aaeb9">More...</a><br /></td></tr>
-<tr class="separator:a7a3766694541dd5c639d4a11897aaeb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81b750927e5dc24f1595c15e7dd7bdf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a81b750927e5dc24f1595c15e7dd7bdf5">RT_MCU_JumpTo</a> (<a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a> address)</td></tr>
-<tr class="memdesc:a81b750927e5dc24f1595c15e7dd7bdf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jump to a specific address.  <a href="#a81b750927e5dc24f1595c15e7dd7bdf5">More...</a><br /></td></tr>
-<tr class="separator:a81b750927e5dc24f1595c15e7dd7bdf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e87aa8d85986723da69a68cd0d1e51c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a8e87aa8d85986723da69a68cd0d1e51c">RT_MCU_SetSystemClock</a> (<a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5b">SYS_CLK</a> mode)</td></tr>
-<tr class="memdesc:a8e87aa8d85986723da69a68cd0d1e51c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the frequency of the system clock.  <a href="#a8e87aa8d85986723da69a68cd0d1e51c">More...</a><br /></td></tr>
-<tr class="separator:a8e87aa8d85986723da69a68cd0d1e51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad514417aa2e5a5d061a5eabeceae20c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#ad514417aa2e5a5d061a5eabeceae20c6">RT_Sram_Clear</a> ()</td></tr>
-<tr class="memdesc:ad514417aa2e5a5d061a5eabeceae20c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is to clear the former 7K-byte sram.  <a href="#ad514417aa2e5a5d061a5eabeceae20c6">More...</a><br /></td></tr>
-<tr class="separator:ad514417aa2e5a5d061a5eabeceae20c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>M2 micro core unit. </p>
 <dl class="section author"><dt>Author</dt><dd>Zhirui Dai </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2018-05-25 </dd></dl>
-</div><h2 class="groupheader">Typedef Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ad87cedffcaadc51db22594fce55173d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad87cedffcaadc51db22594fce55173d4">&#9670;&nbsp;</a></span>MemoryAnd32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MemoryAnd32</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">val&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((*(volatile <a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>*)(addr)) &amp;= (val))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logical addrND operation on 32-bit data from a specific address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>the address to be AND </td></tr>
+    <tr><td class="paramname">val</td><td>the AND mask </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="afc530c7e6b49b0ca97c1ad9dac1c4750"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc530c7e6b49b0ca97c1ad9dac1c4750">&#9670;&nbsp;</a></span>MemoryBitAt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MemoryBitAt</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">val&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(( *(volatile <a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>*)(addr) &gt;&gt; val ) &amp;0x1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a specific bit of a 32-bit data from a specific address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>the address </td></tr>
+    <tr><td class="paramname">val</td><td>the bit location (in the 32-bit data) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>long the bit </dd></dl>
+
+</div>
+</div>
+<a id="a04c34919a950117ae7da2dc5a235622b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04c34919a950117ae7da2dc5a235622b">&#9670;&nbsp;</a></span>MemoryBitOff</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MemoryBitOff</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">val&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="a00020.html#ad87cedffcaadc51db22594fce55173d4">MemoryAnd32</a>(addr,~(1&lt;&lt;(val)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a specific bit of a 32-bit data from a specific address to 0. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>the address </td></tr>
+    <tr><td class="paramname">val</td><td>the bit location (in the 32-bit data) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a99a602346038b54068758ef00c42d1b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99a602346038b54068758ef00c42d1b6">&#9670;&nbsp;</a></span>MemoryBitOn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MemoryBitOn</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">val&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="a00020.html#a27874a97deab7cecdde5ddecf466e31e">MemoryOr32</a>(addr,1&lt;&lt;(val))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a specific bit of a 32-bit data from a specific address to 1. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>the address </td></tr>
+    <tr><td class="paramname">val</td><td>the bit location (in the 32-bit data) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ae49e41753dbce64185d380d307ade78d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae49e41753dbce64185d380d307ade78d">&#9670;&nbsp;</a></span>MemoryBitSwitch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MemoryBitSwitch</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">val&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(*(volatile <a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>*)(addr)^=(1&lt;&lt;(val)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a specific bit of a 32-bit data from a specific address to opposite state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>the address </td></tr>
+    <tr><td class="paramname">val</td><td>the bit location (in the 32-bit data) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a27874a97deab7cecdde5ddecf466e31e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27874a97deab7cecdde5ddecf466e31e">&#9670;&nbsp;</a></span>MemoryOr32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MemoryOr32</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">val&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((*(volatile <a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>*)(addr)) |= (val))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logical OR operation on 32-bit data at a specific address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>the address to be OR </td></tr>
+    <tr><td class="paramname">val</td><td>the OR mask </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a2d484dc15bdf30ee11ab3b05f31f0e16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d484dc15bdf30ee11ab3b05f31f0e16">&#9670;&nbsp;</a></span>MemoryRead32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MemoryRead32</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr</td><td>)</td>
+          <td>&#160;&#160;&#160;(*(volatile <a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>*)(addr))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read 32-bit data from a specific address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>the address to read </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>long the read value </dd></dl>
+
+</div>
+</div>
+<a id="a6b9732365b12e48ddb89fe1028b975b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b9732365b12e48ddb89fe1028b975b0">&#9670;&nbsp;</a></span>MemoryWrite32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MemoryWrite32</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">val&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(*(volatile <a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>*)(addr)) = (val)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write 32-bit data to a specific address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>the address to write </td></tr>
+    <tr><td class="paramname">val</td><td>the value to be written </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a8c864ced65734e7f17f208d7b532c251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c864ced65734e7f17f208d7b532c251">&#9670;&nbsp;</a></span>RT_MCU_JumpTo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_MCU_JumpTo</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">address</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                   \</div><div class="line">    FuncPtr funcptr;                \</div><div class="line">    funcptr = (<a class="code" href="a00020.html#a3d987633d7a3ca10c14905a807b62eb1">FuncPtr</a>)address;     \</div><div class="line">    funcptr();                      \</div><div class="line">}</div><div class="ttc" id="a00020_html_a3d987633d7a3ca10c14905a807b62eb1"><div class="ttname"><a href="a00020.html#a3d987633d7a3ca10c14905a807b62eb1">FuncPtr</a></div><div class="ttdeci">void(* FuncPtr)(void)</div><div class="ttdef"><b>Definition:</b> mcu.h:212</div></div>
+</div><!-- fragment -->
+<p>Jump to a specific address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>the address to jump </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>When this function is used, returning to the position where this function is used is impossible. By using RT_MCU_JumpTo, we can make a soft reset. For example, if the entrance address of the program is 0x10000000, it is: <div class="fragment"><div class="line"><a class="code" href="a00020.html#a8c864ced65734e7f17f208d7b532c251">RT_MCU_JumpTo</a>(0x10000000);</div></div><!-- fragment --> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a017f8665ec51267680fc0e536db19c13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a017f8665ec51267680fc0e536db19c13">&#9670;&nbsp;</a></span>RT_MCU_SetSystemClock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_MCU_SetSystemClock</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">mode</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                               \</div><div class="line">    MemoryAnd32(SYS_CTL2_REG, ~<a class="code" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401">SYS_CLK_12M</a>);    \</div><div class="line">    MemoryOr32(SYS_CTL2_REG, mode);             \</div><div class="line">}</div><div class="ttc" id="a00020_html_ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401"><div class="ttname"><a href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401">SYS_CLK_12M</a></div><div class="ttdef"><b>Definition:</b> mcu.h:244</div></div>
+</div><!-- fragment -->
+<p>Set the frequency of the system clock. </p>
+<dl class="section note"><dt>Note</dt><dd>This is used in UART to adjust the baudrate. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>The frequency of system clock to set. Optional value: <a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5baaac7754daa9ff2db35951f3539495122">SYS_CLK_3M</a>, <a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5bad1640aa8c46162a7551abca12293ef39">SYS_CLK_6M</a>, <a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401">SYS_CLK_12M</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ae64bbc76e9536602350b7ec801d010c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae64bbc76e9536602350b7ec801d010c1">&#9670;&nbsp;</a></span>RT_Sram_Clear</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_Sram_Clear</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                                           \</div><div class="line">    unsigned <span class="keywordtype">long</span> i;                                        \</div><div class="line">    for(i=0;i&lt;7168;i++)                                     \</div><div class="line">    {                                                       \</div><div class="line">      (*(<span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *)(0x01000000 + i)) = 0;    \</div><div class="line">    }                                                       \</div><div class="line">}</div></div><!-- fragment -->
+<p>This function is to clear the former 7K-byte sram. </p>
+<dl class="section warning"><dt>Warning</dt><dd>To avoid possible influence on the stack, this function only clear the former 7K bytes. When it is in interrupt, this function is not recommended because some important data is stored in the sram for the later state recover from the interrupt. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
 <a id="a3d987633d7a3ca10c14905a807b62eb1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d987633d7a3ca10c14905a807b62eb1">&#9670;&nbsp;</a></span>FuncPtr</h2>
 
@@ -470,465 +843,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a5c1a2bd4c1bd4c2f429d8042a45327ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c1a2bd4c1bd4c2f429d8042a45327ff">&#9670;&nbsp;</a></span>MemoryAnd32()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MemoryAnd32 </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>&#160;</td>
-          <td class="paramname"><em>addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Logical addrND operation on 32-bit data from a specific address. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">addr</td><td>the address to be AND </td></tr>
-    <tr><td class="paramname">val</td><td>the AND mask </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
-<a id="aaa87daf3a7b5e127c21919e520e58282"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa87daf3a7b5e127c21919e520e58282">&#9670;&nbsp;</a></span>MemoryBitAt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t MemoryBitAt </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>&#160;</td>
-          <td class="paramname"><em>addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get a specific bit of a 32-bit data from a specific address. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">addr</td><td>the address </td></tr>
-    <tr><td class="paramname">val</td><td>the bit location (in the 32-bit data) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>long the bit </dd></dl>
-
-</div>
-</div>
-<a id="a29fb2c978051c0cff760432e2378f3a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29fb2c978051c0cff760432e2378f3a3">&#9670;&nbsp;</a></span>MemoryBitOff()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MemoryBitOff </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>&#160;</td>
-          <td class="paramname"><em>addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set a specific bit of a 32-bit data from a specific address to 0. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">addr</td><td>the address </td></tr>
-    <tr><td class="paramname">val</td><td>the bit location (in the 32-bit data) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
-<a id="a23e80593caa37b5d932a8320dc561830"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23e80593caa37b5d932a8320dc561830">&#9670;&nbsp;</a></span>MemoryBitOn()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MemoryBitOn </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>&#160;</td>
-          <td class="paramname"><em>addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set a specific bit of a 32-bit data from a specific address to 1. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">addr</td><td>the address </td></tr>
-    <tr><td class="paramname">val</td><td>the bit location (in the 32-bit data) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
-<a id="a7a3766694541dd5c639d4a11897aaeb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a3766694541dd5c639d4a11897aaeb9">&#9670;&nbsp;</a></span>MemoryBitSwitch()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MemoryBitSwitch </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>&#160;</td>
-          <td class="paramname"><em>addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set a specific bit of a 32-bit data from a specific address to opposite state. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">addr</td><td>the address </td></tr>
-    <tr><td class="paramname">val</td><td>the bit location (in the 32-bit data) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
-<a id="a9ea92ebccdef6bdaca4d00210cc7266d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ea92ebccdef6bdaca4d00210cc7266d">&#9670;&nbsp;</a></span>MemoryOr32()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MemoryOr32 </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>&#160;</td>
-          <td class="paramname"><em>addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Logical OR operation on 32-bit data at a specific address. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">addr</td><td>the address to be OR </td></tr>
-    <tr><td class="paramname">val</td><td>the OR mask </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
-<a id="a706b02571285f92589fbb0b964d7d0bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a706b02571285f92589fbb0b964d7d0bb">&#9670;&nbsp;</a></span>MemoryRead32()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t MemoryRead32 </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>&#160;</td>
-          <td class="paramname"><em>addr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Read 32-bit data from a specific address. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">addr</td><td>the address to read </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>long the read value </dd></dl>
-
-</div>
-</div>
-<a id="ad9953f631a539cfaa35baf94f878b3ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9953f631a539cfaa35baf94f878b3ec">&#9670;&nbsp;</a></span>MemoryWrite32()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MemoryWrite32 </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>&#160;</td>
-          <td class="paramname"><em>addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Write 32-bit data to a specific address. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">addr</td><td>the address to write </td></tr>
-    <tr><td class="paramname">val</td><td>the value to be written </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
-<a id="a81b750927e5dc24f1595c15e7dd7bdf5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81b750927e5dc24f1595c15e7dd7bdf5">&#9670;&nbsp;</a></span>RT_MCU_JumpTo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RT_MCU_JumpTo </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00020.html#a06da901348542a481c297d9b700e2001">memory_addr_t</a>&#160;</td>
-          <td class="paramname"><em>address</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Jump to a specific address. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">address</td><td>the address to jump </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>When this function is used, returning to the position where this function is used is impossible. By using RT_MCU_JumpTo, we can make a soft reset. For example, if the entrance address of the program is 0x10000000, it is: <div class="fragment"><div class="line"><a class="code" href="a00020.html#a81b750927e5dc24f1595c15e7dd7bdf5">RT_MCU_JumpTo</a>(0x10000000);</div></div><!-- fragment --> </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
-<a id="a8e87aa8d85986723da69a68cd0d1e51c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e87aa8d85986723da69a68cd0d1e51c">&#9670;&nbsp;</a></span>RT_MCU_SetSystemClock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RT_MCU_SetSystemClock </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5b">SYS_CLK</a>&#160;</td>
-          <td class="paramname"><em>mode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the frequency of the system clock. </p>
-<dl class="section note"><dt>Note</dt><dd>This is used in UART to adjust the baudrate. </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mode</td><td>The frequency of system clock to set. Optional value: <a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5baaac7754daa9ff2db35951f3539495122">SYS_CLK_3M</a>, <a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5bad1640aa8c46162a7551abca12293ef39">SYS_CLK_6M</a>, <a class="el" href="a00020.html#ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401">SYS_CLK_12M</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
-<a id="ad514417aa2e5a5d061a5eabeceae20c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad514417aa2e5a5d061a5eabeceae20c6">&#9670;&nbsp;</a></span>RT_Sram_Clear()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RT_Sram_Clear </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>This function is to clear the former 7K-byte sram. </p>
-<dl class="section warning"><dt>Warning</dt><dd>To avoid possible influence on the stack, this function only clear the former 7K bytes. When it is in interrupt, this function is not recommended because some important data is stored in the sram for the later state recover from the interrupt. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.8-->
@@ -937,7 +851,7 @@ Functions</h2></td></tr>
     <!-- id is needed for treeview function! -->
     <!-- <ul>
         <li class="navelem"><a class="el" href="dir_9c8c494a5e1ae1f33037b0e9d49f06c7.html">release</a></li><li class="navelem"><a class="el" href="dir_42743c43973611cb0b05144d150e48a5.html">include</a></li><li class="navelem"><a class="el" href="a00020.html">mcu.h</a></li>
-        <li class="footer">Generated on Fri Jul 13 2018 14:03:53 for Camel Library Documentaion by
+        <li class="footer">Generated on Mon Jul 16 2018 10:05:52 for Camel Library Documentaion by
             <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
     </ul> -->
@@ -949,7 +863,7 @@ Functions</h2></td></tr>
             <!-- <h5 class="card-title">Special title treatment</h5> -->
             <p class="card-text d-flex justify-content-between">
                 <a href="#" class="btn btn-primary">Return To Top</a>
-                <a href="http://www.doxygen.org/index.html">Generated on Fri Jul 13 2018 14:03:53 for Camel Library Documentaion by <img class="footer" src="doxygen.png" alt="doxygen"/>  1.8.14</a>
+                <a href="http://www.doxygen.org/index.html">Generated on Mon Jul 16 2018 10:05:52 for Camel Library Documentaion by <img class="footer" src="doxygen.png" alt="doxygen"/>  1.8.14</a>
             </p>
         </div>
     </div>

@@ -11,8 +11,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-static char __convertBuffer[33];
-static char __printfBuffer[128];
+char __convertBuffer[33];
+char __printfBuffer[128];
 
 void _printf(char* buf, const char *format, va_list ap);
 

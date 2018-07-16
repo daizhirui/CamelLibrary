@@ -63,7 +63,7 @@ var NAVTREE =
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Macros", "globals_defs.html", "globals_defs" ]
       ] ]
     ] ]
   ] ]
@@ -72,7 +72,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "a00002.html",
-"a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da81072e84e040f3ee8c531655c60e325d",
+"a00020.html#adadaa0ab1ebbd7ba9b70dfd24c3ed44da835280d31e2f3f5bc44bb1eb58024d80",
 "a00059.html#a369b51538a0ccf57dcdb30e12352a8c7"
 ];
 

@@ -11,8 +11,6 @@
 
 /*! \cond PRIVATE */
 // for itoa, ftoa
-static char __convertBuffer[33];
-static char __printfBuffer[128];
 char* _xtoa(unsigned long num);
 char * _strcat(char *dest, const char * src);
 unsigned int _strlen(const char * str);

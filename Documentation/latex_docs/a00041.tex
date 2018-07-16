@@ -9,59 +9,56 @@ Timer Counter 0 Library for M2.
 \subsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{a00041_a7eb236125fa1773036d72e020419f3ad}{R\+T\+\_\+\+T\+C0\+\_\+\+Stop}}()~\mbox{\hyperlink{a00020_ad9953f631a539cfaa35baf94f878b3ec}{Memory\+Write32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 0)
+\#define \mbox{\hyperlink{a00041_a7eb236125fa1773036d72e020419f3ad}{R\+T\+\_\+\+T\+C0\+\_\+\+Stop}}()~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 0)
 \begin{DoxyCompactList}\small\item\em Stop T\+C0. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_a8758649b0f3c3401f75970ddeab0a8d9}{R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Irq}}()~\mbox{\hyperlink{a00020_ad9953f631a539cfaa35baf94f878b3ec}{Memory\+Write32}}(T0\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG, 0)
+\#define \mbox{\hyperlink{a00041_a8758649b0f3c3401f75970ddeab0a8d9}{R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Irq}}()~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(T0\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG, 0)
 \begin{DoxyCompactList}\small\item\em Clear T\+C0 T\+C-\/\+I\+RQ and P\+W\+M-\/\+I\+RQ. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_a17c2c2161dfc43f81e4e887a0d2b62ee}{R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Cnt}}()~\mbox{\hyperlink{a00020_ad9953f631a539cfaa35baf94f878b3ec}{Memory\+Write32}}(T0\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG, 0)
+\#define \mbox{\hyperlink{a00041_a17c2c2161dfc43f81e4e887a0d2b62ee}{R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Cnt}}()~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(T0\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG, 0)
 \begin{DoxyCompactList}\small\item\em Clear T\+C0 Counter value. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{a00041_a455c100511141b1243e8ee7f756e6553}{R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+All}}()
 \begin{DoxyCompactList}\small\item\em Clear T\+C0 T\+C-\/\+I\+RQ, P\+W\+M-\/\+I\+RQ and Counter value. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_a1ff15e860147b3fff582b7603ba7ffa8}{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+On}}()~\mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 7)
+\#define \mbox{\hyperlink{a00041_a1ff15e860147b3fff582b7603ba7ffa8}{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+On}}()~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 7)
 \begin{DoxyCompactList}\small\item\em Turn on T\+C0 T\+C-\/\+I\+RQ. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_a7434ed75487de93c69569c05430967ae}{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+Off}}()~\mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 7))
+\#define \mbox{\hyperlink{a00041_a7434ed75487de93c69569c05430967ae}{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+Off}}()~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 7))
 \begin{DoxyCompactList}\small\item\em Turn off T\+C0 T\+C-\/\+I\+RQ. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_a76c2b1a397b2035b2f2f2e64940b790f}{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+On}}()~\mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 6)
+\#define \mbox{\hyperlink{a00041_a76c2b1a397b2035b2f2f2e64940b790f}{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+On}}()~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 6)
 \begin{DoxyCompactList}\small\item\em Turn on T\+C0 P\+W\+M-\/\+I\+RQ. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_aa62df019b0279e8510e465f5e920f555}{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+Off}}()~\mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 6))
+\#define \mbox{\hyperlink{a00041_aa62df019b0279e8510e465f5e920f555}{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+Off}}()~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 6))
 \begin{DoxyCompactList}\small\item\em Turn off T\+C0 P\+W\+M-\/\+I\+RQ. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_a41989522dd60679c7c86268b68363a5c}{R\+T\+\_\+\+T\+C0\+\_\+\+Check\+Tc\+Flag}}()~((\mbox{\hyperlink{a00020_a706b02571285f92589fbb0b964d7d0bb}{Memory\+Read32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG) \& 0x80000000) $>$$>$ 31)
+\#define \mbox{\hyperlink{a00041_a41989522dd60679c7c86268b68363a5c}{R\+T\+\_\+\+T\+C0\+\_\+\+Check\+Tc\+Flag}}()~((\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG) \& 0x80000000) $>$$>$ 31)
 \begin{DoxyCompactList}\small\item\em Read T\+C0 T\+C-\/flag. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_ae20de59a971c4aa0a50a724ac08fb19e}{R\+T\+\_\+\+T\+C0\+\_\+\+Check\+P\+W\+M\+Flag}}()~((\mbox{\hyperlink{a00020_a706b02571285f92589fbb0b964d7d0bb}{Memory\+Read32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG) \& 0x40000000) $>$$>$ 30)
+\#define \mbox{\hyperlink{a00041_ae20de59a971c4aa0a50a724ac08fb19e}{R\+T\+\_\+\+T\+C0\+\_\+\+Check\+P\+W\+M\+Flag}}()~((\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG) \& 0x40000000) $>$$>$ 30)
 \begin{DoxyCompactList}\small\item\em Read T\+C0 P\+W\+M-\/flag. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_aa7936fffa8b7bcd47751d2e89f81d4a9}{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+On}}()~\mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 1)
+\#define \mbox{\hyperlink{a00041_aa7936fffa8b7bcd47751d2e89f81d4a9}{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+On}}()~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 1)
 \begin{DoxyCompactList}\small\item\em Turn on T\+C0 Timer. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_acbfad29faf802168f3281e5754e40aa9}{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Off}}()~\mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 1))
+\#define \mbox{\hyperlink{a00041_acbfad29faf802168f3281e5754e40aa9}{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Off}}()~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 1))
 \begin{DoxyCompactList}\small\item\em Turn off T\+C0 Timer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00041_ad3aa9b19f24000e1eabe4af902ae0d3a}{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us}}(T,  irq\+En)
+\begin{DoxyCompactList}\small\item\em This function sets the timer function of T\+C0. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{a00041_ac299997dc05f47b4b42bfd4e52b98d36}{R\+T\+\_\+\+T\+C0\+\_\+\+Set\+Counter}}(n)
 \begin{DoxyCompactList}\small\item\em This function sets the frequency counter of T\+C0 The base frequency of the counter is 45\+Hz. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_a4dd8c922ad55805d587d5a73b78d911a}{R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+On}}()~\mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1)
+\#define \mbox{\hyperlink{a00041_a4dd8c922ad55805d587d5a73b78d911a}{R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+On}}()~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1)
 \begin{DoxyCompactList}\small\item\em Turn on T\+C0 Event Counter. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_a2c4dcae7aa5753dc38986240b024888f}{R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+Off}}()~\mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$1)
+\#define \mbox{\hyperlink{a00041_a2c4dcae7aa5753dc38986240b024888f}{R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+Off}}()~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$1)
 \begin{DoxyCompactList}\small\item\em Turn off T\+C0 Event Counter. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{a00041_a2739dbdedbc45242d873c9ecd9f5f56a}{R\+T\+\_\+\+T\+C0\+\_\+\+Set\+Ecnt}}(n,  trigger,  irq)
 \begin{DoxyCompactList}\small\item\em This function sets the E\+C\+NT function of T\+C0. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_a70e69675d0a4e7d5095f938dffa14779}{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+On}}()~\mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 4)
+\#define \mbox{\hyperlink{a00041_a70e69675d0a4e7d5095f938dffa14779}{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+On}}()~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 4)
 \begin{DoxyCompactList}\small\item\em Turn on T\+C0 P\+WM. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_a043d535ff9aad665ddf1521169a0f187}{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Off}}()~\mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 4))
+\#define \mbox{\hyperlink{a00041_a043d535ff9aad665ddf1521169a0f187}{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Off}}()~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 4))
 \begin{DoxyCompactList}\small\item\em Turn off T\+C0 P\+WM. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{a00041_a055e471dbfe89e577e92a0789a2c6ae5}{R\+T\+\_\+\+T\+C0\+\_\+\+Set\+P\+WM}}(div,  ref,  irq)
 \begin{DoxyCompactList}\small\item\em This function sets the P\+WM function of T\+C0. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_aac1f2943fc99c1197cda6bc5c0fce669}{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+On}}()~\mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 3)
+\#define \mbox{\hyperlink{a00041_aac1f2943fc99c1197cda6bc5c0fce669}{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+On}}()~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 3)
 \begin{DoxyCompactList}\small\item\em Turn on T\+C0 Pulse Width Measurement. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_ab3d4fe7b156ef14b033ad020108fa386}{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Off}}()~\mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 3))
+\#define \mbox{\hyperlink{a00041_ab3d4fe7b156ef14b033ad020108fa386}{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Off}}()~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 3))
 \begin{DoxyCompactList}\small\item\em Turn off T\+C0 Pulse Width Measurement. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{a00041_acd97abf7aebb4ffa83af031604a67344}{R\+T\+\_\+\+T\+C0\+\_\+\+Read\+Cnt}}()~\mbox{\hyperlink{a00020_a706b02571285f92589fbb0b964d7d0bb}{Memory\+Read32}}(T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG)
-\begin{DoxyCompactList}\small\item\em Read T\+C0 Counter Register Value. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsubsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{a00041_a8e0656cd8304f2e28517ca46b8f854a0}{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us}} (uint32\+\_\+t T, \mbox{\hyperlink{a00020_ab43e533f3793920486fb81c580f71564}{switch\+\_\+t}} irq\+En)
-\begin{DoxyCompactList}\small\item\em This function sets the timer function of T\+C0. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00041_a7e5566d1cc48eb1c7e1ee9844e7c5be5}{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Trigger\+Mode}} (\mbox{\hyperlink{a00020_a6d33f21be3f0c5cf91c5d638e8aca086}{trigger\+\_\+mode\+\_\+t}} mode)
+\#define \mbox{\hyperlink{a00041_a48f8c6b4e5fba0057564f92060449557}{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Trigger\+Mode}}(mode)
 \begin{DoxyCompactList}\small\item\em Set T\+C0 Trigger Mode of Pulse Width Measurement. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00041_a45059aa93adb7ba8a83c80a4c2132c8b}{R\+T\+\_\+\+T\+C0\+\_\+\+Set\+P\+W\+MM}} (\mbox{\hyperlink{a00020_a6d33f21be3f0c5cf91c5d638e8aca086}{trigger\+\_\+mode\+\_\+t}} mode, \mbox{\hyperlink{a00020_ab43e533f3793920486fb81c580f71564}{switch\+\_\+t}} irq)
-\begin{DoxyCompactList}\small\item\em This function sets the Pulse width measure for T\+C0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\#define \mbox{\hyperlink{a00041_a60ec825df0fabe789ae083794f336b00}{R\+T\+\_\+\+T\+C0\+\_\+\+Set\+P\+W\+MM}}(mode,  irq)
+\begin{DoxyCompactList}\small\item\em This function sets the Pulse width measure for T\+C0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00041_acd97abf7aebb4ffa83af031604a67344}{R\+T\+\_\+\+T\+C0\+\_\+\+Read\+Cnt}}()~\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG)
+\begin{DoxyCompactList}\small\item\em Read T\+C0 Counter Register Value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsubsection{Detailed Description}
@@ -83,7 +80,7 @@ Zhirui Dai
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Check\+P\+W\+M\+Flag@{R\+T\+\_\+\+T\+C0\+\_\+\+Check\+P\+W\+M\+Flag}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+Check\+P\+W\+M\+Flag@{R\+T\+\_\+\+T\+C0\+\_\+\+Check\+P\+W\+M\+Flag}!T\+C0.\+h@{T\+C0.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Check\+P\+W\+M\+Flag}{RT\_TC0\_CheckPWMFlag}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Check\+P\+W\+M\+Flag(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\mbox{\hyperlink{a00020_a706b02571285f92589fbb0b964d7d0bb}{Memory\+Read32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG) \& 0x40000000) $>$$>$ 30)}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Check\+P\+W\+M\+Flag(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG) \& 0x40000000) $>$$>$ 30)}
 
 
 
@@ -96,7 +93,7 @@ int P\+W\+M-\/flag
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Check\+Tc\+Flag@{R\+T\+\_\+\+T\+C0\+\_\+\+Check\+Tc\+Flag}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+Check\+Tc\+Flag@{R\+T\+\_\+\+T\+C0\+\_\+\+Check\+Tc\+Flag}!T\+C0.\+h@{T\+C0.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Check\+Tc\+Flag}{RT\_TC0\_CheckTcFlag}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Check\+Tc\+Flag(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\mbox{\hyperlink{a00020_a706b02571285f92589fbb0b964d7d0bb}{Memory\+Read32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG) \& 0x80000000) $>$$>$ 31)}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Check\+Tc\+Flag(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG) \& 0x80000000) $>$$>$ 31)}
 
 
 
@@ -129,7 +126,7 @@ void
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Cnt@{R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Cnt}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Cnt@{R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Cnt}!T\+C0.\+h@{T\+C0.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Cnt}{RT\_TC0\_ClearCnt}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Cnt(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad9953f631a539cfaa35baf94f878b3ec}{Memory\+Write32}}(T0\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG, 0)}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Cnt(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(T0\+\_\+\+C\+L\+R\+C\+N\+T\+\_\+\+R\+EG, 0)}
 
 
 
@@ -142,7 +139,7 @@ void
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Irq@{R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Irq}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Irq@{R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Irq}!T\+C0.\+h@{T\+C0.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Irq}{RT\_TC0\_ClearIrq}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Irq(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad9953f631a539cfaa35baf94f878b3ec}{Memory\+Write32}}(T0\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG, 0)}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Clear\+Irq(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(T0\+\_\+\+C\+L\+R\+I\+R\+Q\+\_\+\+R\+EG, 0)}
 
 
 
@@ -155,7 +152,7 @@ void
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+Off}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+Off}!T\+C0.\+h@{T\+C0.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+Off}{RT\_TC0\_EcntOff}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$1)}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$1)}
 
 
 
@@ -168,7 +165,7 @@ void
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+On}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+On}!T\+C0.\+h@{T\+C0.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+On}{RT\_TC0\_EcntOn}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1)}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Ecnt\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1)}
 
 
 
@@ -181,7 +178,7 @@ void
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+Off}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+Off}!T\+C0.\+h@{T\+C0.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+Off}{RT\_TC0\_PWMIrqOff}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 6))}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 6))}
 
 
 
@@ -194,7 +191,7 @@ void
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+On}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+On}!T\+C0.\+h@{T\+C0.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+On}{RT\_TC0\_PWMIrqOn}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 6)}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Irq\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 6)}
 
 
 
@@ -207,7 +204,7 @@ void
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Off}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Off}!T\+C0.\+h@{T\+C0.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Off}{RT\_TC0\_PWMMOff}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 3))}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 3))}
 
 
 
@@ -220,7 +217,7 @@ void
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+On}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+On}!T\+C0.\+h@{T\+C0.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+On}{RT\_TC0\_PWMMOn}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 3)}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 3)}
 
 
 
@@ -229,11 +226,36 @@ Turn on T\+C0 Pulse Width Measurement.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
+\mbox{\Hypertarget{a00041_a48f8c6b4e5fba0057564f92060449557}\label{a00041_a48f8c6b4e5fba0057564f92060449557}} 
+\index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Trigger\+Mode@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Trigger\+Mode}}
+\index{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Trigger\+Mode@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Trigger\+Mode}!T\+C0.\+h@{T\+C0.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Trigger\+Mode}{RT\_TC0\_PWMMTriggerMode}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Trigger\+Mode(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                           \(\backslash\)
+    MemoryAnd32(T0\_CTL0\_REG, ~(1 << 2));    \(\backslash\)
+    MemoryOr32(T0\_CTL0\_REG, mode << 2);     \(\backslash\)
+\}
+\end{DoxyCode}
+
+
+Set T\+C0 Trigger Mode of Pulse Width Measurement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Trigger mode, optional values\+: \mbox{\hyperlink{a00020_a6d33f21be3f0c5cf91c5d638e8aca086a60a109ab1ab372f4e3935064a3f0a26c}{R\+I\+S\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER}}, \mbox{\hyperlink{a00020_a6d33f21be3f0c5cf91c5d638e8aca086a75134708fc2093222ca5a56acefc5d3f}{F\+A\+L\+L\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \mbox{\Hypertarget{a00041_a043d535ff9aad665ddf1521169a0f187}\label{a00041_a043d535ff9aad665ddf1521169a0f187}} 
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Off}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Off}!T\+C0.\+h@{T\+C0.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Off}{RT\_TC0\_PWMOff}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 4))}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 4))}
 
 
 
@@ -246,7 +268,7 @@ void
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+On}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+On}!T\+C0.\+h@{T\+C0.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+On}{RT\_TC0\_PWMOn}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 4)}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 4)}
 
 
 
@@ -259,7 +281,7 @@ void
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Read\+Cnt@{R\+T\+\_\+\+T\+C0\+\_\+\+Read\+Cnt}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+Read\+Cnt@{R\+T\+\_\+\+T\+C0\+\_\+\+Read\+Cnt}!T\+C0.\+h@{T\+C0.\+h}}
 \paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Read\+Cnt}{RT\_TC0\_ReadCnt}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Read\+Cnt(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a706b02571285f92589fbb0b964d7d0bb}{Memory\+Read32}}(T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG)}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Read\+Cnt(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(T0\+\_\+\+R\+E\+A\+D\+\_\+\+R\+EG)}
 
 
 
@@ -357,98 +379,20 @@ This function sets the P\+WM function of T\+C0.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{a00041_a7eb236125fa1773036d72e020419f3ad}\label{a00041_a7eb236125fa1773036d72e020419f3ad}} 
-\index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Stop@{R\+T\+\_\+\+T\+C0\+\_\+\+Stop}}
-\index{R\+T\+\_\+\+T\+C0\+\_\+\+Stop@{R\+T\+\_\+\+T\+C0\+\_\+\+Stop}!T\+C0.\+h@{T\+C0.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Stop}{RT\_TC0\_Stop}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Stop(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad9953f631a539cfaa35baf94f878b3ec}{Memory\+Write32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 0)}
-
-
-
-Stop T\+C0. 
-
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00041_a7434ed75487de93c69569c05430967ae}\label{a00041_a7434ed75487de93c69569c05430967ae}} 
-\index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+Off}}
-\index{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+Off}!T\+C0.\+h@{T\+C0.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+Off}{RT\_TC0\_TcIrqOff}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 7))}
-
-
-
-Turn off T\+C0 T\+C-\/\+I\+RQ. 
-
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00041_a1ff15e860147b3fff582b7603ba7ffa8}\label{a00041_a1ff15e860147b3fff582b7603ba7ffa8}} 
-\index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+On}}
-\index{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+On}!T\+C0.\+h@{T\+C0.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+On}{RT\_TC0\_TcIrqOn}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 7)}
-
-
-
-Turn on T\+C0 T\+C-\/\+I\+RQ. 
-
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00041_acbfad29faf802168f3281e5754e40aa9}\label{a00041_acbfad29faf802168f3281e5754e40aa9}} 
-\index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Off}}
-\index{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Off}!T\+C0.\+h@{T\+C0.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Off}{RT\_TC0\_TimerOff}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 1))}
-
-
-
-Turn off T\+C0 Timer. 
-
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00041_aa7936fffa8b7bcd47751d2e89f81d4a9}\label{a00041_aa7936fffa8b7bcd47751d2e89f81d4a9}} 
-\index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+On}}
-\index{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+On}!T\+C0.\+h@{T\+C0.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+On}{RT\_TC0\_TimerOn}}
-{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 1)}
-
-
-
-Turn on T\+C0 Timer. 
-
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-
-
-\subsubsection{Function Documentation}
-\mbox{\Hypertarget{a00041_a7e5566d1cc48eb1c7e1ee9844e7c5be5}\label{a00041_a7e5566d1cc48eb1c7e1ee9844e7c5be5}} 
-\index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Trigger\+Mode@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Trigger\+Mode}}
-\index{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Trigger\+Mode@{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Trigger\+Mode}!T\+C0.\+h@{T\+C0.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Trigger\+Mode()}{RT\_TC0\_PWMMTriggerMode()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+T\+C0\+\_\+\+P\+W\+M\+M\+Trigger\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a6d33f21be3f0c5cf91c5d638e8aca086}{trigger\+\_\+mode\+\_\+t}}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Set T\+C0 Trigger Mode of Pulse Width Measurement. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em mode} & Trigger mode, optional values\+: \mbox{\hyperlink{a00020_a6d33f21be3f0c5cf91c5d638e8aca086a60a109ab1ab372f4e3935064a3f0a26c}{R\+I\+S\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER}}, \mbox{\hyperlink{a00020_a6d33f21be3f0c5cf91c5d638e8aca086a75134708fc2093222ca5a56acefc5d3f}{F\+A\+L\+L\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER}} \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00041_a45059aa93adb7ba8a83c80a4c2132c8b}\label{a00041_a45059aa93adb7ba8a83c80a4c2132c8b}} 
+\mbox{\Hypertarget{a00041_a60ec825df0fabe789ae083794f336b00}\label{a00041_a60ec825df0fabe789ae083794f336b00}} 
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Set\+P\+W\+MM@{R\+T\+\_\+\+T\+C0\+\_\+\+Set\+P\+W\+MM}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+Set\+P\+W\+MM@{R\+T\+\_\+\+T\+C0\+\_\+\+Set\+P\+W\+MM}!T\+C0.\+h@{T\+C0.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Set\+P\+W\+M\+M()}{RT\_TC0\_SetPWMM()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+T\+C0\+\_\+\+Set\+P\+W\+MM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a6d33f21be3f0c5cf91c5d638e8aca086}{trigger\+\_\+mode\+\_\+t}}}]{mode,  }\item[{\mbox{\hyperlink{a00020_ab43e533f3793920486fb81c580f71564}{switch\+\_\+t}}}]{irq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Set\+P\+W\+MM}{RT\_TC0\_SetPWMM}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Set\+P\+W\+MM(\begin{DoxyParamCaption}\item[{}]{mode,  }\item[{}]{irq }\end{DoxyParamCaption})}
 
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                                   \(\backslash\)
+    MemoryAnd32(T0\_CTL0\_REG, ~((0x1 << 7) + (0x1 << 2)));           \(\backslash\)
+    MemoryOr32(T0\_CTL0\_REG, (0x18 | (irq << 7) | (mode << 2)));     \(\backslash\)
+    MemoryOr32(SYS\_CTL0\_REG, irq);                                  \(\backslash\)
+\}
+\end{DoxyCode}
 
 
 This function sets the Pulse width measure for T\+C0. 
@@ -463,12 +407,94 @@ This function sets the Pulse width measure for T\+C0.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{a00041_a8e0656cd8304f2e28517ca46b8f854a0}\label{a00041_a8e0656cd8304f2e28517ca46b8f854a0}} 
+\mbox{\Hypertarget{a00041_a7eb236125fa1773036d72e020419f3ad}\label{a00041_a7eb236125fa1773036d72e020419f3ad}} 
+\index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Stop@{R\+T\+\_\+\+T\+C0\+\_\+\+Stop}}
+\index{R\+T\+\_\+\+T\+C0\+\_\+\+Stop@{R\+T\+\_\+\+T\+C0\+\_\+\+Stop}!T\+C0.\+h@{T\+C0.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Stop}{RT\_TC0\_Stop}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Stop(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 0)}
+
+
+
+Stop T\+C0. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00041_a7434ed75487de93c69569c05430967ae}\label{a00041_a7434ed75487de93c69569c05430967ae}} 
+\index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+Off}}
+\index{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+Off}!T\+C0.\+h@{T\+C0.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+Off}{RT\_TC0\_TcIrqOff}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 7))}
+
+
+
+Turn off T\+C0 T\+C-\/\+I\+RQ. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00041_a1ff15e860147b3fff582b7603ba7ffa8}\label{a00041_a1ff15e860147b3fff582b7603ba7ffa8}} 
+\index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+On}}
+\index{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+On}!T\+C0.\+h@{T\+C0.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+On}{RT\_TC0\_TcIrqOn}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Tc\+Irq\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 7)}
+
+
+
+Turn on T\+C0 T\+C-\/\+I\+RQ. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00041_acbfad29faf802168f3281e5754e40aa9}\label{a00041_acbfad29faf802168f3281e5754e40aa9}} 
+\index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Off}}
+\index{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Off@{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Off}!T\+C0.\+h@{T\+C0.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Off}{RT\_TC0\_TimerOff}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ 1))}
+
+
+
+Turn off T\+C0 Timer. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00041_aa7936fffa8b7bcd47751d2e89f81d4a9}\label{a00041_aa7936fffa8b7bcd47751d2e89f81d4a9}} 
+\index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+On}}
+\index{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+On@{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+On}!T\+C0.\+h@{T\+C0.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+On}{RT\_TC0\_TimerOn}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(T0\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 1 $<$$<$ 1)}
+
+
+
+Turn on T\+C0 Timer. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00041_ad3aa9b19f24000e1eabe4af902ae0d3a}\label{a00041_ad3aa9b19f24000e1eabe4af902ae0d3a}} 
 \index{T\+C0.\+h@{T\+C0.\+h}!R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us@{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us}}
 \index{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us@{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us}!T\+C0.\+h@{T\+C0.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us()}{RT\_TC0\_TimerSet1us()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{T,  }\item[{\mbox{\hyperlink{a00020_ab43e533f3793920486fb81c580f71564}{switch\+\_\+t}}}]{irq\+En }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us}{RT\_TC0\_TimerSet1us}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+T\+C0\+\_\+\+Timer\+Set1us(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{irq\+En }\end{DoxyParamCaption})}
 
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                                           \(\backslash\)
+    \textcolor{comment}{/* [T0\_CLK\_REG] = 3 * T / [T0\_REF\_REG] - 1                              \(\backslash\)}
+\textcolor{comment}{     Let [T0\_REF\_REG] = 255, get [T0\_CLK\_REG] */}                            \(\backslash\)
+    uint32\_t clk = T / 81 - 1;                                              \(\backslash\)
+    if (clk < 1) clk = 1;                                                   \(\backslash\)
+    uint32\_t ref = 30 * T / clk;                                            \(\backslash\)
+    if (ref % 10 >= 5) ref = ref / 10 + 1;  \textcolor{comment}{/* ensure the interval is bigger than T */}\(\backslash\)
+    else ref /= 10;                                                         \(\backslash\)
+    \mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{MemoryAnd32}}(T0\_CTL0\_REG, ~(1 << 7));    \textcolor{comment}{/* turn off irq */}              \(\backslash\)
+    \mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{MemoryWrite32}}(T0\_CLK\_REG, clk);                                         \(\backslash\)
+    \mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{MemoryWrite32}}(T0\_REF\_REG, ref);                                         \(\backslash\)
+    \mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{MemoryOr32}}(T0\_CTL0\_REG, (0x02 | (irqEn << 7)));                         \(\backslash\)
+    \mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{MemoryOr32}}(SYS\_CTL0\_REG, irqEn);                                        \(\backslash\)
+\}
+\end{DoxyCode}
 
 
 This function sets the timer function of T\+C0. 

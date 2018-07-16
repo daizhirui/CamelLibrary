@@ -6,6 +6,27 @@ Interrupt Library for M2.
 
 
 {\ttfamily \#include \char`\"{}mcu.\+h\char`\"{}}\newline
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00011_a397366295a7d6d3ed47e5e3d69549448}{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Get\+Flag}}(device)~(( \mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(S\+Y\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+EG) \& (0x1 $<$$<$ device) ) $>$$>$ device)
+\begin{DoxyCompactList}\small\item\em Check interrupt flag of S\+PI, U\+A\+R\+T1, Watch\+Dog, External\+Interrupt, Debug, Timer2, Timer1, Timer0 or U\+A\+R\+T0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00011_a5ddacb2147f802d2af2f507e41043504}{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+On}}()~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 0x1)
+\begin{DoxyCompactList}\small\item\em Turn on system interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00011_a9c68b82296205323f01358d9a27813a9}{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Off}}()~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$0x1)
+\begin{DoxyCompactList}\small\item\em Turn off system interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00011_a135ec6dd65a4ef971477debf65c6809f}{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Setup}}(port,  mode)
+\begin{DoxyCompactList}\small\item\em Set the external interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00011_aa1a62e0954243f0c0fc8ec850ea2eebe}{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Off}}(port)~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(I\+N\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ port))
+\begin{DoxyCompactList}\small\item\em Close an external interrupt port. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00011_a1bebef46f3eb19ed0c71deb174a4bbaf}{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear}}(port)~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(I\+N\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG, 1 $<$$<$ port)
+\begin{DoxyCompactList}\small\item\em Clear interrupt flag from specific external interrupt port. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00011_a4f2cc857d9a0da5f06bbf5ff62babbdb}{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear\+All}}()~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(I\+N\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG, 0xff)
+\begin{DoxyCompactList}\small\item\em Clear all external interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00011_ab8287fc872a2d0ae785c8b3b51a37a5e}{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag}}()~\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(I\+N\+T\+\_\+\+C\+T\+L1\+\_\+\+R\+EG)
+\begin{DoxyCompactList}\small\item\em Get the external interrupt flag table. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00011_ae65409aaf69a9f495207ebbe133f161d}{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+Flag}}(port)~( (\mbox{\hyperlink{a00011_ab8287fc872a2d0ae785c8b3b51a37a5e}{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag}}() $>$$>$ port) \& 0x1 )
+\begin{DoxyCompactList}\small\item\em Get the flag of specific external interrupt port. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -28,27 +49,6 @@ enum \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4}{E\+X\+T\+I\+N\+T
 \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4af59c814bf9818345f24bb79e7533945c}{E\+X\+I\+N\+T5}} = 0x5
  \}
 \end{DoxyCompactItemize}
-\subsubsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-uint32\+\_\+t \mbox{\hyperlink{a00011_aca7d297005ee41b91c0e638a40bec585}{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Get\+Flag}} (\mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4c}{S\+Y\+S\+I\+N\+T\+\_\+\+D\+E\+V\+I\+CE}} device)
-\begin{DoxyCompactList}\small\item\em Check interrupt flag of S\+PI, U\+A\+R\+T1, Watch\+Dog, External\+Interrupt, Debug, Timer2, Timer1, Timer0 or U\+A\+R\+T0. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00011_ae38d9088d19c0550caf1dacec0b3475b}{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+On}} ()
-\begin{DoxyCompactList}\small\item\em Turn on system interrupt. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00011_acf51664514fdf6f702d8209e95e445dc}{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Off}} ()
-\begin{DoxyCompactList}\small\item\em Turn off system interrupt. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00011_ac2664665be12652ffe3d884f1423f672}{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Setup}} (\mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4}{E\+X\+T\+I\+N\+T\+\_\+\+P\+O\+RT}} port, \mbox{\hyperlink{a00020_a6d33f21be3f0c5cf91c5d638e8aca086}{trigger\+\_\+mode\+\_\+t}} mode)
-\begin{DoxyCompactList}\small\item\em Set the external interrupt. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00011_a9889abece7fc3ef133b0a93d7b5e54f2}{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Off}} (port)
-\begin{DoxyCompactList}\small\item\em Close an external interrupt port. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00011_a8100842e1feca5062f1712116abe97d0}{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear}} (port)
-\begin{DoxyCompactList}\small\item\em Clear interrupt flag from specific external interrupt port. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00011_a62cc2402f1e2466bdd167cb75ad3cb74}{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear\+All}} ()
-\begin{DoxyCompactList}\small\item\em Clear all external interrupt flag. \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{a00011_a89b52c64e3041f59ff80bcc0a4682015}{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag}} ()
-\begin{DoxyCompactList}\small\item\em Get the external interrupt flag table. \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{a00011_a359121bf1f9306a694a4958cb14f6e61}{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+Flag}} (port)
-\begin{DoxyCompactList}\small\item\em Get the flag of specific external interrupt port. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsubsection{Detailed Description}
@@ -63,6 +63,156 @@ Zhirui Dai
 \begin{DoxyCopyright}{Copyright}
 2018 Zhirui 
 \end{DoxyCopyright}
+
+
+\subsubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{a00011_a1bebef46f3eb19ed0c71deb174a4bbaf}\label{a00011_a1bebef46f3eb19ed0c71deb174a4bbaf}} 
+\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear}}
+\index{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear}!Interrupt.\+h@{Interrupt.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear}{RT\_EXINT\_Clear}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear(\begin{DoxyParamCaption}\item[{}]{port }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(I\+N\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG, 1 $<$$<$ port)}
+
+
+
+Clear interrupt flag from specific external interrupt port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & the external interrupt port to clear irq flag, optional value\+: \#\+E\+X\+I\+N\+T0, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a6c87103fd7c63fc99ee4b631c0a4dac4}{E\+X\+I\+N\+T1}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a92c5398067978d1aefd4ba3c276dec32}{E\+X\+I\+N\+T2}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a3c37ddaa34bf4297b421d8577be06895}{E\+X\+I\+N\+T3}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a766aca243fc0f7aa292c791202bef6e7}{E\+X\+I\+N\+T4}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4af59c814bf9818345f24bb79e7533945c}{E\+X\+I\+N\+T5}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00011_a4f2cc857d9a0da5f06bbf5ff62babbdb}\label{a00011_a4f2cc857d9a0da5f06bbf5ff62babbdb}} 
+\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear\+All@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear\+All}}
+\index{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear\+All@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear\+All}!Interrupt.\+h@{Interrupt.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear\+All}{RT\_EXINT\_ClearAll}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear\+All(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(I\+N\+T\+\_\+\+C\+L\+R\+\_\+\+R\+EG, 0xff)}
+
+
+
+Clear all external interrupt flag. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00011_ab8287fc872a2d0ae785c8b3b51a37a5e}\label{a00011_ab8287fc872a2d0ae785c8b3b51a37a5e}} 
+\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag}}
+\index{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag}!Interrupt.\+h@{Interrupt.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag}{RT\_EXINT\_GetAllFlag}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(I\+N\+T\+\_\+\+C\+T\+L1\+\_\+\+R\+EG)}
+
+
+
+Get the external interrupt flag table. 
+
+\begin{DoxyReturn}{Returns}
+the external interrupt flag table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00011_ae65409aaf69a9f495207ebbe133f161d}\label{a00011_ae65409aaf69a9f495207ebbe133f161d}} 
+\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+Flag@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+Flag}}
+\index{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+Flag@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+Flag}!Interrupt.\+h@{Interrupt.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+Flag}{RT\_EXINT\_GetFlag}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+Flag(\begin{DoxyParamCaption}\item[{}]{port }\end{DoxyParamCaption})~( (\mbox{\hyperlink{a00011_ab8287fc872a2d0ae785c8b3b51a37a5e}{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag}}() $>$$>$ port) \& 0x1 )}
+
+
+
+Get the flag of specific external interrupt port. 
+
+\begin{DoxyReturn}{Returns}
+The flag of the external interrupt port. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00011_aa1a62e0954243f0c0fc8ec850ea2eebe}\label{a00011_aa1a62e0954243f0c0fc8ec850ea2eebe}} 
+\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Off@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Off}}
+\index{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Off@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Off}!Interrupt.\+h@{Interrupt.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Off}{RT\_EXINT\_Off}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Off(\begin{DoxyParamCaption}\item[{}]{port }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(I\+N\+T\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$(1 $<$$<$ port))}
+
+
+
+Close an external interrupt port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & the external interrupt port to close, optional value\+: \#\+E\+X\+I\+N\+T0, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a6c87103fd7c63fc99ee4b631c0a4dac4}{E\+X\+I\+N\+T1}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a92c5398067978d1aefd4ba3c276dec32}{E\+X\+I\+N\+T2}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a3c37ddaa34bf4297b421d8577be06895}{E\+X\+I\+N\+T3}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a766aca243fc0f7aa292c791202bef6e7}{E\+X\+I\+N\+T4}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4af59c814bf9818345f24bb79e7533945c}{E\+X\+I\+N\+T5}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00011_a135ec6dd65a4ef971477debf65c6809f}\label{a00011_a135ec6dd65a4ef971477debf65c6809f}} 
+\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Setup@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Setup}}
+\index{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Setup@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Setup}!Interrupt.\+h@{Interrupt.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Setup}{RT\_EXINT\_Setup}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Setup(\begin{DoxyParamCaption}\item[{}]{port,  }\item[{}]{mode }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                \(\backslash\)
+        MemoryOr32(INT\_CTL0\_REG, 1 << port);         \(\backslash\)
+        MemoryAnd32(INT\_CTL2\_REG, ~(\mbox{\hyperlink{a00020_a6d33f21be3f0c5cf91c5d638e8aca086a60a109ab1ab372f4e3935064a3f0a26c}{RISING\_TRIGGER}} << port)); \(\backslash\)
+        MemoryOr32(INT\_CTL2\_REG, mode << port);   \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+Set the external interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & the port of external interrupt, optional value\+: \#\+E\+X\+I\+N\+T0, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a6c87103fd7c63fc99ee4b631c0a4dac4}{E\+X\+I\+N\+T1}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a92c5398067978d1aefd4ba3c276dec32}{E\+X\+I\+N\+T2}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a3c37ddaa34bf4297b421d8577be06895}{E\+X\+I\+N\+T3}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a766aca243fc0f7aa292c791202bef6e7}{E\+X\+I\+N\+T4}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4af59c814bf9818345f24bb79e7533945c}{E\+X\+I\+N\+T5}} \\
+\hline
+{\em trigger} & the trigger mode, optional value\+: \#\+R\+I\+S\+I\+NG, \#\+F\+A\+L\+L\+I\+NG \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00011_a397366295a7d6d3ed47e5e3d69549448}\label{a00011_a397366295a7d6d3ed47e5e3d69549448}} 
+\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Get\+Flag@{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Get\+Flag}}
+\index{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Get\+Flag@{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Get\+Flag}!Interrupt.\+h@{Interrupt.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Get\+Flag}{RT\_SYSINT\_GetFlag}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Get\+Flag(\begin{DoxyParamCaption}\item[{}]{device }\end{DoxyParamCaption})~(( \mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(S\+Y\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+EG) \& (0x1 $<$$<$ device) ) $>$$>$ device)}
+
+
+
+Check interrupt flag of S\+PI, U\+A\+R\+T1, Watch\+Dog, External\+Interrupt, Debug, Timer2, Timer1, Timer0 or U\+A\+R\+T0. 
+
+\begin{DoxyNote}{Note}
+S\+Y\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+EG\mbox{[}8\+:0\mbox{]}\+: 9 devices. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Optional value\+: \#\+S\+Y\+S\+I\+N\+T\+\_\+\+S\+P\+I\+I\+NT, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4ca0363b01262967c7900f56bf11fb3541d}{S\+Y\+S\+I\+N\+T\+\_\+\+U\+A\+R\+T1\+I\+NT}}, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4ca3fce9e90d8963a30d0fdb51cd9009db9}{S\+Y\+S\+I\+N\+T\+\_\+\+U\+A\+R\+T0\+I\+NT}}, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4caa245202adffe4900175deab41b6518fc}{S\+Y\+S\+I\+N\+T\+\_\+\+W\+D\+T\+I\+NT}}, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4caf7b71238d06781c61f2d4894f74b12c3}{S\+Y\+S\+I\+N\+T\+\_\+\+E\+X\+T\+I\+NT}}, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4ca108e51031e1626a71e03626005ee11c2}{S\+Y\+S\+I\+N\+T\+\_\+\+D\+B\+G\+I\+NT}}, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4cace28a954633dd9ea0cdef0ad00fe87a2}{S\+Y\+S\+I\+N\+T\+\_\+\+T\+C2\+I\+NT}}, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4ca6a6e9a3e70344b1de433dcde4bfa569d}{S\+Y\+S\+I\+N\+T\+\_\+\+T\+C1\+I\+NT}}, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4ca046fae26abf2ef23f7ea24607cd837f5}{S\+Y\+S\+I\+N\+T\+\_\+\+T\+C0\+I\+NT}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00011_a9c68b82296205323f01358d9a27813a9}\label{a00011_a9c68b82296205323f01358d9a27813a9}} 
+\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Off@{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Off}}
+\index{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Off@{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Off}!Interrupt.\+h@{Interrupt.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Off}{RT\_SYSINT\_Off}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Off(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, $\sim$0x1)}
+
+
+
+Turn off system interrupt. 
+
+\begin{DoxyNote}{Note}
+S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG\mbox{[}0\mbox{]}\+: 1=enable system interrupt, 0=disable system interrupt. 
+\end{DoxyNote}
+\mbox{\Hypertarget{a00011_a5ddacb2147f802d2af2f507e41043504}\label{a00011_a5ddacb2147f802d2af2f507e41043504}} 
+\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+On@{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+On}}
+\index{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+On@{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+On}!Interrupt.\+h@{Interrupt.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+On}{RT\_SYSINT\_On}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+On(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG, 0x1)}
+
+
+
+Turn on system interrupt. 
+
+\begin{DoxyNote}{Note}
+S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG\mbox{[}0\mbox{]}\+: 1=enable system interrupt, 0=disable system interrupt. 
+\end{DoxyNote}
 
 
 \subsubsection{Enumeration Type Documentation}
@@ -134,145 +284,3 @@ S\+Y\+S\+I\+N\+T\+\_\+\+U\+A\+R\+T0\+I\+NT&T\+C0 Interrupt \\
 \hline
 
 \end{DoxyEnumFields}
-
-
-\subsubsection{Function Documentation}
-\mbox{\Hypertarget{a00011_a8100842e1feca5062f1712116abe97d0}\label{a00011_a8100842e1feca5062f1712116abe97d0}} 
-\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear}}
-\index{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear}!Interrupt.\+h@{Interrupt.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear()}{RT\_EXINT\_Clear()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear (\begin{DoxyParamCaption}\item[{port}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Clear interrupt flag from specific external interrupt port. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em port} & the external interrupt port to clear irq flag, optional value\+: \#\+E\+X\+I\+N\+T0, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a6c87103fd7c63fc99ee4b631c0a4dac4}{E\+X\+I\+N\+T1}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a92c5398067978d1aefd4ba3c276dec32}{E\+X\+I\+N\+T2}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a3c37ddaa34bf4297b421d8577be06895}{E\+X\+I\+N\+T3}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a766aca243fc0f7aa292c791202bef6e7}{E\+X\+I\+N\+T4}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4af59c814bf9818345f24bb79e7533945c}{E\+X\+I\+N\+T5}} \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00011_a62cc2402f1e2466bdd167cb75ad3cb74}\label{a00011_a62cc2402f1e2466bdd167cb75ad3cb74}} 
-\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear\+All@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear\+All}}
-\index{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear\+All@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear\+All}!Interrupt.\+h@{Interrupt.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear\+All()}{RT\_EXINT\_ClearAll()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Clear\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Clear all external interrupt flag. 
-
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00011_a89b52c64e3041f59ff80bcc0a4682015}\label{a00011_a89b52c64e3041f59ff80bcc0a4682015}} 
-\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag}}
-\index{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag}!Interrupt.\+h@{Interrupt.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag()}{RT\_EXINT\_GetAllFlag()}}
-{\footnotesize\ttfamily uint32\+\_\+t R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+All\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Get the external interrupt flag table. 
-
-\begin{DoxyReturn}{Returns}
-the external interrupt flag table 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00011_a359121bf1f9306a694a4958cb14f6e61}\label{a00011_a359121bf1f9306a694a4958cb14f6e61}} 
-\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+Flag@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+Flag}}
-\index{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+Flag@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+Flag}!Interrupt.\+h@{Interrupt.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+Flag()}{RT\_EXINT\_GetFlag()}}
-{\footnotesize\ttfamily uint32\+\_\+t R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Get\+Flag (\begin{DoxyParamCaption}\item[{port}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Get the flag of specific external interrupt port. 
-
-\begin{DoxyReturn}{Returns}
-The flag of the external interrupt port. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00011_a9889abece7fc3ef133b0a93d7b5e54f2}\label{a00011_a9889abece7fc3ef133b0a93d7b5e54f2}} 
-\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Off@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Off}}
-\index{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Off@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Off}!Interrupt.\+h@{Interrupt.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Off()}{RT\_EXINT\_Off()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Off (\begin{DoxyParamCaption}\item[{port}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Close an external interrupt port. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em port} & the external interrupt port to close, optional value\+: \#\+E\+X\+I\+N\+T0, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a6c87103fd7c63fc99ee4b631c0a4dac4}{E\+X\+I\+N\+T1}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a92c5398067978d1aefd4ba3c276dec32}{E\+X\+I\+N\+T2}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a3c37ddaa34bf4297b421d8577be06895}{E\+X\+I\+N\+T3}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a766aca243fc0f7aa292c791202bef6e7}{E\+X\+I\+N\+T4}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4af59c814bf9818345f24bb79e7533945c}{E\+X\+I\+N\+T5}} \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00011_ac2664665be12652ffe3d884f1423f672}\label{a00011_ac2664665be12652ffe3d884f1423f672}} 
-\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Setup@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Setup}}
-\index{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Setup@{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Setup}!Interrupt.\+h@{Interrupt.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Setup()}{RT\_EXINT\_Setup()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+E\+X\+I\+N\+T\+\_\+\+Setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4}{E\+X\+T\+I\+N\+T\+\_\+\+P\+O\+RT}}}]{port,  }\item[{\mbox{\hyperlink{a00020_a6d33f21be3f0c5cf91c5d638e8aca086}{trigger\+\_\+mode\+\_\+t}}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Set the external interrupt. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em port} & the port of external interrupt, optional value\+: \#\+E\+X\+I\+N\+T0, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a6c87103fd7c63fc99ee4b631c0a4dac4}{E\+X\+I\+N\+T1}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a92c5398067978d1aefd4ba3c276dec32}{E\+X\+I\+N\+T2}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a3c37ddaa34bf4297b421d8577be06895}{E\+X\+I\+N\+T3}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4a766aca243fc0f7aa292c791202bef6e7}{E\+X\+I\+N\+T4}}, \mbox{\hyperlink{a00011_af11f5754cc92430795a63bb53d964cd4af59c814bf9818345f24bb79e7533945c}{E\+X\+I\+N\+T5}} \\
-\hline
-{\em trigger} & the trigger mode, optional value\+: \#\+R\+I\+S\+I\+NG, \#\+F\+A\+L\+L\+I\+NG \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00011_aca7d297005ee41b91c0e638a40bec585}\label{a00011_aca7d297005ee41b91c0e638a40bec585}} 
-\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Get\+Flag@{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Get\+Flag}}
-\index{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Get\+Flag@{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Get\+Flag}!Interrupt.\+h@{Interrupt.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Get\+Flag()}{RT\_SYSINT\_GetFlag()}}
-{\footnotesize\ttfamily uint32\+\_\+t R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Get\+Flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4c}{S\+Y\+S\+I\+N\+T\+\_\+\+D\+E\+V\+I\+CE}}}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Check interrupt flag of S\+PI, U\+A\+R\+T1, Watch\+Dog, External\+Interrupt, Debug, Timer2, Timer1, Timer0 or U\+A\+R\+T0. 
-
-\begin{DoxyNote}{Note}
-S\+Y\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+EG\mbox{[}8\+:0\mbox{]}\+: 9 devices. 
-\end{DoxyNote}
-
-\begin{DoxyParams}{Parameters}
-{\em device} & Optional value\+: \#\+S\+Y\+S\+I\+N\+T\+\_\+\+S\+P\+I\+I\+NT, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4ca0363b01262967c7900f56bf11fb3541d}{S\+Y\+S\+I\+N\+T\+\_\+\+U\+A\+R\+T1\+I\+NT}}, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4ca3fce9e90d8963a30d0fdb51cd9009db9}{S\+Y\+S\+I\+N\+T\+\_\+\+U\+A\+R\+T0\+I\+NT}}, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4caa245202adffe4900175deab41b6518fc}{S\+Y\+S\+I\+N\+T\+\_\+\+W\+D\+T\+I\+NT}}, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4caf7b71238d06781c61f2d4894f74b12c3}{S\+Y\+S\+I\+N\+T\+\_\+\+E\+X\+T\+I\+NT}}, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4ca108e51031e1626a71e03626005ee11c2}{S\+Y\+S\+I\+N\+T\+\_\+\+D\+B\+G\+I\+NT}}, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4cace28a954633dd9ea0cdef0ad00fe87a2}{S\+Y\+S\+I\+N\+T\+\_\+\+T\+C2\+I\+NT}}, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4ca6a6e9a3e70344b1de433dcde4bfa569d}{S\+Y\+S\+I\+N\+T\+\_\+\+T\+C1\+I\+NT}}, \mbox{\hyperlink{a00011_afa38f6b3d96898de1e521bf88e097a4ca046fae26abf2ef23f7ea24607cd837f5}{S\+Y\+S\+I\+N\+T\+\_\+\+T\+C0\+I\+NT}} \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{a00011_acf51664514fdf6f702d8209e95e445dc}\label{a00011_acf51664514fdf6f702d8209e95e445dc}} 
-\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Off@{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Off}}
-\index{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Off@{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Off}!Interrupt.\+h@{Interrupt.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Off()}{RT\_SYSINT\_Off()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Turn off system interrupt. 
-
-\begin{DoxyNote}{Note}
-S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG\mbox{[}0\mbox{]}\+: 1=enable system interrupt, 0=disable system interrupt. 
-\end{DoxyNote}
-\mbox{\Hypertarget{a00011_ae38d9088d19c0550caf1dacec0b3475b}\label{a00011_ae38d9088d19c0550caf1dacec0b3475b}} 
-\index{Interrupt.\+h@{Interrupt.\+h}!R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+On@{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+On}}
-\index{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+On@{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+On}!Interrupt.\+h@{Interrupt.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+On()}{RT\_SYSINT\_On()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+S\+Y\+S\+I\+N\+T\+\_\+\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Turn on system interrupt. 
-
-\begin{DoxyNote}{Note}
-S\+Y\+S\+\_\+\+C\+T\+L0\+\_\+\+R\+EG\mbox{[}0\mbox{]}\+: 1=enable system interrupt, 0=disable system interrupt. 
-\end{DoxyNote}

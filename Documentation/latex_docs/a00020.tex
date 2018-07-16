@@ -6,6 +6,31 @@ M2 micro core unit.
 
 
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{Memory\+Read32}}(addr)~($\ast$(volatile \mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}$\ast$)(addr))
+\begin{DoxyCompactList}\small\item\em Read 32-\/bit data from a specific address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00020_a6b9732365b12e48ddb89fe1028b975b0}{Memory\+Write32}}(addr,  val)~($\ast$(volatile \mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}$\ast$)(addr)) = (val)
+\begin{DoxyCompactList}\small\item\em Write 32-\/bit data to a specific address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(addr,  val)~(($\ast$(volatile \mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}$\ast$)(addr)) $\vert$= (val))
+\begin{DoxyCompactList}\small\item\em Logical OR operation on 32-\/bit data at a specific address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(addr,  val)~(($\ast$(volatile \mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}$\ast$)(addr)) \&= (val))
+\begin{DoxyCompactList}\small\item\em Logical addr\+ND operation on 32-\/bit data from a specific address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00020_afc530c7e6b49b0ca97c1ad9dac1c4750}{Memory\+Bit\+At}}(addr,  val)~(( $\ast$(volatile \mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}$\ast$)(addr) $>$$>$ val ) \&0x1)
+\begin{DoxyCompactList}\small\item\em Get a specific bit of a 32-\/bit data from a specific address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00020_a99a602346038b54068758ef00c42d1b6}{Memory\+Bit\+On}}(addr,  val)~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(addr,1$<$$<$(val))
+\begin{DoxyCompactList}\small\item\em Set a specific bit of a 32-\/bit data from a specific address to 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00020_a04c34919a950117ae7da2dc5a235622b}{Memory\+Bit\+Off}}(addr,  val)~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(addr,$\sim$(1$<$$<$(val)))
+\begin{DoxyCompactList}\small\item\em Set a specific bit of a 32-\/bit data from a specific address to 0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00020_ae49e41753dbce64185d380d307ade78d}{Memory\+Bit\+Switch}}(addr,  val)~($\ast$(volatile \mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}$\ast$)(addr)$^\wedge$=(1$<$$<$(val)))
+\begin{DoxyCompactList}\small\item\em Set a specific bit of a 32-\/bit data from a specific address to opposite state. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00020_a8c864ced65734e7f17f208d7b532c251}{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To}}(address)
+\begin{DoxyCompactList}\small\item\em Jump to a specific address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00020_a017f8665ec51267680fc0e536db19c13}{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}}(mode)
+\begin{DoxyCompactList}\small\item\em Set the frequency of the system clock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00020_ae64bbc76e9536602350b7ec801d010c1}{R\+T\+\_\+\+Sram\+\_\+\+Clear}}()
+\begin{DoxyCompactList}\small\item\em This function is to clear the former 7\+K-\/byte sram. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -117,31 +142,6 @@ enum \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5b}{S\+Y\+S\+\_\+\+C
 \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M}} = (0x3$<$$<$12)
  \}
 \end{DoxyCompactItemize}
-\subsubsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-uint32\+\_\+t \mbox{\hyperlink{a00020_a706b02571285f92589fbb0b964d7d0bb}{Memory\+Read32}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr)
-\begin{DoxyCompactList}\small\item\em Read 32-\/bit data from a specific address. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00020_ad9953f631a539cfaa35baf94f878b3ec}{Memory\+Write32}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr, uint32\+\_\+t val)
-\begin{DoxyCompactList}\small\item\em Write 32-\/bit data to a specific address. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}{Memory\+Or32}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr, uint32\+\_\+t val)
-\begin{DoxyCompactList}\small\item\em Logical OR operation on 32-\/bit data at a specific address. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}{Memory\+And32}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr, uint32\+\_\+t val)
-\begin{DoxyCompactList}\small\item\em Logical addr\+ND operation on 32-\/bit data from a specific address. \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{a00020_aaa87daf3a7b5e127c21919e520e58282}{Memory\+Bit\+At}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr, uint32\+\_\+t val)
-\begin{DoxyCompactList}\small\item\em Get a specific bit of a 32-\/bit data from a specific address. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00020_a23e80593caa37b5d932a8320dc561830}{Memory\+Bit\+On}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr, uint32\+\_\+t val)
-\begin{DoxyCompactList}\small\item\em Set a specific bit of a 32-\/bit data from a specific address to 1. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00020_a29fb2c978051c0cff760432e2378f3a3}{Memory\+Bit\+Off}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr, uint32\+\_\+t val)
-\begin{DoxyCompactList}\small\item\em Set a specific bit of a 32-\/bit data from a specific address to 0. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00020_a7a3766694541dd5c639d4a11897aaeb9}{Memory\+Bit\+Switch}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} addr, uint32\+\_\+t val)
-\begin{DoxyCompactList}\small\item\em Set a specific bit of a 32-\/bit data from a specific address to opposite state. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00020_a81b750927e5dc24f1595c15e7dd7bdf5}{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To}} (\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}} address)
-\begin{DoxyCompactList}\small\item\em Jump to a specific address. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00020_a8e87aa8d85986723da69a68cd0d1e51c}{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}} (\mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5b}{S\+Y\+S\+\_\+\+C\+LK}} mode)
-\begin{DoxyCompactList}\small\item\em Set the frequency of the system clock. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{a00020_ad514417aa2e5a5d061a5eabeceae20c6}{R\+T\+\_\+\+Sram\+\_\+\+Clear}} ()
-\begin{DoxyCompactList}\small\item\em This function is to clear the former 7\+K-\/byte sram. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsubsection{Detailed Description}
@@ -153,6 +153,254 @@ Zhirui Dai
 \begin{DoxyDate}{Date}
 2018-\/05-\/25 
 \end{DoxyDate}
+
+
+\subsubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{a00020_ad87cedffcaadc51db22594fce55173d4}\label{a00020_ad87cedffcaadc51db22594fce55173d4}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+And32@{Memory\+And32}}
+\index{Memory\+And32@{Memory\+And32}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+And32}{MemoryAnd32}}
+{\footnotesize\ttfamily \#define Memory\+And32(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{val }\end{DoxyParamCaption})~(($\ast$(volatile \mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}$\ast$)(addr)) \&= (val))}
+
+
+
+Logical addr\+ND operation on 32-\/bit data from a specific address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address to be A\+ND \\
+\hline
+{\em val} & the A\+ND mask \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_afc530c7e6b49b0ca97c1ad9dac1c4750}\label{a00020_afc530c7e6b49b0ca97c1ad9dac1c4750}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+At@{Memory\+Bit\+At}}
+\index{Memory\+Bit\+At@{Memory\+Bit\+At}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+Bit\+At}{MemoryBitAt}}
+{\footnotesize\ttfamily \#define Memory\+Bit\+At(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{val }\end{DoxyParamCaption})~(( $\ast$(volatile \mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}$\ast$)(addr) $>$$>$ val ) \&0x1)}
+
+
+
+Get a specific bit of a 32-\/bit data from a specific address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address \\
+\hline
+{\em val} & the bit location (in the 32-\/bit data) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long the bit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_a04c34919a950117ae7da2dc5a235622b}\label{a00020_a04c34919a950117ae7da2dc5a235622b}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+Off@{Memory\+Bit\+Off}}
+\index{Memory\+Bit\+Off@{Memory\+Bit\+Off}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+Bit\+Off}{MemoryBitOff}}
+{\footnotesize\ttfamily \#define Memory\+Bit\+Off(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{val }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_ad87cedffcaadc51db22594fce55173d4}{Memory\+And32}}(addr,$\sim$(1$<$$<$(val)))}
+
+
+
+Set a specific bit of a 32-\/bit data from a specific address to 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address \\
+\hline
+{\em val} & the bit location (in the 32-\/bit data) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_a99a602346038b54068758ef00c42d1b6}\label{a00020_a99a602346038b54068758ef00c42d1b6}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+On@{Memory\+Bit\+On}}
+\index{Memory\+Bit\+On@{Memory\+Bit\+On}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+Bit\+On}{MemoryBitOn}}
+{\footnotesize\ttfamily \#define Memory\+Bit\+On(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{val }\end{DoxyParamCaption})~\mbox{\hyperlink{a00020_a27874a97deab7cecdde5ddecf466e31e}{Memory\+Or32}}(addr,1$<$$<$(val))}
+
+
+
+Set a specific bit of a 32-\/bit data from a specific address to 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address \\
+\hline
+{\em val} & the bit location (in the 32-\/bit data) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_ae49e41753dbce64185d380d307ade78d}\label{a00020_ae49e41753dbce64185d380d307ade78d}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+Switch@{Memory\+Bit\+Switch}}
+\index{Memory\+Bit\+Switch@{Memory\+Bit\+Switch}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+Bit\+Switch}{MemoryBitSwitch}}
+{\footnotesize\ttfamily \#define Memory\+Bit\+Switch(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{val }\end{DoxyParamCaption})~($\ast$(volatile \mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}$\ast$)(addr)$^\wedge$=(1$<$$<$(val)))}
+
+
+
+Set a specific bit of a 32-\/bit data from a specific address to opposite state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address \\
+\hline
+{\em val} & the bit location (in the 32-\/bit data) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_a27874a97deab7cecdde5ddecf466e31e}\label{a00020_a27874a97deab7cecdde5ddecf466e31e}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+Or32@{Memory\+Or32}}
+\index{Memory\+Or32@{Memory\+Or32}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+Or32}{MemoryOr32}}
+{\footnotesize\ttfamily \#define Memory\+Or32(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{val }\end{DoxyParamCaption})~(($\ast$(volatile \mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}$\ast$)(addr)) $\vert$= (val))}
+
+
+
+Logical OR operation on 32-\/bit data at a specific address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address to be OR \\
+\hline
+{\em val} & the OR mask \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}\label{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+Read32@{Memory\+Read32}}
+\index{Memory\+Read32@{Memory\+Read32}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+Read32}{MemoryRead32}}
+{\footnotesize\ttfamily \#define Memory\+Read32(\begin{DoxyParamCaption}\item[{}]{addr }\end{DoxyParamCaption})~($\ast$(volatile \mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}$\ast$)(addr))}
+
+
+
+Read 32-\/bit data from a specific address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long the read value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_a6b9732365b12e48ddb89fe1028b975b0}\label{a00020_a6b9732365b12e48ddb89fe1028b975b0}} 
+\index{mcu.\+h@{mcu.\+h}!Memory\+Write32@{Memory\+Write32}}
+\index{Memory\+Write32@{Memory\+Write32}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{Memory\+Write32}{MemoryWrite32}}
+{\footnotesize\ttfamily \#define Memory\+Write32(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{val }\end{DoxyParamCaption})~($\ast$(volatile \mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}$\ast$)(addr)) = (val)}
+
+
+
+Write 32-\/bit data to a specific address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the address to write \\
+\hline
+{\em val} & the value to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_a8c864ced65734e7f17f208d7b532c251}\label{a00020_a8c864ced65734e7f17f208d7b532c251}} 
+\index{mcu.\+h@{mcu.\+h}!R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To}}
+\index{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To}{RT\_MCU\_JumpTo}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To(\begin{DoxyParamCaption}\item[{}]{address }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                   \(\backslash\)
+    FuncPtr funcptr;                \(\backslash\)
+    funcptr = (\mbox{\hyperlink{a00020_a3d987633d7a3ca10c14905a807b62eb1}{FuncPtr}})address;     \(\backslash\)
+    funcptr();                      \(\backslash\)
+\}
+\end{DoxyCode}
+
+
+Jump to a specific address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & the address to jump \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+When this function is used, returning to the position where this function is used is impossible. By using R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To, we can make a soft reset. For example, if the entrance address of the program is 0x10000000, it is\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{a00020_a8c864ced65734e7f17f208d7b532c251}{RT\_MCU\_JumpTo}}(0x10000000);
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_a017f8665ec51267680fc0e536db19c13}\label{a00020_a017f8665ec51267680fc0e536db19c13}} 
+\index{mcu.\+h@{mcu.\+h}!R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}}
+\index{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}{RT\_MCU\_SetSystemClock}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                               \(\backslash\)
+    MemoryAnd32(SYS\_CTL2\_REG, ~\mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401}{SYS\_CLK\_12M}});    \(\backslash\)
+    MemoryOr32(SYS\_CTL2\_REG, mode);             \(\backslash\)
+\}
+\end{DoxyCode}
+
+
+Set the frequency of the system clock. 
+
+\begin{DoxyNote}{Note}
+This is used in U\+A\+RT to adjust the baudrate. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The frequency of system clock to set. Optional value\+: \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5baaac7754daa9ff2db35951f3539495122}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M}}, \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5bad1640aa8c46162a7551abca12293ef39}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M}}, \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00020_ae64bbc76e9536602350b7ec801d010c1}\label{a00020_ae64bbc76e9536602350b7ec801d010c1}} 
+\index{mcu.\+h@{mcu.\+h}!R\+T\+\_\+\+Sram\+\_\+\+Clear@{R\+T\+\_\+\+Sram\+\_\+\+Clear}}
+\index{R\+T\+\_\+\+Sram\+\_\+\+Clear@{R\+T\+\_\+\+Sram\+\_\+\+Clear}!mcu.\+h@{mcu.\+h}}
+\paragraph{\texorpdfstring{R\+T\+\_\+\+Sram\+\_\+\+Clear}{RT\_Sram\_Clear}}
+{\footnotesize\ttfamily \#define R\+T\+\_\+\+Sram\+\_\+\+Clear(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                           \(\backslash\)
+    unsigned \textcolor{keywordtype}{long} i;                                        \(\backslash\)
+    for(i=0;i<7168;i++)                                     \(\backslash\)
+    \{                                                       \(\backslash\)
+      (*(\textcolor{keyword}{volatile} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)(0x01000000 + i)) = 0;    \(\backslash\)
+    \}                                                       \(\backslash\)
+\}
+\end{DoxyCode}
+
+
+This function is to clear the former 7\+K-\/byte sram. 
+
+\begin{DoxyWarning}{Warning}
+To avoid possible influence on the stack, this function only clear the former 7K bytes. When it is in interrupt, this function is not recommended because some important data is stored in the sram for the later state recover from the interrupt. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 
 
 \subsubsection{Typedef Documentation}
@@ -279,226 +527,3 @@ F\+A\+L\+L\+I\+N\+G\+\_\+\+T\+R\+I\+G\+G\+ER&Falling trigger \\
 \hline
 
 \end{DoxyEnumFields}
-
-
-\subsubsection{Function Documentation}
-\mbox{\Hypertarget{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}\label{a00020_a5c1a2bd4c1bd4c2f429d8042a45327ff}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+And32@{Memory\+And32}}
-\index{Memory\+And32@{Memory\+And32}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+And32()}{MemoryAnd32()}}
-{\footnotesize\ttfamily void Memory\+And32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr,  }\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Logical addr\+ND operation on 32-\/bit data from a specific address. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address to be A\+ND \\
-\hline
-{\em val} & the A\+ND mask \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_aaa87daf3a7b5e127c21919e520e58282}\label{a00020_aaa87daf3a7b5e127c21919e520e58282}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+At@{Memory\+Bit\+At}}
-\index{Memory\+Bit\+At@{Memory\+Bit\+At}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+Bit\+At()}{MemoryBitAt()}}
-{\footnotesize\ttfamily uint32\+\_\+t Memory\+Bit\+At (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr,  }\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Get a specific bit of a 32-\/bit data from a specific address. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address \\
-\hline
-{\em val} & the bit location (in the 32-\/bit data) \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-long the bit 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_a29fb2c978051c0cff760432e2378f3a3}\label{a00020_a29fb2c978051c0cff760432e2378f3a3}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+Off@{Memory\+Bit\+Off}}
-\index{Memory\+Bit\+Off@{Memory\+Bit\+Off}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+Bit\+Off()}{MemoryBitOff()}}
-{\footnotesize\ttfamily void Memory\+Bit\+Off (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr,  }\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Set a specific bit of a 32-\/bit data from a specific address to 0. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address \\
-\hline
-{\em val} & the bit location (in the 32-\/bit data) \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_a23e80593caa37b5d932a8320dc561830}\label{a00020_a23e80593caa37b5d932a8320dc561830}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+On@{Memory\+Bit\+On}}
-\index{Memory\+Bit\+On@{Memory\+Bit\+On}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+Bit\+On()}{MemoryBitOn()}}
-{\footnotesize\ttfamily void Memory\+Bit\+On (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr,  }\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Set a specific bit of a 32-\/bit data from a specific address to 1. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address \\
-\hline
-{\em val} & the bit location (in the 32-\/bit data) \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_a7a3766694541dd5c639d4a11897aaeb9}\label{a00020_a7a3766694541dd5c639d4a11897aaeb9}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+Bit\+Switch@{Memory\+Bit\+Switch}}
-\index{Memory\+Bit\+Switch@{Memory\+Bit\+Switch}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+Bit\+Switch()}{MemoryBitSwitch()}}
-{\footnotesize\ttfamily void Memory\+Bit\+Switch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr,  }\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Set a specific bit of a 32-\/bit data from a specific address to opposite state. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address \\
-\hline
-{\em val} & the bit location (in the 32-\/bit data) \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}\label{a00020_a9ea92ebccdef6bdaca4d00210cc7266d}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+Or32@{Memory\+Or32}}
-\index{Memory\+Or32@{Memory\+Or32}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+Or32()}{MemoryOr32()}}
-{\footnotesize\ttfamily void Memory\+Or32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr,  }\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Logical OR operation on 32-\/bit data at a specific address. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address to be OR \\
-\hline
-{\em val} & the OR mask \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_a706b02571285f92589fbb0b964d7d0bb}\label{a00020_a706b02571285f92589fbb0b964d7d0bb}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+Read32@{Memory\+Read32}}
-\index{Memory\+Read32@{Memory\+Read32}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+Read32()}{MemoryRead32()}}
-{\footnotesize\ttfamily uint32\+\_\+t Memory\+Read32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Read 32-\/bit data from a specific address. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address to read \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-long the read value 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_ad9953f631a539cfaa35baf94f878b3ec}\label{a00020_ad9953f631a539cfaa35baf94f878b3ec}} 
-\index{mcu.\+h@{mcu.\+h}!Memory\+Write32@{Memory\+Write32}}
-\index{Memory\+Write32@{Memory\+Write32}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{Memory\+Write32()}{MemoryWrite32()}}
-{\footnotesize\ttfamily void Memory\+Write32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{addr,  }\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Write 32-\/bit data to a specific address. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em addr} & the address to write \\
-\hline
-{\em val} & the value to be written \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_a81b750927e5dc24f1595c15e7dd7bdf5}\label{a00020_a81b750927e5dc24f1595c15e7dd7bdf5}} 
-\index{mcu.\+h@{mcu.\+h}!R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To}}
-\index{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To()}{RT\_MCU\_JumpTo()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_a06da901348542a481c297d9b700e2001}{memory\+\_\+addr\+\_\+t}}}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Jump to a specific address. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em address} & the address to jump \\
-\hline
-\end{DoxyParams}
-\begin{DoxyNote}{Note}
-When this function is used, returning to the position where this function is used is impossible. By using R\+T\+\_\+\+M\+C\+U\+\_\+\+Jump\+To, we can make a soft reset. For example, if the entrance address of the program is 0x10000000, it is\+: 
-\begin{DoxyCode}
-\mbox{\hyperlink{a00020_a81b750927e5dc24f1595c15e7dd7bdf5}{RT\_MCU\_JumpTo}}(0x10000000);
-\end{DoxyCode}
- 
-\end{DoxyNote}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_a8e87aa8d85986723da69a68cd0d1e51c}\label{a00020_a8e87aa8d85986723da69a68cd0d1e51c}} 
-\index{mcu.\+h@{mcu.\+h}!R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}}
-\index{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock@{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock()}{RT\_MCU\_SetSystemClock()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+M\+C\+U\+\_\+\+Set\+System\+Clock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5b}{S\+Y\+S\+\_\+\+C\+LK}}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Set the frequency of the system clock. 
-
-\begin{DoxyNote}{Note}
-This is used in U\+A\+RT to adjust the baudrate. 
-\end{DoxyNote}
-
-\begin{DoxyParams}{Parameters}
-{\em mode} & The frequency of system clock to set. Optional value\+: \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5baaac7754daa9ff2db35951f3539495122}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+3M}}, \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5bad1640aa8c46162a7551abca12293ef39}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+6M}}, \mbox{\hyperlink{a00020_ae3a2d501b8662e11b969fb4a5e195e5ba6c646c9a1e4c38ef0af6d576eacfb401}{S\+Y\+S\+\_\+\+C\+L\+K\+\_\+12M}}. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00020_ad514417aa2e5a5d061a5eabeceae20c6}\label{a00020_ad514417aa2e5a5d061a5eabeceae20c6}} 
-\index{mcu.\+h@{mcu.\+h}!R\+T\+\_\+\+Sram\+\_\+\+Clear@{R\+T\+\_\+\+Sram\+\_\+\+Clear}}
-\index{R\+T\+\_\+\+Sram\+\_\+\+Clear@{R\+T\+\_\+\+Sram\+\_\+\+Clear}!mcu.\+h@{mcu.\+h}}
-\paragraph{\texorpdfstring{R\+T\+\_\+\+Sram\+\_\+\+Clear()}{RT\_Sram\_Clear()}}
-{\footnotesize\ttfamily void R\+T\+\_\+\+Sram\+\_\+\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-This function is to clear the former 7\+K-\/byte sram. 
-
-\begin{DoxyWarning}{Warning}
-To avoid possible influence on the stack, this function only clear the former 7K bytes. When it is in interrupt, this function is not recommended because some important data is stored in the sram for the later state recover from the interrupt. 
-\end{DoxyWarning}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}

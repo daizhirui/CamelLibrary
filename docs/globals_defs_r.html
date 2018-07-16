@@ -133,11 +133,17 @@ $(document).ready(function(){initNavTree('globals_defs_r.html','');});
 &#160;
 
 <h3><a id="index_r"></a>- r -</h3><ul>
-<li>RAISE_TRIGGER
-: <a class="el" href="a00020.html#abda90eda34a640b130f48a6ade23fe22">mcu.h</a>
+<li>RT_ADC_Clear
+: <a class="el" href="a00002.html#a00318bd4fc3ce7ad4f03124b91891f4f">analogIO.h</a>
 </li>
-<li>RISING
-: <a class="el" href="a00011.html#aeea2b49478f3b13faedba764985c6e96">Interrupt.h</a>
+<li>RT_ADC_SD_DataReady
+: <a class="el" href="a00002.html#aa3fc5e0f9802d24cd8c0090c86bf9299">analogIO.h</a>
+</li>
+<li>RT_ADC_SD_Off
+: <a class="el" href="a00002.html#ac57cb41fced89567b192b3a26bb0cb91">analogIO.h</a>
+</li>
+<li>RT_ADC_SD_On
+: <a class="el" href="a00002.html#a3ed6d7d3daccf57a9ee5a9490d8985ad">analogIO.h</a>
 </li>
 <li>RT_ADC_SD_SetAdWidth
 : <a class="el" href="a00002.html#acb989d89893ac99af984979cb9e8df2a">analogIO.h</a>
@@ -150,6 +156,21 @@ $(document).ready(function(){initNavTree('globals_defs_r.html','');});
 </li>
 <li>RT_ADC_SD_Setup
 : <a class="el" href="a00002.html#a312f152517ab50c1cda791e118dd4473">analogIO.h</a>
+</li>
+<li>RT_ADC_SD_Start
+: <a class="el" href="a00002.html#a201094f8f020811fe7d1cb26efe47094">analogIO.h</a>
+</li>
+<li>RT_ADC_TemperatureSensorOff
+: <a class="el" href="a00002.html#a592b3503c0efb0d01f07c151ea6aaa91">analogIO.h</a>
+</li>
+<li>RT_ADC_TemperatureSensorOn
+: <a class="el" href="a00002.html#a499716b82c53672422efd8ad4fd4c9ab">analogIO.h</a>
+</li>
+<li>RT_ADC_V2P_Off
+: <a class="el" href="a00002.html#a392f47d863065820e42b66b84007dfe0">analogIO.h</a>
+</li>
+<li>RT_ADC_V2P_On
+: <a class="el" href="a00002.html#af1002dc4b0d8af47aba6aaa5de06868e">analogIO.h</a>
 </li>
 <li>RT_ADC_V2P_SetResistor
 : <a class="el" href="a00002.html#ab24203a1eff5816f48761f0e38337d67">analogIO.h</a>
@@ -173,7 +194,7 @@ $(document).ready(function(){initNavTree('globals_defs_r.html','');});
 : <a class="el" href="a00011.html#aa1a62e0954243f0c0fc8ec850ea2eebe">Interrupt.h</a>
 </li>
 <li>RT_EXINT_Setup
-: <a class="el" href="a00011.html#a32678a4a1877f8e6fcae9fad3dd436ed">Interrupt.h</a>
+: <a class="el" href="a00011.html#a135ec6dd65a4ef971477debf65c6809f">Interrupt.h</a>
 </li>
 <li>RT_Flash_Erase1k
 : <a class="el" href="a00008.html#ab65db3c66c91da3a934540a2f8175803">Flash.h</a>
@@ -217,8 +238,20 @@ $(document).ready(function(){initNavTree('globals_defs_r.html','');});
 <li>RT_IO_SetOutput
 : <a class="el" href="a00014.html#a80f50c7de76076789b624b7fce7531c6">IO.h</a>
 </li>
+<li>RT_MCU_JumpTo
+: <a class="el" href="a00020.html#a8c864ced65734e7f17f208d7b532c251">mcu.h</a>
+</li>
+<li>RT_MCU_SetSystemClock
+: <a class="el" href="a00020.html#a017f8665ec51267680fc0e536db19c13">mcu.h</a>
+</li>
 <li>RT_OPO_ExchangeChannelPin
 : <a class="el" href="a00002.html#a1846f829df60ca42a455a1688eee7310">analogIO.h</a>
+</li>
+<li>RT_OPO_Off
+: <a class="el" href="a00002.html#aaaa6d1267ea1064b765948a2ab8dd934">analogIO.h</a>
+</li>
+<li>RT_OPO_On
+: <a class="el" href="a00002.html#a6ce23f7d735a1eedc00c509721b79446">analogIO.h</a>
 </li>
 <li>RT_OPO_SelectChannelPin
 : <a class="el" href="a00002.html#aaa7081959e37104e40e3f637d42d5144">analogIO.h</a>
@@ -261,6 +294,9 @@ $(document).ready(function(){initNavTree('globals_defs_r.html','');});
 </li>
 <li>RT_RTC_SetTimeFormat
 : <a class="el" href="a00053.html#a4342706ea208fe0adff35bfa3c78b87c">time.h</a>
+</li>
+<li>RT_Sram_Clear
+: <a class="el" href="a00020.html#ae64bbc76e9536602350b7ec801d010c1">mcu.h</a>
 </li>
 <li>RT_SYSINT_GetFlag
 : <a class="el" href="a00011.html#a397366295a7d6d3ed47e5e3d69549448">Interrupt.h</a>
@@ -326,7 +362,7 @@ $(document).ready(function(){initNavTree('globals_defs_r.html','');});
 : <a class="el" href="a00041.html#a055e471dbfe89e577e92a0789a2c6ae5">TC0.h</a>
 </li>
 <li>RT_TC0_SetPWMM
-: <a class="el" href="a00041.html#ad1c595fd71883cd9a5d5fd5ed7cf4f30">TC0.h</a>
+: <a class="el" href="a00041.html#a60ec825df0fabe789ae083794f336b00">TC0.h</a>
 </li>
 <li>RT_TC0_Stop
 : <a class="el" href="a00041.html#a7eb236125fa1773036d72e020419f3ad">TC0.h</a>
@@ -342,6 +378,9 @@ $(document).ready(function(){initNavTree('globals_defs_r.html','');});
 </li>
 <li>RT_TC0_TimerOn
 : <a class="el" href="a00041.html#aa7936fffa8b7bcd47751d2e89f81d4a9">TC0.h</a>
+</li>
+<li>RT_TC0_TimerSet1us
+: <a class="el" href="a00041.html#ad3aa9b19f24000e1eabe4af902ae0d3a">TC0.h</a>
 </li>
 <li>RT_TC1_CheckPWMFlag
 : <a class="el" href="a00044.html#acf0b6d73b626b9f56f9f6fda79d0860c">TC1.h</a>
@@ -398,7 +437,7 @@ $(document).ready(function(){initNavTree('globals_defs_r.html','');});
 : <a class="el" href="a00044.html#af7f2a1fa7c0f6bf6e61dbc2c1ecb1730">TC1.h</a>
 </li>
 <li>RT_TC1_SetPWMM
-: <a class="el" href="a00044.html#a1e92ad68930f990a6437c74432689e1b">TC1.h</a>
+: <a class="el" href="a00044.html#a266de7845aeeeac26e3330245626a9f6">TC1.h</a>
 </li>
 <li>RT_TC1_Stop
 : <a class="el" href="a00044.html#ade1093a6b28016a59b5e5b0c2733ab2c">TC1.h</a>
@@ -414,6 +453,9 @@ $(document).ready(function(){initNavTree('globals_defs_r.html','');});
 </li>
 <li>RT_TC1_TimerOn
 : <a class="el" href="a00044.html#ac76393581e0b1d58a9628139db72cdaf">TC1.h</a>
+</li>
+<li>RT_TC1_TimerSet1us
+: <a class="el" href="a00044.html#a2de3e5b6d78aebf23eaed01eb6cb4898">TC1.h</a>
 </li>
 <li>RT_TC2_CheckPWM0Flag
 : <a class="el" href="a00047.html#a68bc636dca2736a8368cfd72ca9eb11a">TC2.h</a>
@@ -492,6 +534,9 @@ $(document).ready(function(){initNavTree('globals_defs_r.html','');});
 </li>
 <li>RT_TC2_TimerOn
 : <a class="el" href="a00047.html#ab274ee44af2080d68745b2ec3af06648">TC2.h</a>
+</li>
+<li>RT_TC2_TimerSet1us
+: <a class="el" href="a00047.html#aadfafcd102be9335f47c244450854c15">TC2.h</a>
 </li>
 <li>RT_TC4_AllPWM_Off
 : <a class="el" href="a00050.html#a810820140a90f26db974ea72d81fac27">TC4.h</a>
@@ -603,7 +648,7 @@ $(document).ready(function(){initNavTree('globals_defs_r.html','');});
 <div id="nav-path" class="navpath">
     <!-- id is needed for treeview function! -->
     <!-- <ul>
-        <li class="footer">Generated on Wed Jul 11 2018 15:21:29 for Camel Library Documentaion by
+        <li class="footer">Generated on Mon Jul 16 2018 10:05:52 for Camel Library Documentaion by
             <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
     </ul> -->
@@ -615,7 +660,7 @@ $(document).ready(function(){initNavTree('globals_defs_r.html','');});
             <!-- <h5 class="card-title">Special title treatment</h5> -->
             <p class="card-text d-flex justify-content-between">
                 <a href="#" class="btn btn-primary">Return To Top</a>
-                <a href="http://www.doxygen.org/index.html">Generated on Wed Jul 11 2018 15:21:29 for Camel Library Documentaion by <img class="footer" src="doxygen.png" alt="doxygen"/>  1.8.14</a>
+                <a href="http://www.doxygen.org/index.html">Generated on Mon Jul 16 2018 10:05:52 for Camel Library Documentaion by <img class="footer" src="doxygen.png" alt="doxygen"/>  1.8.14</a>
             </p>
         </div>
     </div>

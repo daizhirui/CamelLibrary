@@ -1,5 +1,16 @@
 var a00020 =
 [
+    [ "MemoryAnd32", "a00020.html#ad87cedffcaadc51db22594fce55173d4", null ],
+    [ "MemoryBitAt", "a00020.html#afc530c7e6b49b0ca97c1ad9dac1c4750", null ],
+    [ "MemoryBitOff", "a00020.html#a04c34919a950117ae7da2dc5a235622b", null ],
+    [ "MemoryBitOn", "a00020.html#a99a602346038b54068758ef00c42d1b6", null ],
+    [ "MemoryBitSwitch", "a00020.html#ae49e41753dbce64185d380d307ade78d", null ],
+    [ "MemoryOr32", "a00020.html#a27874a97deab7cecdde5ddecf466e31e", null ],
+    [ "MemoryRead32", "a00020.html#a2d484dc15bdf30ee11ab3b05f31f0e16", null ],
+    [ "MemoryWrite32", "a00020.html#a6b9732365b12e48ddb89fe1028b975b0", null ],
+    [ "RT_MCU_JumpTo", "a00020.html#a8c864ced65734e7f17f208d7b532c251", null ],
+    [ "RT_MCU_SetSystemClock", "a00020.html#a017f8665ec51267680fc0e536db19c13", null ],
+    [ "RT_Sram_Clear", "a00020.html#ae64bbc76e9536602350b7ec801d010c1", null ],
     [ "FuncPtr", "a00020.html#a3d987633d7a3ca10c14905a807b62eb1", null ],
     [ "FuncPtr1", "a00020.html#a0891965816a5b721b07f7bebefaf7430", null ],
     [ "FuncPtr2", "a00020.html#a331a88eeefe11112bb8fe1b43dd777b8", null ],
@@ -96,16 +107,5 @@ var a00020 =
     [ "trigger_mode_t", "a00020.html#a6d33f21be3f0c5cf91c5d638e8aca086", [
       [ "RISING_TRIGGER", "a00020.html#a6d33f21be3f0c5cf91c5d638e8aca086a60a109ab1ab372f4e3935064a3f0a26c", null ],
       [ "FALLING_TRIGGER", "a00020.html#a6d33f21be3f0c5cf91c5d638e8aca086a75134708fc2093222ca5a56acefc5d3f", null ]
-    ] ],
-    [ "MemoryAnd32", "a00020.html#a5c1a2bd4c1bd4c2f429d8042a45327ff", null ],
-    [ "MemoryBitAt", "a00020.html#aaa87daf3a7b5e127c21919e520e58282", null ],
-    [ "MemoryBitOff", "a00020.html#a29fb2c978051c0cff760432e2378f3a3", null ],
-    [ "MemoryBitOn", "a00020.html#a23e80593caa37b5d932a8320dc561830", null ],
-    [ "MemoryBitSwitch", "a00020.html#a7a3766694541dd5c639d4a11897aaeb9", null ],
-    [ "MemoryOr32", "a00020.html#a9ea92ebccdef6bdaca4d00210cc7266d", null ],
-    [ "MemoryRead32", "a00020.html#a706b02571285f92589fbb0b964d7d0bb", null ],
-    [ "MemoryWrite32", "a00020.html#ad9953f631a539cfaa35baf94f878b3ec", null ],
-    [ "RT_MCU_JumpTo", "a00020.html#a81b750927e5dc24f1595c15e7dd7bdf5", null ],
-    [ "RT_MCU_SetSystemClock", "a00020.html#a8e87aa8d85986723da69a68cd0d1e51c", null ],
-    [ "RT_Sram_Clear", "a00020.html#ad514417aa2e5a5d061a5eabeceae20c6", null ]
+    ] ]
 ];

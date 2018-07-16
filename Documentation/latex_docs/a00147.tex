@@ -4,9 +4,9 @@ To use this library, please include {\ttfamily \mbox{\hyperlink{a00002}{analog\+
 
 
 \begin{DoxyCode}
-\textcolor{keywordtype}{void} \mbox{\hyperlink{a00002_a3bb0bbb7c349af23c8e5f1b0d8408a07}{RT\_ADC\_SD\_On}}();
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00002_a3ed6d7d3daccf57a9ee5a9490d8985ad}{RT\_ADC\_SD\_On}}();
 
-\textcolor{keywordtype}{void} \mbox{\hyperlink{a00002_a1934526cb3d40a1b0ae7a0f19597a4ff}{RT\_ADC\_SD\_Off}}();
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00002_ac57cb41fced89567b192b3a26bb0cb91}{RT\_ADC\_SD\_Off}}();
 
 \textcolor{keywordtype}{void} \mbox{\hyperlink{a00002_a246ce987fa2b9f254f4796340eb23ed0}{RT\_ADC\_SD\_SetSampleRate}}(mode);
 
@@ -16,13 +16,13 @@ To use this library, please include {\ttfamily \mbox{\hyperlink{a00002}{analog\+
 
 \textcolor{keywordtype}{void} \mbox{\hyperlink{a00002_a312f152517ab50c1cda791e118dd4473}{RT\_ADC\_SD\_Setup}}(sampleRate, adWidth, triggerSource);
 
-\textcolor{keywordtype}{void} \mbox{\hyperlink{a00002_ac75cab97ce7cce47671dd8ef34e920d8}{RT\_ADC\_SD\_Start}}();
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00002_a201094f8f020811fe7d1cb26efe47094}{RT\_ADC\_SD\_Start}}();
 
-uint32\_t \mbox{\hyperlink{a00002_a7fd97b414a33170e6013c88f37e028a9}{RT\_ADC\_SD\_DataReady}}();
+uint32\_t \mbox{\hyperlink{a00002_aa3fc5e0f9802d24cd8c0090c86bf9299}{RT\_ADC\_SD\_DataReady}}();
 
 uint32\_t \mbox{\hyperlink{a00002_a5532ac461de55576a3875b29300c8536}{RT\_ADC\_SD\_Read}}();
 
-\textcolor{keywordtype}{void} \mbox{\hyperlink{a00002_a6f788ef3b57dbc478ab10de7356574fa}{RT\_ADC\_Clear}}();
+\textcolor{keywordtype}{void} \mbox{\hyperlink{a00002_a00318bd4fc3ce7ad4f03124b91891f4f}{RT\_ADC\_Clear}}();
 \end{DoxyCode}
 
 
@@ -48,13 +48,13 @@ uint32\_t \mbox{\hyperlink{a00002_a5532ac461de55576a3875b29300c8536}{RT\_ADC\_SD
     \mbox{\hyperlink{a00002_a246ce987fa2b9f254f4796340eb23ed0}{RT\_ADC\_SD\_SetSampleRate}}(\mbox{\hyperlink{a00002_aebc3424fa91b715741f0320561ecfbb0a720c5991be73063f5ab035440f26b486}{SD\_CLK\_3M}});
     \mbox{\hyperlink{a00002_acb989d89893ac99af984979cb9e8df2a}{RT\_ADC\_SD\_SetAdWidth}}(\mbox{\hyperlink{a00002_a44030e617a742aba101c6dcd3ec2078ea3a9f3242e2567dcfb29f566e45cf6de0}{SD\_20BIT}});
     \mbox{\hyperlink{a00002_a11bf38478bd196acd1f179115e714dfc}{RT\_ADC\_SD\_SetTrigger}}(\mbox{\hyperlink{a00002_ab266bb772aaf5cffad6bede99cfb094ca2da9ae6568d907b90ab68f56f8605ada}{SD\_TRIG\_BY\_TC0PWM}});
-    \mbox{\hyperlink{a00002_a6f788ef3b57dbc478ab10de7356574fa}{RT\_ADC\_Clear}}();
-    \mbox{\hyperlink{a00002_a3bb0bbb7c349af23c8e5f1b0d8408a07}{RT\_ADC\_SD\_On}}();
+    \mbox{\hyperlink{a00002_a00318bd4fc3ce7ad4f03124b91891f4f}{RT\_ADC\_Clear}}();
+    \mbox{\hyperlink{a00002_a3ed6d7d3daccf57a9ee5a9490d8985ad}{RT\_ADC\_SD\_On}}();
     \textcolor{keywordflow}{for} (\textcolor{keyword}{register} uint32\_t i=0; i<200;i++)
         \_\_asm\_\_(\textcolor{stringliteral}{"nop"});
-    \mbox{\hyperlink{a00002_ac75cab97ce7cce47671dd8ef34e920d8}{RT\_ADC\_SD\_Start}}();
-    \textcolor{keywordflow}{while}(!\mbox{\hyperlink{a00002_a7fd97b414a33170e6013c88f37e028a9}{RT\_ADC\_SD\_DataReady}}());
-    uint32\_t result = \mbox{\hyperlink{a00020_a706b02571285f92589fbb0b964d7d0bb}{MemoryRead32}}(AD\_READ\_REG) & 0xfffff;
+    \mbox{\hyperlink{a00002_a201094f8f020811fe7d1cb26efe47094}{RT\_ADC\_SD\_Start}}();
+    \textcolor{keywordflow}{while}(!\mbox{\hyperlink{a00002_aa3fc5e0f9802d24cd8c0090c86bf9299}{RT\_ADC\_SD\_DataReady}}());
+    uint32\_t result = \mbox{\hyperlink{a00020_a2d484dc15bdf30ee11ab3b05f31f0e16}{MemoryRead32}}(AD\_READ\_REG) & 0xfffff;
     \textcolor{comment}{// ...}
 \}
 \end{DoxyCode}
