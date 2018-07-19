@@ -494,7 +494,7 @@ int main(int argc, char *argv[])
         else   // user mode
         {
             // stack_pointer = bss_end + 1024 * 1;
-            stack_pointer = bss_end + 1024 * 1;
+            stack_pointer = 0x01001f00;
             printf("\nstack pointer is +1024*1 byte from bss_end\n");
         }
         stack_pointer &= ~7;
