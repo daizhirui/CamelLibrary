@@ -55,7 +55,7 @@
  */
 #define RT_Flash_EraseFrom(address)                                     \
     {                                                                   \
-        for(unsigned long addr=address;addr<0x10001f400;addr+=0x400) {  \
+        for(unsigned long addr=address;addr<0x10001fc00;addr+=0x400) {  \
             RT_Flash_Erase1k(addr);                                     \
         }                                                               \
     }

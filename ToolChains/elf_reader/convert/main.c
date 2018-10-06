@@ -28,9 +28,9 @@ static inline void printUsage() {
     printf("       -h print this usage\n");
     printf("example:\n");
     printf("    convert -m elf_file       convert the elf file to binary file\n");
-    printf("    convert -m -d elf_file    convert the elf file to binary file and\n");
+    printf("    convert -m -v elf_file    convert the elf file to binary file and\n");
     printf("                              output debugging information simultaneously\n");
-    printf("    convert -d elf_file       only output the debugging information\n");
+    printf("    convert -v elf_file       only output the debugging information\n");
 }
 
 static inline param_t processArgs(int argc, char * argv[]) {

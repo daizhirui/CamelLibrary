@@ -231,6 +231,8 @@ void M2_Convert_writeBinToDisk(M2_BIN_T bin)
     size_t  fileNameLength = strlen(bin.elf_fileName) + 12;
     fileName = (char*)malloc(fileNameLength * sizeof(char));
     FILE    *file;
+    
+    // binary bin
     strcpy(fileName, bin.elf_fileName);
     strcat(fileName, ".bin");
     file = fopen(fileName, "wb");
@@ -257,24 +259,26 @@ void M2_Convert_writeBinToDisk(M2_BIN_T bin)
         }
     }
     
+    // binary txt
     strcpy(fileName, bin.elf_fileName);
     strcat(fileName, ".txt");
     file = fopen(fileName, "w");
     for (uint32_t i = 0; i <= bin.code_buf_size; i += 4) {
-        fprintf(file, "%8.8x\n", *(uint32_t*)(bin.code_buf + i));
+        fprintf(file, "%8.8x: %8.8x\n", M2_DEFAULT_TARGET_ADDR + i, *(uint32_t*)(bin.code_buf + i));
     }
     if (bin.rodata_buf != NULL) {
         for (uint32_t i = 0; i <= bin.rodata_buf_size; i += 4) {
-            fprintf(file, "%8.8x\n", *(uint32_t*)(bin.rodata_buf + i));
+            fprintf(file, "%8.8x: %8.8x\n", bin.rodata_section_addr + i, *(uint32_t*)(bin.rodata_buf + i));
         }
     }
     if (bin.data_buf != NULL) {
         for (uint32_t i = 0; i <= bin.data_buf_size; i += 4) {
-            fprintf(file, "%8.8x\n", *(uint32_t*)(bin.data_buf + i));
+            fprintf(file, "%8.8x: %8.8x\n", bin.data_flash_begin_addr + i, *(uint32_t*)(bin.data_buf + i));
         }
     }
     fclose(file);
     
+    // rodata bin txt
     if (bin.rodata_buf != NULL) {
         strcpy(fileName, bin.elf_fileName);
         strcat(fileName, "_rodata.bin");
@@ -286,11 +290,14 @@ void M2_Convert_writeBinToDisk(M2_BIN_T bin)
         strcat(fileName, "_rodata.txt");
         file = fopen(fileName, "w");
         for (uint32_t i = 0; i <= bin.rodata_buf_size; i += 4) {
-            fprintf(file, "%8.8x\n", *(uint32_t*)(bin.rodata_buf + i));
+            fprintf(file, "%8.8x: %8.8x ===> ", bin.rodata_section_addr + i, *(uint32_t*)(bin.rodata_buf + i));
+            fwrite(bin.rodata_buf + i, sizeof(uint32_t), 1, file);
+            fprintf(file, "\n");
         }
         fclose(file);
     }
     
+    // data bin txt
     if (bin.data_buf != NULL) {
         strcpy(fileName, bin.elf_fileName);
         strcat(fileName, "_data.bin");
@@ -302,10 +309,11 @@ void M2_Convert_writeBinToDisk(M2_BIN_T bin)
         strcat(fileName, "_data.txt");
         file = fopen(fileName, "w");
         for (uint32_t i = 0; i <= bin.data_buf_size; i += 4) {
-            fprintf(file, "%8.8x\n", *(uint32_t*)(bin.data_buf + i));
+            fprintf(file, "%8.8x: %8.8x\n", bin.data_flash_begin_addr + i, *(uint32_t*)(bin.data_buf + i));
         }
         fclose(file);
     }
+    
     // coe file
     strcpy(fileName, bin.elf_fileName);
     strcat(fileName, ".coe");
