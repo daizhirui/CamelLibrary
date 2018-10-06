@@ -1,4 +1,4 @@
-# Camel_Library
+# Camel Library
 Official Library for Camel Micro products. This library is embedded in [CamelStudioX](https://github.com/daizhirui/CamelStudioX_Mac/releases/latest).
 ----
 
